@@ -1,0 +1,25 @@
+
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+def shared_pod
+    pod "MJRefresh"
+    pod "YYKit"
+    pod "MJExtension"
+    pod "AFNetworking"
+    pod "Masonry"
+    pod "SDWebImage"
+    pod "SDCycleScrollView"
+end
+
+target 'RuiHaoTalents' do
+    shared_pod
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.0'
+        end
+    end
+end

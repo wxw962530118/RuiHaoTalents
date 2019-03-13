@@ -1,0 +1,19 @@
+//
+//  HZTPrefixHeader.pch
+//  RuiHaoTalents
+//
+//  Created by 王新伟 on 2019/3/13.
+//  Copyright © 2019年 王新伟. All rights reserved.
+//
+
+#ifndef HZTPrefixHeader_pch
+#define HZTPrefixHeader_pch
+
+#import "HZTMacroNotifications.h"
+#import "HZTMacroEnvironment.h"
+#import "HZTMacroColors.h"
+#import "HZTMacroFontSize.h"
+#import "HZTMacroMeasurement.h"
+#import "HZTMacroScreenDapter.h"
+
+#endif /* HZTPrefixHeader_pch */

@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */; };
+		ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F62522389ACD0053D864 /* AppDelegate.m */; };
+		ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62D22389AD00053D864 /* Assets.xcassets */; };
+		ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */; };
+		ACE8F63422389AD00053D864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F63322389AD00053D864 /* main.m */; };
+		ACFE80382238A2F2006D1506 /* HZTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80372238A2F2006D1506 /* HZTBaseViewController.m */; };
+		ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE803A2238A309006D1506 /* HZTBaseNavigationController.m */; };
+		ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE803D2238A31A006D1506 /* HZTBaseModel.m */; };
+		ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80402238A331006D1506 /* HZTRootNavigationController.m */; };
+		ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80442238A39B006D1506 /* HZTMacroNotifications.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.debug.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.debug.xcconfig"; sourceTree = "<group>"; };
+		98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuiHaoTalents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuiHaoTalents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE8F62422389ACD0053D864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ACE8F62522389ACD0053D864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ACE8F62D22389AD00053D864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACE8F63022389AD00053D864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACE8F63222389AD00053D864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE8F63322389AD00053D864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACFE80362238A2F2006D1506 /* HZTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTBaseViewController.h; sourceTree = "<group>"; };
+		ACFE80372238A2F2006D1506 /* HZTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTBaseViewController.m; sourceTree = "<group>"; };
+		ACFE80392238A309006D1506 /* HZTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTBaseNavigationController.h; sourceTree = "<group>"; };
+		ACFE803A2238A309006D1506 /* HZTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTBaseNavigationController.m; sourceTree = "<group>"; };
+		ACFE803C2238A31A006D1506 /* HZTBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTBaseModel.h; sourceTree = "<group>"; };
+		ACFE803D2238A31A006D1506 /* HZTBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTBaseModel.m; sourceTree = "<group>"; };
+		ACFE803F2238A331006D1506 /* HZTRootNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTRootNavigationController.h; sourceTree = "<group>"; };
+		ACFE80402238A331006D1506 /* HZTRootNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTRootNavigationController.m; sourceTree = "<group>"; };
+		ACFE80432238A39B006D1506 /* HZTMacroNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroNotifications.h; sourceTree = "<group>"; };
+		ACFE80442238A39B006D1506 /* HZTMacroNotifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMacroNotifications.m; sourceTree = "<group>"; };
+		ACFE80462238A444006D1506 /* HZTMacroEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroEnvironment.h; sourceTree = "<group>"; };
+		ACFE80472238A450006D1506 /* HZTMacroColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroColors.h; sourceTree = "<group>"; };
+		ACFE80482238A45B006D1506 /* HZTMacroFontSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroFontSize.h; sourceTree = "<group>"; };
+		ACFE80492238A46D006D1506 /* HZTMacroMeasurement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroMeasurement.h; sourceTree = "<group>"; };
+		ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroScreenDapter.h; sourceTree = "<group>"; };
+		ACFE804B2238A527006D1506 /* HZTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTPrefixHeader.pch; sourceTree = "<group>"; };
+		DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.release.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACE8F61E22389ACD0053D864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		434BBAF18F98D64C91A31924 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */,
+				DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACE8F61822389ACD0053D864 = {
+			isa = PBXGroup;
+			children = (
+				ACE8F62322389ACD0053D864 /* RuiHaoTalents */,
+				ACE8F62222389ACD0053D864 /* Products */,
+				434BBAF18F98D64C91A31924 /* Pods */,
+				D8AC12AC29E0B95DBAD45356 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ACE8F62222389ACD0053D864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACE8F62322389ACD0053D864 /* RuiHaoTalents */ = {
+			isa = PBXGroup;
+			children = (
+				ACFE80352238A2AA006D1506 /* Account */,
+				ACFE80312238A29F006D1506 /* Login&Register */,
+				ACE8F63F22389E440053D864 /* Base */,
+				ACE8F64D22389E440053D864 /* Home */,
+				ACE8F64422389E440053D864 /* Modules */,
+				ACE8F63A22389E440053D864 /* Public */,
+				ACE8F64322389E440053D864 /* Resource */,
+				ACE8F62422389ACD0053D864 /* AppDelegate.h */,
+				ACE8F62522389ACD0053D864 /* AppDelegate.m */,
+				ACFE804B2238A527006D1506 /* HZTPrefixHeader.pch */,
+				ACE8F62D22389AD00053D864 /* Assets.xcassets */,
+				ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */,
+				ACE8F63222389AD00053D864 /* Info.plist */,
+				ACE8F63322389AD00053D864 /* main.m */,
+			);
+			path = RuiHaoTalents;
+			sourceTree = "<group>";
+		};
+		ACE8F63A22389E440053D864 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F63B22389E440053D864 /* Managers */,
+				ACE8F63C22389E440053D864 /* Components */,
+				ACE8F63D22389E440053D864 /* Marco */,
+				ACE8F63E22389E440053D864 /* Categorys */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		ACE8F63B22389E440053D864 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		ACE8F63C22389E440053D864 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ACE8F63D22389E440053D864 /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				ACFE80432238A39B006D1506 /* HZTMacroNotifications.h */,
+				ACFE80442238A39B006D1506 /* HZTMacroNotifications.m */,
+				ACFE80462238A444006D1506 /* HZTMacroEnvironment.h */,
+				ACFE80472238A450006D1506 /* HZTMacroColors.h */,
+				ACFE80482238A45B006D1506 /* HZTMacroFontSize.h */,
+				ACFE80492238A46D006D1506 /* HZTMacroMeasurement.h */,
+				ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */,
+			);
+			path = Marco;
+			sourceTree = "<group>";
+		};
+		ACE8F63E22389E440053D864 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		ACE8F63F22389E440053D864 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F64022389E440053D864 /* BaseView */,
+				ACE8F64122389E440053D864 /* BaseControllers */,
+				ACE8F64222389E440053D864 /* BaseModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ACE8F64022389E440053D864 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		ACE8F64122389E440053D864 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACFE80362238A2F2006D1506 /* HZTBaseViewController.h */,
+				ACFE80372238A2F2006D1506 /* HZTBaseViewController.m */,
+				ACFE80392238A309006D1506 /* HZTBaseNavigationController.h */,
+				ACFE803A2238A309006D1506 /* HZTBaseNavigationController.m */,
+				ACFE803F2238A331006D1506 /* HZTRootNavigationController.h */,
+				ACFE80402238A331006D1506 /* HZTRootNavigationController.m */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		ACE8F64222389E440053D864 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACFE803C2238A31A006D1506 /* HZTBaseModel.h */,
+				ACFE803D2238A31A006D1506 /* HZTBaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		ACE8F64322389E440053D864 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ACE8F64422389E440053D864 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F64522389E440053D864 /* MyResume */,
+				ACE8F64922389E440053D864 /* MyWallet */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ACE8F64522389E440053D864 /* MyResume */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F64622389E440053D864 /* Models */,
+				ACE8F64722389E440053D864 /* Controllers */,
+				ACE8F64822389E440053D864 /* Views */,
+			);
+			path = MyResume;
+			sourceTree = "<group>";
+		};
+		ACE8F64622389E440053D864 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACE8F64722389E440053D864 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACE8F64822389E440053D864 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACE8F64922389E440053D864 /* MyWallet */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F64A22389E440053D864 /* Models */,
+				ACE8F64B22389E440053D864 /* Controllers */,
+				ACE8F64C22389E440053D864 /* Views */,
+			);
+			path = MyWallet;
+			sourceTree = "<group>";
+		};
+		ACE8F64A22389E440053D864 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACE8F64B22389E440053D864 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACE8F64C22389E440053D864 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACE8F64D22389E440053D864 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ACE8F64E22389E440053D864 /* Models */,
+				ACE8F64F22389E440053D864 /* Controllers */,
+				ACE8F65022389E440053D864 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ACE8F64E22389E440053D864 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACE8F64F22389E440053D864 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACE8F65022389E440053D864 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACFE80312238A29F006D1506 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				ACFE80322238A29F006D1506 /* Models */,
+				ACFE80332238A29F006D1506 /* Controllers */,
+				ACFE80342238A29F006D1506 /* Views */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		ACFE80322238A29F006D1506 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACFE80332238A29F006D1506 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACFE80342238A29F006D1506 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACFE80352238A2AA006D1506 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D8AC12AC29E0B95DBAD45356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACE8F62022389ACD0053D864 /* RuiHaoTalents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACE8F63722389AD00053D864 /* Build configuration list for PBXNativeTarget "RuiHaoTalents" */;
+			buildPhases = (
+				FF2B9182A313567E84C3508A /* [CP] Check Pods Manifest.lock */,
+				ACE8F61D22389ACD0053D864 /* Sources */,
+				ACE8F61E22389ACD0053D864 /* Frameworks */,
+				ACE8F61F22389ACD0053D864 /* Resources */,
+				689F8998785BDEBCB1DCADE7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuiHaoTalents;
+			productName = RuiHaoTalents;
+			productReference = ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACE8F61922389ACD0053D864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HZT;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "王新伟";
+				TargetAttributes = {
+					ACE8F62022389ACD0053D864 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = ACE8F61C22389ACD0053D864 /* Build configuration list for PBXProject "RuiHaoTalents" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACE8F61822389ACD0053D864;
+			productRefGroup = ACE8F62222389ACD0053D864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACE8F62022389ACD0053D864 /* RuiHaoTalents */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACE8F61F22389ACD0053D864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */,
+				ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		689F8998785BDEBCB1DCADE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2B9182A313567E84C3508A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuiHaoTalents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACE8F61D22389ACD0053D864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE8F63422389AD00053D864 /* main.m in Sources */,
+				ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */,
+				ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */,
+				ACFE80382238A2F2006D1506 /* HZTBaseViewController.m in Sources */,
+				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
+				ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */,
+				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACE8F63022389AD00053D864 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACE8F63522389AD00053D864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ACE8F63622389AD00053D864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACE8F63822389AD00053D864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";
+				INFOPLIST_FILE = RuiHaoTalents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = haizitong.RuiHaoTalents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACE8F63922389AD00053D864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";
+				INFOPLIST_FILE = RuiHaoTalents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = haizitong.RuiHaoTalents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACE8F61C22389ACD0053D864 /* Build configuration list for PBXProject "RuiHaoTalents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE8F63522389AD00053D864 /* Debug */,
+				ACE8F63622389AD00053D864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACE8F63722389AD00053D864 /* Build configuration list for PBXNativeTarget "RuiHaoTalents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE8F63822389AD00053D864 /* Debug */,
+				ACE8F63922389AD00053D864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACE8F61922389ACD0053D864 /* Project object */;
+}
