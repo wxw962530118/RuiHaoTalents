@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HZTMenuListHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpy-p4-QpG">
+                    <rect key="frame" x="16" y="82" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="rGr-kz-hxl"/>
+                        <constraint firstAttribute="width" constant="56" id="txS-YP-GyE"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqe-kD-z4x">
+                    <rect key="frame" x="87" y="85" width="35" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18301845726" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-6k-HSs">
+                    <rect key="frame" x="87" y="116.5" width="90" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wUy-6k-HSs" firstAttribute="leading" secondItem="Zpy-p4-QpG" secondAttribute="trailing" constant="15" id="4ZE-S5-9vS"/>
+                <constraint firstItem="Zpy-p4-QpG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="Hi8-qo-i1S"/>
+                <constraint firstItem="zqe-kD-z4x" firstAttribute="leading" secondItem="Zpy-p4-QpG" secondAttribute="trailing" constant="15" id="Jwk-ii-fuq"/>
+                <constraint firstItem="zqe-kD-z4x" firstAttribute="centerY" secondItem="Zpy-p4-QpG" secondAttribute="centerY" constant="-15" id="a4Z-Vb-Qo4"/>
+                <constraint firstItem="wUy-6k-HSs" firstAttribute="centerY" secondItem="Zpy-p4-QpG" secondAttribute="centerY" constant="15" id="f2d-in-ZjC"/>
+                <constraint firstItem="Zpy-p4-QpG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="zlp-Da-C0Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="userImgView" destination="Zpy-p4-QpG" id="wlj-J1-IYy"/>
+                <outlet property="userNameLabel" destination="zqe-kD-z4x" id="TqG-bW-Q4N"/>
+                <outlet property="userPhoneLabel" destination="wUy-6k-HSs" id="U2c-lx-71s"/>
+            </connections>
+            <point key="canvasLocation" x="-337.60000000000002" y="318.44077961019491"/>
+        </view>
+    </objects>
+</document>

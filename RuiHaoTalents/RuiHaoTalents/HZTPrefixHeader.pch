@@ -9,6 +9,7 @@
 #ifndef HZTPrefixHeader_pch
 #define HZTPrefixHeader_pch
 
+#import "HZTFileHeader.h"
 #import "HZTMacroNotifications.h"
 #import "HZTMacroEnvironment.h"
 #import "HZTMacroColors.h"

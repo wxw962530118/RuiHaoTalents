@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 #define CurrentVersion                 [ToolBaseClass getCurrentVersion]
 #define IS_Simulator                   [[ToolBaseClass getPhoneExplicitModel] isEqualToString:@"Simulator"]
 #define GetHomeCachPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
@@ -44,8 +44,6 @@
 +(UIImage *)handleGrayImageWithSourceImage:(UIImage *)sourceImage;
 /**url 特殊字符提取替换*/
 +(NSString *)URLEncodedString:(NSString *)string;
-/**计算首页内容高度*/
-+(void)handelHomeCellHeightWith:(NSMutableArray *)dataArray callBack:(void(^)(void))callBack;
 /**格式化时间戳*/
 +(NSString *)handleTimeWithTimeInterval:(NSTimeInterval )timeInterval;
 /**字符串转MD5*/

@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */; };
+		AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6469F52238B12900408EA3 /* HZTHomeViewController.m */; };
+		ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */; };
+		ACBB3B9E2238CE4E0019EACB /* HZTHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */; };
+		ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9F2238CE5E0019EACB /* HZTMenuListHeaderView.xib */; };
+		ACBB3BA32238CECF0019EACB /* HZTMenuListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB3BA22238CECF0019EACB /* HZTMenuListModel.m */; };
+		ACC1FB042238B230001E9F4A /* HZTLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB032238B230001E9F4A /* HZTLeftMenuView.m */; };
+		ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB092238B382001E9F4A /* HZTMenuListView.m */; };
+		ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB0C2238B395001E9F4A /* HZTMenuListHeaderView.m */; };
+		ACC1FB112238B3AB001E9F4A /* HZTMenuListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB0F2238B3AB001E9F4A /* HZTMenuListCell.m */; };
+		ACC1FB122238B3AB001E9F4A /* HZTMenuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FB102238B3AB001E9F4A /* HZTMenuListCell.xib */; };
+		ACC1FB192238B947001E9F4A /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB132238B947001E9F4A /* UIView+Category.m */; };
+		ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB152238B947001E9F4A /* UIButton+HitAreaExpand.m */; };
+		ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB172238B947001E9F4A /* UITableViewCell+HZTableViewCell.m */; };
+		ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FB1E2238BA1E001E9F4A /* HZTLeftMenuContentView.m */; };
+		ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276BC2238EA4900AD825B /* HZTHomeHeaderModel.m */; };
+		ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276C02238F2AD00AD825B /* ToolBaseClass.m */; };
+		ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276C22238F8A200AD825B /* HZTPageControl.m */; };
+		ACD276C62238FC6300AD825B /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD276C52238FC6200AD825B /* Home.xcassets */; };
+		ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276CC2239153E00AD825B /* HZTNewsListController.m */; };
 		ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F62522389ACD0053D864 /* AppDelegate.m */; };
 		ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62D22389AD00053D864 /* Assets.xcassets */; };
 		ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */; };
@@ -22,6 +41,41 @@
 /* Begin PBXFileReference section */
 		2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.debug.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.debug.xcconfig"; sourceTree = "<group>"; };
 		98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuiHaoTalents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6469F42238B12900408EA3 /* HZTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeViewController.h; sourceTree = "<group>"; };
+		AC6469F52238B12900408EA3 /* HZTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeViewController.m; sourceTree = "<group>"; };
+		ACBB3B9A2238CE3E0019EACB /* HZTHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeHeaderView.h; sourceTree = "<group>"; };
+		ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeHeaderView.m; sourceTree = "<group>"; };
+		ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTHomeHeaderView.xib; sourceTree = "<group>"; };
+		ACBB3B9F2238CE5E0019EACB /* HZTMenuListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMenuListHeaderView.xib; sourceTree = "<group>"; };
+		ACBB3BA12238CECF0019EACB /* HZTMenuListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMenuListModel.h; sourceTree = "<group>"; };
+		ACBB3BA22238CECF0019EACB /* HZTMenuListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMenuListModel.m; sourceTree = "<group>"; };
+		ACC1FB022238B230001E9F4A /* HZTLeftMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLeftMenuView.h; sourceTree = "<group>"; };
+		ACC1FB032238B230001E9F4A /* HZTLeftMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLeftMenuView.m; sourceTree = "<group>"; };
+		ACC1FB082238B382001E9F4A /* HZTMenuListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMenuListView.h; sourceTree = "<group>"; };
+		ACC1FB092238B382001E9F4A /* HZTMenuListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMenuListView.m; sourceTree = "<group>"; };
+		ACC1FB0B2238B395001E9F4A /* HZTMenuListHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMenuListHeaderView.h; sourceTree = "<group>"; };
+		ACC1FB0C2238B395001E9F4A /* HZTMenuListHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMenuListHeaderView.m; sourceTree = "<group>"; };
+		ACC1FB0E2238B3AB001E9F4A /* HZTMenuListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMenuListCell.h; sourceTree = "<group>"; };
+		ACC1FB0F2238B3AB001E9F4A /* HZTMenuListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMenuListCell.m; sourceTree = "<group>"; };
+		ACC1FB102238B3AB001E9F4A /* HZTMenuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMenuListCell.xib; sourceTree = "<group>"; };
+		ACC1FB132238B947001E9F4A /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		ACC1FB142238B947001E9F4A /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		ACC1FB152238B947001E9F4A /* UIButton+HitAreaExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HitAreaExpand.m"; sourceTree = "<group>"; };
+		ACC1FB162238B947001E9F4A /* UITableViewCell+HZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HZTableViewCell.h"; sourceTree = "<group>"; };
+		ACC1FB172238B947001E9F4A /* UITableViewCell+HZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HZTableViewCell.m"; sourceTree = "<group>"; };
+		ACC1FB182238B947001E9F4A /* UIButton+HitAreaExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HitAreaExpand.h"; sourceTree = "<group>"; };
+		ACC1FB1C2238B980001E9F4A /* HZTFileHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTFileHeader.h; sourceTree = "<group>"; };
+		ACC1FB1D2238BA1E001E9F4A /* HZTLeftMenuContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLeftMenuContentView.h; sourceTree = "<group>"; };
+		ACC1FB1E2238BA1E001E9F4A /* HZTLeftMenuContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLeftMenuContentView.m; sourceTree = "<group>"; };
+		ACD276BB2238EA4900AD825B /* HZTHomeHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeHeaderModel.h; sourceTree = "<group>"; };
+		ACD276BC2238EA4900AD825B /* HZTHomeHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeHeaderModel.m; sourceTree = "<group>"; };
+		ACD276BF2238F2AD00AD825B /* ToolBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBaseClass.h; sourceTree = "<group>"; };
+		ACD276C02238F2AD00AD825B /* ToolBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBaseClass.m; sourceTree = "<group>"; };
+		ACD276C22238F8A200AD825B /* HZTPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTPageControl.m; sourceTree = "<group>"; };
+		ACD276C32238F8A300AD825B /* HZTPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTPageControl.h; sourceTree = "<group>"; };
+		ACD276C52238FC6200AD825B /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		ACD276CB2239153E00AD825B /* HZTNewsListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTNewsListController.h; sourceTree = "<group>"; };
+		ACD276CC2239153E00AD825B /* HZTNewsListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListController.m; sourceTree = "<group>"; };
 		ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuiHaoTalents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE8F62422389ACD0053D864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACE8F62522389ACD0053D864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +123,69 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ACC1FB012238B21F001E9F4A /* LeftMenuAbout */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1FB1D2238BA1E001E9F4A /* HZTLeftMenuContentView.h */,
+				ACC1FB1E2238BA1E001E9F4A /* HZTLeftMenuContentView.m */,
+				ACC1FB022238B230001E9F4A /* HZTLeftMenuView.h */,
+				ACC1FB032238B230001E9F4A /* HZTLeftMenuView.m */,
+				ACC1FB082238B382001E9F4A /* HZTMenuListView.h */,
+				ACC1FB092238B382001E9F4A /* HZTMenuListView.m */,
+				ACC1FB0B2238B395001E9F4A /* HZTMenuListHeaderView.h */,
+				ACC1FB0C2238B395001E9F4A /* HZTMenuListHeaderView.m */,
+				ACBB3B9F2238CE5E0019EACB /* HZTMenuListHeaderView.xib */,
+				ACC1FB0E2238B3AB001E9F4A /* HZTMenuListCell.h */,
+				ACC1FB0F2238B3AB001E9F4A /* HZTMenuListCell.m */,
+				ACC1FB102238B3AB001E9F4A /* HZTMenuListCell.xib */,
+				ACBB3BA12238CECF0019EACB /* HZTMenuListModel.h */,
+				ACBB3BA22238CECF0019EACB /* HZTMenuListModel.m */,
+			);
+			path = LeftMenuAbout;
+			sourceTree = "<group>";
+		};
+		ACD276BE2238F2AD00AD825B /* ToolBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				ACD276BF2238F2AD00AD825B /* ToolBaseClass.h */,
+				ACD276C02238F2AD00AD825B /* ToolBaseClass.m */,
+			);
+			path = ToolBaseClass;
+			sourceTree = "<group>";
+		};
+		ACD276C72239152900AD825B /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				ACD276C82239152900AD825B /* Models */,
+				ACD276C92239152900AD825B /* Controllers */,
+				ACD276CA2239152900AD825B /* Views */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		ACD276C82239152900AD825B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACD276C92239152900AD825B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACD276CB2239153E00AD825B /* HZTNewsListController.h */,
+				ACD276CC2239153E00AD825B /* HZTNewsListController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACD276CA2239152900AD825B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ACE8F61822389ACD0053D864 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +228,7 @@
 		ACE8F63A22389E440053D864 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				ACD276BE2238F2AD00AD825B /* ToolBaseClass */,
 				ACE8F63B22389E440053D864 /* Managers */,
 				ACE8F63C22389E440053D864 /* Components */,
 				ACE8F63D22389E440053D864 /* Marco */,
@@ -129,6 +247,9 @@
 		ACE8F63C22389E440053D864 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ACD276C32238F8A300AD825B /* HZTPageControl.h */,
+				ACD276C22238F8A200AD825B /* HZTPageControl.m */,
+				ACC1FB012238B21F001E9F4A /* LeftMenuAbout */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -143,6 +264,7 @@
 				ACFE80482238A45B006D1506 /* HZTMacroFontSize.h */,
 				ACFE80492238A46D006D1506 /* HZTMacroMeasurement.h */,
 				ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */,
+				ACC1FB1C2238B980001E9F4A /* HZTFileHeader.h */,
 			);
 			path = Marco;
 			sourceTree = "<group>";
@@ -150,6 +272,12 @@
 		ACE8F63E22389E440053D864 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				ACC1FB182238B947001E9F4A /* UIButton+HitAreaExpand.h */,
+				ACC1FB152238B947001E9F4A /* UIButton+HitAreaExpand.m */,
+				ACC1FB162238B947001E9F4A /* UITableViewCell+HZTableViewCell.h */,
+				ACC1FB172238B947001E9F4A /* UITableViewCell+HZTableViewCell.m */,
+				ACC1FB142238B947001E9F4A /* UIView+Category.h */,
+				ACC1FB132238B947001E9F4A /* UIView+Category.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -196,6 +324,7 @@
 		ACE8F64322389E440053D864 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ACD276C52238FC6200AD825B /* Home.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -203,6 +332,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACD276C72239152900AD825B /* NewsList */,
 				ACE8F64522389E440053D864 /* MyResume */,
 				ACE8F64922389E440053D864 /* MyWallet */,
 			);
@@ -284,6 +414,8 @@
 		ACE8F64E22389E440053D864 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ACD276BB2238EA4900AD825B /* HZTHomeHeaderModel.h */,
+				ACD276BC2238EA4900AD825B /* HZTHomeHeaderModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +423,8 @@
 		ACE8F64F22389E440053D864 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC6469F42238B12900408EA3 /* HZTHomeViewController.h */,
+				AC6469F52238B12900408EA3 /* HZTHomeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +432,9 @@
 		ACE8F65022389E440053D864 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACBB3B9A2238CE3E0019EACB /* HZTHomeHeaderView.h */,
+				ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */,
+				ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,8 +545,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */,
 				ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */,
+				ACD276C62238FC6300AD825B /* Home.xcassets in Resources */,
+				ACBB3B9E2238CE4E0019EACB /* HZTHomeHeaderView.xib in Resources */,
 				ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */,
+				ACC1FB122238B3AB001E9F4A /* HZTMenuListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,13 +608,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC1FB042238B230001E9F4A /* HZTLeftMenuView.m in Sources */,
+				AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */,
+				ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */,
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
 				ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */,
+				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
+				ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */,
 				ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */,
 				ACFE80382238A2F2006D1506 /* HZTBaseViewController.m in Sources */,
+				ACC1FB192238B947001E9F4A /* UIView+Category.m in Sources */,
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
+				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
+				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
+				ACC1FB112238B3AB001E9F4A /* HZTMenuListCell.m in Sources */,
 				ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */,
+				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
+				ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */,
 				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,
+				ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */,
+				ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */,
+				ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */,
+				ACBB3BA32238CECF0019EACB /* HZTMenuListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +764,7 @@
 			baseConfigurationReference = 2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";
@@ -629,6 +786,7 @@
 			baseConfigurationReference = DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";

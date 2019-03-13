@@ -12,5 +12,8 @@
 
 @end
 
-NSString *const HZTNOTIFICATION_CLASS_TEACHER_LIST_SELECED_NORMAL
-= @"Notification_class_teacher_list_selected_normal";
+NSString * const HZTNOTIFICATION_HIDE_LEFT_MENU
+= @"Notification_hide_left_menu";
+
+NSString * const HZTNOTIFICATION_SHOW_LEFT_MENU
+= @"Notification_show_left_menu";

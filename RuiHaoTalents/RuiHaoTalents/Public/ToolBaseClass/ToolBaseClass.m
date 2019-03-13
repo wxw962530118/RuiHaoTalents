@@ -7,8 +7,6 @@
 
 #import "ToolBaseClass.h"
 #import "AppDelegate.h"
-#import "HZTHomeCollectionModel.h"
-#import <AFNetworking.h>
 #import <sys/sysctl.h>
 #import <mach/mach.h>
 #import <CommonCrypto/CommonDigest.h>
@@ -218,53 +216,6 @@
     return encodedString;
 }
 
-+(void)handelHomeCellHeightWith:(NSMutableArray *)dataArray callBack:(void(^)(void))callBack{
-    /***计算内容高度*/
-    float  titleTop = 28;
-    float  titleH = 20;
-    float  titleBottom = 10;
-    for (HZTHomeCollectionModel * model in  dataArray) {
-        model.cellHeight += (titleTop + titleH + titleBottom);
-        if ([model.partStyle isEqualToString:@"DAILY_BOOK"]) {
-            /**周四看什么*/
-            CGFloat imgW = kScreenW - (IS_PAD ? 72 : 30);
-            float contentH = [ToolBaseClass getHeightWithString:model.dailyList[0].dailyTitle width:imgW font:IS_PAD ? HZTFontSize(14) : HZTFontSize(12)];
-            float contentBottom = 10;
-            CGFloat defaultW = IS_PAD ? 696 : 345;
-            CGFloat defaultH = IS_PAD ? 324 : 160;
-            CGFloat scaleWH = defaultH / defaultW;
-            CGFloat imgH  = imgW * scaleWH;
-            float imageBottom = IS_PAD ? 20 : 10;
-            model.cellHeight += (contentH + contentBottom +imgH + imageBottom);
-        }else if ([model.partStyle isEqualToString:@"IMAGE_TEXT"]){
-            //kScreenW <= 320 ? CGSizeMake(297, (297 * 162)/317) : CGSizeMake(317 ,162);
-            float itemH = 162;
-            float itemHBottom = IS_PAD ? 20 : 10;
-            model.cellHeight += (itemH + itemHBottom) - 10;
-        }else if ([model.partStyle isEqualToString:@"SLIDE_HORIZONTAL"]){
-            CGFloat height = kScreenW <= 320 ? (89 * 175)/109 : 175;
-            float itemHBottom = IS_PAD ? 20 : 10;
-            model.cellHeight += (height + itemHBottom);
-        }else{
-            CGFloat itemDefaultW  =  IS_PAD ? 156 : 108;
-            CGFloat itemDefaultH  =  IS_PAD ? 259 : 190;
-            CGFloat itemScaleWH   =  itemDefaultH/itemDefaultW;
-            CGFloat marginLeft    =  IS_PAD ? 33 : 10;
-            CGFloat margin        =  IS_PAD ? 20 : 10;
-            NSInteger itemCount   =  IS_PAD ? 4 : 3;
-            CGFloat homeItemW     =  (kScreenW - (itemCount - 1)* margin - 2 * marginLeft)/itemCount - (IS_PAD ? 4 : 0);
-            CGFloat homeItemH     =  homeItemW * itemScaleWH;
-            float itemHBottom     =  IS_PAD ? 35 : 15;
-            NSInteger rowCount = model.bookList.count/itemCount + (model.bookList.count % itemCount ? 1 : 0);
-            model.cellHeight   += ((homeItemH * rowCount) + (rowCount - 1) * 10 + itemHBottom);
-            model.cellHeight   -= 5;
-        }
-    }
-    if (callBack) {
-        callBack();
-    }
-}
-
 +(NSString *)handleTimeWithTimeInterval:(NSTimeInterval )timeInterval{
     NSDate * d = [[NSDate alloc]initWithTimeIntervalSince1970:timeInterval/1000.0];
     NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
@@ -303,7 +254,7 @@
     return outputString;
 }
 
-+(BOOL )saveUserDefaultsWithKey:(NSString *)key value:(id)value{
++(BOOL)saveUserDefaultsWithKey:(NSString *)key value:(id)value{
     NSUserDefaults * df = [NSUserDefaults standardUserDefaults];
     [df setObject:value forKey:key];
     return [df synchronize];
@@ -319,7 +270,6 @@
 
 /**
  绘制虚线
- 
  @param lineView    需要绘制成虚线的控件
  @param lineLength  虚线的宽度
  @param lineSpacing 虚线的间距
@@ -350,7 +300,6 @@
 
 /**
  添加虚线边框
- 
  @param lineView    需要绘制成虚线的控件
  @param lineWidth   虚线宽度
  @param lineLength  虚线的宽度
@@ -362,7 +311,7 @@
     border.strokeColor = lineColor.CGColor;
     border.fillColor = nil;
     /**绘制带圆角的边框*/
-    border.path = [UIBezierPath bezierPathWithRoundedRect:lineView.bounds cornerRadius:IS_PAD ? 12 : 3].CGPath;
+    border.path = [UIBezierPath bezierPathWithRoundedRect:lineView.bounds cornerRadius:3].CGPath;
     border.frame = lineView.bounds;
     border.lineWidth =lineWidth;
     border.lineCap = @"square";
@@ -372,7 +321,6 @@
 
 /**
  创建抖动动画
- 
  @param translate   抖动幅度
  @param viewToShake 需要抖动的控件
  */
@@ -402,7 +350,6 @@
 /**时间转换为时间戳，精确到微秒*/
 + (NSInteger)getIntervalsWithTimeStamp:(NSInteger)timeStamp{
     return [[NSDate date] timeIntervalSinceDate:[self getDateWithTimeStamp:timeStamp]];
-    
 }
 
 /**时间戳转换为时间*/
@@ -428,7 +375,6 @@
     if (kernReturn != KERN_SUCCESS){
         return NSNotFound;
     }
-    //return ((vm_page_size * vmStats.free_count + vm_page_size * vmStats.inactive_count));
     return ((vm_page_size * vmStats.free_count)/1024.0)/1024.0;
 }
 

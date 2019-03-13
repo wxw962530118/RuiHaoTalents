@@ -7,16 +7,23 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HZTBaseNavigationController.h"
+#import "HZTHomeViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+-(void)congifRootWindow{
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH)];
+    self.window.backgroundColor = HZTColorWhiteGround;
+    self.window.rootViewController = [[HZTBaseNavigationController alloc] initWithRootViewController:[[HZTHomeViewController alloc] init]];
+    [self.window makeKeyAndVisible];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self congifRootWindow];
     return YES;
 }
 

@@ -15,8 +15,8 @@
 #define RGBColorAlpha(r,g,b,a)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 /**重点文字色  黑色*/
 #define HZTColorEmphasis            RGBColor(33, 33, 33)
-/**默认主色调 蓝色*/
-#define HZTMainColor                RGBColor(33,150,243)
+/**默认主色调 深绿色*/
+#define HZTMainColor                RGBColor(79,193,170)
 /** App 页面背景色   淡灰*/
 #define HZTColorBackGround          RGBColor(246, 246, 246)
 /** App 控件描边灰色 淡灰*/

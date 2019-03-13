@@ -31,7 +31,10 @@ CG_INLINE void NotificationRemoveAll(id observer) {
 }
 
 /**
- 通知: NAME*/
-UIKIT_EXTERN NSString *const HZTNOTIFICATION_CLASS_TEACHER_LIST_SELECED_NORMAL;
+ 通知: 隐藏首页左侧菜单栏*/
+UIKIT_EXTERN NSString *const HZTNOTIFICATION_HIDE_LEFT_MENU;
 
+/**
+ 通知: 显示首页左侧菜单栏*/
+UIKIT_EXTERN NSString *const HZTNOTIFICATION_SHOW_LEFT_MENU;
 NS_ASSUME_NONNULL_END
