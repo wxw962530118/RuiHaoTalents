@@ -22,7 +22,7 @@
 /** App 控件描边灰色 淡灰*/
 #define HZTColorComponentBorder     RGBColor(216, 216, 216)
 /** App 分割线 淡灰*/
-#define HZTColorComponentLine       RGBColor(214, 214, 214)
+#define HZTColorComponentLine       RGBColor(226, 226, 226)
 /** App 页面白色背景 白色*/
 #define HZTColorWhiteGround         RGBColor(255, 255, 255)
 /**清除颜色*/

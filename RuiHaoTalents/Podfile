@@ -10,6 +10,10 @@ def shared_pod
     pod "Masonry"
     pod "SDWebImage"
     pod "SDCycleScrollView"
+    pod "IQKeyboardManager"
+    pod "DACircularProgress"
+    pod "FLAnimatedImage"
+    pod 'TYAttributedLabel', '~> 2.6.2'
 end
 
 target 'RuiHaoTalents' do

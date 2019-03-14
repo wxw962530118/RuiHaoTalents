@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HZTBaseNavigationController.h"
+#import "HZTRootNavigationController.h"
 #import "HZTHomeViewController.h"
 @interface AppDelegate ()
 
@@ -15,15 +15,22 @@
 
 @implementation AppDelegate
 
--(void)congifRootWindow{
+-(void)configRootWindow{
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH)];
     self.window.backgroundColor = HZTColorWhiteGround;
-    self.window.rootViewController = [[HZTBaseNavigationController alloc] initWithRootViewController:[[HZTHomeViewController alloc] init]];
+    self.window.rootViewController = [[HZTRootNavigationController alloc] initWithRootViewController:[[HZTHomeViewController alloc] init]];
     [self.window makeKeyAndVisible];
 }
 
+-(void)configIQKeyboardManager{
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self congifRootWindow];
+    [self configIQKeyboardManager];
+    [self configRootWindow];
     return YES;
 }
 

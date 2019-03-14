@@ -13,6 +13,7 @@
 
 @interface ToolBaseClass ()<UIAlertViewDelegate,UIActionSheetDelegate>
 @property (nonatomic, copy) void(^callBack)(NSUInteger index);
+@property (nonatomic, copy) void(^alertBlock)(void);
 @end
 @implementation ToolBaseClass
 
@@ -419,6 +420,16 @@
 /**获取电池状态*/
 +(UIDeviceBatteryState)getBatteryStauts{
     return [UIDevice currentDevice].batteryState;
+}
+
+-(void)showAlertViewType:(CustomAlretType)type title:(NSString *)title desc:(NSString *)desc isShowCancel:(BOOL)isShowCancel bottomTitle:(NSString *)bottomTitle callBack:(void (^)(void))callBack{
+    self.alertBlock = callBack;
+    HZTCustomAlretView * view = [HZTCustomAlretView createAlretView];
+    [view configSubViewsType:type title:title desc:desc isShowCancel:isShowCancel bottomTitle:bottomTitle callBack:^{
+        if (self.alertBlock) {
+            self.alertBlock();
+        }
+    }];
 }
 
 @end

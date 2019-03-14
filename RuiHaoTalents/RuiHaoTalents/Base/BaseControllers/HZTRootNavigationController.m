@@ -7,26 +7,27 @@
 //
 
 #import "HZTRootNavigationController.h"
-
+#import "HZTLoginViewController.h"
 @interface HZTRootNavigationController ()
 
 @end
 
 @implementation HZTRootNavigationController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController{
+    self = [super initWithRootViewController:rootViewController];
+    if (self) {
+        [self addObserVers];
+    }
+    return self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)addObserVers{
+    NotificationRegister(HZTNOTIFICATION_SHOULD_LOGIN, self, @selector(shouldLogin), nil);
 }
-*/
+
+-(void)shouldLogin{
+    HZTLoginViewController * login = [[HZTLoginViewController alloc]init];
+    [self presentViewController:[[HZTBaseNavigationController alloc] initWithRootViewController:login] animated:YES completion:nil];
+}
 
 @end

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "HZTCustomAlretView.h"
 #define CurrentVersion                 [ToolBaseClass getCurrentVersion]
 #define IS_Simulator                   [[ToolBaseClass getPhoneExplicitModel] isEqualToString:@"Simulator"]
 #define GetHomeCachPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
@@ -78,6 +79,9 @@
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIActionSheet *)actionSheetWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void (^)(NSUInteger))callBack;
+/**
+ 根据状态展示提示框*/
+-(void)showAlertViewType:(CustomAlretType)type title:(NSString *)title desc:(NSString *)desc isShowCancel:(BOOL)isShowCancel bottomTitle:(NSString *)bottomTitle callBack:(void (^)(void))callBack;
 @end
 
 /**Tool: 把彩色图片转成灰色*/

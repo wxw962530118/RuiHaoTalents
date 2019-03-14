@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTBaseNavigationController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HZTRootNavigationController : UINavigationController
+@interface HZTRootNavigationController : HZTBaseNavigationController
 
 @end
 

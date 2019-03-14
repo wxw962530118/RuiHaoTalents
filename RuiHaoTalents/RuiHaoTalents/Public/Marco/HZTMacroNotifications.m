@@ -17,3 +17,7 @@ NSString * const HZTNOTIFICATION_HIDE_LEFT_MENU
 
 NSString * const HZTNOTIFICATION_SHOW_LEFT_MENU
 = @"Notification_show_left_menu";
+
+NSString * const HZTNOTIFICATION_SHOULD_LOGIN
+= @"Notification_should_login";
+

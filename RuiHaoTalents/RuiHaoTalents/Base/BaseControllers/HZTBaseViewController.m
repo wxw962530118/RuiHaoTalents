@@ -16,9 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = HZTColorWhiteGround;
+    [self configSelf];
     [self configBackItem];
     [self configTableContentInset];
+}
+
+-(void)configSelf{
+    self.view.backgroundColor = HZTColorWhiteGround;
+    /**自定义导航栏返回按钮 系统侧滑返回失效 处理*/
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
 }
 
 -(void)configBackItem{
@@ -26,6 +32,7 @@
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     backBtn.frame = (CGRect){{0,0}, {40, 40}};
+    [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
     [backBtn setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
 }

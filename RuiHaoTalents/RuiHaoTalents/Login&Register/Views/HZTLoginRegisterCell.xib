@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HZTLoginRegisterCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jig-Dn-qR2">
+                        <rect key="frame" x="16" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="e0a-NK-64w"/>
+                            <constraint firstAttribute="width" constant="20" id="tkq-l5-hO4"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAO-9K-ckD">
+                        <rect key="frame" x="228" y="10" width="77" height="30"/>
+                        <state key="normal" title="获取验证码"/>
+                        <connections>
+                            <action selector="clickGetCodeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DoK-PD-usP"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-JR-aqR">
+                        <rect key="frame" x="0.0" y="48.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="RSY-hY-OcE"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D5d-K7-GkA">
+                        <rect key="frame" x="51" y="10" width="169" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="dFf-KQ-48d"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="A9g-JR-aqR" secondAttribute="trailing" id="DSZ-Jg-jhr"/>
+                    <constraint firstItem="A9g-JR-aqR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HLB-en-i1c"/>
+                    <constraint firstAttribute="trailing" secondItem="dAO-9K-ckD" secondAttribute="trailing" constant="15" id="IAA-tn-Uvl"/>
+                    <constraint firstItem="Jig-Dn-qR2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QcH-ID-jVm"/>
+                    <constraint firstItem="D5d-K7-GkA" firstAttribute="centerY" secondItem="Jig-Dn-qR2" secondAttribute="centerY" id="Ww3-P4-ywN"/>
+                    <constraint firstItem="D5d-K7-GkA" firstAttribute="leading" secondItem="Jig-Dn-qR2" secondAttribute="trailing" constant="15" id="fjx-db-aWv"/>
+                    <constraint firstAttribute="trailing" secondItem="D5d-K7-GkA" secondAttribute="trailing" constant="100" id="hLh-iA-C5v"/>
+                    <constraint firstItem="dAO-9K-ckD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iGV-01-L9N"/>
+                    <constraint firstItem="Jig-Dn-qR2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pYR-q8-h5C"/>
+                    <constraint firstAttribute="bottom" secondItem="A9g-JR-aqR" secondAttribute="bottom" id="uu5-4R-2G2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="getCodeBtn" destination="dAO-9K-ckD" id="k8V-yd-hKw"/>
+                <outlet property="iconImgView" destination="Jig-Dn-qR2" id="1yc-xF-bct"/>
+                <outlet property="textField" destination="D5d-K7-GkA" id="FMs-Sr-uTS"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -10,6 +10,7 @@
 #import "HZTLeftMenuContentView.h"
 #import "HZTHomeHeaderView.h"
 #import "HZTNewsListController.h"
+#import "HZTHomeBottomCell.h"
 @interface HZTHomeViewController ()<UITableViewDelegate,UITableViewDataSource,HZTHomeHeaderViewDelegate>
 /***/
 @property (nonatomic, strong) HZTLeftMenuContentView * menuContentView;
@@ -58,23 +59,17 @@
     [_menuContentView showMenuView];
 }
 
--(NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
-    cell.backgroundColor = [UIColor purpleColor];
+    HZTHomeBottomCell * cell = [HZTHomeBottomCell cellWithTableViewFromXIB:tableView];
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-}
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    return 343;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -116,8 +111,9 @@
 
 #pragma mark --- 消息中心
 -(void)clickMessage{
-    HZTNewsListController * vc = [[HZTNewsListController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+//    HZTNewsListController * vc = [[HZTNewsListController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
