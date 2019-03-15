@@ -119,6 +119,10 @@
 		AC707001223A4B90003F4F6D /* HZTDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707000223A4B90003F4F6D /* HZTDistrictModel.m */; };
 		AC707005223A503F003F4F6D /* HZTHomeBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707003223A503F003F4F6D /* HZTHomeBottomCell.m */; };
 		AC707006223A503F003F4F6D /* HZTHomeBottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC707004223A503F003F4F6D /* HZTHomeBottomCell.xib */; };
+		AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700A223B746F003F4F6D /* NetWorkManager.m */; };
+		AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700F223B750E003F4F6D /* HZTAccountManager.m */; };
+		AC707013223B753C003F4F6D /* HZTAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707012223B753C003F4F6D /* HZTAccountModel.m */; };
+		AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */; };
 		ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */; };
 		ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D74223A2BC5008E5494 /* HZTCustomAlretView.m */; };
 		ACB12D77223A2BD6008E5494 /* HZTCustomAlretView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB12D76223A2BD6008E5494 /* HZTCustomAlretView.xib */; };
@@ -294,6 +298,14 @@
 		AC707002223A503F003F4F6D /* HZTHomeBottomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeBottomCell.h; sourceTree = "<group>"; };
 		AC707003223A503F003F4F6D /* HZTHomeBottomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeBottomCell.m; sourceTree = "<group>"; };
 		AC707004223A503F003F4F6D /* HZTHomeBottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTHomeBottomCell.xib; sourceTree = "<group>"; };
+		AC707009223B746F003F4F6D /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		AC70700A223B746F003F4F6D /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		AC70700E223B750E003F4F6D /* HZTAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTAccountManager.h; sourceTree = "<group>"; };
+		AC70700F223B750E003F4F6D /* HZTAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAccountManager.m; sourceTree = "<group>"; };
+		AC707011223B753C003F4F6D /* HZTAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTAccountModel.h; sourceTree = "<group>"; };
+		AC707012223B753C003F4F6D /* HZTAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAccountModel.m; sourceTree = "<group>"; };
+		AC707030223B8F15003F4F6D /* HZTLoginWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLoginWorkManager.h; sourceTree = "<group>"; };
+		AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLoginWorkManager.m; sourceTree = "<group>"; };
 		ACB12D6E223A2A53008E5494 /* HZTToastHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTToastHUD.h; sourceTree = "<group>"; };
 		ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTToastHUD.m; sourceTree = "<group>"; };
 		ACB12D73223A2BC5008E5494 /* HZTCustomAlretView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomAlretView.h; sourceTree = "<group>"; };
@@ -602,6 +614,41 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AC707007223B746F003F4F6D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AC707008223B746F003F4F6D /* NetWorkManager */,
+				AC70700B223B746F003F4F6D /* HomeNetWorkManager */,
+				AC70700C223B746F003F4F6D /* Login&RegisterNetWork */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AC707008223B746F003F4F6D /* NetWorkManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC707009223B746F003F4F6D /* NetWorkManager.h */,
+				AC70700A223B746F003F4F6D /* NetWorkManager.m */,
+			);
+			path = NetWorkManager;
+			sourceTree = "<group>";
+		};
+		AC70700B223B746F003F4F6D /* HomeNetWorkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeNetWorkManager;
+			sourceTree = "<group>";
+		};
+		AC70700C223B746F003F4F6D /* Login&RegisterNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				AC707030223B8F15003F4F6D /* HZTLoginWorkManager.h */,
+				AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */,
+			);
+			path = "Login&RegisterNetWork";
+			sourceTree = "<group>";
+		};
 		ACB12D71223A2B50008E5494 /* CustomPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +784,7 @@
 		ACE8F63A22389E440053D864 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				AC707007223B746F003F4F6D /* API */,
 				AC2D71E0223A246B00E80191 /* ThirdSDK */,
 				ACD276BE2238F2AD00AD825B /* ToolBaseClass */,
 				ACE8F63B22389E440053D864 /* Managers */,
@@ -750,6 +798,8 @@
 		ACE8F63B22389E440053D864 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AC70700E223B750E003F4F6D /* HZTAccountManager.h */,
+				AC70700F223B750E003F4F6D /* HZTAccountManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1003,6 +1053,8 @@
 		ACFE80352238A2AA006D1506 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				AC707011223B753C003F4F6D /* HZTAccountModel.h */,
+				AC707012223B753C003F4F6D /* HZTAccountModel.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1233,6 +1285,7 @@
 				ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */,
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
 				ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */,
+				AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */,
 				ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */,
 				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
 				AC706FFB223A4B79003F4F6D /* HZTProvinceModel.m in Sources */,
@@ -1250,6 +1303,7 @@
 				AC2D71DB2239F06100E80191 /* HZTLoginRegisterCell.m in Sources */,
 				AC2D72B9223A25B500E80191 /* MBProgressHUD+MJ.m in Sources */,
 				ACC1FB192238B947001E9F4A /* UIView+Category.m in Sources */,
+				AC707013223B753C003F4F6D /* HZTAccountModel.m in Sources */,
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
@@ -1264,7 +1318,9 @@
 				AC706FFE223A4B84003F4F6D /* HZTCityModel.m in Sources */,
 				AC2D7204223A246B00E80191 /* MBProgressHUD+PYExtension.m in Sources */,
 				AC2D720D223A246C00E80191 /* PYPhotoBrowseView.m in Sources */,
+				AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
+				AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */,
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,
 				ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */,
 				AC2D71DF2239F2FA00E80191 /* HZTLoginRegisterModel.m in Sources */,

@@ -9,6 +9,7 @@
 #import "HZTRegisterViewController.h"
 #import "HZTLoginRegisterCell.h"
 #import "HZTLoginRegisterModel.h"
+#import "HZTLoginWorkManager.h"
 @interface HZTRegisterViewController ()<UITableViewDelegate,UITableViewDataSource,TYAttributedLabelDelegate>
 /***/
 @property (nonatomic, strong) UITableView * tableView;
@@ -20,6 +21,14 @@
 @property (nonatomic, strong) TYAttributedLabel * attributedLabel;
 /***/
 @property (nonatomic, strong) NSMutableArray <HZTLoginRegisterModel *>* dataArray;
+/***/
+@property (nonatomic, copy) NSString * phone;
+/***/
+@property (nonatomic, copy) NSString * code;
+/***/
+@property (nonatomic, copy) NSString * password;
+/***/
+@property (nonatomic, strong) HZTMajorButton * registerBtn;
 @end
 
 @implementation HZTRegisterViewController
@@ -32,7 +41,7 @@
 }
 
 -(void)prepareData{
-    NSArray * placeholderArr = @[@"请输入手机号码",@"请输入密码",@"请输入验证码"];
+    NSArray * placeholderArr = @[@"请输入手机号码",@"请输入8-16位密码",@"请输入验证码"];
     NSArray * iconArr = @[@"login_phone",@"login_password",@"login_password"];
     for (int i = 0; i< placeholderArr.count; i++) {
         HZTLoginRegisterModel * model = [[HZTLoginRegisterModel alloc] init];
@@ -48,10 +57,33 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    WS(weakSelf)
     HZTLoginRegisterCell * cell = [HZTLoginRegisterCell cellWithTableViewFromXIB:tableView];
     cell.model = self.dataArray[indexPath.row];
+    cell.textChangedBlock = ^(NSString * _Nonnull str, NSString * _Nonnull placeholder) {
+        if ([placeholder isEqualToString:@"请输入手机号码"]) {
+            weakSelf.phone = str;
+        }else if ([placeholder isEqualToString:@"请输入8-16位密码"]){
+            weakSelf.password = str;
+        }else{
+            weakSelf.code = str;
+        }
+    };
     cell.getCodeBtnCallBack = ^{
         /**拉取获取验证码协议 成功后开始定时器*/
+        if(!weakSelf.phone.length){
+            [HZTToastHUD showNormalWithTitle:@"请输入手机号码"];
+            return ;
+        }else if (weakSelf.phone.length < 11) {
+            [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
+            return;
+        }
+        [[HZTLoginWorkManager manager] requestRegisterMobileCodeWithMobile:weakSelf.phone succeed:^(id  _Nonnull responseObject) {
+            HZTLoginRegisterCell * lastCell = [weakSelf.tableView.visibleCells lastObject];
+            [lastCell getCodeSucceed];
+        } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+
+        }];
     };
     return cell;
 }
@@ -93,7 +125,9 @@
 
 -(UIView *)footerView{
     if (!_footerView) {
-        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 90)];        HZTMajorButton * registerBtn  = [[HZTMajorButton alloc] init];
+        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 90)];
+        HZTMajorButton * registerBtn  = [[HZTMajorButton alloc] init];
+        self.registerBtn = registerBtn;
         [registerBtn setTitle:@"注册" forState:UIControlStateNormal];
         registerBtn.layer.cornerRadius = 5;
         registerBtn.layer.masksToBounds = true;
@@ -146,9 +180,47 @@
 
 #pragma 点击注册按钮 注册成功引导用户登录<或直接根据用户的注册的手机号码及密码直接登录 具体根据需求而定>
 -(void)clickRegister{
-    [[ToolBaseClass getRootWindow] endEditing:YES];
-    HZTLoginRegisterCell * cell = [self.tableView.visibleCells lastObject];
-    [cell getCodeSucceed];
+    self.registerBtn.isInvalid = true;
+    if (!self.phone.length){
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"请输入手机号码"];
+        return;
+    }else if (self.phone.length < 11){
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
+        return;
+    }else if (!self.password.length){
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"请输入密码"];
+        return;
+    }else if (self.password.length < 8 || self.password.length > 16){
+        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
+        self.registerBtn.isInvalid = false;
+        return;
+    }else if ([ToolBaseClass handlePredicatePassword:self.password]) {
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"密码过于简单,请重新设置"];
+        return;
+    }else if (!self.code.length){
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"请输入验证码"];
+        return;
+    }else if (self.code.length != 6){
+        self.registerBtn.isInvalid = false;
+        [HZTToastHUD showNormalWithTitle:@"请输入6位验证码"];
+        return;
+    }
+    [[HZTLoginWorkManager manager] requestRegisterCreateWithMobile:self.phone code:self.code password:self.password succeed:^(id  _Nonnull responseObject) {
+        [HZTToastHUD showNormalWithTitle:@"注册成功"];
+        /**回到登录页面并自动填充账号密码*/
+        if (self.registerSucceed) {
+            self.registerSucceed(self.phone, self.password);
+        }
+        self.registerBtn.isInvalid = false;
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 @end

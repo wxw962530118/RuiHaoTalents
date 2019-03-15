@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 /***/
 @property (nonatomic, copy) NSString * phone;
 /***/
+@property (nonatomic, copy) NSString * password;
+/***/
 @property (nonatomic, assign) BOOL isShowGetCode;
 /***/
 @property (nonatomic, copy) NSString * iconName;

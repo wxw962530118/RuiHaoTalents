@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTRegisterViewController : HZTBaseViewController
-
+/***/
+@property (nonatomic, copy) void (^registerSucceed)(NSString * phone,NSString * password);
 @end
 
 NS_ASSUME_NONNULL_END

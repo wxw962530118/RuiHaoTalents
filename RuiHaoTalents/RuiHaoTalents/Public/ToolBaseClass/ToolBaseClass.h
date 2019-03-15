@@ -37,6 +37,8 @@
 +(NSDictionary *)changeErrorToNSDictionary:(NSError *)error;
 /**用颜色生成图片*/
 +(UIImage *)imageWithColor:(UIColor *)color;
+/**将stringBase64转码*/
++(NSString *)handleBase64StringWithString:(NSString *)string;
 /**获取当前详细机型信息 */
 +(NSString*)getPhoneExplicitModel;
 /**将图片设成透明*/
@@ -63,6 +65,8 @@
 +(NSInteger)getIntervalsWithTimeStamp:(NSInteger)timeStamp;
 /**时间转换为时间戳*/
 +(NSInteger)getTimeStampWithDate:(NSDate *)date;
+/**登录注册密码复杂度的效验*/
++(BOOL)handlePredicatePassword:(NSString *)passWord;
 /**获取设备内存总大小*/
 +(double)getDeviceTotalMemorySize;
 /**获取设备可用内存总大小*/
@@ -75,6 +79,10 @@
 +(CGFloat)getBatteryQuantity;
 /**获取电池状态*/
 +(UIDeviceBatteryState)getBatteryStauts;
+/**字典转化字符串*/
++(NSString*)dictionaryToJson:(NSDictionary *)dic;
+/**json字符串转化字典*/
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
@@ -95,14 +103,14 @@ CG_INLINE UIImage *ToolGetImageWithColor(UIColor *color){
 };
 
 /** Tool: Alert快捷方式, otherButtonTitles类型:NSString或NSArray ,点击取消的返回值为 0 */
-CG_INLINE UIAlertView *HZTAlertsView(NSString *title, NSString *message, NSString *cancelButtonTitle, id otherButtonTitle, void(^callBack)(NSUInteger index)){
+CG_INLINE UIAlertView *HZTAlertView(NSString *title, NSString *message, NSString *cancelButtonTitle, id otherButtonTitle, void(^callBack)(NSUInteger index)){
     return [[ToolBaseClass shareManager] alertWithTitle:title message:message cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitle callBack:^(NSUInteger index) {
         callBack(index);
     }];
 };
 
 /** Tool: ActionSheet快捷方式, otherButtonTitles类型:NSString或NSArray */
-CG_INLINE UIActionSheet *HZTActionsSheet(NSString *title, NSString *cancelButtonTitle, NSString *destructiveButtonTitle, id otherButtonTitles, void(^callBack)(NSUInteger index)){
+CG_INLINE UIActionSheet *HZTActionSheet(NSString *title, NSString *cancelButtonTitle, NSString *destructiveButtonTitle, id otherButtonTitles, void(^callBack)(NSUInteger index)){
     return [[ToolBaseClass shareManager] actionSheetWithTitle:title cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:otherButtonTitles callBack:^(NSUInteger index) {
         callBack(index);
     }];

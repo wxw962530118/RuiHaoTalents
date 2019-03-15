@@ -10,6 +10,7 @@
 #import "HZTRegisterViewController.h"
 #import "HZTLoginRegisterModel.h"
 #import "HZTLoginRegisterCell.h"
+#import "HZTLoginWorkManager.h"
 @interface HZTLoginViewController ()<UITableViewDelegate,UITableViewDataSource,TYAttributedLabelDelegate>
 /***/
 @property (nonatomic, strong) UITableView * tableView;
@@ -26,11 +27,13 @@
 /***/
 @property (nonatomic, strong) NSMutableArray <HZTLoginRegisterModel *>* dataArray;
 /**当前输入的手机号码*/
-@property (nonatomic, copy) NSString * currentPhone;
+@property (nonatomic, copy) NSString * phone;
 /**当前密码*/
-@property (nonatomic, copy) NSString * passWord;
+@property (nonatomic, copy) NSString * password;
 /**当前验证码*/
 @property (nonatomic, copy) NSString * code;
+/***/
+@property (nonatomic, strong) HZTMajorButton * loginBtn;
 
 @end
 
@@ -39,6 +42,8 @@
 -(instancetype)init{
     if (self = [super init]) {
         /**默认为密码登录*/
+        self.password = @"";
+        self.phone = @"";
         self.isPassWordLogin = YES;
     }
     return self;
@@ -60,12 +65,15 @@
 -(void)prepareData{
     [self.dataArray removeAllObjects];
     if (self.self.isPassWordLogin) {
-        NSArray * placeholderArr = @[@"请输入手机号码",@"请输入密码"];
+        NSArray * placeholderArr = @[@"请输入手机号码",@"请输入8-16位密码"];
         NSArray * iconArr = @[@"login_phone",@"login_password"];
         for (int i = 0; i< placeholderArr.count; i++) {
             HZTLoginRegisterModel * model = [[HZTLoginRegisterModel alloc] init];
-            if (![ToolBaseClass isNullClass:self.currentPhone] && !i) {
-                model.phone = self.currentPhone;
+            if (![ToolBaseClass isNullClass:self.phone] && !i) {
+                model.phone = self.phone;
+            }
+            if (![ToolBaseClass isNullClass:self.password] && i==1) {
+                model.password = self.password;
             }
             model.placeholder = placeholderArr[i];
             model.iconName = iconArr[i];
@@ -77,8 +85,8 @@
         NSArray * iconArr = @[@"login_phone",@"login_password"];
         for (int i = 0; i< placeholderArr.count; i++) {
             HZTLoginRegisterModel * model = [[HZTLoginRegisterModel alloc] init];
-            if (![ToolBaseClass isNullClass:self.currentPhone] && !i) {
-                model.phone = self.currentPhone;
+            if (![ToolBaseClass isNullClass:self.phone] && !i) {
+                model.phone = self.phone;
             }
             model.placeholder = placeholderArr[i];
             model.iconName = iconArr[i];
@@ -94,7 +102,13 @@
 }
 
 -(void)clickRegister{
+    WS(weakSelf)
     HZTRegisterViewController * vc = [[HZTRegisterViewController alloc] init];
+    vc.registerSucceed = ^(NSString * _Nonnull phone, NSString * _Nonnull password) {
+        weakSelf.phone = phone;
+        weakSelf.password = password;
+        [weakSelf prepareData];
+    };
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -108,9 +122,9 @@
     cell.model = self.dataArray[indexPath.row];
     cell.textChangedBlock = ^(NSString * _Nonnull str, NSString * _Nonnull placeholder) {
         if ([placeholder isEqualToString:@"请输入手机号码"]) {
-            weakSelf.currentPhone = str;
-        }else if ([placeholder isEqualToString:@"请输入密码"]){
-            weakSelf.passWord = str;
+            weakSelf.phone = str;
+        }else if ([placeholder isEqualToString:@"请输入8-16位密码"]){
+            weakSelf.password = str;
         }else{
             weakSelf.code = str;
         }
@@ -170,7 +184,9 @@
 
 -(UIView *)footerView{
     if (!_footerView) {
-        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 190)];        HZTMajorButton * loginBtn  = [[HZTMajorButton alloc] init];
+        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 190)];
+        HZTMajorButton * loginBtn  = [[HZTMajorButton alloc] init];
+        self.loginBtn = loginBtn;
         [loginBtn setTitle:@"立即登录" forState:UIControlStateNormal];
         loginBtn.layer.cornerRadius = 5;
         loginBtn.layer.masksToBounds = true;
@@ -210,11 +226,11 @@
         _attributedLabel = [[TYAttributedLabel alloc]init];
         _attributedLabel.textColor = [UIColor blackColor];
         _attributedLabel.delegate = self;
-        _attributedLabel.font = HZTFontSize(15);
+        _attributedLabel.font = HZTFontSize(14);
         _attributedLabel.numberOfLines = 1;
         _attributedLabel.text = @"登录即表示您已同意";
         _attributedLabel.textAlignment = kCTTextAlignmentCenter;
-        [_attributedLabel appendLinkWithText:@"《服务协议》" linkFont:HZTFontSize(15) linkColor:HZTMainColor underLineStyle:kCTUnderlineStyleNone linkData:@"http://baidu.com"];
+        [_attributedLabel appendLinkWithText:@"《服务协议》" linkFont:HZTFontSize(14) linkColor:HZTMainColor underLineStyle:kCTUnderlineStyleNone linkData:@"http://baidu.com"];
         [self.view addSubview:_attributedLabel];
         [self.view bringSubviewToFront:_attributedLabel];
         [_attributedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -226,7 +242,52 @@
 
 #pragma mark --- 点击登录按钮
 -(void)clickLogin{
-    
+    if (!self.phone.length){
+        [HZTToastHUD showNormalWithTitle:@"请输入手机号码"];
+        return;
+    }else if (self.phone.length < 11){
+        [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
+        return;
+    }else if (!self.password.length){
+         [HZTToastHUD showNormalWithTitle:@"请输入密码"];
+        return;
+    }else if (self.password.length < 8 || self.password.length > 16){
+        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
+        return;
+    }else if ([ToolBaseClass handlePredicatePassword:self.password]) {
+        [HZTToastHUD showNormalWithTitle:@"密码过于简单,请重新设置"];
+        self.loginBtn.isInvalid = false;
+        return;
+    }
+    if (!self.isPassWordLogin) {
+        if (!self.code.length){
+            [HZTToastHUD showNormalWithTitle:@"请输入验证码"];
+            return;
+        }else if (self.code.length != 6){
+            [HZTToastHUD showNormalWithTitle:@"请输入6位验证码"];
+            self.loginBtn.isInvalid = false;
+            return;
+        }
+    }
+    [[HZTLoginWorkManager manager] requestSigninWithMobile:self.phone password:self.password succeed:^(id  _Nonnull responseObject) {
+        [self.view endEditing:YES];
+        /**登录成功之后同步到当前账户信息*/
+        [MBProgressHUD showSuccess:@"登录成功"];
+        NSMutableDictionary * tempDict = [[NSMutableDictionary alloc] initWithDictionary:responseObject[@"data"]];
+        [tempDict setObject:responseObject[@"humanId"] forKey:@"humanId"];
+        HZTAccountModel * account = [HZTAccountModel mj_objectWithKeyValues:tempDict];
+        account.passWord = self.password;
+        [HZTAccountManager saveUserWithAccount:account];
+        [HZTAccountManager saveLastLoginPhoneWithAccount:account];
+        [HZTAccountManager saveLastPassWordWithAccount:account];
+        NotificationPost(HZTNOTIFICATION_DID_LOGIN_SUCCEED, nil, nil);
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        self.loginBtn.isInvalid = false;
+        NSDictionary * errorDic = [ToolBaseClass changeErrorToNSDictionary:error];
+        [HZTToastHUD showNormalWithTitle:[errorDic objectForKey:@"msg"]];
+        [HZTToastHUD hideLoading];
+    }];
 }
 
 #pragma mark --- 切换登录方式

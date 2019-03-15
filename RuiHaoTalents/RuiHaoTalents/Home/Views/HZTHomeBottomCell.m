@@ -48,10 +48,10 @@
 
 -(void)addCycleScrollView{
     if (!_cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(35, 0, kScreenW - 58,33) delegate:self placeholderImage:nil];
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(35, 0, kScreenW - 58,30) delegate:self placeholderImage:nil];
         _cycleScrollView.layer.cornerRadius = 5;
         _cycleScrollView.layer.masksToBounds = true;
-        _cycleScrollView.backgroundColor = RGBColor(216, 216, 216);
+        _cycleScrollView.backgroundColor = RGBColor(239, 239, 239);
         _cycleScrollView.onlyDisplayText = true;
         _cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
         _cycleScrollView.titlesGroup = @[@"qwer",@"123",@"mmmm"];

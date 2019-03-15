@@ -21,3 +21,8 @@ NSString * const HZTNOTIFICATION_SHOW_LEFT_MENU
 NSString * const HZTNOTIFICATION_SHOULD_LOGIN
 = @"Notification_should_login";
 
+NSString * const HZTNOTIFICATION_DID_LOGIN_SUCCEED
+= @"Notification_did_login_succeed";
+
+NSString * const HZTNOTIFICATION_NETWORK_CHANGED
+= @"Notification_network_shanged";

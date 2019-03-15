@@ -26,4 +26,6 @@
 #import "HZTToastHUD.h"
 #import "HZTCustomSheetView.h"
 #import "HZTCustomPickerView.h"
+#import "HZTAccountManager.h"
+
 #endif /* HZTFileHeader_h */

@@ -56,6 +56,10 @@
 }
 
 -(void)showMenu{
+    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]) {
+        NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+        return;
+    }
     [_menuContentView showMenuView];
 }
 
@@ -111,9 +115,12 @@
 
 #pragma mark --- 消息中心
 -(void)clickMessage{
-    NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
-//    HZTNewsListController * vc = [[HZTNewsListController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]) {
+        NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+        return;
+    }
+    HZTNewsListController * vc = [[HZTNewsListController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

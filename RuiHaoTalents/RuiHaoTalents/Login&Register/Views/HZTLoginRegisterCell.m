@@ -30,7 +30,7 @@
 -(void)setModel:(HZTLoginRegisterModel *)model{
     _model = model;
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    if (![model.placeholder isEqualToString:@"请输入密码"]) {
+    if (![model.placeholder isEqualToString:@"请输入8-16位密码"]) {
         self.textField.keyboardType = UIKeyboardTypeNumberPad;
     }else{
         self.textField.secureTextEntry = true;
@@ -39,8 +39,10 @@
     self.textField.placeholder = model.placeholder;
     self.getCodeBtn.hidden = !model.isShowGetCode;
     [self.getCodeBtn setTitleColor:HZTMainColor forState:UIControlStateNormal];
-    if (![ToolBaseClass isNullClass:model.phone]) {
+    if (![ToolBaseClass isNullClass:model.phone] && [model.placeholder isEqualToString:@"请输入手机号码"]) {
         self.textField.text = model.phone;
+    }if (![ToolBaseClass isNullClass:model.password] && [model.placeholder isEqualToString:@"请输入8-16位密码"]) {
+        self.textField.text = model.password;
     }
 }
 
@@ -77,9 +79,9 @@
 
 -(void)textFieldDidChange{
     if (self.textChangedBlock) {
-        if ([self.textField.placeholder isEqualToString:@"请输入验证码"] && self.textField.text.length > 4) {
-            [MBProgressHUD showError:@"验证码最多不超过4位"];
-            self.textField.text = [self.textField.text substringToIndex:4];
+        if ([self.textField.placeholder isEqualToString:@"请输入验证码"] && self.textField.text.length > 6) {
+            [MBProgressHUD showError:@"验证码最多不超过6位"];
+            self.textField.text = [self.textField.text substringToIndex:6];
         }else if([self.textField.placeholder isEqualToString:@"请输入手机号码"] && self.textField.text.length > 11){
             [MBProgressHUD showError:@"手机号码最多不超过11位"];
             self.textField.text = [self.textField.text substringToIndex:11];

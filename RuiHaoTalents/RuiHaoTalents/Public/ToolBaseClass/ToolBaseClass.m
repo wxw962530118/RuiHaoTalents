@@ -17,6 +17,13 @@
 @end
 @implementation ToolBaseClass
 
+static char base64EncodingTable[64] = {
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+    'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+    'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'
+};
+
 + (instancetype)shareManager{
     static ToolBaseClass * manager;
     static dispatch_once_t once;
@@ -203,6 +210,57 @@
         }
     }
     return iPhoneXSeries;
+}
+
++(NSString *)handleBase64StringWithString:(NSString *)string{
+    unsigned long ixtext, lentext;
+    long ctremaining;
+    unsigned char input[3], output[4];
+    short i, charsonline = 0, ctcopy;
+    const unsigned char *raw;
+    NSMutableString *result;
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+    lentext = [data length];
+    if (lentext < 1)
+        return @"";
+    result = [NSMutableString stringWithCapacity:lentext];
+    raw = [data bytes];
+    ixtext = 0;
+    while (true) {
+        ctremaining = lentext - ixtext;
+        if (ctremaining <= 0)
+            break;
+        for (i = 0; i < 3; i++) {
+            unsigned long ix = ixtext + i;
+            if (ix < lentext)
+                input[i] = raw[ix];
+            else
+                input[i] = 0;
+        }
+        output[0] = (input[0] & 0xFC) >> 2;
+        output[1] = ((input[0] & 0x03) << 4) | ((input[1] & 0xF0) >> 4);
+        output[2] = ((input[1] & 0x0F) << 2) | ((input[2] & 0xC0) >> 6);
+        output[3] = input[2] & 0x3F;
+        ctcopy = 4;
+        switch (ctremaining) {
+            case 1:
+                ctcopy = 2;
+                break;
+            case 2:
+                ctcopy = 3;
+                break;
+        }
+        
+        for (i = 0; i < ctcopy; i++)
+            [result appendString:[NSString stringWithFormat:@"%c", base64EncodingTable[output[i]]]];
+        
+        for (i = ctcopy; i < 4; i++)
+            [result appendString:@"="];
+        
+        ixtext += 3;
+        charsonline += 4;
+    }
+    return result;
 }
 
 +(NSString *)URLEncodedString:(NSString *)string{
@@ -412,6 +470,17 @@
     }
 }
 
++(BOOL)handlePredicatePassword:(NSString *)passWord{
+    BOOL result = false;
+    if ([passWord length] >= 8 && [passWord length] <= 16){
+        /**判断长度大于8位后再接着判断是否同时包含数字和字符*/
+        NSString * regex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$";
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        result = ![pred evaluateWithObject:passWord];
+    }
+    return result;
+}
+
 /**获取电池电量*/
 +(CGFloat)getBatteryQuantity{
     return [[UIDevice currentDevice] batteryLevel];
@@ -430,6 +499,24 @@
             self.alertBlock();
         }
     }];
+}
+
++(NSString *)dictionaryToJson:(NSDictionary *)dic{
+    NSError * parseError = nil;
+    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
+    if (jsonString == nil) return nil;
+    NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError * err;
+    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
 }
 
 @end
