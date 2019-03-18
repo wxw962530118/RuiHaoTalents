@@ -28,6 +28,9 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    self.userNameLabel.text = @"王小新";
+    self.userPhoneLabel.text= [HZTAccountManager getUser].mobile;
+    [self.userImgView sd_setImageWithURL:[NSURL URLWithString:[HZTAccountManager getUser].userIcon] placeholderImage:[UIImage imageNamed:@"left_menu_icon"]];
 }
 
 @end

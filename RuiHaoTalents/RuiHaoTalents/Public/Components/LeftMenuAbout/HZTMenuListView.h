@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTMenuListView : UIView
--(instancetype)initWithFrame:(CGRect)frame;
+-(instancetype)initWithFrame:(CGRect)frame callBack:(void (^)(void))callBack;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTBaseViewController : UIViewController
-
+-(void)ctNavRightItemWithTitle:(NSString * __nullable)title imageName:(NSString * __nullable)imageName callBack:(void (^)(void))callBack;
 @end
 
 NS_ASSUME_NONNULL_END

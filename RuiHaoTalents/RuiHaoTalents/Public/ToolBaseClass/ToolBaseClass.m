@@ -502,9 +502,22 @@ static char base64EncodingTable[64] = {
 }
 
 +(NSString *)dictionaryToJson:(NSDictionary *)dic{
-    NSError * parseError = nil;
-    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSError * error;
+    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&error];
+    NSString * jsonString;
+    if (!jsonData) {
+        NSLog(@"%@",error);
+    }else{
+        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    NSMutableString * mutStr = [NSMutableString stringWithString:jsonString];
+    NSRange range = {0,jsonString.length};
+    /**1.去掉字符串中的空格*/
+    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
+    NSRange range2 = {0,mutStr.length};
+    /**2.去掉字符串中的换行符*/
+    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
+    return mutStr;
 }
 
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
@@ -517,6 +530,15 @@ static char base64EncodingTable[64] = {
         return nil;
     }
     return dic;
+}
+
++ (HZTBaseViewController *)getTheFrontViewController{
+    UINavigationController * rootNavC = [self getRootNavController];
+    return rootNavC.viewControllers.lastObject;
+}
+
++ (HZTRootNavigationController *)getRootNavController{
+    return (HZTRootNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
 }
 
 @end

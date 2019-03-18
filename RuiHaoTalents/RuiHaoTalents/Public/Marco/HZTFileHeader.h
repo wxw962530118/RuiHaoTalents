@@ -27,5 +27,5 @@
 #import "HZTCustomSheetView.h"
 #import "HZTCustomPickerView.h"
 #import "HZTAccountManager.h"
-
+#import "HZTOthersNetWorkManager.h"
 #endif /* HZTFileHeader_h */

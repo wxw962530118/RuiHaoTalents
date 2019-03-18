@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) int userType;
 /***/
 @property (nonatomic, copy) NSString * humanId;
+/***/
+@property (nonatomic, copy) NSString * userIcon;
 @end
 
 NS_ASSUME_NONNULL_END

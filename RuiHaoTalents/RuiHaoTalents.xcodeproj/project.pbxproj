@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */; };
+		AC207748223F39530072129B /* Others.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC207747223F39530072129B /* Others.xcassets */; };
+		AC20774B223F3EF40072129B /* HZTShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20774A223F3EF40072129B /* HZTShareView.m */; };
+		AC20774D223F3F040072129B /* HZTShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC20774C223F3F040072129B /* HZTShareView.xib */; };
+		AC207750223F462F0072129B /* HZTMyResumeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20774F223F462F0072129B /* HZTMyResumeListModel.m */; };
+		AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207752223F464F0072129B /* HZTMyResumeHeaderView.m */; };
+		AC207755223F46580072129B /* HZTMyResumeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC207754223F46580072129B /* HZTMyResumeHeaderView.xib */; };
+		AC207759223F472A0072129B /* HZTMyResumeRealNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207757223F472A0072129B /* HZTMyResumeRealNameCell.m */; };
+		AC20775A223F472A0072129B /* HZTMyResumeRealNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC207758223F472A0072129B /* HZTMyResumeRealNameCell.xib */; };
+		AC20775D223F475C0072129B /* HZTMyResumeSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20775C223F475C0072129B /* HZTMyResumeSectionFooterView.m */; };
+		AC20775F223F476E0072129B /* HZTMyResumeSectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC20775E223F476D0072129B /* HZTMyResumeSectionFooterView.xib */; };
+		AC207763223F479C0072129B /* HZTMyResumeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207761223F479C0072129B /* HZTMyResumeCustomCell.m */; };
+		AC207764223F479C0072129B /* HZTMyResumeCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC207762223F479C0072129B /* HZTMyResumeCustomCell.xib */; };
+		AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207767223F4CD60072129B /* HZTOthersNetWorkManager.m */; };
+		AC20776B223F82C90072129B /* HZTSkillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20776A223F82C90072129B /* HZTSkillModel.m */; };
+		AC20776E223F83920072129B /* HZTProjiectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20776D223F83920072129B /* HZTProjiectModel.m */; };
+		AC207771223F85170072129B /* HZTResumeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207770223F85170072129B /* HZTResumeModel.m */; };
+		AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC207773223F85EC0072129B /* HZTTrainModel.m */; };
+		AC20777B223F917A0072129B /* HZTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20777A223F917A0072129B /* HZTSettingViewController.m */; };
+		AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20777D223F91B60072129B /* HZTSettingCell.m */; };
+		AC207780223F91B60072129B /* HZTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC20777E223F91B60072129B /* HZTSettingCell.xib */; };
 		AC2D71D12239ED2A00E80191 /* HZTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D71D02239ED2A00E80191 /* HZTLoginViewController.m */; };
 		AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D71D32239ED3800E80191 /* HZTRegisterViewController.m */; };
 		AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D71D62239EFF700E80191 /* HZTMajorButton.m */; };
@@ -127,6 +147,9 @@
 		ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D74223A2BC5008E5494 /* HZTCustomAlretView.m */; };
 		ACB12D77223A2BD6008E5494 /* HZTCustomAlretView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB12D76223A2BD6008E5494 /* HZTCustomAlretView.xib */; };
 		ACB12D7B223A42C5008E5494 /* HZTCustomSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D7A223A42C5008E5494 /* HZTCustomSheetView.m */; };
+		ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB38142223F94EC00FFB9B3 /* HZTPersonJobFullModel.m */; };
+		ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */; };
+		ACB38148223FA43300FFB9B3 /* HZTCustomHederCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */; };
 		ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */; };
 		ACBB3B9E2238CE4E0019EACB /* HZTHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */; };
 		ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9F2238CE5E0019EACB /* HZTMenuListHeaderView.xib */; };
@@ -145,6 +168,7 @@
 		ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276C22238F8A200AD825B /* HZTPageControl.m */; };
 		ACD276C62238FC6300AD825B /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD276C52238FC6200AD825B /* Home.xcassets */; };
 		ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276CC2239153E00AD825B /* HZTNewsListController.m */; };
+		ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */; };
 		ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F62522389ACD0053D864 /* AppDelegate.m */; };
 		ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62D22389AD00053D864 /* Assets.xcassets */; };
 		ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */; };
@@ -159,6 +183,39 @@
 /* Begin PBXFileReference section */
 		2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.debug.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.debug.xcconfig"; sourceTree = "<group>"; };
 		98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuiHaoTalents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC207747223F39530072129B /* Others.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Others.xcassets; sourceTree = "<group>"; };
+		AC207749223F3EF30072129B /* HZTShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTShareView.h; sourceTree = "<group>"; };
+		AC20774A223F3EF40072129B /* HZTShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTShareView.m; sourceTree = "<group>"; };
+		AC20774C223F3F040072129B /* HZTShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTShareView.xib; sourceTree = "<group>"; };
+		AC20774E223F462F0072129B /* HZTMyResumeListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeListModel.h; sourceTree = "<group>"; };
+		AC20774F223F462F0072129B /* HZTMyResumeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeListModel.m; sourceTree = "<group>"; };
+		AC207751223F464F0072129B /* HZTMyResumeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeHeaderView.h; sourceTree = "<group>"; };
+		AC207752223F464F0072129B /* HZTMyResumeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeHeaderView.m; sourceTree = "<group>"; };
+		AC207754223F46580072129B /* HZTMyResumeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeHeaderView.xib; sourceTree = "<group>"; };
+		AC207756223F472A0072129B /* HZTMyResumeRealNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeRealNameCell.h; sourceTree = "<group>"; };
+		AC207757223F472A0072129B /* HZTMyResumeRealNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeRealNameCell.m; sourceTree = "<group>"; };
+		AC207758223F472A0072129B /* HZTMyResumeRealNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeRealNameCell.xib; sourceTree = "<group>"; };
+		AC20775B223F475C0072129B /* HZTMyResumeSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeSectionFooterView.h; sourceTree = "<group>"; };
+		AC20775C223F475C0072129B /* HZTMyResumeSectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeSectionFooterView.m; sourceTree = "<group>"; };
+		AC20775E223F476D0072129B /* HZTMyResumeSectionFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeSectionFooterView.xib; sourceTree = "<group>"; };
+		AC207760223F479C0072129B /* HZTMyResumeCustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeCustomCell.h; sourceTree = "<group>"; };
+		AC207761223F479C0072129B /* HZTMyResumeCustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeCustomCell.m; sourceTree = "<group>"; };
+		AC207762223F479C0072129B /* HZTMyResumeCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeCustomCell.xib; sourceTree = "<group>"; };
+		AC207766223F4CD60072129B /* HZTOthersNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTOthersNetWorkManager.h; sourceTree = "<group>"; };
+		AC207767223F4CD60072129B /* HZTOthersNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTOthersNetWorkManager.m; sourceTree = "<group>"; };
+		AC207769223F82C90072129B /* HZTSkillModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTSkillModel.h; sourceTree = "<group>"; };
+		AC20776A223F82C90072129B /* HZTSkillModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTSkillModel.m; sourceTree = "<group>"; };
+		AC20776C223F83920072129B /* HZTProjiectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTProjiectModel.h; sourceTree = "<group>"; };
+		AC20776D223F83920072129B /* HZTProjiectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTProjiectModel.m; sourceTree = "<group>"; };
+		AC20776F223F85170072129B /* HZTResumeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTResumeModel.h; sourceTree = "<group>"; };
+		AC207770223F85170072129B /* HZTResumeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTResumeModel.m; sourceTree = "<group>"; };
+		AC207772223F85EC0072129B /* HZTTrainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTrainModel.h; sourceTree = "<group>"; };
+		AC207773223F85EC0072129B /* HZTTrainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTrainModel.m; sourceTree = "<group>"; };
+		AC207779223F917A0072129B /* HZTSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTSettingViewController.h; sourceTree = "<group>"; };
+		AC20777A223F917A0072129B /* HZTSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTSettingViewController.m; sourceTree = "<group>"; };
+		AC20777C223F91B60072129B /* HZTSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTSettingCell.h; sourceTree = "<group>"; };
+		AC20777D223F91B60072129B /* HZTSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTSettingCell.m; sourceTree = "<group>"; };
+		AC20777E223F91B60072129B /* HZTSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTSettingCell.xib; sourceTree = "<group>"; };
 		AC2D71CF2239ED2A00E80191 /* HZTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLoginViewController.h; sourceTree = "<group>"; };
 		AC2D71D02239ED2A00E80191 /* HZTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLoginViewController.m; sourceTree = "<group>"; };
 		AC2D71D22239ED3800E80191 /* HZTRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTRegisterViewController.h; sourceTree = "<group>"; };
@@ -313,6 +370,11 @@
 		ACB12D76223A2BD6008E5494 /* HZTCustomAlretView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCustomAlretView.xib; sourceTree = "<group>"; };
 		ACB12D79223A42C5008E5494 /* HZTCustomSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomSheetView.h; sourceTree = "<group>"; };
 		ACB12D7A223A42C5008E5494 /* HZTCustomSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCustomSheetView.m; sourceTree = "<group>"; };
+		ACB38141223F94EC00FFB9B3 /* HZTPersonJobFullModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTPersonJobFullModel.h; sourceTree = "<group>"; };
+		ACB38142223F94EC00FFB9B3 /* HZTPersonJobFullModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTPersonJobFullModel.m; sourceTree = "<group>"; };
+		ACB38144223FA43300FFB9B3 /* HZTCustomHederCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomHederCell.h; sourceTree = "<group>"; };
+		ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCustomHederCell.m; sourceTree = "<group>"; };
+		ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCustomHederCell.xib; sourceTree = "<group>"; };
 		ACBB3B9A2238CE3E0019EACB /* HZTHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeHeaderView.h; sourceTree = "<group>"; };
 		ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeHeaderView.m; sourceTree = "<group>"; };
 		ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTHomeHeaderView.xib; sourceTree = "<group>"; };
@@ -346,6 +408,8 @@
 		ACD276C52238FC6200AD825B /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
 		ACD276CB2239153E00AD825B /* HZTNewsListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTNewsListController.h; sourceTree = "<group>"; };
 		ACD276CC2239153E00AD825B /* HZTNewsListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListController.m; sourceTree = "<group>"; };
+		ACDA0CCA223F33BA00C54A63 /* HZTMyResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeViewController.h; sourceTree = "<group>"; };
+		ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeViewController.m; sourceTree = "<group>"; };
 		ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuiHaoTalents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE8F62422389ACD0053D864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACE8F62522389ACD0053D864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -391,6 +455,51 @@
 				DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC207765223F4CB70072129B /* OthersNetWorkManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC207766223F4CD60072129B /* HZTOthersNetWorkManager.h */,
+				AC207767223F4CD60072129B /* HZTOthersNetWorkManager.m */,
+			);
+			path = OthersNetWorkManager;
+			sourceTree = "<group>";
+		};
+		AC207775223F913A0072129B /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				AC207776223F913A0072129B /* Models */,
+				AC207777223F913A0072129B /* Controllers */,
+				AC207778223F913A0072129B /* Views */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		AC207776223F913A0072129B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC207777223F913A0072129B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC207779223F917A0072129B /* HZTSettingViewController.h */,
+				AC20777A223F917A0072129B /* HZTSettingViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC207778223F913A0072129B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC20777C223F91B60072129B /* HZTSettingCell.h */,
+				AC20777D223F91B60072129B /* HZTSettingCell.m */,
+				AC20777E223F91B60072129B /* HZTSettingCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AC2D71E0223A246B00E80191 /* ThirdSDK */ = {
@@ -617,6 +726,7 @@
 		AC707007223B746F003F4F6D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AC207765223F4CB70072129B /* OthersNetWorkManager */,
 				AC707008223B746F003F4F6D /* NetWorkManager */,
 				AC70700B223B746F003F4F6D /* HomeNetWorkManager */,
 				AC70700C223B746F003F4F6D /* Login&RegisterNetWork */,
@@ -807,6 +917,9 @@
 		ACE8F63C22389E440053D864 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC207749223F3EF30072129B /* HZTShareView.h */,
+				AC20774A223F3EF40072129B /* HZTShareView.m */,
+				AC20774C223F3F040072129B /* HZTShareView.xib */,
 				ACB12D6E223A2A53008E5494 /* HZTToastHUD.h */,
 				ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */,
 				AC2D71D52239EFF700E80191 /* HZTMajorButton.h */,
@@ -892,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD276C52238FC6200AD825B /* Home.xcassets */,
+				AC207747223F39530072129B /* Others.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -899,6 +1013,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC207775223F913A0072129B /* Setting */,
 				AC706FF5223A4B69003F4F6D /* Address */,
 				ACD276C72239152900AD825B /* NewsList */,
 				ACE8F64522389E440053D864 /* MyResume */,
@@ -920,6 +1035,18 @@
 		ACE8F64622389E440053D864 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC20774E223F462F0072129B /* HZTMyResumeListModel.h */,
+				AC20774F223F462F0072129B /* HZTMyResumeListModel.m */,
+				ACB38141223F94EC00FFB9B3 /* HZTPersonJobFullModel.h */,
+				ACB38142223F94EC00FFB9B3 /* HZTPersonJobFullModel.m */,
+				AC207769223F82C90072129B /* HZTSkillModel.h */,
+				AC20776A223F82C90072129B /* HZTSkillModel.m */,
+				AC20776C223F83920072129B /* HZTProjiectModel.h */,
+				AC20776D223F83920072129B /* HZTProjiectModel.m */,
+				AC20776F223F85170072129B /* HZTResumeModel.h */,
+				AC207770223F85170072129B /* HZTResumeModel.m */,
+				AC207772223F85EC0072129B /* HZTTrainModel.h */,
+				AC207773223F85EC0072129B /* HZTTrainModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -927,6 +1054,8 @@
 		ACE8F64722389E440053D864 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACDA0CCA223F33BA00C54A63 /* HZTMyResumeViewController.h */,
+				ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -934,6 +1063,21 @@
 		ACE8F64822389E440053D864 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC207751223F464F0072129B /* HZTMyResumeHeaderView.h */,
+				AC207752223F464F0072129B /* HZTMyResumeHeaderView.m */,
+				AC207754223F46580072129B /* HZTMyResumeHeaderView.xib */,
+				AC207756223F472A0072129B /* HZTMyResumeRealNameCell.h */,
+				AC207757223F472A0072129B /* HZTMyResumeRealNameCell.m */,
+				AC207758223F472A0072129B /* HZTMyResumeRealNameCell.xib */,
+				AC20775B223F475C0072129B /* HZTMyResumeSectionFooterView.h */,
+				AC20775C223F475C0072129B /* HZTMyResumeSectionFooterView.m */,
+				AC20775E223F476D0072129B /* HZTMyResumeSectionFooterView.xib */,
+				AC207760223F479C0072129B /* HZTMyResumeCustomCell.h */,
+				AC207761223F479C0072129B /* HZTMyResumeCustomCell.m */,
+				AC207762223F479C0072129B /* HZTMyResumeCustomCell.xib */,
+				ACB38144223FA43300FFB9B3 /* HZTCustomHederCell.h */,
+				ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */,
+				ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1141,7 +1285,9 @@
 				AC2D727E223A25B500E80191 /* 9.png in Resources */,
 				AC2D726D223A25B500E80191 /* 60.png in Resources */,
 				AC2D72B2223A25B500E80191 /* 45.png in Resources */,
+				AC207764223F479C0072129B /* HZTMyResumeCustomCell.xib in Resources */,
 				AC2D72A2223A25B500E80191 /* 57.png in Resources */,
+				AC20774D223F3F040072129B /* HZTShareView.xib in Resources */,
 				AC2D72AA223A25B500E80191 /* 6.png in Resources */,
 				AC2D72A1223A25B500E80191 /* 5.png in Resources */,
 				AC2D726A223A25B500E80191 /* 63.png in Resources */,
@@ -1155,6 +1301,7 @@
 				AC707006223A503F003F4F6D /* HZTHomeBottomCell.xib in Resources */,
 				AC2D7284223A25B500E80191 /* 16.png in Resources */,
 				AC2D72AD223A25B500E80191 /* 44.png in Resources */,
+				AC20775A223F472A0072129B /* HZTMyResumeRealNameCell.xib in Resources */,
 				AC2D7286223A25B500E80191 /* 13.png in Resources */,
 				AC2D7271223A25B500E80191 /* 75.png in Resources */,
 				AC2D7293223A25B500E80191 /* 27.png in Resources */,
@@ -1163,6 +1310,7 @@
 				AC2D726C223A25B500E80191 /* 76.png in Resources */,
 				AC2D729B223A25B500E80191 /* 31.png in Resources */,
 				AC2D7289223A25B500E80191 /* 10.png in Resources */,
+				AC207748223F39530072129B /* Others.xcassets in Resources */,
 				AC2D7298223A25B500E80191 /* 30.png in Resources */,
 				AC2D72A9223A25B500E80191 /* 54.png in Resources */,
 				AC2D7287223A25B500E80191 /* 39.png in Resources */,
@@ -1176,6 +1324,7 @@
 				AC2D727B223A25B500E80191 /* 66.png in Resources */,
 				AC2D72A0223A25B500E80191 /* 43.png in Resources */,
 				AC2D7276223A25B500E80191 /* 70.png in Resources */,
+				AC207755223F46580072129B /* HZTMyResumeHeaderView.xib in Resources */,
 				AC2D7283223A25B500E80191 /* 17.png in Resources */,
 				AC2D72B8223A25B500E80191 /* 52.png in Resources */,
 				AC2D7279223A25B500E80191 /* 8.png in Resources */,
@@ -1187,6 +1336,7 @@
 				AC2D729C223A25B500E80191 /* 19.png in Resources */,
 				AC2D7282223A25B500E80191 /* 15.png in Resources */,
 				AC2D726B223A25B500E80191 /* 62.png in Resources */,
+				AC207780223F91B60072129B /* HZTSettingCell.xib in Resources */,
 				ACD276C62238FC6300AD825B /* Home.xcassets in Resources */,
 				AC2D727F223A25B500E80191 /* 14.png in Resources */,
 				AC2D7275223A25B500E80191 /* 71.png in Resources */,
@@ -1194,6 +1344,7 @@
 				AC2D7291223A25B500E80191 /* 37.png in Resources */,
 				AC2D729A223A25B500E80191 /* 25.png in Resources */,
 				AC2D7290223A25B500E80191 /* 36.png in Resources */,
+				ACB38148223FA43300FFB9B3 /* HZTCustomHederCell.xib in Resources */,
 				AC2D7296223A25B500E80191 /* 26.png in Resources */,
 				AC2D71DC2239F06100E80191 /* HZTLoginRegisterCell.xib in Resources */,
 				AC2D7294223A25B500E80191 /* 33.png in Resources */,
@@ -1213,6 +1364,7 @@
 				AC2D728A223A25B500E80191 /* 38.png in Resources */,
 				AC2D7281223A25B500E80191 /* 29.png in Resources */,
 				AC2D72B0223A25B500E80191 /* 3.png in Resources */,
+				AC20775F223F476E0072129B /* HZTMyResumeSectionFooterView.xib in Resources */,
 				ACB12D77223A2BD6008E5494 /* HZTCustomAlretView.xib in Resources */,
 				AC2D727D223A25B500E80191 /* 73.png in Resources */,
 				AC2D72A5223A25B500E80191 /* 55.png in Resources */,
@@ -1279,17 +1431,27 @@
 			files = (
 				AC2D7206223A246B00E80191 /* PYPhotoBrowserConst.m in Sources */,
 				ACC1FB042238B230001E9F4A /* HZTLeftMenuView.m in Sources */,
+				ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */,
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
+				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
+				AC20774B223F3EF40072129B /* HZTShareView.m in Sources */,
 				AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */,
+				AC207763223F479C0072129B /* HZTMyResumeCustomCell.m in Sources */,
 				ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */,
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
+				ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */,
+				AC20775D223F475C0072129B /* HZTMyResumeSectionFooterView.m in Sources */,
 				ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */,
 				AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */,
+				AC20777B223F917A0072129B /* HZTSettingViewController.m in Sources */,
 				ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */,
+				AC207750223F462F0072129B /* HZTMyResumeListModel.m in Sources */,
 				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
 				AC706FFB223A4B79003F4F6D /* HZTProvinceModel.m in Sources */,
+				AC20776B223F82C90072129B /* HZTSkillModel.m in Sources */,
 				ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */,
+				AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */,
 				AC2D7209223A246C00E80191 /* PYPhotosNavigationController.m in Sources */,
 				ACB12D7B223A42C5008E5494 /* HZTCustomSheetView.m in Sources */,
 				AC707005223A503F003F4F6D /* HZTHomeBottomCell.m in Sources */,
@@ -1303,15 +1465,21 @@
 				AC2D71DB2239F06100E80191 /* HZTLoginRegisterCell.m in Sources */,
 				AC2D72B9223A25B500E80191 /* MBProgressHUD+MJ.m in Sources */,
 				ACC1FB192238B947001E9F4A /* UIView+Category.m in Sources */,
+				ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */,
+				AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */,
+				AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */,
 				AC707013223B753C003F4F6D /* HZTAccountModel.m in Sources */,
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
+				AC207759223F472A0072129B /* HZTMyResumeRealNameCell.m in Sources */,
 				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
 				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
+				AC20776E223F83920072129B /* HZTProjiectModel.m in Sources */,
 				AC2D7208223A246B00E80191 /* PYPhotosReaderController.m in Sources */,
 				ACC1FB112238B3AB001E9F4A /* HZTMenuListCell.m in Sources */,
 				AC2D71D12239ED2A00E80191 /* HZTLoginViewController.m in Sources */,
+				AC207771223F85170072129B /* HZTResumeModel.m in Sources */,
 				AC706FF4223A4AE9003F4F6D /* HZTCustomPickerModel.m in Sources */,
 				AC2D720C223A246C00E80191 /* PYPhotosView.m in Sources */,
 				ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */,
@@ -1466,6 +1634,7 @@
 			baseConfigurationReference = 2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S8VLGVUGW6;
@@ -1488,6 +1657,7 @@
 			baseConfigurationReference = DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S8VLGVUGW6;

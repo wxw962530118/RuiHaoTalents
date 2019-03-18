@@ -35,11 +35,11 @@
             centerImgView.image = [UIImage imageNamed:@"home_localuser_icon"];
             bottomLabel.text = @"小王";
         }else if (i == 1){
-            topImgView.image = [UIImage imageNamed:@"home_jinguna"];
+            topImgView.image = [UIImage imageNamed:@"home_tongguan"];
             centerImgView.image = [UIImage imageNamed:@"home_localuser_icon"];
             bottomLabel.text = @"小李";
         }else{
-            topImgView.image = [UIImage imageNamed:@"home_yinguan"];
+            topImgView.image = [UIImage imageNamed:@"home_jinguna"];
             centerImgView.image = [UIImage imageNamed:@"home_localuser_icon"];
             bottomLabel.text = @"小马";
         }

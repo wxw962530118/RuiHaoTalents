@@ -9,7 +9,8 @@
 #import "HZTBaseViewController.h"
 
 @interface HZTBaseViewController ()
-
+/***/
+@property (nonatomic, copy) void (^Block)(void);
 @end
 
 @implementation HZTBaseViewController
@@ -47,6 +48,31 @@
 
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)ctNavRightItemWithTitle:(NSString * __nullable)title imageName:(NSString * __nullable)imageName callBack:(nonnull void (^)(void))callBack{
+    self.Block = callBack;
+    UIButton * btn = [[UIButton alloc] init];
+    [btn addTarget:self action:@selector(clickRightItem) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitleColor:RGBColor(33, 33, 33) forState:UIControlStateNormal];
+    if (title && imageName) {
+        btn.titleLabel.font = HZTFontSize(16);
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [btn setImageEdgeInsets:UIEdgeInsetsMake(0,[ToolBaseClass getWidthWithString:[btn currentTitle] font:btn.titleLabel.font],0, -[ToolBaseClass getWidthWithString:[btn currentTitle] font:btn.titleLabel.font]-15)];
+        [btn setTitleEdgeInsets:UIEdgeInsetsMake(0,-10, 0, 10)];
+    }else if (title){
+        [btn setTitle:title forState:UIControlStateNormal];
+    }else if (imageName){
+        [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    }
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
+-(void)clickRightItem{
+    if (self.Block) {
+        self.Block();
+    }
 }
 
 @end

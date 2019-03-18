@@ -254,10 +254,6 @@
     }else if (self.password.length < 8 || self.password.length > 16){
         [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
         return;
-    }else if ([ToolBaseClass handlePredicatePassword:self.password]) {
-        [HZTToastHUD showNormalWithTitle:@"密码过于简单,请重新设置"];
-        self.loginBtn.isInvalid = false;
-        return;
     }
     if (!self.isPassWordLogin) {
         if (!self.code.length){
@@ -269,8 +265,10 @@
             return;
         }
     }
+    [HZTToastHUD showLoading];
     [[HZTLoginWorkManager manager] requestSigninWithMobile:self.phone password:self.password succeed:^(id  _Nonnull responseObject) {
         [self.view endEditing:YES];
+        [HZTToastHUD hideLoading];
         /**登录成功之后同步到当前账户信息*/
         [MBProgressHUD showSuccess:@"登录成功"];
         NSMutableDictionary * tempDict = [[NSMutableDictionary alloc] initWithDictionary:responseObject[@"data"]];

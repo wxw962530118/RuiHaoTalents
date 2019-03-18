@@ -39,8 +39,11 @@
 }
 
 -(void)addMenuListView{
+    WS(weakSelf)
     if (!_menuListView) {
-        _menuListView = [[HZTMenuListView alloc] initWithFrame:CGRectMake(0, 0,kScreenW - 100, kScreenH)];
+        _menuListView = [[HZTMenuListView alloc] initWithFrame:CGRectMake(0, 0,kScreenW - 100, kScreenH) callBack:^{
+            [weakSelf.leftMenuView hidenWithAnimation];
+        }];
     }
 }
 

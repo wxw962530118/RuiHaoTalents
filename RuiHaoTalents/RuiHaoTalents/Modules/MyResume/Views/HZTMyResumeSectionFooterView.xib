@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IH0-Sc-Ix0" customClass="HZTMyResumeSectionFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="515" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-7B-Ejz">
+                    <rect key="frame" x="20" y="0.0" width="475" height="57"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="+添加拥有技能">
+                        <color key="titleColor" red="0.30980392156862746" green="0.75686274509803919" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="clickAddBtn:" destination="IH0-Sc-Ix0" eventType="touchUpInside" id="tjT-x8-0xA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7Qk-7B-Ejz" secondAttribute="trailing" constant="20" id="9hO-1w-32p"/>
+                <constraint firstItem="7Qk-7B-Ejz" firstAttribute="top" secondItem="IH0-Sc-Ix0" secondAttribute="top" id="R2d-Ap-d0x"/>
+                <constraint firstItem="7Qk-7B-Ejz" firstAttribute="leading" secondItem="IH0-Sc-Ix0" secondAttribute="leading" constant="20" id="bcL-zX-GpM"/>
+                <constraint firstAttribute="bottom" secondItem="7Qk-7B-Ejz" secondAttribute="bottom" constant="10" id="n4Q-B1-NfP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="7Qk-7B-Ejz" id="dda-9N-MwO"/>
+            </connections>
+            <point key="canvasLocation" x="-343" y="154"/>
+        </view>
+    </objects>
+</document>

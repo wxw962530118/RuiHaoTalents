@@ -57,11 +57,7 @@
     [param setObject:password forKey:@"password"];
     NSString * URLString = [NSString stringWithFormat:URL_PASSWORD_LOGIN,HZT_HOST];
     NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:param success:^(id response) {
-        if ([[response objectForKey:@"state"] intValue] == 0) {
-            succeed(response);
-        }else{
-            [MBProgressHUD showError:[response objectForKey:@"msg"]];
-        }
+        succeed(response);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(task,error);
     }];

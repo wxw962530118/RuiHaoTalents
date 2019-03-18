@@ -36,8 +36,8 @@
     if (![ToolBaseClass isNullClass:[HZTAccountManager getUser].token]){
         [dict setValue:[HZTAccountManager getUser].token forKey:@"token"];
         [dict setValue:[HZTAccountManager getUser].mobile forKey:@"userName"];
+        /**基类统一根据客户端设置userType 0 个人 1企业*/
         [dict setValue:@"0" forKey:@"userType"];
-        NSLog(@"baseTokenInfo:%@",[ToolBaseClass dictionaryToJson:dict]);
         [self.sessionManager.requestSerializer setValue:[ToolBaseClass dictionaryToJson:dict] forHTTPHeaderField:@"baseTokenInfo"];
     }else{
         [self.sessionManager.requestSerializer setValue:@"{}" forHTTPHeaderField:@"baseTokenInfo"];
@@ -108,11 +108,21 @@
 
 -(NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure{
     NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    /**基类统一根据客户端设置userType 0 个人 1企业*/
-    [dic setObject:@"0" forKey:@"userType"];
+    if (![HZTAccountManager getUser].token) [dic setValue:@"0" forKey:@"userType"];
     NSURLSessionDataTask * task = [self.sessionManager POST:URLString parameters:dic progress:^(NSProgress * uploadProgress) {
     } success:^(NSURLSessionDataTask * task, id responseObject) {
-        success(responseObject);
+        if ([[responseObject objectForKey:@"state"] intValue] == 0) {
+            success(responseObject);
+        }else{
+            if ([[responseObject objectForKey:@"state"] intValue] >=1 && [[responseObject objectForKey:@"state"] intValue] <=3) {
+                /**处理token问题 重新登录*/
+                [MBProgressHUD showError:@"登录失效,请重新登录"];
+                NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+            }else{
+                [MBProgressHUD showError:[responseObject objectForKey:@"msg"]];
+            }
+            [HZTToastHUD hideLoading];
+        }
     } failure:^(NSURLSessionDataTask * task, NSError * error) {
         NSHTTPURLResponse * httpResponse = (NSHTTPURLResponse*)task.response;
         NSInteger responseStatusCode = [httpResponse statusCode];
@@ -219,16 +229,8 @@ CG_INLINE BOOL HandleFailedWithErrorCode_extern(NSURLSessionDataTask * task,NSEr
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)task.response;
     NSInteger responseStatusCode = [httpResponse statusCode];
     NSLog(@"responseStatusCode:%ld", (unsigned long)responseStatusCode);
-    NSDictionary * tempDict = [ToolBaseClass changeErrorToNSDictionary:error];
-    NSDictionary * dict = (NSDictionary *)error.userInfo;
-    NSLog(@"NSDebugDescription:%@",[dict objectForKey:@"NSUnderlyingError"]);
-    NSData* data = [error.userInfo objectForKey:@"NSErrorFailingURLKey"];
-    if (data) {
-        id responseObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSDictionary *errorDic = responseObject[@"data"];
-        int code = [[errorDic objectForKey:@"errorCode"] intValue];
-        NSString *errorMsgText = errorDic[@"msg"];
-    }
+    NSDictionary * errorDict = [ToolBaseClass changeErrorToNSDictionary:error];
+    NSLog(@"errorDict:%@",errorDict);
     if(responseStatusCode == 401){
         /**内部处理token失效发出通知*/
         NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
@@ -242,7 +244,7 @@ CG_INLINE BOOL HandleFailedWithErrorCode_extern(NSURLSessionDataTask * task,NSEr
 //        if (![ToolBaseClass isNullClass:errMessage]){
 //            HZTAlertView(@"提示", errMessage , @"确定", nil, ^(NSUInteger index) {
 //            });
-//        }
+//        }errorDict
     }
     return YES;
 };
