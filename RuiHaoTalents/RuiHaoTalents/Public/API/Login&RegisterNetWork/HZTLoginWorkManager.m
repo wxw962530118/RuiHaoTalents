@@ -11,6 +11,7 @@
 #define URL_PASSWORD_LOGIN    @"%@/loginuser/login"
 #define URL_GET_CODE          @"%@/loginuser/code/get"
 #define URL_REGISTER          @"%@/loginuser/register/user"
+#define URL_LOGIN_OUT         @"%@/loginuser/out/login"
 @implementation HZTLoginWorkManager
 
 +(instancetype)manager{
@@ -70,6 +71,16 @@
     [param setObject:code forKey:@"verifyCode"];
     NSString * URLString = [NSString stringWithFormat:URL_CODE_LOGIN,HZT_HOST];
     NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:param success:^(id response) {
+        succeed(response);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(task,error);
+    }];
+    return  task;
+}
+
+-(NSURLSessionDataTask *)requestLoginOutSucceed:(void (^)(id _Nonnull))succeed failure:(void (^)(NSURLSessionDataTask * _Nonnull, NSError * _Nonnull))failure{
+    NSString * URLString = [NSString stringWithFormat:URL_LOGIN_OUT,HZT_HOST];
+    NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:nil success:^(id response) {
         succeed(response);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(task,error);

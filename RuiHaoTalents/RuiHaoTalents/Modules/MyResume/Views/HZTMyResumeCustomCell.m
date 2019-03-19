@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *jobNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIButton *lookMoreBtn;
 
 @end
 
@@ -23,8 +24,18 @@
 
 }
 
-- (IBAction)clickAddBtn:(id)sender {
-    NSLog(@"取添加相关技能");
+- (IBAction)clickLookMoreBtn:(id)sender {
+    if (self.callBack) {
+        self.lookMoreBtn.hidden = YES;
+        self.callBack(MyResumeCellCallBackType_LookMore);
+    }
+}
+
+- (IBAction)clickDeleteBtn:(id)sender {
+    NSLog(@"删除");
+    if (self.callBack) {
+        self.callBack(MyResumeCellCallBackType_Delete);
+    }
 }
 
 -(void)setResumeModel:(HZTResumeModel *)resumeModel{
@@ -33,6 +44,7 @@
     self.jobNameLabel.text = resumeModel.resumePosition;
     self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",resumeModel.startDate,resumeModel.endDate];
     self.descLabel.text = resumeModel.resumeDescribe;
+    self.lookMoreBtn.hidden = !resumeModel.isShowMore;
 }
 
 -(void)setProjiectModel:(HZTProjiectModel *)projiectModel{
@@ -41,6 +53,7 @@
     self.jobNameLabel.text = projiectModel.projectPost;
     self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",projiectModel.projectStart,projiectModel.projectEnd];
     self.descLabel.text = projiectModel.projectDescribe;
+    self.lookMoreBtn.hidden = !projiectModel.isShowMore;
 }
 
 @end

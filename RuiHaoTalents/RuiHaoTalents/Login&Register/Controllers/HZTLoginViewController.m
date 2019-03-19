@@ -251,10 +251,11 @@
     }else if (!self.password.length){
          [HZTToastHUD showNormalWithTitle:@"请输入密码"];
         return;
-    }else if (self.password.length < 8 || self.password.length > 16){
-        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
-        return;
     }
+//    else if (self.password.length < 8 || self.password.length > 16){
+//        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
+//        return;
+//    }
     if (!self.isPassWordLogin) {
         if (!self.code.length){
             [HZTToastHUD showNormalWithTitle:@"请输入验证码"];

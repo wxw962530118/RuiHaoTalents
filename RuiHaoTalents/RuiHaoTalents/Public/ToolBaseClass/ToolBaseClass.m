@@ -532,6 +532,15 @@ static char base64EncodingTable[64] = {
     return dic;
 }
 
++(BOOL)isShouldLogin{
+    BOOL isShouldLogin = NO;
+    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]) {
+        NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+        isShouldLogin = YES;
+    }
+    return isShouldLogin;
+}
+
 + (HZTBaseViewController *)getTheFrontViewController{
     UINavigationController * rootNavC = [self getRootNavController];
     return rootNavC.viewControllers.lastObject;

@@ -17,9 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (HZTAccountModel *)getUser;
 /**
- *  退出登录 */
-+ (void)signOutUser;
-/**
  *  存储用户信息 */
 + (BOOL)saveUserWithAccount:(HZTAccountModel *)account;
 /**

@@ -28,6 +28,11 @@
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
 }
 
++(void)popToRootViewController{
+    HZTRootNavigationController * rootNav = (HZTRootNavigationController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+    [rootNav popToViewController:[rootNav.viewControllers firstObject] animated:YES];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configIQKeyboardManager];
     [self configRootWindow];

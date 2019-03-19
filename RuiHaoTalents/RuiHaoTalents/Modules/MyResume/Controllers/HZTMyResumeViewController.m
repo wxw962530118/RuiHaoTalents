@@ -14,8 +14,8 @@
 #import "HZTMyResumeCustomCell.h"
 #import "HZTMyResumeListModel.h"
 #import "HZTCustomHederCell.h"
-@interface HZTMyResumeViewController ()
-<UITableViewDelegate,UITableViewDataSource>
+#import "HZTTrainCell.h"
+@interface HZTMyResumeViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
 /***/
@@ -48,15 +48,27 @@
         /**处理动态cell高度*/
         for (int i = 0; i< self.listModel.personJobFullVO.trainList.count; i++) {
             HZTTrainModel * model = self.listModel.personJobFullVO.trainList[i];
-            model.cellHeight = 200;
+            model.cellHeight = 94;
+            if (self.listModel.personJobFullVO.trainList.count > 2 &&  i == 1) {
+                model.isShowMore = YES;
+                model.cellHeight += 30;
+            }
         }
         for (int i = 0; i< self.listModel.personJobFullVO.resumeList.count; i++) {
             HZTResumeModel * model = self.listModel.personJobFullVO.resumeList[i];
             model.cellHeight = (30 + 20 + 18 + 16 + 10 + 12 + 14 + [ToolBaseClass getHeightWithString:model.resumeDescribe width:kScreenW - 70 font:HZTFontSize(14)] + 30);
+            if (self.listModel.personJobFullVO.resumeList.count > 2 &&  i == 1) {
+                model.isShowMore = YES;
+                model.cellHeight += 30;
+            }
         }
         for (int i = 0; i< self.listModel.personJobFullVO.projiectList.count; i++) {
             HZTProjiectModel * model = self.listModel.personJobFullVO.projiectList[i];
             model.cellHeight = (30 + 20 + 18 + 16 + 10 + 12 + 14 + [ToolBaseClass getHeightWithString:model.projectDescribe width:kScreenW - 70 font:HZTFontSize(14)] + 30);
+            if (self.listModel.personJobFullVO.projiectList.count > 2 &&  i == 1) {
+                model.isShowMore = YES;
+                model.cellHeight += 30;
+            }
         }
         [self.mainTableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
@@ -87,13 +99,13 @@
             return self.listModel.personJobFullVO.skillList.count ? self.listModel.personJobFullVO.skillList.count + 1 : self.listModel.personJobFullVO.skillList.count;
             break;
         case 2:
-            return self.listModel.personJobFullVO.trainList.count ? self.listModel.personJobFullVO.trainList.count + 1 : self.listModel.personJobFullVO.trainList.count;
+            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.trainList.count isShowMore:(self.listModel.personJobFullVO.trainList.count > 2 ? self.listModel.personJobFullVO.trainList[1].isShowMore : false)];
             break;
         case 3:
-            return self.listModel.personJobFullVO.resumeList.count ? self.listModel.personJobFullVO.resumeList.count + 1 : self.listModel.personJobFullVO.resumeList.count;
+            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.resumeList.count isShowMore:(self.listModel.personJobFullVO.resumeList.count > 2 ? self.listModel.personJobFullVO.resumeList[1].isShowMore : false)];
             break;
         case 4:
-            return self.listModel.personJobFullVO.projiectList.count ? self.listModel.personJobFullVO.projiectList.count + 1 : self.listModel.personJobFullVO.projiectList.count;
+            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.projiectList.count isShowMore:(self.listModel.personJobFullVO.projiectList.count > 2 ? self.listModel.personJobFullVO.projiectList[1].isShowMore : false)];
             break;
         default:
             return 0;
@@ -101,12 +113,21 @@
     }
 }
 
+-(NSInteger)handleSectionCountWithCount:(NSInteger)count isShowMore:(BOOL)isShowMore{
+    if (count) {
+        return ((count > 2 && isShowMore) ? 2 : count) + 1;
+    }else{
+        return count;
+    }
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    WS(weakSelf)
     if (!indexPath.section) {
         HZTMyResumeRealNameCell * cell = [HZTMyResumeRealNameCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else{
-        if (self.listModel.personJobFullVO.skillList.count) {
+        if (indexPath.section == 1) {
             if (!indexPath.row) {
                 HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
                 return cell;
@@ -114,23 +135,34 @@
                 UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
                 return cell;
             }
-        }else if (self.listModel.personJobFullVO.trainList.count){
+        }else if (indexPath.section == 2){
             if (!indexPath.row) {
                 HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
                 cell.title = @"教育经历";
                 return cell;
             }else{
-                UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
+                HZTTrainCell * cell = [HZTTrainCell cellWithTableViewFromXIB:tableView];
+                cell.model = self.listModel.personJobFullVO.trainList[indexPath.row - 1];
+                cell.callBack = ^(TrainCallBackType type) {
+                    if (type == TrainCallBackType_LookMore) {
+                        weakSelf.listModel.personJobFullVO.trainList[1].isShowMore = false;
+                        weakSelf.listModel.personJobFullVO.trainList[1].cellHeight -= 30;
+                        [weakSelf.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
+                    }
+                };
                 return cell;
             }
-        }else if (self.listModel.personJobFullVO.resumeList.count){
+        }else if (indexPath.section == 3){
             if (!indexPath.row) {
                 HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
                 cell.title = @"工作经历";
                 return cell;
             }else{
-                HZTMyResumeCustomCell * cell = [HZTMyResumeCustomCell cellWithTableViewFromXIB:tableView]; 
-                cell.resumeModel = self.listModel.personJobFullVO.resumeList[indexPath.row];
+                HZTMyResumeCustomCell * cell = [HZTMyResumeCustomCell cellWithTableViewFromXIB:tableView];
+                cell.resumeModel = self.listModel.personJobFullVO.resumeList[indexPath.row - 1];
+                cell.callBack = ^(MyResumeCellCallBackType type) {
+                    [weakSelf handleResumeCellCallBackWithType:type indexPath:indexPath projiectList:nil resumeList:weakSelf.listModel.personJobFullVO.resumeList];
+                };
                 return cell;
             }
         }else{
@@ -140,11 +172,40 @@
                 return cell;
             }else{
                 HZTMyResumeCustomCell * cell = [HZTMyResumeCustomCell cellWithTableViewFromXIB:tableView];
-                cell.projiectModel = self.listModel.personJobFullVO.projiectList[indexPath.row];
+                cell.projiectModel = self.listModel.personJobFullVO.projiectList[indexPath.row - 1];
+                cell.callBack = ^(MyResumeCellCallBackType type) {
+                    [weakSelf handleResumeCellCallBackWithType:type indexPath:indexPath projiectList:weakSelf.listModel.personJobFullVO.projiectList resumeList:nil];
+                };
                 return cell;
             }
         }
      }
+}
+
+#pragma mark --- 处理项目经验 工作经历 公用cell 回调事件
+-(void)handleResumeCellCallBackWithType:(MyResumeCellCallBackType)type  indexPath:(NSIndexPath *)indexPath projiectList:(NSArray <HZTProjiectModel *>*)projiectList resumeList:(NSArray <HZTResumeModel *>*)resumeList{
+    if (type == MyResumeCellCallBackType_LookMore) {
+        if (projiectList) {
+            projiectList[1].isShowMore = false;
+            projiectList[1].cellHeight -= 30;
+        }else{
+            resumeList[1].isShowMore = false;
+            resumeList[1].cellHeight -= 30;
+        }
+        [self.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
+    }else{
+        NSMutableArray * temp;
+        if (projiectList) {
+            temp = [NSMutableArray arrayWithArray:projiectList];
+            [temp removeObject:projiectList[indexPath.row - 1]];
+            self.listModel.personJobFullVO.projiectList = temp;
+        }else{
+            temp = [NSMutableArray arrayWithArray:resumeList];
+            [temp removeObject:resumeList[indexPath.row - 1]];
+            self.listModel.personJobFullVO.resumeList = temp;
+        }
+        [self.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -152,11 +213,14 @@
         return 91;
     }else{
         if (indexPath.section == 2){
-            return 100;
+            if (!indexPath.row) return 80;
+            return self.listModel.personJobFullVO.trainList[indexPath.row-1].cellHeight;
         }else if (indexPath.section == 3){
-           return self.listModel.personJobFullVO.resumeList[indexPath.row].cellHeight;
+           if (!indexPath.row) return 80;
+           return self.listModel.personJobFullVO.resumeList[indexPath.row-1].cellHeight;
         }else if (indexPath.section == 4){
-            return self.listModel.personJobFullVO.projiectList[indexPath.row].cellHeight;
+            if (!indexPath.row) return 80;
+            return self.listModel.personJobFullVO.projiectList[indexPath.row-1].cellHeight;
         }else{
             return 100;
         }
@@ -219,8 +283,8 @@
         _mainTableView.estimatedRowHeight = 0;
         _mainTableView.estimatedSectionFooterHeight = 0;
         _mainTableView.estimatedSectionHeaderHeight = 0;
-        _mainTableView.showsVerticalScrollIndicator = false;
         _mainTableView.tableHeaderView = self.headerView;
+        _mainTableView.allowsSelection = false;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_mainTableView];
         [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {

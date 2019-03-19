@@ -54,9 +54,9 @@
     self.Block = callBack;
     UIButton * btn = [[UIButton alloc] init];
     [btn addTarget:self action:@selector(clickRightItem) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitleColor:RGBColor(33, 33, 33) forState:UIControlStateNormal];
+    [btn setTitleColor:RGBColor(85, 85, 85) forState:UIControlStateNormal];
+    btn.titleLabel.font = HZTFontSize(15);
     if (title && imageName) {
-        btn.titleLabel.font = HZTFontSize(16);
         [btn setTitle:title forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         [btn setImageEdgeInsets:UIEdgeInsetsMake(0,[ToolBaseClass getWidthWithString:[btn currentTitle] font:btn.titleLabel.font],0, -[ToolBaseClass getWidthWithString:[btn currentTitle] font:btn.titleLabel.font]-15)];

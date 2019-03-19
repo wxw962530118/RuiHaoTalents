@@ -88,6 +88,8 @@
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 /**获取最前端的控制器*/
 + (HZTBaseViewController *)getTheFrontViewController;
+/**检测是否需要登录*/
++(BOOL)isShouldLogin;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

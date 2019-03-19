@@ -67,10 +67,6 @@ static HZTAccountManager *manager = nil;
     return lastLoginPhoneNumber;
 }
 
-+ (void)signOutUser{
-    
-}
-
 +(BOOL)saveUserWithAccount:(HZTAccountModel *)account{
     /**沙盒路径*/
     NSString * doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];

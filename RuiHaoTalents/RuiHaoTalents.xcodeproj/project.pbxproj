@@ -150,6 +150,15 @@
 		ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB38142223F94EC00FFB9B3 /* HZTPersonJobFullModel.m */; };
 		ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */; };
 		ACB38148223FA43300FFB9B3 /* HZTCustomHederCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */; };
+		ACB3814C224088D400FFB9B3 /* HZTTrainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB3814A224088D400FFB9B3 /* HZTTrainCell.m */; };
+		ACB3814D224088D400FFB9B3 /* HZTTrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB3814B224088D400FFB9B3 /* HZTTrainCell.xib */; };
+		ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB381532240B97900FFB9B3 /* HZTNewsListCell.m */; };
+		ACB381572240B97A00FFB9B3 /* HZTNewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB381552240B97A00FFB9B3 /* HZTNewsListCell.xib */; };
+		ACB3815A2240B99300FFB9B3 /* HZTNewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB381592240B99300FFB9B3 /* HZTNewsListModel.m */; };
+		ACB3816A2240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB381642240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m */; };
+		ACB3816B2240CBDA00FFB9B3 /* HZTTopTabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB381652240CBDA00FFB9B3 /* HZTTopTabModel.m */; };
+		ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB381692240CBDA00FFB9B3 /* HZTTopTabView.m */; };
+		ACB3816F2240CCB000FFB9B3 /* HZTJobMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB3816E2240CCB000FFB9B3 /* HZTJobMessageListController.m */; };
 		ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */; };
 		ACBB3B9E2238CE4E0019EACB /* HZTHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */; };
 		ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB3B9F2238CE5E0019EACB /* HZTMenuListHeaderView.xib */; };
@@ -375,6 +384,22 @@
 		ACB38144223FA43300FFB9B3 /* HZTCustomHederCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomHederCell.h; sourceTree = "<group>"; };
 		ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCustomHederCell.m; sourceTree = "<group>"; };
 		ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCustomHederCell.xib; sourceTree = "<group>"; };
+		ACB38149224088D400FFB9B3 /* HZTTrainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTrainCell.h; sourceTree = "<group>"; };
+		ACB3814A224088D400FFB9B3 /* HZTTrainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTrainCell.m; sourceTree = "<group>"; };
+		ACB3814B224088D400FFB9B3 /* HZTTrainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTTrainCell.xib; sourceTree = "<group>"; };
+		ACB381532240B97900FFB9B3 /* HZTNewsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListCell.m; sourceTree = "<group>"; };
+		ACB381542240B97900FFB9B3 /* HZTNewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTNewsListCell.h; sourceTree = "<group>"; };
+		ACB381552240B97A00FFB9B3 /* HZTNewsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZTNewsListCell.xib; sourceTree = "<group>"; };
+		ACB381582240B99300FFB9B3 /* HZTNewsListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTNewsListModel.h; sourceTree = "<group>"; };
+		ACB381592240B99300FFB9B3 /* HZTNewsListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListModel.m; sourceTree = "<group>"; };
+		ACB381642240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTTopTabCollectionCell.m; sourceTree = "<group>"; };
+		ACB381652240CBDA00FFB9B3 /* HZTTopTabModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTTopTabModel.m; sourceTree = "<group>"; };
+		ACB381662240CBDA00FFB9B3 /* HZTTopTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTTopTabView.h; sourceTree = "<group>"; };
+		ACB381672240CBDA00FFB9B3 /* HZTTopTabCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTTopTabCollectionCell.h; sourceTree = "<group>"; };
+		ACB381682240CBDA00FFB9B3 /* HZTTopTabModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTTopTabModel.h; sourceTree = "<group>"; };
+		ACB381692240CBDA00FFB9B3 /* HZTTopTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTTopTabView.m; sourceTree = "<group>"; };
+		ACB3816D2240CCB000FFB9B3 /* HZTJobMessageListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTJobMessageListController.h; sourceTree = "<group>"; };
+		ACB3816E2240CCB000FFB9B3 /* HZTJobMessageListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTJobMessageListController.m; sourceTree = "<group>"; };
 		ACBB3B9A2238CE3E0019EACB /* HZTHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeHeaderView.h; sourceTree = "<group>"; };
 		ACBB3B9B2238CE3E0019EACB /* HZTHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeHeaderView.m; sourceTree = "<group>"; };
 		ACBB3B9D2238CE4E0019EACB /* HZTHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTHomeHeaderView.xib; sourceTree = "<group>"; };
@@ -789,6 +814,83 @@
 			path = CustomSheetView;
 			sourceTree = "<group>";
 		};
+		ACB3815B2240C11100FFB9B3 /* JobSteward */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3815C2240C11100FFB9B3 /* Models */,
+				ACB3815D2240C11100FFB9B3 /* Controllers */,
+				ACB3815E2240C11100FFB9B3 /* Views */,
+			);
+			path = JobSteward;
+			sourceTree = "<group>";
+		};
+		ACB3815C2240C11100FFB9B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACB3815D2240C11100FFB9B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACB3815E2240C11100FFB9B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACB3815F2240C13C00FFB9B3 /* JobMessage */ = {
+			isa = PBXGroup;
+			children = (
+				ACB381602240C13C00FFB9B3 /* Models */,
+				ACB381612240C13C00FFB9B3 /* Controllers */,
+				ACB381622240C13C00FFB9B3 /* Views */,
+			);
+			path = JobMessage;
+			sourceTree = "<group>";
+		};
+		ACB381602240C13C00FFB9B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACB381612240C13C00FFB9B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3816D2240CCB000FFB9B3 /* HZTJobMessageListController.h */,
+				ACB3816E2240CCB000FFB9B3 /* HZTJobMessageListController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACB381622240C13C00FFB9B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACB381632240CBDA00FFB9B3 /* HZTTopTabView */ = {
+			isa = PBXGroup;
+			children = (
+				ACB381642240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m */,
+				ACB381652240CBDA00FFB9B3 /* HZTTopTabModel.m */,
+				ACB381662240CBDA00FFB9B3 /* HZTTopTabView.h */,
+				ACB381672240CBDA00FFB9B3 /* HZTTopTabCollectionCell.h */,
+				ACB381682240CBDA00FFB9B3 /* HZTTopTabModel.h */,
+				ACB381692240CBDA00FFB9B3 /* HZTTopTabView.m */,
+			);
+			path = HZTTopTabView;
+			sourceTree = "<group>";
+		};
 		ACC1FB012238B21F001E9F4A /* LeftMenuAbout */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +934,8 @@
 		ACD276C82239152900AD825B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ACB381582240B99300FFB9B3 /* HZTNewsListModel.h */,
+				ACB381592240B99300FFB9B3 /* HZTNewsListModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -848,6 +952,9 @@
 		ACD276CA2239152900AD825B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACB381542240B97900FFB9B3 /* HZTNewsListCell.h */,
+				ACB381532240B97900FFB9B3 /* HZTNewsListCell.m */,
+				ACB381552240B97A00FFB9B3 /* HZTNewsListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -926,6 +1033,7 @@
 				AC2D71D62239EFF700E80191 /* HZTMajorButton.m */,
 				ACD276C32238F8A300AD825B /* HZTPageControl.h */,
 				ACD276C22238F8A200AD825B /* HZTPageControl.m */,
+				ACB381632240CBDA00FFB9B3 /* HZTTopTabView */,
 				ACB12D78223A42A4008E5494 /* CustomSheetView */,
 				ACB12D72223A2B50008E5494 /* CustomAlretView */,
 				ACB12D71223A2B50008E5494 /* CustomPickerView */,
@@ -1013,6 +1121,8 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACB3815F2240C13C00FFB9B3 /* JobMessage */,
+				ACB3815B2240C11100FFB9B3 /* JobSteward */,
 				AC207775223F913A0072129B /* Setting */,
 				AC706FF5223A4B69003F4F6D /* Address */,
 				ACD276C72239152900AD825B /* NewsList */,
@@ -1078,6 +1188,9 @@
 				ACB38144223FA43300FFB9B3 /* HZTCustomHederCell.h */,
 				ACB38145223FA43300FFB9B3 /* HZTCustomHederCell.m */,
 				ACB38146223FA43300FFB9B3 /* HZTCustomHederCell.xib */,
+				ACB38149224088D400FFB9B3 /* HZTTrainCell.h */,
+				ACB3814A224088D400FFB9B3 /* HZTTrainCell.m */,
+				ACB3814B224088D400FFB9B3 /* HZTTrainCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1288,6 +1401,7 @@
 				AC207764223F479C0072129B /* HZTMyResumeCustomCell.xib in Resources */,
 				AC2D72A2223A25B500E80191 /* 57.png in Resources */,
 				AC20774D223F3F040072129B /* HZTShareView.xib in Resources */,
+				ACB381572240B97A00FFB9B3 /* HZTNewsListCell.xib in Resources */,
 				AC2D72AA223A25B500E80191 /* 6.png in Resources */,
 				AC2D72A1223A25B500E80191 /* 5.png in Resources */,
 				AC2D726A223A25B500E80191 /* 63.png in Resources */,
@@ -1300,6 +1414,7 @@
 				ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */,
 				AC707006223A503F003F4F6D /* HZTHomeBottomCell.xib in Resources */,
 				AC2D7284223A25B500E80191 /* 16.png in Resources */,
+				ACB3814D224088D400FFB9B3 /* HZTTrainCell.xib in Resources */,
 				AC2D72AD223A25B500E80191 /* 44.png in Resources */,
 				AC20775A223F472A0072129B /* HZTMyResumeRealNameCell.xib in Resources */,
 				AC2D7286223A25B500E80191 /* 13.png in Resources */,
@@ -1433,6 +1548,7 @@
 				ACC1FB042238B230001E9F4A /* HZTLeftMenuView.m in Sources */,
 				ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */,
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
+				ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
 				AC20774B223F3EF40072129B /* HZTShareView.m in Sources */,
@@ -1456,8 +1572,11 @@
 				ACB12D7B223A42C5008E5494 /* HZTCustomSheetView.m in Sources */,
 				AC707005223A503F003F4F6D /* HZTHomeBottomCell.m in Sources */,
 				ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */,
+				ACB3816B2240CBDA00FFB9B3 /* HZTTopTabModel.m in Sources */,
 				AC2D7203223A246B00E80191 /* UIView+PYExtension.m in Sources */,
+				ACB3815A2240B99300FFB9B3 /* HZTNewsListModel.m in Sources */,
 				AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */,
+				ACB3816A2240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m in Sources */,
 				AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */,
 				AC2D720F223A246C00E80191 /* PYPhotoView.m in Sources */,
 				ACFE80382238A2F2006D1506 /* HZTBaseViewController.m in Sources */,
@@ -1465,6 +1584,7 @@
 				AC2D71DB2239F06100E80191 /* HZTLoginRegisterCell.m in Sources */,
 				AC2D72B9223A25B500E80191 /* MBProgressHUD+MJ.m in Sources */,
 				ACC1FB192238B947001E9F4A /* UIView+Category.m in Sources */,
+				ACB3816F2240CCB000FFB9B3 /* HZTJobMessageListController.m in Sources */,
 				ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */,
 				AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */,
 				AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */,
@@ -1474,6 +1594,7 @@
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
 				AC207759223F472A0072129B /* HZTMyResumeRealNameCell.m in Sources */,
 				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
+				ACB3814C224088D400FFB9B3 /* HZTTrainCell.m in Sources */,
 				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
 				AC20776E223F83920072129B /* HZTProjiectModel.m in Sources */,
 				AC2D7208223A246B00E80191 /* PYPhotosReaderController.m in Sources */,
@@ -1496,6 +1617,7 @@
 				ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */,
 				AC707001223A4B90003F4F6D /* HZTDistrictModel.m in Sources */,
 				AC2D7268223A25B500E80191 /* MBProgressHUD.m in Sources */,
+				ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */,
 				ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */,
 				ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */,
 				ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */,

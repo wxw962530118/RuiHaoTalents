@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * trainEnd;
 /**cell高度*/
 @property (nonatomic, assign) CGFloat cellHeight;
+/**展示查看更多*/
+@property (nonatomic, assign) BOOL isShowMore;
 @end
 
 NS_ASSUME_NONNULL_END

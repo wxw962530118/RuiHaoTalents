@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="277" id="3gK-ge-IRH" customClass="HZTMyResumeCustomCell">
-            <rect key="frame" x="0.0" y="0.0" width="409" height="269"/>
+            <rect key="frame" x="0.0" y="0.0" width="409" height="299"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3gK-ge-IRH" id="JXo-zX-P2J">
-                <rect key="frame" x="0.0" y="0.0" width="409" height="268.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="409" height="298.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-HI-tuL">
@@ -24,7 +24,7 @@
                             <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                         <connections>
-                            <action selector="clickAddBtn:" destination="3gK-ge-IRH" eventType="touchUpInside" id="ett-AX-PaB"/>
+                            <action selector="clickDeleteBtn:" destination="3gK-ge-IRH" eventType="touchUpInside" id="UEh-zz-qvp"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSb-7R-W6W">
@@ -58,14 +58,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-th-etA">
+                        <rect key="frame" x="0.0" y="249.5" width="409" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="查看更多">
+                            <color key="titleColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="clickLookMoreBtn:" destination="3gK-ge-IRH" eventType="touchUpInside" id="rW7-86-EBW"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="orf-XW-0Uk" firstAttribute="top" secondItem="9nP-LT-jwi" secondAttribute="bottom" constant="14" id="8ge-Sa-Jl9"/>
                     <constraint firstItem="2UM-Hz-k7K" firstAttribute="centerY" secondItem="TSb-7R-W6W" secondAttribute="centerY" id="Gjh-Pw-Kap"/>
                     <constraint firstItem="wRc-HI-tuL" firstAttribute="centerY" secondItem="TSb-7R-W6W" secondAttribute="centerY" id="KVj-IG-3tw"/>
                     <constraint firstItem="JFR-md-47c" firstAttribute="leading" secondItem="TSb-7R-W6W" secondAttribute="leading" id="ONx-Sd-LME"/>
+                    <constraint firstAttribute="bottom" secondItem="5TL-th-etA" secondAttribute="bottom" constant="20" id="PIA-mf-mW0"/>
                     <constraint firstItem="TSb-7R-W6W" firstAttribute="top" secondItem="JXo-zX-P2J" secondAttribute="top" constant="15" id="Q2H-2s-dgu"/>
                     <constraint firstItem="9nP-LT-jwi" firstAttribute="top" secondItem="JFR-md-47c" secondAttribute="bottom" constant="10" id="UvH-k5-rVS"/>
+                    <constraint firstItem="5TL-th-etA" firstAttribute="leading" secondItem="JXo-zX-P2J" secondAttribute="leading" id="VGC-1x-eR2"/>
+                    <constraint firstAttribute="trailing" secondItem="5TL-th-etA" secondAttribute="trailing" id="YCy-pI-YXg"/>
                     <constraint firstItem="JFR-md-47c" firstAttribute="top" secondItem="TSb-7R-W6W" secondAttribute="bottom" constant="18" id="YUd-gg-ehW"/>
                     <constraint firstItem="9nP-LT-jwi" firstAttribute="leading" secondItem="JFR-md-47c" secondAttribute="leading" id="Z9P-jH-uJg"/>
                     <constraint firstAttribute="trailing" secondItem="wRc-HI-tuL" secondAttribute="trailing" constant="16" id="cEM-Ge-vAy"/>
@@ -78,6 +91,7 @@
             <connections>
                 <outlet property="descLabel" destination="orf-XW-0Uk" id="Ql8-g3-1vZ"/>
                 <outlet property="jobNameLabel" destination="JFR-md-47c" id="MIB-cp-Vpp"/>
+                <outlet property="lookMoreBtn" destination="5TL-th-etA" id="M6s-Ob-26G"/>
                 <outlet property="timeLabel" destination="9nP-LT-jwi" id="5QM-82-obK"/>
                 <outlet property="titleLabel" destination="TSb-7R-W6W" id="HX5-Mg-P0X"/>
             </connections>

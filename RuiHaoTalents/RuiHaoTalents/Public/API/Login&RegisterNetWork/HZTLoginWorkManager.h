@@ -41,6 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(NSURLSessionDataTask *)requestSigninWithMobile:(NSString *)mobile password:(NSString *)password succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 
+-(NSURLSessionDataTask *)requestLoginOutSucceed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

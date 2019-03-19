@@ -8,11 +8,15 @@
 
 #import "HZTSettingViewController.h"
 #import "HZTSettingCell.h"
+#import "HZTLoginWorkManager.h"
+#import "AppDelegate.h"
 @interface HZTSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
 /***/
 @property (nonatomic, strong) NSMutableArray * dataListArray;
+/***/
+@property (nonatomic, strong) UIView * footerView;
 
 @end
 
@@ -46,13 +50,13 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
-    cell.textLabel.text = self.dataListArray[indexPath.section][indexPath.row];
+    HZTSettingCell * cell = [HZTSettingCell cellWithTableViewFromXIB:tableView];
+    cell.title = self.dataListArray[indexPath.section][indexPath.row];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 54;
+    return 50;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -73,7 +77,7 @@
         _mainTableView.estimatedRowHeight = 0;
         _mainTableView.estimatedSectionFooterHeight = 0;
         _mainTableView.estimatedSectionHeaderHeight = 0;
-        _mainTableView.showsVerticalScrollIndicator = false;
+        _mainTableView.tableFooterView = self.footerView;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_mainTableView];
         [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -88,6 +92,37 @@
         _dataListArray = [NSMutableArray array];
     }
     return _dataListArray;
+}
+
+-(UIView *)footerView{
+    if (!_footerView) {
+        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW,64)];
+        UIButton * btn = [[UIButton alloc] init];
+        [btn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [btn setTitleColor:RGBColor(252, 55, 105) forState:UIControlStateNormal];
+        btn.backgroundColor = HZTColorWhiteGround;
+        [btn addTarget:self action:@selector(clickLoginOut) forControlEvents:UIControlEventTouchUpInside];
+        [_footerView addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(_footerView);
+            make.height.mas_equalTo(54);
+        }];
+    }
+    return _footerView;
+}
+
+#pragma mark --- 退出登录
+-(void)clickLoginOut{
+    HZTAlertView(@"提示", @"确定要退出登陆吗?", @"取消",@"确定", ^(NSUInteger index) {
+        if (index) {
+            [[HZTLoginWorkManager manager] requestLoginOutSucceed:^(id  _Nonnull responseObject) {
+              [HZTAccountManager signOutEven];
+              [AppDelegate popToRootViewController];
+            } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+                
+            }];
+        }
+    });
 }
 
 @end

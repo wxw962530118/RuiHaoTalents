@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * skillsName;
 /**技能值*/
 @property (nonatomic, copy) NSString * skillsValue;
+/***/
+@property (nonatomic, assign) BOOL isShowMore;
 
 @end
 

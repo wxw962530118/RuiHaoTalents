@@ -56,10 +56,7 @@
 }
 
 -(void)showMenu{
-    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]) {
-        NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
-        return;
-    }
+    
     [_menuContentView showMenuView];
 }
 
@@ -95,7 +92,6 @@
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.tableHeaderView = self.headerView;
-        _tableView.showsVerticalScrollIndicator = false;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -115,10 +111,7 @@
 
 #pragma mark --- 消息中心
 -(void)clickMessage{
-    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]) {
-        NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
-        return;
-    }
+    if ([ToolBaseClass isShouldLogin]) return;
     HZTNewsListController * vc = [[HZTNewsListController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
