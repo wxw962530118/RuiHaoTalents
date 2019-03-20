@@ -75,4 +75,8 @@
     }
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc %@", [self className]);
+}
+
 @end

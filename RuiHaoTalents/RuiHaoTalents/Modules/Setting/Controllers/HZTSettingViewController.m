@@ -7,6 +7,7 @@
 //
 
 #import "HZTSettingViewController.h"
+#import "HZTAboutMeViewController.h"
 #import "HZTSettingCell.h"
 #import "HZTLoginWorkManager.h"
 #import "AppDelegate.h"
@@ -65,6 +66,24 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        
+    } else if (indexPath.section == 1) {
+        
+    } else {
+        if (indexPath.row == 0) {
+            
+        } else if (indexPath.row == 1) {
+            
+        } else {
+            HZTAboutMeViewController *aboutMeVC = [[HZTAboutMeViewController alloc] init];
+            [self.navigationController pushViewController:aboutMeVC animated:YES];
+        }
+    }
 }
 
 #pragma mark --- 懒加载相关
