@@ -18,9 +18,22 @@
 @property (nonatomic, strong) HZTHomeHeaderView * headerView;
 /***/
 @property (nonatomic, strong) UITableView * tableView;
+/**当前定位的经度*/
+@property (nonatomic, assign) double longitude;
+/**当前定位的纬度*/
+@property (nonatomic, assign) double latitude;
+/**当前定位的市区/县*/
+@property (nonatomic, strong) NSString * cityAreaName;
 @end
 
 @implementation HZTHomeViewController
+
+-(instancetype)init{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +46,18 @@
 -(void)addObservers{
     NotificationRegister(HZTNOTIFICATION_HIDE_LEFT_MENU, self, @selector(hideMenuView), nil);
     NotificationRegister(HZTNOTIFICATION_SHOW_LEFT_MENU, self, @selector(showMenuView), nil);
+    NotificationRegister(HZTNOTIFICATION_UPDATE_USER_LOCATION_SUCCEED, self, @selector(locationSucceed:), nil);
+}
+
+#pragma mark --- 定位成功刷新头部城市信息
+-(void)locationSucceed:(NSNotification *)noti{
+    NSDictionary * dict = noti.userInfo;
+    self.longitude = [[dict objectForKey:@"longitude"] doubleValue];
+    self.latitude = [[dict objectForKey:@"latitude"] doubleValue];
+    self.cityAreaName =  [NSString stringWithFormat:@"%@-%@",[dict objectForKey:@"LocationCityName"],[dict objectForKey:@"SubLocality"]];
+    HZTHomeHeaderModel * model = [[HZTHomeHeaderModel alloc] init];
+    model.cityName = self.cityAreaName;
+    self.headerView.model = model;
 }
 
 -(void)showMenuView{
@@ -107,6 +132,28 @@
         _headerView.delegate = self;
     }
     return _headerView;
+}
+
+#pragma mark --- HZTHomeHeaderViewDelegate
+
+-(void)clickScan:(HZTHomeHeaderView *)view{
+    
+}
+
+-(void)clickImTalent:(HZTHomeHeaderView *)view{
+    
+}
+
+-(void)clickSecurity:(HZTHomeHeaderView *)view{
+    
+}
+
+-(void)clickJoinTalent:(HZTHomeHeaderView *)view{
+    
+}
+
+-(void)clickImmediateMatch:(HZTHomeHeaderView *)view{
+    
 }
 
 #pragma mark --- 消息中心

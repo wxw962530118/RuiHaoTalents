@@ -26,3 +26,6 @@ NSString * const HZTNOTIFICATION_DID_LOGIN_SUCCEED
 
 NSString * const HZTNOTIFICATION_NETWORK_CHANGED
 = @"Notification_network_shanged";
+
+NSString * const HZTNOTIFICATION_UPDATE_USER_LOCATION_SUCCEED
+= @"Notification_update_location_succeed";

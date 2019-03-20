@@ -90,6 +90,10 @@
 + (HZTBaseViewController *)getTheFrontViewController;
 /**检测是否需要登录*/
 +(BOOL)isShouldLogin;
+/**获取定位城市名称*/
++(NSString *)getLocationCity;
+/**获取定位城市区县*/
++(NSString *)getLocationSubLocality;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

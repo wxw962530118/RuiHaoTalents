@@ -9,6 +9,7 @@
 #import "HZTHomeHeaderView.h"
 #import "SDCycleScrollView.h"
 #import "HZTPageControl.h"
+#import "HZTWorkAreaViewController.h"
 @interface HZTHomeHeaderView ()<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView * cycleView;
 /***/
@@ -16,7 +17,14 @@
 /***/
 @property (nonatomic, strong) HZTPageControl * pageControl;
 /***/
-@property (nonatomic, strong) NSArray * localImageArr;
+@property (weak, nonatomic) IBOutlet UILabel *locationNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startMouthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startYearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endMouthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endYearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *arriveTimeLabel;
+@property (strong ,nonatomic) NSArray * localImageArr;
+@property (weak, nonatomic) IBOutlet UILabel *expectJobLabel;
 @end
 
 @implementation HZTHomeHeaderView
@@ -60,27 +68,42 @@
 
 #pragma mark --- 成为伯乐
 - (IBAction)clickJoinTalent:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(clickJoinTalent:)]) {
+        [self.delegate clickJoinTalent:self];
+    }
 }
 
 #pragma mark --- 我是伯乐
 - (IBAction)clickImTalent:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(clickImTalent:)]) {
+        [self.delegate clickImTalent:self];
+    }
 }
 
 #pragma mark --- 扫一扫
 - (IBAction)clickScan:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(clickScan:)]) {
+        [self.delegate clickScan:self];
+    }
 }
 
 #pragma mark --- 求职安全
 - (IBAction)clickSecurity:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(clickSecurity:)]) {
+        [self.delegate clickSecurity:self];
+    }
+}
+
+#pragma mark --- 立即匹配
+- (IBAction)clickImmediateMatch:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(clickImmediateMatch:)]) {
+        [self.delegate clickImmediateMatch:self];
+    }
 }
 
 -(void)setModel:(HZTHomeHeaderModel *)model{
     _model = model;
-    
+    self.locationNameLabel.text = model.cityName;
 }
 
 #pragma mark --- SDCycleScrollView图片点击回调
