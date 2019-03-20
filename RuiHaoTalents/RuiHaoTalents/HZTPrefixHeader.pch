@@ -17,4 +17,8 @@
 #import "HZTMacroMeasurement.h"
 #import "HZTMacroScreenDapter.h"
 
+#import "UIColor+Common.h"
+#import "NSString+Common.h"
+
 #endif /* HZTPrefixHeader_pch */
+
