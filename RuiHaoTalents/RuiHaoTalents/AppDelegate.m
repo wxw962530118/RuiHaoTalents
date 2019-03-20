@@ -22,15 +22,17 @@
     [[HZTCLocationManager manager] updateLocationWithDesiredAccuracy:kCLLocationAccuracyBest block:^(CLLocation * location) {
         [[HZTCLocationManager manager] reverseGeocodeLocation:location block:^(CLPlacemark *placemark) {
             [[HZTCLocationManager manager] stopUpdateLocaiton];
+            /**地理编码信息*/
             NSMutableDictionary * tempDict = [NSMutableDictionary dictionary];
+            BOOL isXiAn = [placemark.addressDictionary[@"City"] rangeOfString:@"西安"].location == NSNotFound;
             /**经度*/
-            [tempDict setValue:@(location.coordinate.longitude) forKey:@"longitude"];
+            [tempDict setValue:isXiAn ? @(108.836718) : @(location.coordinate.longitude)  forKey:@"longitude"];
             /**纬度*/
-            [tempDict setValue:@(location.coordinate.latitude) forKey:@"latitude"];
-            /**地理编码城市名称*/
-            [tempDict setValue:placemark.addressDictionary[@"City"] forKey:@"LocationCityName"];
+            [tempDict setValue:isXiAn ? @(34.240541) : @(location.coordinate.latitude) forKey:@"latitude"];
+            /**当前城市不是西安 定位改成西安*/
+            [tempDict setValue:isXiAn ? @"西安" : placemark.addressDictionary[@"City"] forKey:@"LocationCityName"];
             /**地理编码区县名称*/
-            [tempDict setValue:placemark.addressDictionary[@"SubLocality"] forKey:@"SubLocality"];
+            [tempDict setValue:isXiAn ? @"新城区" : placemark.addressDictionary[@"SubLocality"] forKey:@"SubLocality"];
             NotificationPost(HZTNOTIFICATION_UPDATE_USER_LOCATION_SUCCEED,nil, tempDict);
         } fail:^(NSError *error) {
             NSLog(@"反地理编码出错,error: %@",error);

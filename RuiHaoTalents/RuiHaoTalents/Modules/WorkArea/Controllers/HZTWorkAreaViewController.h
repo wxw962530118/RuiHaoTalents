@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTWorkAreaViewController : HZTBaseViewController
-
+-(instancetype)initWithCityName:(NSString *)cityName areaName:(NSString *)areaName callBack:(void (^)(NSString * result))callBack;
 @end
 
 NS_ASSUME_NONNULL_END

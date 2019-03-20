@@ -37,6 +37,7 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    [self.locationNameLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAddress:)]];
     [self configCycleInfo];
     [self createPageControl];
 }
@@ -98,6 +99,13 @@
 - (IBAction)clickImmediateMatch:(id)sender {
     if ([self.delegate respondsToSelector:@selector(clickImmediateMatch:)]) {
         [self.delegate clickImmediateMatch:self];
+    }
+}
+
+#pragma mark --- 工作衣区域
+-(void)clickAddress:(UITapGestureRecognizer *)tap{
+    if ([self.delegate respondsToSelector:@selector(clickWorkArea:)]) {
+        [self.delegate clickWorkArea:self];
     }
 }
 

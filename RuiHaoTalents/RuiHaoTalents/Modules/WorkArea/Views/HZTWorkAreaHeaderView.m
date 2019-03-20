@@ -31,7 +31,6 @@
 -(void)addCurrentAddressLabel{
     if (!_currentAddressLabel) {
         _currentAddressLabel = [[UILabel alloc] init];
-        _currentAddressLabel.text = @"";
         _currentAddressLabel.font = HZTFontSize(15);
         _currentAddressLabel.textColor = RGBColor(102, 102, 102);
         [self addSubview:_currentAddressLabel];
@@ -49,13 +48,29 @@
         [self addSubview:_lineView];
         [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).offset(20);
+            make.right.equalTo(self.mas_right);
+            make.height.mas_offset(1);
             make.top.equalTo(_currentAddressLabel.mas_bottom).offset(20);
         }];
     }
 }
 
 -(void)addCurrentCityLabel{
-    
+    if (!_currentCityLabel) {
+        _currentCityLabel = [[UILabel alloc] init];
+        _currentCityLabel.font = HZTFontSize(15);
+        _currentCityLabel.textColor = RGBColor(102, 102, 102);
+        [self addSubview:_currentCityLabel];
+        [_currentCityLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.mas_left).offset(20);
+            make.top.equalTo(_lineView.mas_bottom).offset(20);
+        }];
+    }
+}
+
+-(void)setCityName:(NSString *)cityName areaName:(NSString *)areaName{
+    _currentAddressLabel.text = [NSString stringWithFormat:@"当前定位区域:%@-%@",cityName,areaName];
+    _currentCityLabel.text = cityName;
 }
 
 @end

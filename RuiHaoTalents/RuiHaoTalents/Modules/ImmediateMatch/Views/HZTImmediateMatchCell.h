@@ -1,5 +1,5 @@
 //
-//  HZTWorkAreaHeaderView.h
+//  HZTImmediateMatchCell.h
 //  RuiHaoTalents
 //
 //  Created by 王新伟 on 2019/3/20.
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HZTWorkAreaHeaderView : UICollectionReusableView
--(void)setCityName:(NSString *)cityName areaName:(NSString *)areaName;
+@interface HZTImmediateMatchCell : UITableViewCell
+
 @end
 
 NS_ASSUME_NONNULL_END

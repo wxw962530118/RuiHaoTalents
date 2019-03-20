@@ -11,6 +11,9 @@
 #import "HZTHomeHeaderView.h"
 #import "HZTNewsListController.h"
 #import "HZTHomeBottomCell.h"
+#import "HZTImmediateMatchController.h"
+#import "HZTScanAboutController.h"
+#import "HZTWorkAreaViewController.h"
 @interface HZTHomeViewController ()<UITableViewDelegate,UITableViewDataSource,HZTHomeHeaderViewDelegate>
 /***/
 @property (nonatomic, strong) HZTLeftMenuContentView * menuContentView;
@@ -22,8 +25,10 @@
 @property (nonatomic, assign) double longitude;
 /**当前定位的纬度*/
 @property (nonatomic, assign) double latitude;
-/**当前定位的市区/县*/
-@property (nonatomic, strong) NSString * cityAreaName;
+/**当前定位的市*/
+@property (nonatomic, strong) NSString * cityName;
+/**当前定位的区/县*/
+@property (nonatomic, strong) NSString * areaName;
 @end
 
 @implementation HZTHomeViewController
@@ -54,9 +59,10 @@
     NSDictionary * dict = noti.userInfo;
     self.longitude = [[dict objectForKey:@"longitude"] doubleValue];
     self.latitude = [[dict objectForKey:@"latitude"] doubleValue];
-    self.cityAreaName =  [NSString stringWithFormat:@"%@-%@",[dict objectForKey:@"LocationCityName"],[dict objectForKey:@"SubLocality"]];
+    self.cityName = [dict objectForKey:@"LocationCityName"];
+    self.areaName = [dict objectForKey:@"SubLocality"];
     HZTHomeHeaderModel * model = [[HZTHomeHeaderModel alloc] init];
-    model.cityName = self.cityAreaName;
+    model.cityName = [NSString stringWithFormat:@"%@-%@",self.cityName,self.areaName];
     self.headerView.model = model;
 }
 
@@ -71,7 +77,7 @@
 -(void)configNav{
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hone_title_icon"]];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home_nav_left_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(showMenu)];
-     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home_nav_right_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(clickMessage)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home_nav_right_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(clickMessage)];
 }
 
 -(void)addMenuContentView{
@@ -137,7 +143,8 @@
 #pragma mark --- HZTHomeHeaderViewDelegate
 
 -(void)clickScan:(HZTHomeHeaderView *)view{
-    
+    HZTScanAboutController * vc = [[HZTScanAboutController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)clickImTalent:(HZTHomeHeaderView *)view{
@@ -152,8 +159,20 @@
     
 }
 
+-(void)clickWorkArea:(HZTHomeHeaderView *)view{
+    WS(weakSelf)
+    HZTWorkAreaViewController * vc = [[HZTWorkAreaViewController alloc] initWithCityName:self.cityName areaName:self.areaName callBack:^(NSString * _Nonnull result) {
+        weakSelf.areaName = result;
+        HZTHomeHeaderModel * model = [[HZTHomeHeaderModel alloc] init];
+        model.cityName = [NSString stringWithFormat:@"%@-%@",weakSelf.cityName,weakSelf.areaName];
+        weakSelf.headerView.model = model;
+    }];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 -(void)clickImmediateMatch:(HZTHomeHeaderView *)view{
-    
+    HZTImmediateMatchController * vc = [[HZTImmediateMatchController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark --- 消息中心

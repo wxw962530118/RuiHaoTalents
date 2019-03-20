@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)clickSecurity:(HZTHomeHeaderView *)view;
 /**立即匹配*/
 -(void)clickImmediateMatch:(HZTHomeHeaderView *)view;
+/**工作区域*/
+-(void)clickWorkArea:(HZTHomeHeaderView *)view;
 @end
 
 @interface HZTHomeHeaderView : UIView
