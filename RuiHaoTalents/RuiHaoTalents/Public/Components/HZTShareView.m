@@ -15,7 +15,7 @@
 
 @implementation HZTShareView
 
-+(instancetype)showShareView{
++(instancetype)show{
     HZTShareView * view = [[[NSBundle mainBundle] loadNibNamed:@"HZTShareView" owner:nil options:nil] lastObject];
     return view;
 }

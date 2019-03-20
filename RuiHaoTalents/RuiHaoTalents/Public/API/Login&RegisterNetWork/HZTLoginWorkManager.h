@@ -28,18 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSURLSessionDataTask *)requestRegisterCreateWithMobile:(NSString *)mobile code:(NSString *)code password:(NSString *)password succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 
 /**
- 登录 验证码登录
- @param mobile   手机号码
- @param code     验证码
- */
--(NSURLSessionDataTask *)requestSigninWithMobile:(NSString *)mobile code:(NSString *)code succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
+ 登录 密码登录 验证码登录
+ @param mobile         手机号码
+ @param password       密码
+ @param verifyCode     验证码
 
-/**
- 登录 密码登录
- @param mobile   手机号码
- @param password 密码
  */
--(NSURLSessionDataTask *)requestSigninWithMobile:(NSString *)mobile password:(NSString *)password succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
+-(NSURLSessionDataTask *)requestSigninWithMobile:(NSString *)mobile password:(NSString *)password verifyCode:(NSString *)verifyCode succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 
 -(NSURLSessionDataTask *)requestLoginOutSucceed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 @end

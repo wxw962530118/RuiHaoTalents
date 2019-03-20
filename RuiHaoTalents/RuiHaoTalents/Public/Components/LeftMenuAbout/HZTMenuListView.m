@@ -61,15 +61,13 @@
     if (self.Block) {
         self.Block();
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (indexPath.row == 1) {
-            HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
-            [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
-        }else if (indexPath.row == 4){
-            HZTSettingViewController * vc = [[HZTSettingViewController alloc] init];
-            [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
-        }
-    });
+    if (indexPath.row == 1) {
+        HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
+        [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 4){
+        HZTSettingViewController * vc = [[HZTSettingViewController alloc] init];
+        [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

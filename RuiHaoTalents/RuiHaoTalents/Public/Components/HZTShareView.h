@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTShareView : UIView
-+(instancetype)showShareView;
++(instancetype)show;
 @end
 
 NS_ASSUME_NONNULL_END

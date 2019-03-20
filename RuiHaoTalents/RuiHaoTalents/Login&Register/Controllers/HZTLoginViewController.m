@@ -129,6 +129,24 @@
             weakSelf.code = str;
         }
     };
+    cell.getCodeBtnCallBack = ^{
+        /**拉取获取验证码协议 成功后开始定时器*/
+        if(!weakSelf.phone.length){
+            [HZTToastHUD showNormalWithTitle:@"请输入手机号码"];
+            return ;
+        }else if (weakSelf.phone.length < 11) {
+            [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
+            return;
+        }
+        [MBProgressHUD showSuccess:@"获取验证码成功"];
+        [[HZTLoginWorkManager manager] requestRegisterMobileCodeWithMobile:weakSelf.phone succeed:^(id  _Nonnull responseObject) {
+            [MBProgressHUD hideHUDForView:nil];
+            HZTLoginRegisterCell * lastCell = [weakSelf.tableView.visibleCells lastObject];
+            [lastCell getCodeSucceed];
+        } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+            
+        }];
+    };
     return cell;
 }
 
@@ -248,14 +266,13 @@
     }else if (self.phone.length < 11){
         [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
         return;
-    }else if (!self.password.length){
+    }else if (!self.password.length && self.isPassWordLogin){
          [HZTToastHUD showNormalWithTitle:@"请输入密码"];
         return;
+    }else if ((self.password.length < 8 || self.password.length > 16) && self.isPassWordLogin){
+        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
+        return;
     }
-//    else if (self.password.length < 8 || self.password.length > 16){
-//        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
-//        return;
-//    }
     if (!self.isPassWordLogin) {
         if (!self.code.length){
             [HZTToastHUD showNormalWithTitle:@"请输入验证码"];
@@ -267,7 +284,7 @@
         }
     }
     [HZTToastHUD showLoading];
-    [[HZTLoginWorkManager manager] requestSigninWithMobile:self.phone password:self.password succeed:^(id  _Nonnull responseObject) {
+    [[HZTLoginWorkManager manager] requestSigninWithMobile:self.phone password:self.password verifyCode:self.code succeed:^(id  _Nonnull responseObject) {
         [self.view endEditing:YES];
         [HZTToastHUD hideLoading];
         /**登录成功之后同步到当前账户信息*/

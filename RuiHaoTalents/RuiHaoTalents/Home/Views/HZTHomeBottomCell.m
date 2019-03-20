@@ -22,6 +22,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self addCycleScrollView];
     for (int i = 0; i< self.viewsArray.count; i++) {
         UIView * view = (UIView *)self.viewsArray[i];

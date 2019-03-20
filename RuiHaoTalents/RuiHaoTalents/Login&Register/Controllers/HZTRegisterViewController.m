@@ -78,7 +78,9 @@
             [HZTToastHUD showNormalWithTitle:@"请输入11位手机号码"];
             return;
         }
+        [MBProgressHUD showSuccess:@"获取验证码成功"];
         [[HZTLoginWorkManager manager] requestRegisterMobileCodeWithMobile:weakSelf.phone succeed:^(id  _Nonnull responseObject) {
+            [MBProgressHUD hideHUDForView:nil];
             HZTLoginRegisterCell * lastCell = [weakSelf.tableView.visibleCells lastObject];
             [lastCell getCodeSucceed];
         } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {

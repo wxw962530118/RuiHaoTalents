@@ -56,7 +56,7 @@
 }
 
 -(void)showMenu{
-    
+    if ([ToolBaseClass isShouldLogin]) return;
     [_menuContentView showMenuView];
 }
 
