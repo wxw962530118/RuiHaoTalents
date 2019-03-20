@@ -135,6 +135,7 @@
 		AC37E65C2241DFA8004144AA /* HZTCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E65B2241DFA8004144AA /* HZTCLocationManager.m */; };
 		AC37E65F224209DA004144AA /* HZTHomeNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E65E224209DA004144AA /* HZTHomeNetWorkManager.m */; };
 		AC37E66222420D97004144AA /* HZTWorkAreaHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E66122420D97004144AA /* HZTWorkAreaHeaderView.m */; };
+		AC37E66722421822004144AA /* HZTAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E66522421822004144AA /* HZTAboutMeViewController.m */; };
 		AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6469F52238B12900408EA3 /* HZTHomeViewController.m */; };
 		AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC706FF0223A4AC5003F4F6D /* HZTCustomPickerView.m */; };
 		AC706FF4223A4AE9003F4F6D /* HZTCustomPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC706FF3223A4AE9003F4F6D /* HZTCustomPickerModel.m */; };
@@ -191,7 +192,6 @@
 		ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE803D2238A31A006D1506 /* HZTBaseModel.m */; };
 		ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80402238A331006D1506 /* HZTRootNavigationController.m */; };
 		ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80442238A39B006D1506 /* HZTMacroNotifications.m */; };
-		E14CAB792241DAE00001A308 /* HZTAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB782241DAE00001A308 /* HZTAboutMeViewController.m */; };
 		E14CAB822241E6AD0001A308 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB812241E6AD0001A308 /* UIColor+Hex.m */; };
 		E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB842241E7370001A308 /* UIColor+Common.m */; };
 		E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB872241EF3A0001A308 /* NSString+Common.m */; };
@@ -365,6 +365,8 @@
 		AC37E65E224209DA004144AA /* HZTHomeNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeNetWorkManager.m; sourceTree = "<group>"; };
 		AC37E66022420D97004144AA /* HZTWorkAreaHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTWorkAreaHeaderView.h; sourceTree = "<group>"; };
 		AC37E66122420D97004144AA /* HZTWorkAreaHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTWorkAreaHeaderView.m; sourceTree = "<group>"; };
+		AC37E66522421822004144AA /* HZTAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTAboutMeViewController.m; sourceTree = "<group>"; };
+		AC37E66622421822004144AA /* HZTAboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTAboutMeViewController.h; sourceTree = "<group>"; };
 		AC6469F42238B12900408EA3 /* HZTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeViewController.h; sourceTree = "<group>"; };
 		AC6469F52238B12900408EA3 /* HZTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeViewController.m; sourceTree = "<group>"; };
 		AC706FEF223A4AC5003F4F6D /* HZTCustomPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomPickerView.h; sourceTree = "<group>"; };
@@ -475,8 +477,6 @@
 		ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroScreenDapter.h; sourceTree = "<group>"; };
 		ACFE804B2238A527006D1506 /* HZTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTPrefixHeader.pch; sourceTree = "<group>"; };
 		DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.release.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.release.xcconfig"; sourceTree = "<group>"; };
-		E14CAB772241DAE00001A308 /* HZTAboutMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTAboutMeViewController.h; sourceTree = "<group>"; };
-		E14CAB782241DAE00001A308 /* HZTAboutMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAboutMeViewController.m; sourceTree = "<group>"; };
 		E14CAB802241E6AD0001A308 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		E14CAB812241E6AD0001A308 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		E14CAB832241E7370001A308 /* UIColor+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common.h"; sourceTree = "<group>"; };
@@ -518,7 +518,6 @@
 		AC207775223F913A0072129B /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				E14CAB722241DA9C0001A308 /* Modules */,
 				AC207777223F913A0072129B /* Controllers */,
 				AC207778223F913A0072129B /* Views */,
 			);
@@ -761,6 +760,23 @@
 				AC2D7264223A25B400E80191 /* 52.png */,
 			);
 			path = loading;
+			sourceTree = "<group>";
+		};
+		AC37E66322421822004144AA /* AboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				AC37E66422421822004144AA /* Controller */,
+			);
+			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		AC37E66422421822004144AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC37E66622421822004144AA /* HZTAboutMeViewController.h */,
+				AC37E66522421822004144AA /* HZTAboutMeViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AC706FF5223A4B69003F4F6D /* Address */ = {
@@ -1183,6 +1199,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC37E66322421822004144AA /* AboutMe */,
 				AC2C7A882241D98A003BC70E /* WorkArea */,
 				ACB3815F2240C13C00FFB9B3 /* JobMessage */,
 				ACB3815B2240C11100FFB9B3 /* JobSteward */,
@@ -1385,31 +1402,6 @@
 				98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E14CAB722241DA9C0001A308 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				E14CAB732241DA9C0001A308 /* Controller */,
-				E14CAB742241DA9C0001A308 /* Views */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		E14CAB732241DA9C0001A308 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				E14CAB772241DAE00001A308 /* HZTAboutMeViewController.h */,
-				E14CAB782241DAE00001A308 /* HZTAboutMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		E14CAB742241DA9C0001A308 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1658,7 +1650,6 @@
 				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
 				AC706FFB223A4B79003F4F6D /* HZTProvinceModel.m in Sources */,
 				E14CAB822241E6AD0001A308 /* UIColor+Hex.m in Sources */,
-				E14CAB792241DAE00001A308 /* HZTAboutMeViewController.m in Sources */,
 				AC20776B223F82C90072129B /* HZTSkillModel.m in Sources */,
 				ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */,
 				AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */,
@@ -1717,6 +1708,7 @@
 				ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */,
 				ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */,
 				ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */,
+				AC37E66722421822004144AA /* HZTAboutMeViewController.m in Sources */,
 				ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */,
 				ACBB3BA32238CECF0019EACB /* HZTMenuListModel.m in Sources */,
 			);

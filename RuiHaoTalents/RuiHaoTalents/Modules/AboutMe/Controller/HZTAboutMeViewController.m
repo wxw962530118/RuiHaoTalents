@@ -117,7 +117,7 @@
 - (UILabel *)verNoLabel {
     if (!_verNoLabel) {
         _verNoLabel = [[UILabel alloc] init];
-        _verNoLabel.text = [NSString appVersion];
+        _verNoLabel.text = CurrentVersion;
         _verNoLabel.textColor = [UIColor fucDark];
         _verNoLabel.font = [UIFont systemFontOfSize:13];
         _verNoLabel.textAlignment = NSTextAlignmentCenter;

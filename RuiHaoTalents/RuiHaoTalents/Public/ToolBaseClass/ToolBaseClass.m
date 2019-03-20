@@ -550,12 +550,4 @@ static char base64EncodingTable[64] = {
     return (HZTRootNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
 }
 
-+(NSString *)getLocationCity{
-   return [ToolBaseClass getUserDefaultsWithKey:@"LocationCityName"];
-}
-
-+(NSString *)getLocationSubLocality{
-    return [ToolBaseClass getUserDefaultsWithKey:@"LocationSubLocality"];
-}
-
 @end
