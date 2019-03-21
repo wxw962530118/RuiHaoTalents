@@ -80,7 +80,7 @@
         } else if (indexPath.row == 1) {
             
         } else {
-            HZTAboutMeViewController *aboutMeVC = [[HZTAboutMeViewController alloc] init];
+            HZTAboutMeViewController * vc = [[HZTAboutMeViewController alloc] init];
             [self xw_pushViewController:vc animated:YES];
         }
     }
