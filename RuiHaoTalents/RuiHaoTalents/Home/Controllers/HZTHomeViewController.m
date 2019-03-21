@@ -144,6 +144,9 @@
 
 -(void)clickScan:(HZTHomeHeaderView *)view{
     HZTScanAboutController * vc = [[HZTScanAboutController alloc] init];
+    SWQRCodeConfig * config = [[SWQRCodeConfig alloc] init];
+    config.scannerType = SWScannerTypeBoth;
+    vc.codeConfig = config;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

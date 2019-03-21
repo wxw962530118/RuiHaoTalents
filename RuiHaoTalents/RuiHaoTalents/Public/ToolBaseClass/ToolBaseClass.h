@@ -90,6 +90,8 @@
 + (HZTBaseViewController *)getTheFrontViewController;
 /**检测是否需要登录*/
 +(BOOL)isShouldLogin;
+/**根据目的地经纬度调起三方地图导航*/
++(void)showNavigationWithLongitude:(double)longitude latitude:(double)latitude;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

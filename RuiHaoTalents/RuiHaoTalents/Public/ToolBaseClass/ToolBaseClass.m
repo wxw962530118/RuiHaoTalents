@@ -550,4 +550,68 @@ static char base64EncodingTable[64] = {
     return (HZTRootNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
 }
 
++(void)showNavigationWithLongitude:(double)longitude latitude:(double)latitude{
+    /**当前手机可用地图容器 里面是存放字典 @{@"title":@"",@"url":""}*/
+    NSMutableArray <NSMutableDictionary *>* mapsArr = [NSMutableArray array];
+    /**1.苹果内置地图比较特殊*/
+    NSMutableDictionary * appleMapDict = [NSMutableDictionary dictionary];
+    [appleMapDict setValue:@"苹果地图" forKey:@"title"];
+    [mapsArr addObject:appleMapDict];
+    /**2.百度地图*/
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://"]]) {
+        NSMutableDictionary * baiduMapDic = [NSMutableDictionary dictionary];
+        [baiduMapDic setValue:@"百度地图" forKey:@"title"];
+        NSString * urlString = [[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=北京&mode=driving&coord_type=gcj02",latitude,longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [baiduMapDic setValue:urlString forKey:@"url"];
+        [mapsArr addObject:baiduMapDic];
+    }
+    /**3.高德地图*/
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]]) {
+        NSMutableDictionary * gaodeMapDic = [NSMutableDictionary dictionary];
+        [gaodeMapDic setValue:@"高德地图" forKey:@"title"];
+        NSString * urlString = [[NSString stringWithFormat:@"iosamap://path?sourceApplication=%@&sid=BGVIS1&did=BGVIS2&dlat=%f&dlon=%f&dname=%@&dev=0&t=2",@"刷哪儿",latitude,longitude,@""] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [gaodeMapDic setValue:urlString forKey:@"url"];
+        [mapsArr addObject:gaodeMapDic];
+    }
+    /**4.谷歌地图*/
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
+        NSMutableDictionary * googleMapDic = [NSMutableDictionary dictionary];
+        [googleMapDic setValue:@"谷歌地图" forKey:@"title"];
+        NSString * urlString = [[NSString stringWithFormat:@"comgooglemaps://?x-source=%@&x-success=%@&saddr=&daddr=%f,%f&directionsmode=driving",@"",@"",latitude, longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [googleMapDic setValue:urlString forKey:@"url"];
+        [mapsArr addObject:googleMapDic];
+    }
+    /**5.腾讯地图*/
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"qqmap://"]]) {
+        NSMutableDictionary * qqMapDic = [NSMutableDictionary dictionary];
+        [qqMapDic setValue:@"腾讯地图" forKey:@"title"];
+        NSString * urlString = [[NSString stringWithFormat:@"qqmap://map/routeplan?from=我的位置&type=drive&tocoord=%f,%f&to=终点&coord_type=1&policy=0",latitude, longitude] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [qqMapDic setValue:urlString forKey:@"url"];
+        [mapsArr addObject:qqMapDic];
+    }
+    
+    NSMutableArray <NSString *>* titles = [NSMutableArray array];
+    for (NSMutableDictionary * dict in mapsArr) {
+        [titles addObject:dict[@"title"]];
+    }
+    [HZTCustomSheetView showCustomSheetViewTitle:@"选择地图" contentArr:titles callBack:^(NSInteger index) {
+        if (![titles[index] isEqualToString:@"苹果地图"]) {
+            NSMutableDictionary * dict = mapsArr[index];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[dict objectForKey:@"url"]]];
+        }else{
+            CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(latitude, longitude);
+            MKMapItem * currentLoc = [MKMapItem mapItemForCurrentLocation];
+            MKMapItem * toLocation = [[MKMapItem alloc]initWithPlacemark:[[MKPlacemark alloc]initWithCoordinate:loc addressDictionary:nil] ];
+            toLocation.name = @"西安";
+            NSArray * items = @[currentLoc,toLocation];
+            NSDictionary * dic = @{
+                                  MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving,
+                                  MKLaunchOptionsMapTypeKey : @(MKMapTypeStandard),
+                                  MKLaunchOptionsShowsTrafficKey : @(YES)
+                                  };
+            [MKMapItem openMapsWithItems:items launchOptions:dic];
+        }
+    }];
+}
+
 @end

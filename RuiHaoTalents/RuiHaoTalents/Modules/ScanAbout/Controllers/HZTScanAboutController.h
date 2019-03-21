@@ -7,11 +7,10 @@
 //
 
 #import "HZTBaseViewController.h"
-
+#import "SWQRCode.h"
 NS_ASSUME_NONNULL_BEGIN
-
 @interface HZTScanAboutController : HZTBaseViewController
-
+@property (nonatomic, strong) SWQRCodeConfig *codeConfig;
 @end
 
 NS_ASSUME_NONNULL_END

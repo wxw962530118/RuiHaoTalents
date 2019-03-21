@@ -35,7 +35,8 @@
 -(void)configNavItem{
     self.navigationItem.title = @"个人简历";
     [self ctNavRightItemWithTitle:nil imageName:@"share_icon" callBack:^{
-        [HZTShareView show];
+        [ToolBaseClass showNavigationWithLongitude:108.836718 latitude:34.240541];
+        //[HZTShareView show];
     }];
 }
 
