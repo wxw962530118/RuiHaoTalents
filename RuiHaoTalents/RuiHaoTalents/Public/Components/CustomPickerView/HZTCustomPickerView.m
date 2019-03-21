@@ -85,7 +85,7 @@
         }];
         
         self.toolView = [[UIView alloc]init];
-        self.toolView.backgroundColor = RGBColor(216, 216, 216);
+        self.toolView.backgroundColor = HZTColorWhiteGround;
         [self.supersView addSubview:self.toolView];
         [self.toolView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self.supersView);
@@ -93,13 +93,23 @@
         }];
         UILabel * titleLabel = [[UILabel alloc] init];
         titleLabel.text = self.title;
+        titleLabel.textColor = RGBColor(216, 216, 216);
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.toolView addSubview:titleLabel];
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.toolView.mas_centerX);
             make.centerY.equalTo(self.toolView.mas_centerY);
         }];
-        [self createToolBtnWithTitlesArray:@[@"取消",@"确定"]];
+        
+        UIView * lineView = [[UIView alloc] init];
+        lineView.backgroundColor = HZTColorComponentLine;
+        [self.toolView addSubview:lineView];
+        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.bottom.right.equalTo(self.toolView);
+            make.height.mas_equalTo(.7);
+        }];
+        
+        [self createToolBtnWithTitlesArray:@[@"picker_cancel_icon",@"picker_sure_icon"]];
     }
     return _supersView;
 }
@@ -107,13 +117,12 @@
 -(void)createToolBtnWithTitlesArray:(NSArray *)titlesArray{
     for (int i = 0; i < titlesArray.count; i++) {
         UIButton * btn = [[UIButton alloc]init];
-        [btn setTitle:titlesArray[i] forState:UIControlStateNormal];
-        btn.titleLabel.font = HZTFontSize(17);
-        [btn setTitleColor:RGBColor(33, 33, 33) forState:UIControlStateNormal];
+        btn.tag = 1000 + i;
+        [btn setImage:[UIImage imageNamed:titlesArray[i]] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.toolView addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake((35), (35)));
+            make.size.mas_equalTo(!i ? CGSizeMake(15, 15) : CGSizeMake(18, 13));
             make.centerY.equalTo(btn.superview);
             !i ? make.left.equalTo(btn.superview).offset((20)): make.right.equalTo(btn.superview).offset(-(20));
         }];
@@ -121,7 +130,7 @@
 }
 
 -(void)clickBtn:(UIButton *)sender{
-    if ([[sender currentTitle]isEqualToString:@"确定"]) {
+    if (sender.tag - 1000){
         if (self.Block) {
             self.Block(self.selectdModel);
         }
@@ -254,7 +263,7 @@
         pickerLabel.textColor = [UIColor blackColor];
         [pickerLabel setBackgroundColor:[UIColor clearColor]];
         pickerLabel.textAlignment = NSTextAlignmentCenter;
-        [pickerLabel setFont:HZTFontSize(18)];
+        pickerLabel.font = HZTFontSize(21);
     }
     pickerLabel.text = [self pickerView:pickerView titleForRow:row forComponent:component];
     return pickerLabel;

@@ -109,7 +109,7 @@
         weakSelf.password = password;
         [weakSelf prepareData];
     };
-    [self.navigationController pushViewController:vc animated:YES];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -291,7 +291,9 @@
         /**登录成功之后同步到当前账户信息*/
         [MBProgressHUD showSuccess:@"登录成功"];
         NSMutableDictionary * tempDict = [[NSMutableDictionary alloc] initWithDictionary:responseObject[@"data"]];
-        [tempDict setObject:responseObject[@"humanId"] forKey:@"humanId"];
+        if (responseObject[@"humanId"]) {
+            [tempDict setObject:responseObject[@"humanId"] forKey:@"humanId"];
+        }
         HZTAccountModel * account = [HZTAccountModel mj_objectWithKeyValues:tempDict];
         account.passWord = self.password;
         [HZTAccountManager saveUserWithAccount:account];

@@ -77,7 +77,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 1) {
         HZTJobMessageListController * vc = [[HZTJobMessageListController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self xw_pushViewController:vc animated:YES];
     }
 }
 

@@ -263,7 +263,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if (section) {
-        NSArray * titleArr = @[@"+添加拥有技能",@"+添加教育经历",@"+添加工作径路",@"+添加项目经验"];
+        NSArray * titleArr = @[@"+添加拥有技能",@"+添加教育经历",@"+添加工作经验",@"+添加项目经验"];
         HZTMyResumeSectionFooterView * view = [HZTMyResumeSectionFooterView createMyResumeSectionFooterViewWithTitle:titleArr[section - 1] callBack:^(NSString * _Nonnull title) {
             NSLog(@"title:%@",title);
         }];

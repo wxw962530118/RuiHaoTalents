@@ -23,8 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *endMouthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endYearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *arriveTimeLabel;
-@property (strong ,nonatomic) NSArray * localImageArr;
 @property (weak, nonatomic) IBOutlet UILabel *expectJobLabel;
+@property (strong ,nonatomic) NSArray * localImageArr;
 @end
 
 @implementation HZTHomeHeaderView
@@ -38,6 +38,7 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     [self.locationNameLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAddress:)]];
+    [self.expectJobLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickExpectJob:)]];
     [self configCycleInfo];
     [self createPageControl];
 }
@@ -102,16 +103,41 @@
     }
 }
 
-#pragma mark --- 工作衣区域
+#pragma mark --- 工作区域
 -(void)clickAddress:(UITapGestureRecognizer *)tap{
     if ([self.delegate respondsToSelector:@selector(clickWorkArea:)]) {
         [self.delegate clickWorkArea:self];
     }
 }
 
--(void)setModel:(HZTHomeHeaderModel *)model{
-    _model = model;
-    self.locationNameLabel.text = model.cityName;
+#pragma mark --- 期望工作
+-(void)clickExpectJob:(UITapGestureRecognizer *)tap{
+    if ([self.delegate respondsToSelector:@selector(clickExpectJob:expectJobLabel:)]) {
+        [self.delegate clickExpectJob:self expectJobLabel:self.expectJobLabel];
+    }
+}
+
+-(void)setCityName:(NSString *)cityName{
+    _cityName = cityName;
+    self.locationNameLabel.text = cityName;
+}
+
+-(void)setEndTime:(NSString *)endTime{
+    _endTime = endTime;
+}
+
+-(void)setStartTime:(NSString *)startTime{
+    _startTime = startTime;
+}
+
+-(void)setArriveDay:(NSString *)arriveDay{
+    _arriveDay = arriveDay;
+}
+
+-(void)setExpectJobName:(NSString *)expectJobName{
+    _expectJobName = expectJobName;
+    self.expectJobLabel.text = expectJobName;
+    self.expectJobLabel.textColor = [expectJobName isEqualToString:@"您所期望的工作"] ? RGBColor(204, 204, 204) : RGBColor(51, 51, 51);
 }
 
 #pragma mark --- SDCycleScrollView图片点击回调

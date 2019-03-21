@@ -81,7 +81,7 @@
             
         } else {
             HZTAboutMeViewController *aboutMeVC = [[HZTAboutMeViewController alloc] init];
-            [self.navigationController pushViewController:aboutMeVC animated:YES];
+            [self xw_pushViewController:vc animated:YES];
         }
     }
 }

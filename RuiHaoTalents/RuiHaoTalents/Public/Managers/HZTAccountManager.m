@@ -116,7 +116,7 @@ static HZTAccountManager *manager = nil;
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:kCurrLoginPhoneNumberDefaults];
 }
 
-+(BOOL )setLoginPhoneNumber:(NSString *)phoneNumber{
++(BOOL)setLoginPhoneNumber:(NSString *)phoneNumber{
     [[NSUserDefaults standardUserDefaults] setObject:phoneNumber forKey:kCurrLoginPhoneNumberDefaults];
     return [[NSUserDefaults standardUserDefaults] synchronize];
 }

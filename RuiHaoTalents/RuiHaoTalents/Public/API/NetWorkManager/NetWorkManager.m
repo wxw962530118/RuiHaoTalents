@@ -108,7 +108,9 @@
 
 -(NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(id))success failure:(void (^)(NSURLSessionDataTask *, NSError *))failure{
     NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    if (![HZTAccountManager getUser].token) [dic setValue:@"0" forKey:@"userType"];
+    if ([ToolBaseClass isNullClass:[HZTAccountManager getUser].token]){
+        [dic setValue:@"0" forKey:@"userType"];
+    }
     NSURLSessionDataTask * task = [self.sessionManager POST:URLString parameters:dic progress:^(NSProgress * uploadProgress) {
     } success:^(NSURLSessionDataTask * task, id responseObject) {
         if ([[responseObject objectForKey:@"state"] intValue] == 0) {

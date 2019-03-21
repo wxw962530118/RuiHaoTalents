@@ -14,6 +14,7 @@
 #import "HZTImmediateMatchController.h"
 #import "HZTScanAboutController.h"
 #import "HZTWorkAreaViewController.h"
+#import "HZTExpectJobViewController.h"
 @interface HZTHomeViewController ()<UITableViewDelegate,UITableViewDataSource,HZTHomeHeaderViewDelegate>
 /***/
 @property (nonatomic, strong) HZTLeftMenuContentView * menuContentView;
@@ -35,7 +36,6 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        
     }
     return self;
 }
@@ -61,9 +61,7 @@
     self.latitude = [[dict objectForKey:@"latitude"] doubleValue];
     self.cityName = [dict objectForKey:@"LocationCityName"];
     self.areaName = [dict objectForKey:@"SubLocality"];
-    HZTHomeHeaderModel * model = [[HZTHomeHeaderModel alloc] init];
-    model.cityName = [NSString stringWithFormat:@"%@-%@",self.cityName,self.areaName];
-    self.headerView.model = model;
+    self.headerView.cityName = [NSString stringWithFormat:@"%@-%@",self.cityName,self.areaName];
 }
 
 -(void)showMenuView{
@@ -147,7 +145,7 @@
     SWQRCodeConfig * config = [[SWQRCodeConfig alloc] init];
     config.scannerType = SWScannerTypeBoth;
     vc.codeConfig = config;
-    [self.navigationController pushViewController:vc animated:YES];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 -(void)clickImTalent:(HZTHomeHeaderView *)view{
@@ -166,23 +164,29 @@
     WS(weakSelf)
     HZTWorkAreaViewController * vc = [[HZTWorkAreaViewController alloc] initWithCityName:self.cityName areaName:self.areaName callBack:^(NSString * _Nonnull result) {
         weakSelf.areaName = result;
-        HZTHomeHeaderModel * model = [[HZTHomeHeaderModel alloc] init];
-        model.cityName = [NSString stringWithFormat:@"%@-%@",weakSelf.cityName,weakSelf.areaName];
-        weakSelf.headerView.model = model;
+        weakSelf.headerView.cityName = [NSString stringWithFormat:@"%@-%@",weakSelf.cityName,weakSelf.areaName];
     }];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self xw_pushViewController:vc animated:YES];
+}
+
+-(void)clickExpectJob:(HZTHomeHeaderView *)view expectJobLabel:(nonnull UILabel *)expectJobLabel{
+    WS(weakSelf)
+    HZTExpectJobViewController * vc = [[HZTExpectJobViewController alloc] initWithExpectJobName:@"" payName:@"" callBack:^(NSString * _Nonnull expectJobName, NSString * _Nonnull payName) {
+        weakSelf.headerView.expectJobName = expectJobName;
+    }];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 -(void)clickImmediateMatch:(HZTHomeHeaderView *)view{
     HZTImmediateMatchController * vc = [[HZTImmediateMatchController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 #pragma mark --- 消息中心
 -(void)clickMessage{
     if ([ToolBaseClass isShouldLogin]) return;
     HZTNewsListController * vc = [[HZTNewsListController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 @end

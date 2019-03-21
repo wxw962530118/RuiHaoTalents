@@ -194,7 +194,7 @@
     NSLog(@"sw_handleWithValue === %@", value);
     HZTAlertView(@"提示", [NSString stringWithFormat:@"扫描结果:%@",value], @"确定", nil, ^(NSUInteger index) {
     });
-    [self.navigationController popViewControllerAnimated:YES];
+    [self xw_popViewController:nil animated:YES];
 }
 
 /**

@@ -24,6 +24,18 @@ NS_ASSUME_NONNULL_BEGIN
  @param humanId  用户ID
  */
 -(NSURLSessionDataTask *)requestEducationExperienceWithHumanId:(NSString *)humanId succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
+
+
+/**
+ 获取行业职能列表
+ @param Id  固定参数:1
+ */
+-(NSURLSessionDataTask *)requestPostListWithId:(NSString *)Id succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
+/**
+ 获取薪资列表
+ @param Id  固定参数:1
+ */
+-(NSURLSessionDataTask *)requestPayListWithId:(NSString *)Id succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure;
 @end
 
 NS_ASSUME_NONNULL_END
