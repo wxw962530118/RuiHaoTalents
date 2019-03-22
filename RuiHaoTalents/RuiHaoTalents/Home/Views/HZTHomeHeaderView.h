@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)clickWorkArea:(HZTHomeHeaderView *)view;
 /**期望工作*/
 -(void)clickExpectJob:(HZTHomeHeaderView *)view expectJobLabel:(UILabel *)expectJobLabel;
+/**到岗开始时间*/
+-(void)clickStartDate:(HZTHomeHeaderView *)view startDate:(NSString *)startDate;
+/**到岗结束时间*/
+-(void)clickStartDate:(HZTHomeHeaderView *)view endDate:(NSString *)endDate;
 @end
 
 @interface HZTHomeHeaderView : UIView

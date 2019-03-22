@@ -10,6 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "HZTPageControl.h"
 #import "HZTWorkAreaViewController.h"
+#import "HZTDatePickerView.h"
 @interface HZTHomeHeaderView ()<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView * cycleView;
 /***/
@@ -18,13 +19,24 @@
 @property (nonatomic, strong) HZTPageControl * pageControl;
 /***/
 @property (weak, nonatomic) IBOutlet UILabel *locationNameLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *startMouthLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *startYearLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *endMouthLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *endYearLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *arriveTimeLabel;
+/***/
 @property (weak, nonatomic) IBOutlet UILabel *expectJobLabel;
+/***/
 @property (strong ,nonatomic) NSArray * localImageArr;
+/**记录选择的开始时间*/
+@property (strong ,nonatomic) NSDate * startDate;
+/**记录选择的结束时间*/
+@property (strong ,nonatomic) NSDate * endDate;
 @end
 
 @implementation HZTHomeHeaderView
@@ -37,10 +49,30 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    [self.locationNameLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAddress:)]];
-    [self.expectJobLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickExpectJob:)]];
+    [self configInfo];
+    [self addGestureRecognizers];
     [self configCycleInfo];
     [self createPageControl];
+}
+
+/**时间相关的初始化*/
+-(void)configInfo{
+    self.startDate = [NSDate date];
+    self.endDate = [NSDate date];
+    self.startYearLabel.text = [self handleDateToYearMouth:[NSDate date] isYear:YES];
+    self.startMouthLabel.text = [self handleDateToYearMouth:[NSDate date] isYear:NO];
+    self.endYearLabel.text = [self handleDateToYearMouth:[NSDate date] isYear:YES];
+    self.endMouthLabel.text = [self handleDateToYearMouth:[NSDate date] isYear:NO];
+    [self handleCalcDaysWithStartDate:[NSDate date] endDate:[NSDate date]];
+}
+
+-(void)addGestureRecognizers{
+    [self.locationNameLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAddress:)]];
+    [self.expectJobLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickExpectJob:)]];
+    [self.startYearLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickStartDate:)]];
+    [self.startMouthLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickStartDate:)]];
+    [self.endMouthLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickEndDate:)]];
+    [self.endYearLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickEndDate:)]];
 }
 
 -(void)configCycleInfo{
@@ -115,6 +147,47 @@
     if ([self.delegate respondsToSelector:@selector(clickExpectJob:expectJobLabel:)]) {
         [self.delegate clickExpectJob:self expectJobLabel:self.expectJobLabel];
     }
+}
+
+#pragma mark --- 选择到岗开始时间
+-(void)clickStartDate:(UITapGestureRecognizer *)tap{
+   [self showDatePickerViewWithStartTime:YES];
+}
+
+#pragma mark --- 选择到岗结束时间
+-(void)clickEndDate:(UITapGestureRecognizer *)tap{
+    [self showDatePickerViewWithStartTime:NO];
+}
+
+-(void)showDatePickerViewWithStartTime:(BOOL)isStartTime{
+    WS(weakSelf)
+    [HZTDatePickerView showDatePickerViewWithFrame:CGRectZero title:@"请选择您期望的到岗时间" defaultDate:isStartTime ? self.startDate : self.endDate minDate:self.startDate maxDate:[ToolBaseClass getPriousorLaterDateFromDate:self.startDate withMonth:12] callBack:^(NSDate * _Nonnull date) {
+        if (isStartTime) {
+            weakSelf.startDate = date;
+            weakSelf.endDate = date;
+            weakSelf.startYearLabel.text = [weakSelf handleDateToYearMouth:date isYear:YES];
+            weakSelf.startMouthLabel.text = [weakSelf handleDateToYearMouth:date isYear:NO];
+            weakSelf.endYearLabel.text = weakSelf.startYearLabel.text;
+            weakSelf.endMouthLabel.text = weakSelf.startMouthLabel.text;
+            [weakSelf handleCalcDaysWithStartDate:weakSelf.startDate endDate:weakSelf.endDate];
+        }else{
+            weakSelf.endDate = date;
+            weakSelf.endYearLabel.text = [weakSelf handleDateToYearMouth:date isYear:YES];
+            weakSelf.endMouthLabel.text = [weakSelf handleDateToYearMouth:date isYear:NO];
+            [weakSelf handleCalcDaysWithStartDate:weakSelf.startDate endDate:weakSelf.endDate];
+        }
+    }];
+}
+
+-(NSString *)handleDateToYearMouth:(NSDate *)date isYear:(BOOL)isYear{
+    NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:isYear ? @"yyyy年" : @"MM月dd日"];
+    return [formatter stringFromDate:date];
+}
+
+-(void)handleCalcDaysWithStartDate:(NSDate *)startDate endDate:(NSDate *)endDate{
+    NSInteger days = [ToolBaseClass calcDaysFromBegin:startDate end:endDate];
+    self.arriveTimeLabel.text = [NSString stringWithFormat:@"%ld天",days <= 1 ? 1 : days];
 }
 
 -(void)setCityName:(NSString *)cityName{

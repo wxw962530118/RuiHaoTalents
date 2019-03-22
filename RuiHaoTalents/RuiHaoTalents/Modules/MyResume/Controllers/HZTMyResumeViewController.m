@@ -15,6 +15,7 @@
 #import "HZTMyResumeListModel.h"
 #import "HZTCustomHederCell.h"
 #import "HZTTrainCell.h"
+#import "HZTImagePickerView.h"
 @interface HZTMyResumeViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
@@ -35,8 +36,31 @@
 -(void)configNavItem{
     self.navigationItem.title = @"个人简历";
     [self ctNavRightItemWithTitle:nil imageName:@"share_icon" callBack:^{
-        [ToolBaseClass showNavigationWithLongitude:108.836718 latitude:34.240541];
+        //[ToolBaseClass showNavigationWithLongitude:108.836718 latitude:34.240541];
         //[HZTShareView show];
+        [HZTImagePickerView showImagePickerViewWithMaxCount:1 callBack:^(NSMutableArray *imagesArray, HZTImagePickerViewType type,void(^resultBlock)(BOOL isSucceed)) {
+            switch (type) {
+                case HZTImagePickerViewType_PhotoLibrary:{
+                    [imagesArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        ZLPhotoAssets * assets = (ZLPhotoAssets *)obj;
+                        UIImage * image;
+                        if (assets.originImage) {
+                            image = assets.originImage;
+                        }else if (assets.thumbImage){
+                            image = assets.thumbImage;
+                        }else{
+                            image = assets.aspectRatioImage;
+                        }
+                    }];
+                }
+                    break;
+                case HZTImagePickerViewType_Camera:
+                    /***/
+                    break;
+                default:
+                    break;
+            }
+        }];
     }];
 }
 

@@ -10,11 +10,13 @@
 #import "HZTCustomAlretView.h"
 #import "HZTBaseViewController.h"
 #import "HZTRootNavigationController.h"
+
 #define CurrentVersion                 [ToolBaseClass getCurrentVersion]
 #define IS_Simulator                   [[ToolBaseClass getPhoneExplicitModel] isEqualToString:@"Simulator"]
 #define GetHomeCachPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define App_TheFrontViewC              [ToolBaseClass getTheFrontViewController]
 #define RootWindow [ToolBaseClass getRootWindow]
+
 @interface ToolBaseClass : NSObject
 /***/
 +(instancetype)shareManager;
@@ -92,6 +94,12 @@
 +(BOOL)isShouldLogin;
 /**根据目的地经纬度调起三方地图导航*/
 +(void)showNavigationWithLongitude:(double)longitude latitude:(double)latitude;
+/**处理相机拍照图片被旋转的问题*/
++(UIImage *)fixOrientation:(UIImage *)image;
+/**检测相机及相册访问权限*/
++(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType;
+/**获取当前时间前后若干月的时间*/
++(NSDate *)getPriousorLaterDateFromDate:(NSDate *)date withMonth:(int)month;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

@@ -28,5 +28,9 @@
 #import "HZTCustomPickerView.h"
 #import "HZTAccountManager.h"
 #import "HZTOthersNetWorkManager.h"
+#import "ZLPhotoAssets.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+
 
 #endif /* HZTFileHeader_h */

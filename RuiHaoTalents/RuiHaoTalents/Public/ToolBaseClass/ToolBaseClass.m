@@ -401,9 +401,10 @@ static char base64EncodingTable[64] = {
 
 #pragma mark --- 计算两个日期之间的天数
 +(NSInteger)calcDaysFromBegin:(NSDate *)beginDate end:(NSDate *)endDate{
-    NSTimeInterval time = [endDate timeIntervalSinceDate:beginDate];
-    int days = ((int)time)/(3600*24) + 1;
-    return days;
+    NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents * comp = [calendar components:NSCalendarUnitDay fromDate:beginDate toDate:endDate options:NSCalendarWrapComponents];
+    NSLog(@" -- >>  comp : %@  << --",comp);
+    return comp.day;
 }
 
 /**时间转换为时间戳，精确到微秒*/
@@ -612,6 +613,117 @@ static char base64EncodingTable[64] = {
             [MKMapItem openMapsWithItems:items launchOptions:dic];
         }
     }];
+}
+
++(NSDate *)getPriousorLaterDateFromDate:(NSDate *)date withMonth:(int)month{
+    NSDateComponents * comps = [[NSDateComponents alloc] init];
+    [comps setMonth:month];
+    NSCalendar * calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate * mDate = [calender dateByAddingComponents:comps toDate:date options:0];
+    return mDate;
+}
+
++(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType{
+    NSString * tipTitle;
+    NSString * tipMessage;
+    /**当前是否可用*/
+    BOOL       isAvailable = false;
+    /**摄像头是否可用,或授权*/
+    BOOL available = [UIImagePickerController isSourceTypeAvailable:sourceType];
+    AVAuthorizationStatus authStatus;
+    if(sourceType == UIImagePickerControllerSourceTypeCamera){
+        NSString * mediaType = AVMediaTypeVideo;
+        authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+        if(!available || authStatus == AVAuthorizationStatusDenied){
+            isAvailable = YES;
+            tipTitle = @"未获得授权使用摄像头";
+            tipMessage = @"请在iOS“设置”－“隐私”－“相机”中打开";
+        }else{
+            isAvailable = NO;
+        }
+    }
+    if (sourceType == UIImagePickerControllerSourceTypePhotoLibrary){
+        ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
+        if (!available || author == ALAuthorizationStatusDenied){
+            isAvailable = YES;
+            tipTitle = @"未获得授权访问相册";
+            tipMessage = @"请在IOS“设置”-“隐私”-“照片”中打开";
+        }else{
+            isAvailable = NO;
+        }
+    }
+    
+    if(isAvailable){
+        HZTAlertView(tipTitle, tipMessage, @"稍后再说",@"去开启", ^(NSUInteger index) {
+            if (index == 1) {
+                NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                    [[UIApplication sharedApplication] openURL:url];
+                }
+            }
+        });
+    }
+    return isAvailable;
+}
+
+#pragma mark --- 处理相机拍照图片被旋转的问题
++(UIImage *)fixOrientation:(UIImage *)image {
+    if (image.imageOrientation == UIImageOrientationUp) return image;
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    switch (image.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, image.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, image.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    switch (image.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, image.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    CGContextRef ctx = CGBitmapContextCreate(NULL, image.size.width, image.size.height,
+                                             CGImageGetBitsPerComponent(image.CGImage), 0,
+                                             CGImageGetColorSpace(image.CGImage),
+                                             CGImageGetBitmapInfo(image.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (image.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            CGContextDrawImage(ctx, CGRectMake(0,0,image.size.height,image.size.width), image.CGImage);
+            break;
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,image.size.width,image.size.height), image.CGImage);
+            break;
+    }
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage * img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
 }
 
 @end
