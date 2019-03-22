@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * humanId;
 /***/
 @property (nonatomic, copy) NSString * userIcon;
+/** 手机号码加密 */
+@property (nonatomic, copy) NSString *formateMobile;
+
 @end
 
 NS_ASSUME_NONNULL_END

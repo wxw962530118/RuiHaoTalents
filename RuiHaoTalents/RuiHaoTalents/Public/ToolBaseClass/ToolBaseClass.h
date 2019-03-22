@@ -70,6 +70,15 @@
 +(NSInteger)getTimeStampWithDate:(NSDate *)date;
 /**登录注册密码复杂度的效验*/
 +(BOOL)handlePredicatePassword:(NSString *)passWord;
+
+/**
+ 校验中国手机号码
+ 
+ @param input 输入的手机号码
+ @return 是否为合法的中国手机号
+ */
++ (BOOL)checkPhoneNumberInput:(NSString *)input;
+
 /**获取设备内存总大小*/
 +(double)getDeviceTotalMemorySize;
 /**获取设备可用内存总大小*/

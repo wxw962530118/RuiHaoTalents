@@ -192,10 +192,6 @@
 		ACD276C62238FC6300AD825B /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD276C52238FC6200AD825B /* Home.xcassets */; };
 		ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276CC2239153E00AD825B /* HZTNewsListController.m */; };
 		ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */; };
-		ACE140C722433A6B007FD87B /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */; };
-		ACE140C822433A6B007FD87B /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */; };
-		ACE140CA22433A6B007FD87B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACE140C222433A6B007FD87B /* SWQRCode.bundle */; };
-		ACE140CB22433A6B007FD87B /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140C422433A6B007FD87B /* SWScannerView.m */; };
 		ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F62522389ACD0053D864 /* AppDelegate.m */; };
 		ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62D22389AD00053D864 /* Assets.xcassets */; };
 		ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */; };
@@ -205,9 +201,19 @@
 		ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE803D2238A31A006D1506 /* HZTBaseModel.m */; };
 		ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80402238A331006D1506 /* HZTRootNavigationController.m */; };
 		ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80442238A39B006D1506 /* HZTMacroNotifications.m */; };
+		E108A830224475AA004F2694 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A82F224475AA004F2694 /* UIButton+Countdown.m */; };
+		E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8332244A634004F2694 /* HZTTextHelper.m */; };
+		E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8392244A777004F2694 /* UILabel+TextHelper.m */; };
+		E12011202243577C005DBA7B /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111722435773005DBA7B /* SWQRCodeConfig.m */; };
+		E12011212243577C005DBA7B /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111822435773005DBA7B /* SWQRCodeManager.m */; };
+		E12011222243577C005DBA7B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120111C22435773005DBA7B /* SWQRCode.bundle */; };
+		E12011232243577C005DBA7B /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111E22435773005DBA7B /* SWScannerView.m */; };
 		E14CAB822241E6AD0001A308 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB812241E6AD0001A308 /* UIColor+Hex.m */; };
 		E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB842241E7370001A308 /* UIColor+Common.m */; };
 		E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB872241EF3A0001A308 /* NSString+Common.m */; };
+		E16AD6F922437BD400B61431 /* HZTChangePwdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16AD6F822437BD400B61431 /* HZTChangePwdView.m */; };
+		E16AD6FC2243870F00B61431 /* HZTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E16AD6FB2243870F00B61431 /* HZTTextField.m */; };
+		E1BCFB602243796B00111A3B /* HZTChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BCFB5F2243796B00111A3B /* HZTChangePwdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -482,14 +488,6 @@
 		ACD276CC2239153E00AD825B /* HZTNewsListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListController.m; sourceTree = "<group>"; };
 		ACDA0CCA223F33BA00C54A63 /* HZTMyResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeViewController.h; sourceTree = "<group>"; };
 		ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeViewController.m; sourceTree = "<group>"; };
-		ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
-		ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
-		ACE140BE22433A6B007FD87B /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
-		ACE140BF22433A6B007FD87B /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
-		ACE140C022433A6B007FD87B /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
-		ACE140C222433A6B007FD87B /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
-		ACE140C422433A6B007FD87B /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
-		ACE140C522433A6B007FD87B /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
 		ACE8F62122389ACD0053D864 /* RuiHaoTalents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuiHaoTalents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE8F62422389ACD0053D864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACE8F62522389ACD0053D864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -514,12 +512,32 @@
 		ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMacroScreenDapter.h; sourceTree = "<group>"; };
 		ACFE804B2238A527006D1506 /* HZTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTPrefixHeader.pch; sourceTree = "<group>"; };
 		DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.release.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.release.xcconfig"; sourceTree = "<group>"; };
+		E108A82E224475AA004F2694 /* UIButton+Countdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
+		E108A82F224475AA004F2694 /* UIButton+Countdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
+		E108A8322244A634004F2694 /* HZTTextHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTextHelper.h; sourceTree = "<group>"; };
+		E108A8332244A634004F2694 /* HZTTextHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTextHelper.m; sourceTree = "<group>"; };
+		E108A8382244A777004F2694 /* UILabel+TextHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextHelper.h"; sourceTree = "<group>"; };
+		E108A8392244A777004F2694 /* UILabel+TextHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextHelper.m"; sourceTree = "<group>"; };
+		E120111722435773005DBA7B /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
+		E120111822435773005DBA7B /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
+		E120111922435773005DBA7B /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
+		E120111A22435773005DBA7B /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
+		E120111B22435773005DBA7B /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
+		E120111C22435773005DBA7B /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
+		E120111E22435773005DBA7B /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
+		E120111F22435773005DBA7B /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
 		E14CAB802241E6AD0001A308 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		E14CAB812241E6AD0001A308 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		E14CAB832241E7370001A308 /* UIColor+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Common.h"; sourceTree = "<group>"; };
 		E14CAB842241E7370001A308 /* UIColor+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Common.m"; sourceTree = "<group>"; };
 		E14CAB862241EF3A0001A308 /* NSString+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
 		E14CAB872241EF3A0001A308 /* NSString+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		E16AD6F722437BD400B61431 /* HZTChangePwdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChangePwdView.h; sourceTree = "<group>"; };
+		E16AD6F822437BD400B61431 /* HZTChangePwdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangePwdView.m; sourceTree = "<group>"; };
+		E16AD6FA2243870F00B61431 /* HZTTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTextField.h; sourceTree = "<group>"; };
+		E16AD6FB2243870F00B61431 /* HZTTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTextField.m; sourceTree = "<group>"; };
+		E1BCFB5E2243796B00111A3B /* HZTChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChangePwdViewController.h; sourceTree = "<group>"; };
+		E1BCFB5F2243796B00111A3B /* HZTChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangePwdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,7 +640,7 @@
 		AC2D71E0223A246B00E80191 /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				ACE140BA22433A6B007FD87B /* SWQRCode */,
+				E120111522435773005DBA7B /* SWQRCode */,
 				AC2D7211223A25B400E80191 /* MBProgressHUD */,
 				AC2D71E1223A246B00E80191 /* PYPhotoBrowser */,
 			);
@@ -1176,37 +1194,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		ACE140BA22433A6B007FD87B /* SWQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140BB22433A6B007FD87B /* Config */,
-				ACE140C222433A6B007FD87B /* SWQRCode.bundle */,
-				ACE140C322433A6B007FD87B /* View */,
-			);
-			path = SWQRCode;
-			sourceTree = "<group>";
-		};
-		ACE140BB22433A6B007FD87B /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140BF22433A6B007FD87B /* SWQRCode.h */,
-				ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */,
-				ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */,
-				ACE140BE22433A6B007FD87B /* SWQRCodeConfig.h */,
-				ACE140C022433A6B007FD87B /* SWQRCodeManager.h */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		ACE140C322433A6B007FD87B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140C422433A6B007FD87B /* SWScannerView.m */,
-				ACE140C522433A6B007FD87B /* SWScannerView.h */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		ACE8F61822389ACD0053D864 = {
 			isa = PBXGroup;
 			children = (
@@ -1267,6 +1254,7 @@
 				AC70700F223B750E003F4F6D /* HZTAccountManager.m */,
 				AC37E65A2241DFA8004144AA /* HZTCLocationManager.h */,
 				AC37E65B2241DFA8004144AA /* HZTCLocationManager.m */,
+				E108A8312244A609004F2694 /* HZTTextHelper */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1283,6 +1271,8 @@
 				AC2D71D62239EFF700E80191 /* HZTMajorButton.m */,
 				ACD276C32238F8A300AD825B /* HZTPageControl.h */,
 				ACD276C22238F8A200AD825B /* HZTPageControl.m */,
+				E16AD6FA2243870F00B61431 /* HZTTextField.h */,
+				E16AD6FB2243870F00B61431 /* HZTTextField.m */,
 				ACB381632240CBDA00FFB9B3 /* HZTTopTabView */,
 				ACB12D78223A42A4008E5494 /* CustomSheetView */,
 				ACB12D72223A2B50008E5494 /* CustomAlretView */,
@@ -1312,6 +1302,8 @@
 			children = (
 				ACC1FB182238B947001E9F4A /* UIButton+HitAreaExpand.h */,
 				ACC1FB152238B947001E9F4A /* UIButton+HitAreaExpand.m */,
+				E108A82E224475AA004F2694 /* UIButton+Countdown.h */,
+				E108A82F224475AA004F2694 /* UIButton+Countdown.m */,
 				ACC1FB162238B947001E9F4A /* UITableViewCell+HZTableViewCell.h */,
 				ACC1FB172238B947001E9F4A /* UITableViewCell+HZTableViewCell.m */,
 				ACC1FB142238B947001E9F4A /* UIView+Category.h */,
@@ -1377,6 +1369,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E1BCFB582243791700111A3B /* ChangePassword */,
 				AC37E67022421932004144AA /* ScanAbout */,
 				AC37E66822421915004144AA /* CompeleteInformation */,
 				AC37E66C22421915004144AA /* ImmediateMatch */,
@@ -1585,6 +1578,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E108A8312244A609004F2694 /* HZTTextHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E108A8322244A634004F2694 /* HZTTextHelper.h */,
+				E108A8332244A634004F2694 /* HZTTextHelper.m */,
+				E108A8382244A777004F2694 /* UILabel+TextHelper.h */,
+				E108A8392244A777004F2694 /* UILabel+TextHelper.m */,
+			);
+			path = HZTTextHelper;
+			sourceTree = "<group>";
+		};
+		E120111522435773005DBA7B /* SWQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				E120111622435773005DBA7B /* Config */,
+				E120111C22435773005DBA7B /* SWQRCode.bundle */,
+				E120111D22435773005DBA7B /* View */,
+			);
+			path = SWQRCode;
+			sourceTree = "<group>";
+		};
+		E120111622435773005DBA7B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E120111722435773005DBA7B /* SWQRCodeConfig.m */,
+				E120111822435773005DBA7B /* SWQRCodeManager.m */,
+				E120111922435773005DBA7B /* SWQRCodeConfig.h */,
+				E120111A22435773005DBA7B /* SWQRCode.h */,
+				E120111B22435773005DBA7B /* SWQRCodeManager.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E120111D22435773005DBA7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E120111E22435773005DBA7B /* SWScannerView.m */,
+				E120111F22435773005DBA7B /* SWScannerView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1BCFB582243791700111A3B /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				E1BCFB592243791700111A3B /* Controller */,
+				E1BCFB5A2243791700111A3B /* Views */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		E1BCFB592243791700111A3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1BCFB5E2243796B00111A3B /* HZTChangePwdViewController.h */,
+				E1BCFB5F2243796B00111A3B /* HZTChangePwdViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1BCFB5A2243791700111A3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E16AD6F722437BD400B61431 /* HZTChangePwdView.h */,
+				E16AD6F822437BD400B61431 /* HZTChangePwdView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1669,7 +1731,7 @@
 				AC2D726A223A25B500E80191 /* 63.png in Resources */,
 				AC2D7295223A25B500E80191 /* 32.png in Resources */,
 				AC2D72BA223A25B500E80191 /* MBProgressHUD.bundle in Resources */,
-				ACE140CA22433A6B007FD87B /* SWQRCode.bundle in Resources */,
+				E12011222243577C005DBA7B /* SWQRCode.bundle in Resources */,
 				AC2D728B223A25B500E80191 /* 35.png in Resources */,
 				AC2D72A3223A25B500E80191 /* 80.png in Resources */,
 				AC2D72B3223A25B500E80191 /* 79.png in Resources */,
@@ -1823,10 +1885,13 @@
 				AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */,
 				AC207763223F479C0072129B /* HZTMyResumeCustomCell.m in Sources */,
 				ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */,
+				E16AD6FC2243870F00B61431 /* HZTTextField.m in Sources */,
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
 				AC37E65F224209DA004144AA /* HZTHomeNetWorkManager.m in Sources */,
+				E108A830224475AA004F2694 /* UIButton+Countdown.m in Sources */,
 				ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */,
 				AC37E68222421A86004144AA /* HZTImmediateMatchCell.m in Sources */,
+				E1BCFB602243796B00111A3B /* HZTChangePwdViewController.m in Sources */,
 				AC20775D223F475C0072129B /* HZTMyResumeSectionFooterView.m in Sources */,
 				ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */,
 				AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */,
@@ -1844,11 +1909,12 @@
 				ACB12D7B223A42C5008E5494 /* HZTCustomSheetView.m in Sources */,
 				AC707005223A503F003F4F6D /* HZTHomeBottomCell.m in Sources */,
 				ACFE803E2238A31A006D1506 /* HZTBaseModel.m in Sources */,
-				ACE140C722433A6B007FD87B /* SWQRCodeConfig.m in Sources */,
+				E12011202243577C005DBA7B /* SWQRCodeConfig.m in Sources */,
 				ACB3816B2240CBDA00FFB9B3 /* HZTTopTabModel.m in Sources */,
 				AC37E65C2241DFA8004144AA /* HZTCLocationManager.m in Sources */,
 				AC2D7203223A246B00E80191 /* UIView+PYExtension.m in Sources */,
 				ACB3815A2240B99300FFB9B3 /* HZTNewsListModel.m in Sources */,
+				E16AD6F922437BD400B61431 /* HZTChangePwdView.m in Sources */,
 				AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */,
 				ACB3816A2240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m in Sources */,
 				AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */,
@@ -1885,24 +1951,26 @@
 				AC7DB40C22421F8F00F39EEF /* HZTWorkAreaListCell.m in Sources */,
 				AC2D720D223A246C00E80191 /* PYPhotoBrowseView.m in Sources */,
 				AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */,
-				ACE140CB22433A6B007FD87B /* SWScannerView.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
 				AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */,
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,
 				ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */,
+				E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */,
 				AC2D71DF2239F2FA00E80191 /* HZTLoginRegisterModel.m in Sources */,
 				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,
 				E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */,
 				ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */,
 				AC707001223A4B90003F4F6D /* HZTDistrictModel.m in Sources */,
 				AC2D7268223A25B500E80191 /* MBProgressHUD.m in Sources */,
+				E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */,
 				ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */,
 				AC37E67622421961004144AA /* HZTImmediateMatchController.m in Sources */,
+				E12011232243577C005DBA7B /* SWScannerView.m in Sources */,
 				ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */,
 				ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */,
 				AC37E66722421822004144AA /* HZTAboutMeViewController.m in Sources */,
-				ACE140C822433A6B007FD87B /* SWQRCodeManager.m in Sources */,
+				E12011212243577C005DBA7B /* SWQRCodeManager.m in Sources */,
 				ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */,
 				ACBB3BA32238CECF0019EACB /* HZTMenuListModel.m in Sources */,
 			);
