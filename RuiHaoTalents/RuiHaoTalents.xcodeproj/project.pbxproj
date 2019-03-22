@@ -212,6 +212,7 @@
 		E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8332244A634004F2694 /* HZTTextHelper.m */; };
 		E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8392244A777004F2694 /* UILabel+TextHelper.m */; };
 		E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */; };
+		E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8442244C870004F2694 /* HZTFeedBackViewController.m */; };
 		E12011202243577C005DBA7B /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111722435773005DBA7B /* SWQRCodeConfig.m */; };
 		E12011212243577C005DBA7B /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111822435773005DBA7B /* SWQRCodeManager.m */; };
 		E12011222243577C005DBA7B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120111C22435773005DBA7B /* SWQRCode.bundle */; };
@@ -540,6 +541,8 @@
 		E108A8392244A777004F2694 /* UILabel+TextHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextHelper.m"; sourceTree = "<group>"; };
 		E108A83D2244BA5E004F2694 /* HZTChangeMobileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChangeMobileViewController.h; sourceTree = "<group>"; };
 		E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangeMobileViewController.m; sourceTree = "<group>"; };
+		E108A8432244C870004F2694 /* HZTFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTFeedBackViewController.h; sourceTree = "<group>"; };
+		E108A8442244C870004F2694 /* HZTFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTFeedBackViewController.m; sourceTree = "<group>"; };
 		E120111722435773005DBA7B /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
 		E120111822435773005DBA7B /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
 		E120111922435773005DBA7B /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
@@ -1434,6 +1437,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E108A8402244C85D004F2694 /* FeedBack */,
 				E108A83B2244BA4A004F2694 /* ChangeMobile */,
 				E1BCFB582243791700111A3B /* ChangePassword */,
 				ACE140CC22434148007FD87B /* ChoosePost */,
@@ -1671,6 +1675,31 @@
 				E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E108A8402244C85D004F2694 /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				E108A8412244C85D004F2694 /* Controller */,
+				E108A8422244C85D004F2694 /* Views */,
+			);
+			path = FeedBack;
+			sourceTree = "<group>";
+		};
+		E108A8412244C85D004F2694 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E108A8432244C870004F2694 /* HZTFeedBackViewController.h */,
+				E108A8442244C870004F2694 /* HZTFeedBackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E108A8422244C85D004F2694 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E120111522435773005DBA7B /* SWQRCode */ = {
@@ -1966,6 +1995,7 @@
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
 				E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */,
 				ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */,
+				E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
 				AC20774B223F3EF40072129B /* HZTShareView.m in Sources */,

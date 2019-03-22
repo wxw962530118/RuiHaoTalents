@@ -10,6 +10,7 @@
 #import "HZTAboutMeViewController.h"
 #import "HZTChangePwdViewController.h"
 #import "HZTChangeMobileViewController.h"
+#import "HZTFeedBackViewController.h"
 
 #import "HZTSettingCell.h"
 #import "HZTLoginWorkManager.h"
@@ -87,7 +88,8 @@
         if (indexPath.row == 0) {
         
         } else if (indexPath.row == 1) {
-            
+            HZTFeedBackViewController *vc = [[HZTFeedBackViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
         } else {
             HZTAboutMeViewController *vc = [[HZTAboutMeViewController alloc] init];
             [self xw_pushViewController:vc animated:YES];
