@@ -220,7 +220,7 @@
             self.registerSucceed(self.phone, self.password);
         }
         self.registerBtn.isInvalid = false;
-        [self.navigationController popViewControllerAnimated:YES];
+        [self xw_popViewController:nil animated:YES];
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
         
     }];

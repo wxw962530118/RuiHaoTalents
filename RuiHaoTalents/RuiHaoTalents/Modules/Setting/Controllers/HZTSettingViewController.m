@@ -86,8 +86,8 @@
         } else if (indexPath.row == 1) {
             
         } else {
-            HZTAboutMeViewController *aboutMeVC = [[HZTAboutMeViewController alloc] init];
-            [self.navigationController pushViewController:aboutMeVC animated:YES];
+            HZTAboutMeViewController * vc = [[HZTAboutMeViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
         }
     }
 }

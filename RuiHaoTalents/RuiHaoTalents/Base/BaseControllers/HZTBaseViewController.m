@@ -22,6 +22,11 @@
     [self configTableContentInset];
 }
 
+-(void)setNavTitle:(NSString *)navTitle{
+    _navTitle = navTitle;
+    self.navigationItem.title = navTitle;
+}
+
 -(void)configSelf{
     self.view.backgroundColor = HZTColorWhiteGround;
     /**自定义导航栏返回按钮 系统侧滑返回失效 处理*/
@@ -50,6 +55,23 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)xw_pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    [self.navigationController pushViewController:viewController animated:animated];
+}
+
+-(void)xw_popViewController:(UIViewController * __nullable)viewController animated:(BOOL)animated{
+    if (viewController) {
+        for (UIViewController * vc in self.navigationController.viewControllers) {
+            if ([vc isKindOfClass:[viewController class]]) {
+                /**当前导航控制器 栈内存在 指定控制器 则 pop回vc*/
+                [self.navigationController popToViewController:vc animated:YES];
+            }
+        }
+    }else{
+        [self.navigationController popViewControllerAnimated:animated];
+    }
+}
+
 -(void)ctNavRightItemWithTitle:(NSString * __nullable)title imageName:(NSString * __nullable)imageName callBack:(nonnull void (^)(void))callBack{
     self.Block = callBack;
     UIButton * btn = [[UIButton alloc] init];
@@ -76,7 +98,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"dealloc %@", [self className]);
+    NSLog(@"dealloc %@--%@", [self className], [self superclass]);
 }
 
 @end

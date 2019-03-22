@@ -63,10 +63,10 @@
     }
     if (indexPath.row == 1) {
         HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
-        [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
+        [App_TheFrontViewC xw_pushViewController:vc animated:YES];
     }else if (indexPath.row == 4){
         HZTSettingViewController * vc = [[HZTSettingViewController alloc] init];
-        [App_TheFrontViewC.navigationController pushViewController:vc animated:YES];
+        [App_TheFrontViewC xw_pushViewController:vc animated:YES];
     }
 }
 

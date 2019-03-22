@@ -93,7 +93,7 @@
     if (self.Block) {
         self.Block(self.dataArray[indexPath.item].name);
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    [self xw_popViewController:nil animated:YES];
 }
 
 #pragma mark --- 整体边距的优先级 始终高于内部边距的优先级

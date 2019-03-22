@@ -24,13 +24,23 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)clickImmediateMatch:(HZTHomeHeaderView *)view;
 /**工作区域*/
 -(void)clickWorkArea:(HZTHomeHeaderView *)view;
+/**期望工作*/
+-(void)clickExpectJob:(HZTHomeHeaderView *)view expectJobLabel:(UILabel *)expectJobLabel;
 @end
 
 @interface HZTHomeHeaderView : UIView
 +(instancetype)createHomeHeaderView;
 @property (nonatomic, weak) id <HZTHomeHeaderViewDelegate> delegate;
-/***/
-@property (nonatomic, strong) HZTHomeHeaderModel * model;
+/**当前定位显示的市区/县*/
+@property (nonatomic, copy) NSString * cityName;
+/**期望工作*/
+@property (nonatomic, copy) NSString * expectJobName;
+/**到岗开始时间*/
+@property (nonatomic, copy) NSString * startTime;
+/**到岗结束时间*/
+@property (nonatomic, copy) NSString * endTime;
+/**到岗时间*/
+@property (nonatomic, copy) NSString * arriveDay;
 @end
 
 NS_ASSUME_NONNULL_END
