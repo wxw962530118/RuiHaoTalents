@@ -32,6 +32,13 @@
     for (int i = 0; i< 30; i++) {
         [self.dataListArray addObject:[NSString stringWithFormat:@"test:%d",i]];
     }
+    
+    [[HZTOthersNetWorkManager manager] requestJobListWithPersonWorkArdess:@"西安市-新城区" workArdessX:108.836718   workArdessY:34.240541 reportStart:@"2019-03-22" reportEnd:@"2019-03-22" personWorkType:@"0" personPayStart:@"41" personIndustry:@"6" personFunction:@"3" sort:1 pageNumber:1 succeed:^(id  _Nonnull responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        
+    }];
+    
     [self.mainTableView reloadData];
 }
 
