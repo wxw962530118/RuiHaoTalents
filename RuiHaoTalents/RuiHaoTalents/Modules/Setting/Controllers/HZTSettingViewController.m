@@ -9,6 +9,8 @@
 #import "HZTSettingViewController.h"
 #import "HZTAboutMeViewController.h"
 #import "HZTChangePwdViewController.h"
+#import "HZTChangeMobileViewController.h"
+
 #import "HZTSettingCell.h"
 #import "HZTLoginWorkManager.h"
 #import "AppDelegate.h"
@@ -73,10 +75,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            
+            HZTChangeMobileViewController *vc = [[HZTChangeMobileViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
         } else {
-            HZTChangePwdViewController *changePwdVC = [[HZTChangePwdViewController alloc] init];
-            [self.navigationController pushViewController:changePwdVC animated:YES];
+            HZTChangePwdViewController *vc = [[HZTChangePwdViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
         }
     } else if (indexPath.section == 1) {
         
@@ -86,7 +89,7 @@
         } else if (indexPath.row == 1) {
             
         } else {
-            HZTAboutMeViewController * vc = [[HZTAboutMeViewController alloc] init];
+            HZTAboutMeViewController *vc = [[HZTAboutMeViewController alloc] init];
             [self xw_pushViewController:vc animated:YES];
         }
     }

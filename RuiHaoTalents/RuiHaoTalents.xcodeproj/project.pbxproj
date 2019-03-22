@@ -196,10 +196,6 @@
 		ACD276C62238FC6300AD825B /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD276C52238FC6200AD825B /* Home.xcassets */; };
 		ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276CC2239153E00AD825B /* HZTNewsListController.m */; };
 		ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */; };
-		ACE140C722433A6B007FD87B /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */; };
-		ACE140C822433A6B007FD87B /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */; };
-		ACE140CA22433A6B007FD87B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACE140C222433A6B007FD87B /* SWQRCode.bundle */; };
-		ACE140CB22433A6B007FD87B /* SWScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140C422433A6B007FD87B /* SWScannerView.m */; };
 		ACE140D22243415E007FD87B /* HZTChoosePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D12243415E007FD87B /* HZTChoosePostController.m */; };
 		ACE140D6224359C1007FD87B /* HZTExpectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D4224359C1007FD87B /* HZTExpectJobViewController.m */; };
 		ACE140D7224359C1007FD87B /* HZTExpectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE140D5224359C1007FD87B /* HZTExpectJobViewController.xib */; };
@@ -215,6 +211,7 @@
 		E108A830224475AA004F2694 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A82F224475AA004F2694 /* UIButton+Countdown.m */; };
 		E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8332244A634004F2694 /* HZTTextHelper.m */; };
 		E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A8392244A777004F2694 /* UILabel+TextHelper.m */; };
+		E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */; };
 		E12011202243577C005DBA7B /* SWQRCodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111722435773005DBA7B /* SWQRCodeConfig.m */; };
 		E12011212243577C005DBA7B /* SWQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E120111822435773005DBA7B /* SWQRCodeManager.m */; };
 		E12011222243577C005DBA7B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E120111C22435773005DBA7B /* SWQRCode.bundle */; };
@@ -506,14 +503,6 @@
 		ACD276CC2239153E00AD825B /* HZTNewsListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListController.m; sourceTree = "<group>"; };
 		ACDA0CCA223F33BA00C54A63 /* HZTMyResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeViewController.h; sourceTree = "<group>"; };
 		ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeViewController.m; sourceTree = "<group>"; };
-		ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
-		ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
-		ACE140BE22433A6B007FD87B /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
-		ACE140BF22433A6B007FD87B /* SWQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCode.h; sourceTree = "<group>"; };
-		ACE140C022433A6B007FD87B /* SWQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeManager.h; sourceTree = "<group>"; };
-		ACE140C222433A6B007FD87B /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
-		ACE140C422433A6B007FD87B /* SWScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWScannerView.m; sourceTree = "<group>"; };
-		ACE140C522433A6B007FD87B /* SWScannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWScannerView.h; sourceTree = "<group>"; };
 		ACE140D02243415E007FD87B /* HZTChoosePostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChoosePostController.h; sourceTree = "<group>"; };
 		ACE140D12243415E007FD87B /* HZTChoosePostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostController.m; sourceTree = "<group>"; };
 		ACE140D3224359C1007FD87B /* HZTExpectJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTExpectJobViewController.h; sourceTree = "<group>"; };
@@ -549,6 +538,8 @@
 		E108A8332244A634004F2694 /* HZTTextHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTextHelper.m; sourceTree = "<group>"; };
 		E108A8382244A777004F2694 /* UILabel+TextHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+TextHelper.h"; sourceTree = "<group>"; };
 		E108A8392244A777004F2694 /* UILabel+TextHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TextHelper.m"; sourceTree = "<group>"; };
+		E108A83D2244BA5E004F2694 /* HZTChangeMobileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChangeMobileViewController.h; sourceTree = "<group>"; };
+		E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangeMobileViewController.m; sourceTree = "<group>"; };
 		E120111722435773005DBA7B /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
 		E120111822435773005DBA7B /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
 		E120111922435773005DBA7B /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
@@ -1225,37 +1216,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		ACE140BA22433A6B007FD87B /* SWQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140BB22433A6B007FD87B /* Config */,
-				ACE140C222433A6B007FD87B /* SWQRCode.bundle */,
-				ACE140C322433A6B007FD87B /* View */,
-			);
-			path = SWQRCode;
-			sourceTree = "<group>";
-		};
-		ACE140BB22433A6B007FD87B /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140BF22433A6B007FD87B /* SWQRCode.h */,
-				ACE140BC22433A6B007FD87B /* SWQRCodeConfig.m */,
-				ACE140BD22433A6B007FD87B /* SWQRCodeManager.m */,
-				ACE140BE22433A6B007FD87B /* SWQRCodeConfig.h */,
-				ACE140C022433A6B007FD87B /* SWQRCodeManager.h */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		ACE140C322433A6B007FD87B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ACE140C422433A6B007FD87B /* SWScannerView.m */,
-				ACE140C522433A6B007FD87B /* SWScannerView.h */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		ACE140CC22434148007FD87B /* ChoosePost */ = {
 			isa = PBXGroup;
 			children = (
@@ -1474,6 +1434,7 @@
 		ACE8F64422389E440053D864 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E108A83B2244BA4A004F2694 /* ChangeMobile */,
 				E1BCFB582243791700111A3B /* ChangePassword */,
 				ACE140CC22434148007FD87B /* ChoosePost */,
 				AC37E67022421932004144AA /* ScanAbout */,
@@ -1693,6 +1654,23 @@
 				E108A8392244A777004F2694 /* UILabel+TextHelper.m */,
 			);
 			path = HZTTextHelper;
+			sourceTree = "<group>";
+		};
+		E108A83B2244BA4A004F2694 /* ChangeMobile */ = {
+			isa = PBXGroup;
+			children = (
+				E108A83C2244BA4A004F2694 /* Controller */,
+			);
+			path = ChangeMobile;
+			sourceTree = "<group>";
+		};
+		E108A83C2244BA4A004F2694 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E108A83D2244BA5E004F2694 /* HZTChangeMobileViewController.h */,
+				E108A83E2244BA5E004F2694 /* HZTChangeMobileViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E120111522435773005DBA7B /* SWQRCode */ = {
@@ -2064,6 +2042,7 @@
 				AC2D720D223A246C00E80191 /* PYPhotoBrowseView.m in Sources */,
 				AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
+				E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */,
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
 				AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */,
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,

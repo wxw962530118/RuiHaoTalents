@@ -165,10 +165,14 @@
         _textField.enabled = YES;
         WS(weakSelf)
         [_textField addTextDidChangeHandler:^(HZTTextField * _Nonnull textField) {
-            weakSelf.changeHandler(textField);
+            if (weakSelf.changeHandler) {
+                weakSelf.changeHandler(textField);
+            }
         }];
         [_textField addTextLengthDidMaxHandler:^(HZTTextField * _Nonnull textField) {
-            weakSelf.maxHandler(textField);
+            if (weakSelf.maxHandler) {
+                weakSelf.maxHandler(textField);
+            }
         }];
         [self addSubview:_textField];
         [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
