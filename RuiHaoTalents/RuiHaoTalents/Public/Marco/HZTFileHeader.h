@@ -31,6 +31,6 @@
 #import "ZLPhotoAssets.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-
+#import "HZTTextField.h"
 
 #endif /* HZTFileHeader_h */

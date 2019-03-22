@@ -12,4 +12,14 @@
 + (NSDictionary*)mj_replacedKeyFromPropertyName{
     return @{@"mobile":@"userName"};
 }
+
+- (NSString *)formateMobile {
+    NSString *mobile = @"";
+    if ([ToolBaseClass checkPhoneNumberInput:self.mobile]) {
+        mobile = [self.mobile stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+    } else {
+        mobile = self.mobile;
+    }
+    return mobile;
+}
 @end

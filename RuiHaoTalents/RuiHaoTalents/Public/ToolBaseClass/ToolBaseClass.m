@@ -482,6 +482,20 @@ static char base64EncodingTable[64] = {
     return result;
 }
 
++ (BOOL)checkPhoneNumberInput:(NSString *)input {
+    if (!input || [input isEqual:[NSNull null]] || [input isKindOfClass:[NSNull class]] || input.length == 0) {
+        return NO;
+    }
+    
+    NSString *MOBILE = @"^1(3|4|5|6|7|8|9)[0-9]\\d{8}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    if ([regextestmobile evaluateWithObject:input] == NO) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 /**获取电池电量*/
 +(CGFloat)getBatteryQuantity{
     return [[UIDevice currentDevice] batteryLevel];

@@ -8,6 +8,10 @@
 
 #import "HZTSettingViewController.h"
 #import "HZTAboutMeViewController.h"
+#import "HZTChangePwdViewController.h"
+#import "HZTChangeMobileViewController.h"
+#import "HZTFeedBackViewController.h"
+
 #import "HZTSettingCell.h"
 #import "HZTLoginWorkManager.h"
 #import "AppDelegate.h"
@@ -30,7 +34,7 @@
 }
 
 -(void)prepareData{
-    [self.dataListArray addObject:@[[NSString stringWithFormat:@"更换手机号码:%@",[HZTAccountManager getUser].mobile],@"修改密码"]];
+    [self.dataListArray addObject:@[[NSString stringWithFormat:@"更换手机号码: %@",[HZTAccountManager getUser].formateMobile],@"修改密码"]];
     [self.dataListArray addObject:@[@"提醒设置"]];
     [self.dataListArray addObject:@[@"我要评价",@"反馈与建议",@"关于我们"]];
     [self.mainTableView reloadData];
@@ -71,16 +75,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
-        
+        if (indexPath.row == 0) {
+            HZTChangeMobileViewController *vc = [[HZTChangeMobileViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
+        } else {
+            HZTChangePwdViewController *vc = [[HZTChangePwdViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
+        }
     } else if (indexPath.section == 1) {
         
     } else {
         if (indexPath.row == 0) {
         
         } else if (indexPath.row == 1) {
-            
+            HZTFeedBackViewController *vc = [[HZTFeedBackViewController alloc] init];
+            [self xw_pushViewController:vc animated:YES];
         } else {
-            HZTAboutMeViewController * vc = [[HZTAboutMeViewController alloc] init];
+            HZTAboutMeViewController *vc = [[HZTAboutMeViewController alloc] init];
             [self xw_pushViewController:vc animated:YES];
         }
     }
