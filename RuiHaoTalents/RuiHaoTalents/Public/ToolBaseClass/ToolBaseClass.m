@@ -758,3 +758,12 @@ static char base64EncodingTable[64] = {
 }
 
 @end
+
+@implementation NSObject (HZTTool)
+
+- (BOOL)isNull{
+    if (!self || self==nil || [self isKindOfClass:[NSNull class]]) return YES;
+    return NO;
+}
+
+@end

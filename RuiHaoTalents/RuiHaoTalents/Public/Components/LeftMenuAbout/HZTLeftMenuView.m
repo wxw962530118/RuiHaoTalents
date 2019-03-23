@@ -142,6 +142,12 @@
 - (void)handleLeftEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
     /**根据被触摸手势的view计算得出坐标值*/
     CGPoint translation = [gesture translationInView:gesture.view];
+    if (translation.x > 0) {
+        if ([ToolBaseClass isShouldLogin]) {
+            NotificationPost(HZTNOTIFICATION_SHOULD_LOGIN, nil, nil);
+            return;
+        }
+    }
     if(UIGestureRecognizerStateBegan == gesture.state ||
        UIGestureRecognizerStateChanged == gesture.state){
         if(translation.x <= self.leftMenuWidth){

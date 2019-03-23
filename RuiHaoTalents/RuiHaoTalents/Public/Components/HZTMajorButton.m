@@ -23,7 +23,7 @@
 
 - (void)initParameter{
     _normalBackgroundColor = HZTMainColor;
-    _highlightBackgroundColor = RGBColor(79,193,170);
+    _highlightBackgroundColor = RGBColor(60,170,160);
     _invalidBackgroundColor = RGBColor(181, 181, 181);
     _fontNormalColor = HZTColorWhiteGround;
     _fontInvalidColor = HZTColorEmphasis;

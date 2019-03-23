@@ -142,3 +142,7 @@ CG_INLINE BOOL IS_IPhoneX(){
     return [[ToolBaseClass shareManager] handleIPhoneModel];
 };
 
+@interface NSObject (HZTTool)
+/** 判断对象是不是空 */
+- (BOOL)isNull;
+@end
