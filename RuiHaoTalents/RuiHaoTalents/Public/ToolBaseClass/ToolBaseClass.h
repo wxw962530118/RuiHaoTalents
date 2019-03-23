@@ -102,8 +102,8 @@
 +(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType;
 /**获取当前时间前后若干月的时间*/
 +(NSDate *)getPriousorLaterDateFromDate:(NSDate *)date withMonth:(int)month;
-/**格式化字符串 isDot:是否已点的形式展示*/
-+(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot;
+/**格式化字符串 isDot:是否已点的形式展示 hasYear 是否以年月日拼接 默认 yyyy-MM-dd*/
++(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot hasYear:(BOOL)hasYear;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

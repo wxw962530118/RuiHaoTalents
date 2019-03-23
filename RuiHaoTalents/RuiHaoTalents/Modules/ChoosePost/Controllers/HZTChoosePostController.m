@@ -59,6 +59,7 @@
             /**一级根据ID拉取二级菜单*/
             [weakSelf getPostListWithId:Id postView:weakSelf.secondChoosePostView];
         }];
+        _firstChoosePostView.backgroundColor = RGBColor(244, 244, 244);
         [self.view addSubview:_firstChoosePostView];
         [_firstChoosePostView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.left.equalTo(self.view);
@@ -75,6 +76,7 @@
             weakSelf.secondId = Id;
             [weakSelf getPostListWithId:Id postView:weakSelf.thirdChoosePostView];
         }];
+        _secondChoosePostView.backgroundColor = RGBColor(243, 243, 243);
         [self.view addSubview:_secondChoosePostView];
         [_secondChoosePostView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(self.view);
@@ -94,6 +96,7 @@
             }
             [weakSelf xw_popViewController:nil animated:YES];
         }];
+        _thirdChoosePostView.backgroundColor = RGBColor(224, 237, 235);
         [self.view addSubview:_thirdChoosePostView];
         [_thirdChoosePostView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(self.view);

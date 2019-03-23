@@ -171,7 +171,7 @@
             weakSelf.endMouthLabel.text = weakSelf.startMouthLabel.text;
             [weakSelf handleCalcDaysWithStartDate:weakSelf.startDate endDate:weakSelf.endDate];
             if ([weakSelf.delegate respondsToSelector:@selector(clickStartDate:startDate:)]) {
-                [weakSelf.delegate clickStartDate:weakSelf startDate:[NSString stringWithFormat:@"%@-%@",weakSelf.startYearLabel.text,weakSelf.startMouthLabel.text]];
+                [weakSelf.delegate clickStartDate:weakSelf startDate:[ToolBaseClass handleDateFormatterWithDate:date isDot:false hasYear:false]];
             }
         }else{
             weakSelf.endDate = date;
@@ -179,7 +179,7 @@
             weakSelf.endMouthLabel.text = [weakSelf handleDateToYearMouth:date isYear:NO];
             [weakSelf handleCalcDaysWithStartDate:weakSelf.startDate endDate:weakSelf.endDate];
             if ([weakSelf.delegate respondsToSelector:@selector(clickEndDate:endDate:)]) {
-                [weakSelf.delegate clickEndDate:weakSelf endDate:[NSString stringWithFormat:@"%@-%@",weakSelf.endYearLabel.text,weakSelf.endMouthLabel.text]];
+                [weakSelf.delegate clickEndDate:weakSelf endDate:[ToolBaseClass handleDateFormatterWithDate:date isDot:false hasYear:false]];
             }
         }
     }];

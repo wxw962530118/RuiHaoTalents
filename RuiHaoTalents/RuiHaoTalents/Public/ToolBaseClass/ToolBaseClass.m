@@ -640,9 +640,17 @@ static char base64EncodingTable[64] = {
     return mDate;
 }
 
-+(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot{
++(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot hasYear:(BOOL)hasYear{
     NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:isDot ? @"yyyy年.MM月.dd日" : @"yyyy年-MM月-dd日"];
+    if (isDot && hasYear) {
+        [formatter setDateFormat:@"yyyy年.MM月.dd日"];
+    }else if (isDot && !hasYear){
+        [formatter setDateFormat:@"yyyy.MM.dd"];
+    }else if (!isDot && hasYear){
+        [formatter setDateFormat:@"yyyy年-MM月-dd日"];
+    }else{
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+    }
     return [formatter stringFromDate:date];
 }
 

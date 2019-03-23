@@ -270,14 +270,14 @@ static CALayer * dot;
     dot = [CALayer layer];
     dot.bounds          = CGRectMake(0, 0, 4, 4);
     dot.position        = CGPointMake(50, 20);
-    dot.backgroundColor = RGBColorAlpha(255, 255, 255,.8).CGColor;
+    dot.backgroundColor = RGBColorAlpha(255, 255, 255,1).CGColor;
     dot.cornerRadius    = 4;
     dot.masksToBounds   = YES;
     [replicatorLayer addSublayer:dot];
     
     [loadHud.blackView addSubview:loadHud.bottomLabel];
     loadHud.bottomLabel.alpha = 1;
-    loadHud.bottomLabel.textColor = RGBColorAlpha(255, 255, 255, .8);
+    loadHud.bottomLabel.textColor = RGBColorAlpha(255, 255, 255,1);
     loadHud.bottomLabel.text = title;
     [loadHud.bottomLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(loadHud.blackView.mas_bottom).offset(-(5));

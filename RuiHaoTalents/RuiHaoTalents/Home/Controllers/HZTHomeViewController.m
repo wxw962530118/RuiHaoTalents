@@ -46,8 +46,8 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.stateDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false];
-           self.endDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false];
+        self.stateDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false hasYear:false];
+           self.endDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false hasYear:false];
     }
     return self;
 }

@@ -43,7 +43,7 @@
 
 -(instancetype)initWithWorkArdess:(NSString *)workArdess workType:(NSString *)workType startDate:(NSString *)startDate endDate:(NSString *)endDate payId:(NSString *)payId industry:(NSString *)industry personFunction:(NSString *)personFunction{
     if (self = [super init]){
-        self.currentSort = 0;
+        self.currentSort = 1;
         self.workArdess = workArdess;
         self.workType = workType;
         self.startDate = startDate;

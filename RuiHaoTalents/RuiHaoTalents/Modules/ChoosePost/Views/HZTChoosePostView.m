@@ -70,7 +70,7 @@
 -(UITableView *)mainTableView{
     if(!_mainTableView){
         _mainTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _mainTableView.backgroundColor = RGBColor(244, 244, 244);
+        _mainTableView.backgroundColor = [UIColor clearColor];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.estimatedRowHeight = 0;
