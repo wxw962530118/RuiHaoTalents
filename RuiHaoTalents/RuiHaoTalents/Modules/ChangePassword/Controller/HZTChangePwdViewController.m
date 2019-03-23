@@ -81,7 +81,7 @@
     NSLog(@"密码：%@", self.pwd);
     NSLog(@"验证码：%@", self.code);
     
-    if (kStringIsEmpty([HZTAccountManager getUser].mobile)) {
+    if ([ToolBaseClass checkPhoneNumberInput:[HZTAccountManager getUser].mobile]) {
         return;
     }
     
