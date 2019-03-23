@@ -26,4 +26,7 @@
     return [UIColor colorWithHexString:@"#D4D4D4"];
 }
 
++ (UIColor *)line {
+    return [UIColor colorWithHexString:@"#E8E8E8"];
+}
 @end

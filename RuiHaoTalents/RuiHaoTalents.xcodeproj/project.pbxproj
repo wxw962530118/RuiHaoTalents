@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */; };
+		6B9D1809224617E100C68884 /* HZTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D1808224617E100C68884 /* HZTTextView.m */; };
+		6B9D180D22461E5E00C68884 /* HZTFeedBackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9D180C22461E5E00C68884 /* HZTFeedBackCell.m */; };
 		AC207748223F39530072129B /* Others.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC207747223F39530072129B /* Others.xcassets */; };
 		AC20774B223F3EF40072129B /* HZTShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20774A223F3EF40072129B /* HZTShareView.m */; };
 		AC20774D223F3F040072129B /* HZTShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC20774C223F3F040072129B /* HZTShareView.xib */; };
@@ -258,6 +260,10 @@
 
 /* Begin PBXFileReference section */
 		2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuiHaoTalents.debug.xcconfig"; path = "Target Support Files/Pods-RuiHaoTalents/Pods-RuiHaoTalents.debug.xcconfig"; sourceTree = "<group>"; };
+		6B9D1807224617E100C68884 /* HZTTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTextView.h; sourceTree = "<group>"; };
+		6B9D1808224617E100C68884 /* HZTTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTextView.m; sourceTree = "<group>"; };
+		6B9D180B22461E5E00C68884 /* HZTFeedBackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTFeedBackCell.h; sourceTree = "<group>"; };
+		6B9D180C22461E5E00C68884 /* HZTFeedBackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTFeedBackCell.m; sourceTree = "<group>"; };
 		98606EF7C72A2EBA058B4BD3 /* libPods-RuiHaoTalents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuiHaoTalents.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC207747223F39530072129B /* Others.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Others.xcassets; sourceTree = "<group>"; };
 		AC207749223F3EF30072129B /* HZTShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTShareView.h; sourceTree = "<group>"; };
@@ -682,6 +688,15 @@
 				DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B9D180A22461DE000C68884 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B9D180B22461E5E00C68884 /* HZTFeedBackCell.h */,
+				6B9D180C22461E5E00C68884 /* HZTFeedBackCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AC207765223F4CB70072129B /* OthersNetWorkManager */ = {
@@ -1448,6 +1463,8 @@
 				AC845993224490DD00E09659 /* HZTDatePickerView.m */,
 				E16AD6FA2243870F00B61431 /* HZTTextField.h */,
 				E16AD6FB2243870F00B61431 /* HZTTextField.m */,
+				6B9D1807224617E100C68884 /* HZTTextView.h */,
+				6B9D1808224617E100C68884 /* HZTTextView.m */,
 				ACB381632240CBDA00FFB9B3 /* HZTTopTabView */,
 				ACB12D78223A42A4008E5494 /* CustomSheetView */,
 				ACB12D72223A2B50008E5494 /* CustomAlretView */,
@@ -1996,7 +2013,7 @@
 			isa = PBXGroup;
 			children = (
 				E108A8412244C85D004F2694 /* Controller */,
-				E108A8422244C85D004F2694 /* Views */,
+				6B9D180A22461DE000C68884 /* View */,
 			);
 			path = FeedBack;
 			sourceTree = "<group>";
@@ -2008,13 +2025,6 @@
 				E108A8442244C870004F2694 /* HZTFeedBackViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E108A8422244C85D004F2694 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E1BCFB582243791700111A3B /* ChangePassword */ = {
@@ -2353,11 +2363,13 @@
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				AC84598A2243783800E09659 /* HZTChoosePostCell.m in Sources */,
+				6B9D1809224617E100C68884 /* HZTTextView.m in Sources */,
 				AC2C7A8E2241DD0C003BC70E /* HZTWorkAreaViewController.m in Sources */,
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
 				AC207759223F472A0072129B /* HZTMyResumeRealNameCell.m in Sources */,
 				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
 				ACB3814C224088D400FFB9B3 /* HZTTrainCell.m in Sources */,
+				6B9D180D22461E5E00C68884 /* HZTFeedBackCell.m in Sources */,
 				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
 				ACDE3B582245F53000B8EFB3 /* UIScrollView+HZTRefresh.m in Sources */,
 				ACF873942244CA0300B5F05F /* UIView+ZLExtension.m in Sources */,

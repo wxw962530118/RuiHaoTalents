@@ -40,6 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIColor *)placeholder;
 
+/**
+ #E8E8E8
+
+ @return UIColor
+ */
++ (UIColor *)line;
+
 @end
 
 NS_ASSUME_NONNULL_END
