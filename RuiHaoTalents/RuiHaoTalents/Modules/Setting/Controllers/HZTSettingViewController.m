@@ -86,7 +86,7 @@
         
     } else {
         if (indexPath.row == 0) {
-        
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/id1436855246?mt=8"]];
         } else if (indexPath.row == 1) {
             HZTFeedBackViewController *vc = [[HZTFeedBackViewController alloc] init];
             [self xw_pushViewController:vc animated:YES];
