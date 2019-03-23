@@ -12,6 +12,10 @@
 
 #import "UILabel+TextHelper.h"
 
+#import "UIButton+Countdown.h"
+
+#import "HZTLoginWorkManager.h"
+
 @interface HZTChangePwdViewController ()
 
 @property (nonatomic, strong) HZTChangePwdView *phoneView;
@@ -59,11 +63,44 @@
     [self addTipsLabel];
 }
 
+- (void)requestUpdatePwd {
+    [HZTToastHUD showLoading];
+    WS(weakSelf)
+    [[HZTLoginWorkManager manager] requestUpdatePwdWithMobile:[HZTAccountManager getUser].mobile password:self.pwd verifyCode:self.code succeed:^(id  _Nonnull responseObject) {
+        [HZTToastHUD hideLoading];
+        [HZTToastHUD showNormalWithTitle:@"密码修改成功"];
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        
+    }];
+}
+
 - (void)updateBtnClick {
     // MARK: 修改密码
     NSLog(@"手机号码：%@", [HZTAccountManager getUser].mobile);
     NSLog(@"密码：%@", self.pwd);
     NSLog(@"验证码：%@", self.code);
+    
+    if (kStringIsEmpty([HZTAccountManager getUser].mobile)) {
+        return;
+    }
+    
+    if (self.pwd.length < 8 || self.pwd.length > 16) {
+        [HZTToastHUD showNormalWithTitle:@"请输入8-16位密码"];
+        return;
+    }
+    
+    if ([ToolBaseClass handlePredicatePassword:self.pwd]) {
+        [HZTToastHUD showNormalWithTitle:@"密码过于简单,请重新设置"];
+        return;
+    }
+    
+    if (self.code.length != 6) {
+        [HZTToastHUD showNormalWithTitle:@"请输入6位验证码"];
+        return;
+    }
+    
+    [self requestUpdatePwd];
 }
 
 - (NSMutableAttributedString *)att {
@@ -103,7 +140,7 @@
         _pwdView = [[HZTChangePwdView alloc] init];
         _pwdView.leftImgName = @"peofile_setting_pwd";
         _pwdView.placeholder = @"请输入新的密码";
-        _pwdView.maxLength = 8;
+        _pwdView.maxLength = 16;
         _pwdView.secureTextEntry = YES;
         WS(weakSelf)
         [_pwdView addTextDidChangeHandler:^(HZTTextField * _Nonnull textField) {
@@ -137,6 +174,16 @@
         }];
         [_verView addTextLengthDidMaxHandler:^(HZTTextField * _Nonnull textField) {
             NSLog(@"验证码输入达到最大限制");
+        }];
+        [_verView addTargetWithGetCode:^(UIButton * _Nonnull button) {
+            [HZTToastHUD showLoading];
+            [[HZTLoginWorkManager manager] requestRegisterMobileCodeWithMobile:[HZTAccountManager getUser].mobile succeed:^(id  _Nonnull responseObject) {
+                [HZTToastHUD hideLoading];
+                [HZTToastHUD showNormalWithTitle:@"验证码发送成功"];
+                [button countdownWithSec:60];
+            } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+                
+            }];
         }];
         [self.view addSubview:_verView];
         [_verView mas_makeConstraints:^(MASConstraintMaker *make) {

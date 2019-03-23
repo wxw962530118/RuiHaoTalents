@@ -12,6 +12,7 @@
 #define URL_GET_CODE          @"%@/loginuser/code/get"
 #define URL_REGISTER          @"%@/loginuser/register/user"
 #define URL_LOGIN_OUT         @"%@/loginuser/out/login"
+#define URL_UPDATE_PWD         @"%@/human/basic/password/update"
 @implementation HZTLoginWorkManager
 
 +(instancetype)manager{
@@ -76,6 +77,22 @@
 -(NSURLSessionDataTask *)requestLoginOutSucceed:(void (^)(id _Nonnull))succeed failure:(void (^)(NSURLSessionDataTask * _Nonnull, NSError * _Nonnull))failure{
     NSString * URLString = [NSString stringWithFormat:URL_LOGIN_OUT,HZT_HOST];
     NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:nil success:^(id response) {
+        succeed(response);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(task,error);
+    }];
+    return  task;
+}
+
+-(NSURLSessionDataTask *)requestUpdatePwdWithMobile:(NSString *)mobile password:(NSString *)password verifyCode:(NSString *)verifyCode succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure {
+    
+    NSMutableDictionary * param = [NSMutableDictionary dictionary];
+    [param setObject:mobile forKey:@"userName"];
+    [param setObject:verifyCode forKey:@"verifyCode"];
+    [param setObject:password forKey:@"password"];
+    
+    NSString * URLString = [NSString stringWithFormat:URL_UPDATE_PWD,HZT_HOST];
+    NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:param success:^(id response) {
         succeed(response);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(task,error);
