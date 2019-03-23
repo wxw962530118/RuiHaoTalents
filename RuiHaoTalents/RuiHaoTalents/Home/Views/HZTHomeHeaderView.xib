@@ -25,7 +25,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scn-hM-DRT">
                     <rect key="frame" x="0.0" y="147" width="375" height="60"/>
                     <subviews>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="定位中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7U-y8-VA1">
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="定位中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7U-y8-VA1">
                             <rect key="frame" x="41" y="20" width="52" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -39,7 +39,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您所期望的工作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSC-EC-XWG">
-                            <rect key="frame" x="121" y="19.5" width="121.5" height="21"/>
+                            <rect key="frame" x="121" y="19.5" width="214" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -79,6 +79,7 @@
                         <constraint firstAttribute="trailing" secondItem="awV-AL-zim" secondAttribute="trailing" constant="19" id="dNP-RO-bY4"/>
                         <constraint firstItem="XSC-EC-XWG" firstAttribute="leading" secondItem="Rvq-hi-HeM" secondAttribute="trailing" constant="10" id="f5y-cr-8sd"/>
                         <constraint firstItem="U7U-y8-VA1" firstAttribute="centerY" secondItem="d8i-s1-RPH" secondAttribute="centerY" id="gTw-zH-hKy"/>
+                        <constraint firstAttribute="trailing" secondItem="XSC-EC-XWG" secondAttribute="trailing" constant="40" id="p78-H6-SfR"/>
                         <constraint firstItem="XSC-EC-XWG" firstAttribute="centerY" secondItem="U7U-y8-VA1" secondAttribute="centerY" id="ypY-j8-QsH"/>
                         <constraint firstItem="Rvq-hi-HeM" firstAttribute="centerY" secondItem="U7U-y8-VA1" secondAttribute="centerY" id="yvM-Z4-siq"/>
                         <constraint firstItem="d8i-s1-RPH" firstAttribute="centerY" secondItem="Scn-hM-DRT" secondAttribute="centerY" id="zRC-G6-u2A"/>
