@@ -136,6 +136,7 @@
         _verView = [[HZTChangePwdView alloc] init];
         _verView.leftImgName = @"profile_setting_ver";
         _verView.placeholder = @"验证码";
+        _verView.keyboardType = UIKeyboardTypeNumberPad;
         _verView.hiddenCodeView = NO;
         _verView.maxLength = 6;
         WS(weakSelf)

@@ -10,6 +10,8 @@
 
 @interface HZTFeedBackViewController ()
 
+@property (nonatomic, strong) UITextView *textView;
+
 @end
 
 @implementation HZTFeedBackViewController
@@ -30,5 +32,17 @@
 - (void)addSubviews {
     self.view.backgroundColor = HZTColorBackGround;
 
+    [self addTextView];
 }
+
+
+#pragma mark --- 懒加载相关
+
+- (void)addTextView {
+    if (!_textView) {
+        _textView = [[UITextView alloc] init];
+        
+    }
+}
+
 @end
