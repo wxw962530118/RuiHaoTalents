@@ -72,15 +72,8 @@
 +(NSInteger)getTimeStampWithDate:(NSDate *)date;
 /**登录注册密码复杂度的效验*/
 +(BOOL)handlePredicatePassword:(NSString *)passWord;
-
-/**
- 校验中国手机号码
- 
- @param input 输入的手机号码
- @return 是否为合法的中国手机号
- */
+/**校验中国手机号码*/
 + (BOOL)checkPhoneNumberInput:(NSString *)input;
-
 /**获取设备内存总大小*/
 +(double)getDeviceTotalMemorySize;
 /**获取设备可用内存总大小*/
@@ -109,6 +102,8 @@
 +(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType;
 /**获取当前时间前后若干月的时间*/
 +(NSDate *)getPriousorLaterDateFromDate:(NSDate *)date withMonth:(int)month;
+/**格式化字符串 isDot:是否已点的形式展示*/
++(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot;
 /**提示弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */
 -(UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(id)otherButtonTitles callBack:(void(^)(NSUInteger index))callBack;
 /**底部弹窗 快捷方式 otherButtonTitles类型:NSString或NSArray */

@@ -10,6 +10,7 @@
 #define HZTFileHeader_h
 
 #import <AFNetworking.h>
+#import "UIScrollView+HZTRefresh.h"
 #import "ToolBaseClass.h"
 #import "UITableViewCell+HZTableViewCell.h"
 #import "UIButton+HitAreaExpand.h"
@@ -18,7 +19,6 @@
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
 #import <YYKit.h>
-#import <MJRefresh.h>
 #import <TYAttributedLabel.h>
 #import <IQKeyboardManager.h>
 #import "HZTMajorButton.h"

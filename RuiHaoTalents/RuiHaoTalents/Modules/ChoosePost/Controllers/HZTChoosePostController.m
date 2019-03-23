@@ -42,6 +42,11 @@
             model.isSelected = [model.name isEqualToString:@""];
         }
         postView.dataArray = [self.dataListArray mutableCopy];
+        if (!postView.dataArray.count) {
+            [self showNoDataViewWithSupersView:postView];
+        }else{
+            [self hideNoDataView];
+        }
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
         
     }];

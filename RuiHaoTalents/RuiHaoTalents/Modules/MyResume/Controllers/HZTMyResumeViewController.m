@@ -150,6 +150,9 @@
     WS(weakSelf)
     if (!indexPath.section) {
         HZTMyResumeRealNameCell * cell = [HZTMyResumeRealNameCell cellWithTableViewFromXIB:tableView];
+        cell.clickRealNameBlock = ^{
+            /**跳转至实名认证页面*/
+        };
         return cell;
     }else{
         if (indexPath.section == 1) {

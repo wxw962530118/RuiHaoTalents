@@ -14,10 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  初始化期望工作
- @param expectJobName 期望职位
- @param payName       薪资
+ @param expectJobName  期望职位
+ @param payName        薪资
  */
--(instancetype)initWithExpectJobName:(NSString *)expectJobName payName:(NSString *)payName callBack:(void (^)(NSString * postName,NSString *payName))callBack;
+-(instancetype)initWithExpectJobName:(NSString *)expectJobName payName:(NSString *)payName callBack:(void (^)(NSString * postName,NSString *payName,NSString *payId,NSString * personIndustry,NSString *personFunction))callBack;
 @end
 
 NS_ASSUME_NONNULL_END

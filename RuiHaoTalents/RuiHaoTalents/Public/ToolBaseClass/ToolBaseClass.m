@@ -402,7 +402,12 @@ static char base64EncodingTable[64] = {
 #pragma mark --- 计算两个日期之间的天数
 +(NSInteger)calcDaysFromBegin:(NSDate *)beginDate end:(NSDate *)endDate{
     NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents * comp = [calendar components:NSCalendarUnitDay fromDate:beginDate toDate:endDate options:NSCalendarWrapComponents];
+    /**去掉时分秒信息*/
+    NSDate * fromDate;
+    NSDate * toDate;
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:NULL forDate:beginDate];
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate interval:NULL forDate:endDate];
+    NSDateComponents * comp = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
     NSLog(@" -- >>  comp : %@  << --",comp);
     return comp.day;
 }
@@ -486,13 +491,11 @@ static char base64EncodingTable[64] = {
     if (!input || [input isEqual:[NSNull null]] || [input isKindOfClass:[NSNull class]] || input.length == 0) {
         return NO;
     }
-    
-    NSString *MOBILE = @"^1(3|4|5|6|7|8|9)[0-9]\\d{8}$";
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    NSString * mobile = @"^1(3|4|5|6|7|8|9)[0-9]\\d{8}$";
+    NSPredicate * regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile];
     if ([regextestmobile evaluateWithObject:input] == NO) {
         return NO;
     }
-    
     return YES;
 }
 
@@ -635,6 +638,12 @@ static char base64EncodingTable[64] = {
     NSCalendar * calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate * mDate = [calender dateByAddingComponents:comps toDate:date options:0];
     return mDate;
+}
+
++(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot{
+    NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:isDot ? @"yyyy年.MM月.dd日" : @"yyyy年-MM月-dd日"];
+    return [formatter stringFromDate:date];
 }
 
 +(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType{

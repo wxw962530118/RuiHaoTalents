@@ -9,43 +9,109 @@
 #import "HZTImmediateMatchController.h"
 #import "HZTImmediateMatchHeaderView.h"
 #import "HZTImmediateMatchCell.h"
+#import "HZTImmediateMatchModel.h"
+
+#define PAGE_CNT 10
 @interface HZTImmediateMatchController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
 /***/
-@property (nonatomic, strong) NSMutableArray * dataListArray;
+@property (nonatomic, strong) NSMutableArray <HZTImmediateMatchModel *>* dataListArray;
 /***/
 @property (nonatomic, strong) HZTImmediateMatchHeaderView * headerView;
-
+/***/
+@property (nonatomic, copy) NSString * workArdess;
+/***/
+@property (nonatomic, copy) NSString * workType;
+/***/
+@property (nonatomic, copy) NSString * startDate;
+/***/
+@property (nonatomic, copy) NSString * endDate;
+/***/
+@property (nonatomic, copy) NSString * payId;
+/***/
+@property (nonatomic, copy) NSString * industry;
+/***/
+@property (nonatomic, copy) NSString * personFunction;
+/**页面*/
+@property (nonatomic, assign) NSInteger pageNumber;
+/***/
+@property (nonatomic, assign) NSInteger currentSort;
 @end
 
 @implementation HZTImmediateMatchController
+
+-(instancetype)initWithWorkArdess:(NSString *)workArdess workType:(NSString *)workType startDate:(NSString *)startDate endDate:(NSString *)endDate payId:(NSString *)payId industry:(NSString *)industry personFunction:(NSString *)personFunction{
+    if (self = [super init]){
+        self.currentSort = 0;
+        self.workArdess = workArdess;
+        self.workType = workType;
+        self.startDate = startDate;
+        self.endDate = endDate;
+        self.payId = payId;
+        self.industry = industry;
+        self.personFunction = personFunction;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"职位";
     [self addHeaderView];
-    [self prepareData];
+    [self loadNewData];
 }
 
--(void)prepareData{
-    for (int i = 0; i< 30; i++) {
-        [self.dataListArray addObject:[NSString stringWithFormat:@"test:%d",i]];
-    }
-    
-    [[HZTOthersNetWorkManager manager] requestJobListWithPersonWorkArdess:@"西安市-新城区" workArdessX:108.836718   workArdessY:34.240541 reportStart:@"2019-03-22" reportEnd:@"2019-03-22" personWorkType:@"0" personPayStart:@"41" personIndustry:@"6" personFunction:@"3" sort:1 pageNumber:1 succeed:^(id  _Nonnull responseObject) {
-        
+-(void)loadNewData{
+    self.pageNumber = 1;
+    [self loadData];
+}
+
+-(void)loadMoreData{
+    self.pageNumber ++;
+    [self loadData];
+}
+
+-(void)loadData{
+    WS(weakSelf)
+    [HZTToastHUD showLoading];
+    [[HZTOthersNetWorkManager manager] requestJobListWithPersonWorkArdess:self.workArdess workArdessX:[ToolBaseClass getUserDefaultsWithKey:LocationLongitude] workArdessY:[ToolBaseClass getUserDefaultsWithKey:LocationLatitude] reportStart:self.startDate reportEnd:self.endDate  personWorkType:self.workType personPayStart:self.payId personIndustry:self.industry personFunction:self.personFunction sort:self.currentSort pageNumber:self.pageNumber succeed:^(id  _Nonnull responseObject) {
+        NSArray * tempArr = (NSArray *)responseObject[@"content"];
+        [HZTToastHUD hideLoading];
+        if (self.dataListArray.count){
+            [self.dataListArray removeAllObjects];
+        }
+        [self.dataListArray addObjectsFromArray:[HZTImmediateMatchModel mj_objectArrayWithKeyValuesArray:tempArr]];
+        if (tempArr.count == PAGE_CNT) {
+            [self.mainTableView addFooterWithWithHeaderWithAutoRefresh:false loadMoreBlock:^(NSInteger pageIndex) {
+                weakSelf.pageNumber = pageIndex;
+                [weakSelf loadMoreData];
+            }];
+        }
+        if (tempArr.count < PAGE_CNT && self.pageNumber != 1){
+            [self.mainTableView endFooterNoMoreData];
+        }else{
+            [self.mainTableView endFooterRefresh];
+        }
+        [self.mainTableView reloadData];
+        if (!tempArr.count) {
+            [self showNoDataViewWithSupersView:self.mainTableView];
+        }else{
+            [self hideNoDataView];
+        }
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-        
+        self.pageNumber -= 1;
+        [self.mainTableView endFooterRefresh];
     }];
-    
-    [self.mainTableView reloadData];
 }
 
 -(void)addHeaderView{
+    WS(weakSelf)
     self.headerView = [HZTImmediateMatchHeaderView createHomeHeaderView];
     self.headerView.callBack = ^(CallBackType type) {
         NSLog(@"type:%ld",type);
+        weakSelf.currentSort = type;
+        [weakSelf.mainTableView beginRefresh];
     };
     self.headerView.frame = CGRectMake(0, 0, kScreenW, 95);
     [self.view addSubview:self.headerView];
@@ -61,6 +127,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HZTImmediateMatchCell * cell = [HZTImmediateMatchCell cellWithTableViewFromXIB:tableView];
+    cell.model = self.dataListArray[indexPath.section];
     return cell;
 }
 
@@ -82,6 +149,7 @@
 
 #pragma mark --- 懒加载相关
 -(UITableView *)mainTableView{
+    WS(weakSelf)
     if(!_mainTableView){
         _mainTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _mainTableView.backgroundColor = RGBColor(244, 244, 244);
@@ -92,6 +160,9 @@
         _mainTableView.estimatedSectionHeaderHeight = 0;
         _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_mainTableView];
+        [self.mainTableView addHeaderWithHeaderWithBeginRefresh:NO animation:NO refreshBlock:^(NSInteger pageIndex) {
+            [weakSelf loadNewData];
+        }];
         [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.bottom.left.equalTo(self.view);
             make.top.equalTo(self.view.mas_top).offset(95);

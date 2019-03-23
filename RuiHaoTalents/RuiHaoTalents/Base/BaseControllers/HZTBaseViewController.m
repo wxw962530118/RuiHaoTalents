@@ -11,6 +11,8 @@
 @interface HZTBaseViewController ()
 /***/
 @property (nonatomic, copy) void (^Block)(void);
+/***/
+@property (nonatomic, strong) UILabel * noDataLabel;
 @end
 
 @implementation HZTBaseViewController
@@ -52,6 +54,7 @@
 }
 
 -(void)back{
+    [HZTToastHUD hideLoading];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -91,9 +94,32 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
+-(void)showNoDataViewWithSupersView:(UIView *)supersView{
+    [self addNoDataLabelWithView:supersView];
+}
+
+-(void)hideNoDataView{
+     self.noDataLabel.hidden = true;
+}
+
 -(void)clickRightItem{
     if (self.Block) {
         self.Block();
+    }
+}
+
+-(void)addNoDataLabelWithView:(UIView *)view{
+    if (!_noDataLabel) {
+        _noDataLabel = [[UILabel alloc] init];
+        _noDataLabel.hidden = false;
+        _noDataLabel.text = @"暂无内容哦O(∩_∩)O哈哈~";
+        _noDataLabel.font = HZTFontSize(18);
+        _noDataLabel.textColor = RGBColorAlpha(0, 0, 0, .6);
+        [view addSubview:self.noDataLabel];
+        [self.noDataLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(view.mas_centerX);
+            make.centerY.equalTo(view.mas_centerY);
+        }];
     }
 }
 

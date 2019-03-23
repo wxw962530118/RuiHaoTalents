@@ -197,6 +197,8 @@
 		ACD276C62238FC6300AD825B /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACD276C52238FC6200AD825B /* Home.xcassets */; };
 		ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD276CC2239153E00AD825B /* HZTNewsListController.m */; };
 		ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */; };
+		ACDE3B552245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B542245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m */; };
+		ACDE3B582245F53000B8EFB3 /* UIScrollView+HZTRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */; };
 		ACE140D22243415E007FD87B /* HZTChoosePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D12243415E007FD87B /* HZTChoosePostController.m */; };
 		ACE140D6224359C1007FD87B /* HZTExpectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D4224359C1007FD87B /* HZTExpectJobViewController.m */; };
 		ACE140D7224359C1007FD87B /* HZTExpectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE140D5224359C1007FD87B /* HZTExpectJobViewController.xib */; };
@@ -535,6 +537,10 @@
 		ACD276CC2239153E00AD825B /* HZTNewsListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNewsListController.m; sourceTree = "<group>"; };
 		ACDA0CCA223F33BA00C54A63 /* HZTMyResumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeViewController.h; sourceTree = "<group>"; };
 		ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeViewController.m; sourceTree = "<group>"; };
+		ACDE3B532245E0B700B8EFB3 /* HZTImmeduateCompanyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTImmeduateCompanyModel.h; sourceTree = "<group>"; };
+		ACDE3B542245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTImmeduateCompanyModel.m; sourceTree = "<group>"; };
+		ACDE3B562245F53000B8EFB3 /* UIScrollView+HZTRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HZTRefresh.h"; sourceTree = "<group>"; };
+		ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HZTRefresh.m"; sourceTree = "<group>"; };
 		ACE140D02243415E007FD87B /* HZTChoosePostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChoosePostController.h; sourceTree = "<group>"; };
 		ACE140D12243415E007FD87B /* HZTChoosePostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostController.m; sourceTree = "<group>"; };
 		ACE140D3224359C1007FD87B /* HZTExpectJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTExpectJobViewController.h; sourceTree = "<group>"; };
@@ -1004,6 +1010,8 @@
 			children = (
 				AC37E68422421ABB004144AA /* HZTImmediateMatchModel.h */,
 				AC37E68522421ABB004144AA /* HZTImmediateMatchModel.m */,
+				ACDE3B532245E0B700B8EFB3 /* HZTImmeduateCompanyModel.h */,
+				ACDE3B542245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1481,6 +1489,8 @@
 				E14CAB842241E7370001A308 /* UIColor+Common.m */,
 				E14CAB862241EF3A0001A308 /* NSString+Common.h */,
 				E14CAB872241EF3A0001A308 /* NSString+Common.m */,
+				ACDE3B562245F53000B8EFB3 /* UIScrollView+HZTRefresh.h */,
+				ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -2349,6 +2359,7 @@
 				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
 				ACB3814C224088D400FFB9B3 /* HZTTrainCell.m in Sources */,
 				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
+				ACDE3B582245F53000B8EFB3 /* UIScrollView+HZTRefresh.m in Sources */,
 				ACF873942244CA0300B5F05F /* UIView+ZLExtension.m in Sources */,
 				ACE140D6224359C1007FD87B /* HZTExpectJobViewController.m in Sources */,
 				AC20776E223F83920072129B /* HZTProjiectModel.m in Sources */,
@@ -2385,6 +2396,7 @@
 				E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */,
 				ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */,
 				AC84598E22437D5A00E09659 /* HZTChoosePostModel.m in Sources */,
+				ACDE3B552245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m in Sources */,
 				AC707001223A4B90003F4F6D /* HZTDistrictModel.m in Sources */,
 				ACF873912244CA0300B5F05F /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				AC2D7268223A25B500E80191 /* MBProgressHUD.m in Sources */,

@@ -72,11 +72,11 @@
     return  task;
 }
 
--(NSURLSessionDataTask *)requestJobListWithPersonWorkArdess:(NSString *)personWorkArdess workArdessX:(double)workArdessX workArdessY:(double)workArdessY reportStart:(NSString *)reportStart reportEnd:(NSString *)reportEnd personWorkType:(NSString *)personWorkType personPayStart:(NSString *)personPayStart personIndustry:(NSString *)personIndustry personFunction:(NSString *)personFunction sort:(NSInteger)sort pageNumber:(NSInteger)pageNumber succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure{
+-(NSURLSessionDataTask *)requestJobListWithPersonWorkArdess:(NSString *)personWorkArdess workArdessX:(NSString *)workArdessX workArdessY:(NSString *)workArdessY reportStart:(NSString *)reportStart reportEnd:(NSString *)reportEnd personWorkType:(NSString *)personWorkType personPayStart:(NSString *)personPayStart personIndustry:(NSString *)personIndustry personFunction:(NSString *)personFunction sort:(NSInteger)sort pageNumber:(NSInteger)pageNumber succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure{
     NSMutableDictionary * param = [NSMutableDictionary dictionary];
     [param setObject:personWorkArdess forKey:@"personWorkArdess"];
-    [param setObject:@(workArdessX) forKey:@"workArdessX"];
-    [param setObject:@(workArdessY) forKey:@"workArdessY"];
+    [param setObject:workArdessX forKey:@"workArdessX"];
+    [param setObject:workArdessY forKey:@"workArdessY"];
     [param setObject:reportStart forKey:@"reportStart"];
     [param setObject:reportEnd forKey:@"reportEnd"];
     [param setObject:personWorkType forKey:@"personWorkType"];
