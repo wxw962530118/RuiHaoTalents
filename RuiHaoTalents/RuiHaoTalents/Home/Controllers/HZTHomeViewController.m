@@ -27,15 +27,27 @@
 /**当前定位的纬度*/
 @property (nonatomic, assign) double latitude;
 /**当前定位的市*/
-@property (nonatomic, strong) NSString * cityName;
+@property (nonatomic, copy) NSString * cityName;
 /**当前定位的区/县*/
 @property (nonatomic, strong) NSString * areaName;
+/***/
+@property (nonatomic, copy) NSString * stateDate;
+/***/
+@property (nonatomic, copy) NSString * endDate;
+/***/
+@property (nonatomic, copy) NSString * payId;
+/***/
+@property (nonatomic, copy) NSString * personFunction;
+/***/
+@property (nonatomic, copy) NSString * personIndustry;
 @end
 
 @implementation HZTHomeViewController
 
 -(instancetype)init{
     if (self = [super init]) {
+        self.stateDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false];
+           self.endDate = [ToolBaseClass handleDateFormatterWithDate:[NSDate date] isDot:false];
     }
     return self;
 }
@@ -169,17 +181,32 @@
     [self xw_pushViewController:vc animated:YES];
 }
 
+-(void)clickStartDate:(HZTHomeHeaderView *)view startDate:(NSString *)startDate{
+    self.stateDate = startDate;
+}
+
+-(void)clickEndDate:(HZTHomeHeaderView *)view endDate:(NSString *)endDate{
+    self.endDate = endDate;
+}
+
 -(void)clickExpectJob:(HZTHomeHeaderView *)view expectJobLabel:(nonnull UILabel *)expectJobLabel{
     WS(weakSelf)
-    HZTExpectJobViewController * vc = [[HZTExpectJobViewController alloc] initWithExpectJobName:@"" payName:@"" callBack:^(NSString * _Nonnull expectJobName, NSString * _Nonnull payName) {
+    HZTExpectJobViewController * vc = [[HZTExpectJobViewController alloc] initWithExpectJobName:@"" payName:@"" callBack:^(NSString * _Nonnull expectJobName, NSString * _Nonnull payName, NSString * _Nonnull payId,NSString * _Nonnull personIndustry,NSString * _Nonnull personFunction) {
         weakSelf.headerView.expectJobName = expectJobName;
+        weakSelf.personIndustry = personIndustry;
+        weakSelf.personFunction = personFunction;
+        weakSelf.payId = payId;
     }];
     [self xw_pushViewController:vc animated:YES];
 }
 
 -(void)clickImmediateMatch:(HZTHomeHeaderView *)view{
-    HZTImmediateMatchController * vc = [[HZTImmediateMatchController alloc] init];
-    [self xw_pushViewController:vc animated:YES];
+    if (self.headerView.expectJobName && ![self.headerView.expectJobName isEqualToString:@"您所期望的工作"]) {
+        HZTImmediateMatchController * vc = [[HZTImmediateMatchController alloc] initWithWorkArdess:self.headerView.cityName workType:@"0" startDate:self.stateDate endDate:self.endDate payId:self.payId industry:self.personIndustry personFunction:self.personFunction];
+        [self xw_pushViewController:vc animated:YES];
+    }else{
+        [HZTToastHUD showNormalWithTitle:@"请选择您所期望的工作"];
+    }
 }
 
 #pragma mark --- 消息中心

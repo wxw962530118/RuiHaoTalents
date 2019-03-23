@@ -27,8 +27,10 @@
             BOOL isXiAn = [placemark.addressDictionary[@"City"] rangeOfString:@"西安"].location == NSNotFound;
             /**经度*/
             [tempDict setValue:isXiAn ? @(108.836718) : @(location.coordinate.longitude)  forKey:@"longitude"];
+            [ToolBaseClass saveUserDefaultsWithKey:LocationLongitude value:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"longitude"]]];
             /**纬度*/
             [tempDict setValue:isXiAn ? @(34.240541) : @(location.coordinate.latitude) forKey:@"latitude"];
+            [ToolBaseClass saveUserDefaultsWithKey:LocationLatitude value:[NSString stringWithFormat:@"%@",[tempDict objectForKey:@"latitude"]]];
             /**当前城市不是西安 定位改成西安*/
             [tempDict setValue:isXiAn ? @"西安" : placemark.addressDictionary[@"City"] forKey:@"LocationCityName"];
             /**地理编码区县名称*/

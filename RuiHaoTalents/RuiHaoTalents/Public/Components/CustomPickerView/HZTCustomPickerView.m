@@ -118,6 +118,8 @@
     for (int i = 0; i < titlesArray.count; i++) {
         UIButton * btn = [[UIButton alloc]init];
         btn.tag = 1000 + i;
+        btn.minHitTestWidth = 22;
+        btn.minHitTestHeight = 22;
         [btn setImage:[UIImage imageNamed:titlesArray[i]] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.toolView addSubview:btn];

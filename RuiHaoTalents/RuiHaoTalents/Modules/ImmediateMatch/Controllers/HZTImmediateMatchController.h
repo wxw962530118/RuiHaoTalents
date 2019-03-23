@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTImmediateMatchController : HZTBaseViewController
-
+-(instancetype)initWithWorkArdess:(NSString *)workArdess workType:(NSString *)workType startDate:(NSString *)startDate endDate:(NSString *)endDate payId:(NSString *)payId industry:(NSString *)industry personFunction:(NSString *)personFunction;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTImmediateMatchModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTImmediateMatchCell : UITableViewCell
-
+/***/
+@property (nonatomic, strong) HZTImmediateMatchModel * model;
 @end
 
 NS_ASSUME_NONNULL_END

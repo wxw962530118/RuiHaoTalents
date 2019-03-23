@@ -32,6 +32,17 @@ NS_ASSUME_NONNULL_BEGIN
  @param animated       是否动画
  */
 -(void)xw_popViewController:(UIViewController * __nullable)viewController animated:(BOOL)animated;
+
+/**
+ 展示无数据页面
+ @param supersView 承载无数据的父级
+ */
+-(void)showNoDataViewWithSupersView:(UIView *)supersView;
+
+/**
+ 隐藏无数据页面
+ */
+-(void)hideNoDataView;
 @end
 
 NS_ASSUME_NONNULL_END

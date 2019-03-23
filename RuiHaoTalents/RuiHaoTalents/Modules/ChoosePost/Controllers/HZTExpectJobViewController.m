@@ -11,7 +11,7 @@
 @interface HZTExpectJobViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *choosePostLabel;
 @property (weak, nonatomic) IBOutlet UILabel *choosePayLabel;
-@property (nonatomic, copy) void (^Block)(NSString * postName,NSString *payName);
+@property (nonatomic, copy) void (^Block)(NSString * postName,NSString *payName,NSString *payId,NSString * personIndustry,NSString *personFunction);
 @property (nonatomic, copy) NSString * expectJobName;
 @property (nonatomic, copy) NSString * payName;
 @property (nonatomic, copy) NSString * secondId;
@@ -21,7 +21,7 @@
 
 @implementation HZTExpectJobViewController
 
--(instancetype)initWithExpectJobName:(NSString *)expectJobName payName:(NSString *)payName callBack:(void (^)(NSString * _Nonnull, NSString * _Nonnull))callBack{
+-(instancetype)initWithExpectJobName:(NSString *)expectJobName payName:(NSString *)payName callBack:(void (^)(NSString * _Nonnull, NSString * _Nonnull,NSString * _Nonnull, NSString * _Nonnull, NSString * _Nonnull))callBack{
     if (self = [super init]) {
         self.Block         = callBack;
         self.payName       = [ToolBaseClass isNullClass:payName]  ? @"请选择期望薪资": payName;
@@ -70,6 +70,10 @@
             [namesArray addObject:dict[@"name"]];
             [idsArray addObject:dict[@"id"]];
         }
+        if (!namesArray.count) {
+            [HZTToastHUD showNormalWithTitle:@"暂无薪资信息"];
+            return ;
+        }
         [HZTCustomPickerView showPickerViewWithTitle:@"薪资要求(月薪,单位:千元)" dataArray:@[namesArray] callBack:^(HZTCustomPickerModel * _Nonnull model) {
             NSInteger index = [namesArray indexOfObject:model.name];
             weakSelf.choosePayLabel.text = model.name;
@@ -94,7 +98,7 @@
         return;
     }
     if (self.Block) {
-        self.Block(self.choosePostLabel.text,self.choosePayLabel.text);
+        self.Block(self.choosePostLabel.text,self.payName,self.payId,self.secondId,self.thirdId);
     }
     [self xw_popViewController:nil animated:YES];
 }

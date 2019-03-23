@@ -25,6 +25,11 @@
 #define WS(weakSelf)      __weak __typeof(&*self)weakSelf = self;
 #define HZTNotServers     @"服务器维护中,请稍后再试!"
 #define HZTNotNetWork     @"请检查网络连接！"
+/**存储用户当前经度*/
+#define LocationLongitude @"UserLongitude"
+/**存储用户当前纬度*/
+#define LocationLatitude  @"UserLatitude"
+
 /**系统10*/
 #define iOS10 [[UIDevice currentDevice].systemVersion floatValue] >= 10.0
 /**系统11*/

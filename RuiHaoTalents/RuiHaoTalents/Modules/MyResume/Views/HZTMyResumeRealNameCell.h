@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTMyResumeRealNameCell : UITableViewCell
-
+/***/
+@property (nonatomic, copy) void (^clickRealNameBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

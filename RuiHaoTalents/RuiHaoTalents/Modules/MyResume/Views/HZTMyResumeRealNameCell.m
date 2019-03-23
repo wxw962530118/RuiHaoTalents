@@ -17,6 +17,9 @@
 
 - (IBAction)clickRealName:(id)sender {
     NSLog(@"去实名认证");
+    if(self.clickRealNameBlock){
+        self.clickRealNameBlock();
+    }
 }
 
 @end

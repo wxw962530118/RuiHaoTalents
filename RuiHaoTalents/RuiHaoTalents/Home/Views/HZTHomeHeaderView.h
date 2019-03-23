@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**到岗开始时间*/
 -(void)clickStartDate:(HZTHomeHeaderView *)view startDate:(NSString *)startDate;
 /**到岗结束时间*/
--(void)clickStartDate:(HZTHomeHeaderView *)view endDate:(NSString *)endDate;
+-(void)clickEndDate:(HZTHomeHeaderView *)view endDate:(NSString *)endDate;
 @end
 
 @interface HZTHomeHeaderView : UIView

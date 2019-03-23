@@ -26,7 +26,15 @@
     [super awakeFromNib];
     self.iconImgView.layer.cornerRadius = 23;
     self.iconImgView.layer.masksToBounds = true;
-    self.iconImgView.image = [ToolBaseClass imageWithColor:HZTMainColor];
+}
+
+-(void)setModel:(HZTImmediateMatchModel *)model{
+    _model = model;
+    self.titleLabel.text = model.jobPosition;
+    self.payCountLabel.text = [NSString stringWithFormat:@"%@-%@",model.fullPayStartName,model.fullPayEndName];
+    [self.iconImgView sd_setImageWithURL:[NSURL URLWithString:model.personJobEnterVO.enterLogo] placeholderImage:[ToolBaseClass imageWithColor:HZTMainColor]];
+    self.companyNameLabel.text = model.personJobEnterVO.enterName;
+    self.companyInfoLabel.text = [NSString stringWithFormat:@"%@|%@人|%@",model.personJobEnterVO.enterNatureName,model.personJobEnterVO.enterFinancName,@"移动互联网"];
 }
 
 @end

@@ -402,7 +402,12 @@ static char base64EncodingTable[64] = {
 #pragma mark --- 计算两个日期之间的天数
 +(NSInteger)calcDaysFromBegin:(NSDate *)beginDate end:(NSDate *)endDate{
     NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents * comp = [calendar components:NSCalendarUnitDay fromDate:beginDate toDate:endDate options:NSCalendarWrapComponents];
+    /**去掉时分秒信息*/
+    NSDate * fromDate;
+    NSDate * toDate;
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:NULL forDate:beginDate];
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate interval:NULL forDate:endDate];
+    NSDateComponents * comp = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
     NSLog(@" -- >>  comp : %@  << --",comp);
     return comp.day;
 }
@@ -635,6 +640,12 @@ static char base64EncodingTable[64] = {
     NSCalendar * calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate * mDate = [calender dateByAddingComponents:comps toDate:date options:0];
     return mDate;
+}
+
++(NSString *)handleDateFormatterWithDate:(NSDate *)date isDot:(BOOL)isDot{
+    NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:isDot ? @"yyyy年.MM月.dd日" : @"yyyy年-MM月-dd日"];
+    return [formatter stringFromDate:date];
 }
 
 +(BOOL)cheackDeviceAuthorityWithImagePickerSourceType:(UIImagePickerControllerSourceType)sourceType{
