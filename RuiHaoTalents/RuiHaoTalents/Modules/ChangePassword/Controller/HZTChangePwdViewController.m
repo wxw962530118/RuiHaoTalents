@@ -81,7 +81,8 @@
     NSLog(@"密码：%@", self.pwd);
     NSLog(@"验证码：%@", self.code);
     
-    if ([ToolBaseClass checkPhoneNumberInput:[HZTAccountManager getUser].mobile]) {
+    if (![ToolBaseClass checkPhoneNumberInput:[HZTAccountManager getUser].mobile]) {
+        [HZTToastHUD showNormalWithTitle:@"手机号码不正确"];
         return;
     }
     
@@ -176,6 +177,10 @@
             NSLog(@"验证码输入达到最大限制");
         }];
         [_verView addTargetWithGetCode:^(UIButton * _Nonnull button) {
+            if (![ToolBaseClass checkPhoneNumberInput:[HZTAccountManager getUser].mobile]) {
+                [HZTToastHUD showNormalWithTitle:@"手机号码不正确"];
+                return;
+            }
             [HZTToastHUD showLoading];
             [[HZTLoginWorkManager manager] requestRegisterMobileCodeWithMobile:[HZTAccountManager getUser].mobile succeed:^(id  _Nonnull responseObject) {
                 [HZTToastHUD hideLoading];
