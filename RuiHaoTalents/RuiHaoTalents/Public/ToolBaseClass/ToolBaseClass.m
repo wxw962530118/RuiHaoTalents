@@ -148,8 +148,18 @@ static char base64EncodingTable[64] = {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
 
-+ (BOOL)isNullClass:(NSString *)string{
-    if (!string || string==nil || [string isKindOfClass:[NSNull class]] || !string.length) return YES;
++ (BOOL)isNullClass:(NSString *)obj{
+    if (!obj || obj == nil || [obj isKindOfClass:[NSNull class]]){
+        return YES;
+    }else if ( [obj isKindOfClass:[NSString class]]){
+        return obj.length == 0;
+    }else if ( [obj isKindOfClass:[NSArray class]]){
+        NSArray * arr = (NSArray *)obj;
+        return  arr.count == 0;
+    }else if ( [obj isKindOfClass:[NSDictionary class]]){
+        NSDictionary * dict = (NSDictionary *)obj;
+        return dict.allKeys.count == 0;
+    }
     return NO;
 }
 
@@ -755,15 +765,6 @@ static char base64EncodingTable[64] = {
     CGContextRelease(ctx);
     CGImageRelease(cgimg);
     return img;
-}
-
-@end
-
-@implementation NSObject (HZTTool)
-
-- (BOOL)isNull{
-    if (!self || self==nil || [self isKindOfClass:[NSNull class]]) return YES;
-    return NO;
 }
 
 @end

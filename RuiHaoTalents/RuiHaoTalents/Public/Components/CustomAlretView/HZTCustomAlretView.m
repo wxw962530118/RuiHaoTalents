@@ -27,7 +27,19 @@
 }
 
 -(void)configSubViewsType:(CustomAlretType)type title:(NSString *)title desc:(NSString *)desc isShowCancel:(BOOL)isShowCancel bottomTitle:(NSString *)bottomTitle callBack:(void (^)(void))callBack{
-    self.stateImgView.image = [UIImage imageNamed:(type == CustomAlretType_Succeed ? @"alert_succeed" : @"alert_faild")];
+    NSString * imageName;
+    if (type == CustomAlretType_Succeed) {
+        imageName = @"alert_succeed";
+    }else if (type == CustomAlretType_Faield){
+        imageName = @"alert_faild";
+    }else if (type == CustomAlretType_Bind){
+        imageName = @"alert_bind";
+    }else if (type == CustomAlretType_RealName){
+        imageName = @"alert_realname";
+    }else if (type == CustomAlretType_Wallect){
+        imageName = @"alert_wallect";
+    }
+    self.stateImgView.image = [UIImage imageNamed:imageName];
     self.titleLabel.text = title;
     self.descLabel.text = desc;
     [self.bottomBtn setTitle:bottomTitle forState:UIControlStateNormal];

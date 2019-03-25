@@ -10,12 +10,32 @@
 #import "HZTRootNavigationController.h"
 #import "HZTHomeViewController.h"
 #import "HZTCLocationManager.h"
+#import "YYFPSLabel.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+-(void)configFPSLabel{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [YYFPSLabel xw_addFPSLableOnWidnow];
+    });
+}
+
+-(void)configUmeng{
+    /* 打开调试日志 */
+    [[UMSocialManager defaultManager] openLog:YES];
+    /* 设置友盟appkey */
+    [[UMSocialManager defaultManager] setUmSocialAppkey:APIKeyUMeng];
+    /**设置微信的appKey和appSecret*/
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:APIKeyWeiXin appSecret:APIKeyWeiXinSecret redirectURL:nil];
+    
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatTimeLine appKey:APIKeyWeiXin appSecret:APIKeyWeiXinSecret redirectURL:nil];
+    /**设置新浪的appKey和appSecret*/
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:APISinaKey  appSecret:APISinaSecret redirectURL:@"https://h5.linkedshow.com"];
+}
 
 -(void)initCLocation{
     [[HZTCLocationManager manager] requestPermission];
@@ -40,7 +60,9 @@
             NSLog(@"反地理编码出错,error: %@",error);
         }];
     } fail:^(NSError *error) {
-        
+        NSLog(@"定位失败,error: %@",error);
+        [ToolBaseClass saveUserDefaultsWithKey:LocationLongitude value:[NSString stringWithFormat:@"%@",@(108.836718)]];
+        [ToolBaseClass saveUserDefaultsWithKey:LocationLatitude value:[NSString stringWithFormat:@"%@",@(34.240541)]];
     }];
 }
 
@@ -63,9 +85,11 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self configUmeng];
     [self initCLocation];
     [self configIQKeyboardManager];
     [self configRootWindow];
+    [self configFPSLabel];
     return YES;
 }
 

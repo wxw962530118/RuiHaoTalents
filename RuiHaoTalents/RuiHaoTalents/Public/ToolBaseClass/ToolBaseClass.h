@@ -30,8 +30,8 @@
 +(CGFloat)getContentPreciseWith:(UIView *)obj width:(CGFloat )width;
 /**计算字符串的宽度 */
 +(CGFloat)getWidthWithString:(NSString *)string font:(UIFont *)font;
-/**判断字符串是否为null */
-+(BOOL)isNullClass:(NSString *)string;
+/**判断对象是否为null nil length是否为0*/
++(BOOL)isNullClass:(NSObject *)obj;
 /**绘制虚线边框*/
 +(void)drawBorderDashLine:(UIView *)lineView lineWidth:(float )lineWidth lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor;
 /**绘制一条虚线*/
@@ -141,8 +141,3 @@ CG_INLINE UIActionSheet *HZTActionSheet(NSString *title, NSString *cancelButtonT
 CG_INLINE BOOL IS_IPhoneX(){
     return [[ToolBaseClass shareManager] handleIPhoneModel];
 };
-
-@interface NSObject (HZTTool)
-/** 判断对象是不是空 */
-- (BOOL)isNull;
-@end

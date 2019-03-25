@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,CustomAlretType){
+    CustomAlretType_Wallect,  /**钱包提现*/
+    CustomAlretType_Bind,     /**绑定*/
+    CustomAlretType_RealName, /**实名认证成功*/
     CustomAlretType_Succeed,  /**成功样式*/
     CustomAlretType_Faield,   /**失败样式*/
 };

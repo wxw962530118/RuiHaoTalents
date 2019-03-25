@@ -74,7 +74,7 @@
 
 -(NSURLSessionDataTask *)requestJobListWithPersonWorkArdess:(NSString *)personWorkArdess workArdessX:(NSString *)workArdessX workArdessY:(NSString *)workArdessY reportStart:(NSString *)reportStart reportEnd:(NSString *)reportEnd personWorkType:(NSString *)personWorkType personPayStart:(NSString *)personPayStart personIndustry:(NSString *)personIndustry personFunction:(NSString *)personFunction sort:(NSInteger)sort pageNumber:(NSInteger)pageNumber succeed:(void (^)(id responseObject))succeed failure:(void (^)(NSURLSessionDataTask * task,NSError * error))failure{
     NSMutableDictionary * param = [NSMutableDictionary dictionary];
-    [param setObject:personWorkArdess forKey:@"personWorkArdess"];
+    [param setObject:[ToolBaseClass isNullClass:personWorkArdess] ? @"西安市-新城区" : personWorkArdess forKey:@"personWorkArdess"];
     [param setObject:workArdessX forKey:@"workArdessX"];
     [param setObject:workArdessY forKey:@"workArdessY"];
     [param setObject:reportStart forKey:@"reportStart"];

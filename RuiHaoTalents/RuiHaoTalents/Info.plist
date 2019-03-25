@@ -42,8 +42,6 @@
 	<string>我们需要通过您的地理位置信息获取您的周边数据</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>相册将用上传照片和提交反馈等功能，使用功能时可从设备相册中获取您指定的图片</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -51,8 +49,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
