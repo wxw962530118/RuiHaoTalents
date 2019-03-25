@@ -8,7 +8,7 @@
 
 #import "HZTChangePwdView.h"
 
-#import "UIButton+Countdown.h"
+#import "HZTLoginWorkManager.h"
 
 @interface HZTChangePwdView()
 
@@ -27,6 +27,8 @@
 @property (nonatomic, copy) HZTTextFieldHandler maxHandler;
 
 @property (nonatomic, copy) void(^target)(void);
+
+@property (nonatomic, copy) void(^getCodeBlock)(UIButton *button);
 
 @end
 
@@ -53,7 +55,9 @@
 }
 
 - (void)getCodeBtnClick {
-    [self.getCodeBtn countdownWithSec:60];
+    if (self.getCodeBlock) {
+        self.getCodeBlock(self.getCodeBtn);
+    }
 }
 
 - (void)viewClick {
@@ -71,6 +75,10 @@
 
 - (void)addTargetWithView:(void(^)(void))target {
     self.target = target;
+}
+
+- (void)addTargetWithGetCode:(void (^)(UIButton *button))target {
+    self.getCodeBlock = target;
 }
 
 #pragma mark --- setter

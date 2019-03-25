@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)addTargetWithView:(void(^)(void))target;
 
+- (void)addTargetWithGetCode:(void(^)(UIButton *button))target;
+
 /**
  设定文本改变Block回调
  
