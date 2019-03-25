@@ -60,7 +60,7 @@
     
     self.content = content;
     
-    if (kStringIsEmpty(content)) {
+    if ([content isEmpty]) {
         self.submitBtn.enabled = NO;
         self.submitBtn.backgroundColor = [UIColor placeholder];
         return;

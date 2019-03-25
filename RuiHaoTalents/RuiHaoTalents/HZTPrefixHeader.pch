@@ -19,6 +19,7 @@
 
 #import "UIColor+Common.h"
 #import "NSString+Common.h"
+#import "NSArray+Common.h"
 
 #endif /* HZTPrefixHeader_pch */
 

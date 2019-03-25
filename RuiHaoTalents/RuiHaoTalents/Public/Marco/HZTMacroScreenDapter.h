@@ -20,11 +20,4 @@
 #define HZTAdaptFont(R)        [UIFont systemFontOfSize:HZTAdWidth(R)]
 #define HZTAdaptBoldFont(R)    [UIFont boldSystemFontOfSize:HZTAdWidth(R)]
 
-// 字符串是否为空
-#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
-// 数组是否为空
-#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
-// 字典是否为空
-#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
-
 #endif /* HZTMacroScreenDapter_h */

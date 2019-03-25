@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)appVersion;
 
+/**
+ 判断字符串是否为空
+ */
+- (BOOL)isEmpty;
+
 @end
 
 NS_ASSUME_NONNULL_END

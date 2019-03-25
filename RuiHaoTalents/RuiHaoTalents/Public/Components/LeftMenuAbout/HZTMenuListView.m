@@ -12,6 +12,7 @@
 #import "HZTMenuListHeaderView.h"
 #import "HZTMyResumeViewController.h"
 #import "HZTSettingViewController.h"
+#import "HZTMyWalletViewController.h"
 
 @interface HZTMenuListView ()<UITableViewDelegate,UITableViewDataSource>
 /***/
@@ -61,12 +62,33 @@
     if (self.Block) {
         self.Block();
     }
-    if (indexPath.row == 1) {
-        HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
-        [App_TheFrontViewC xw_pushViewController:vc animated:YES];
-    }else if (indexPath.row == 4){
-        HZTSettingViewController * vc = [[HZTSettingViewController alloc] init];
-        [App_TheFrontViewC xw_pushViewController:vc animated:YES];
+    
+    switch (indexPath.row) {
+            case 0: {
+                HZTMyWalletViewController * vc = [[HZTMyWalletViewController alloc] init];
+                [App_TheFrontViewC xw_pushViewController:vc animated:YES];
+            }
+            break;
+            
+            case 1: {
+                HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
+                [App_TheFrontViewC xw_pushViewController:vc animated:YES];
+            }
+            break;
+            
+            case 2:
+            break;
+            
+            case 3:
+            break;
+            
+            case 4: {
+                HZTSettingViewController * vc = [[HZTSettingViewController alloc] init];
+                [App_TheFrontViewC xw_pushViewController:vc animated:YES];
+            }
+            break;
+        default:
+            break;
     }
 }
 

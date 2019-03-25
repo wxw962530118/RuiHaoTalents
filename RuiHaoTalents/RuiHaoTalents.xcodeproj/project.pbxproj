@@ -295,6 +295,13 @@
 		E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E14CAB872241EF3A0001A308 /* NSString+Common.m */; };
 		E16AD6F922437BD400B61431 /* HZTChangePwdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E16AD6F822437BD400B61431 /* HZTChangePwdView.m */; };
 		E16AD6FC2243870F00B61431 /* HZTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E16AD6FB2243870F00B61431 /* HZTTextField.m */; };
+		E1B6605A2248A8BF00394A4F /* HZTMyWalletDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B660592248A8BF00394A4F /* HZTMyWalletDetailViewController.m */; };
+		E1B6605D2248AAAB00394A4F /* HZTMyWalletDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B6605C2248AAAB00394A4F /* HZTMyWalletDetailCell.m */; };
+		E1B660632248B36600394A4F /* NSArray+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B660612248B36600394A4F /* NSArray+Common.m */; };
+		E1B660662248B3A900394A4F /* HZTMyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B660642248B3A900394A4F /* HZTMyWalletViewController.m */; };
+		E1B660692248B3B000394A4F /* HZTBindingWechatWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B660672248B3B000394A4F /* HZTBindingWechatWalletViewController.m */; };
+		E1B6606E2248B3D800394A4F /* HZTMyWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B6606C2248B3D800394A4F /* HZTMyWalletCell.m */; };
+		E1B6606F2248B3D800394A4F /* HZTMyWalletHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B6606D2248B3D800394A4F /* HZTMyWalletHeaderView.m */; };
 		E1BCFB602243796B00111A3B /* HZTChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BCFB5F2243796B00111A3B /* HZTChangePwdViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -774,6 +781,20 @@
 		E16AD6F822437BD400B61431 /* HZTChangePwdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangePwdView.m; sourceTree = "<group>"; };
 		E16AD6FA2243870F00B61431 /* HZTTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTextField.h; sourceTree = "<group>"; };
 		E16AD6FB2243870F00B61431 /* HZTTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTextField.m; sourceTree = "<group>"; };
+		E1B660582248A8BF00394A4F /* HZTMyWalletDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyWalletDetailViewController.h; sourceTree = "<group>"; };
+		E1B660592248A8BF00394A4F /* HZTMyWalletDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyWalletDetailViewController.m; sourceTree = "<group>"; };
+		E1B6605B2248AAAB00394A4F /* HZTMyWalletDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyWalletDetailCell.h; sourceTree = "<group>"; };
+		E1B6605C2248AAAB00394A4F /* HZTMyWalletDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyWalletDetailCell.m; sourceTree = "<group>"; };
+		E1B660612248B36600394A4F /* NSArray+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Common.m"; sourceTree = "<group>"; };
+		E1B660622248B36600394A4F /* NSArray+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Common.h"; sourceTree = "<group>"; };
+		E1B660642248B3A900394A4F /* HZTMyWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTMyWalletViewController.m; sourceTree = "<group>"; };
+		E1B660652248B3A900394A4F /* HZTMyWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTMyWalletViewController.h; sourceTree = "<group>"; };
+		E1B660672248B3B000394A4F /* HZTBindingWechatWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTBindingWechatWalletViewController.m; sourceTree = "<group>"; };
+		E1B660682248B3B000394A4F /* HZTBindingWechatWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTBindingWechatWalletViewController.h; sourceTree = "<group>"; };
+		E1B6606A2248B3D800394A4F /* HZTMyWalletCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTMyWalletCell.h; sourceTree = "<group>"; };
+		E1B6606B2248B3D800394A4F /* HZTMyWalletHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTMyWalletHeaderView.h; sourceTree = "<group>"; };
+		E1B6606C2248B3D800394A4F /* HZTMyWalletCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTMyWalletCell.m; sourceTree = "<group>"; };
+		E1B6606D2248B3D800394A4F /* HZTMyWalletHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTMyWalletHeaderView.m; sourceTree = "<group>"; };
 		E1BCFB5E2243796B00111A3B /* HZTChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChangePwdViewController.h; sourceTree = "<group>"; };
 		E1BCFB5F2243796B00111A3B /* HZTChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChangePwdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1883,6 +1904,8 @@
 				E14CAB842241E7370001A308 /* UIColor+Common.m */,
 				E14CAB862241EF3A0001A308 /* NSString+Common.h */,
 				E14CAB872241EF3A0001A308 /* NSString+Common.m */,
+				E1B660622248B36600394A4F /* NSArray+Common.h */,
+				E1B660612248B36600394A4F /* NSArray+Common.m */,
 				ACDE3B562245F53000B8EFB3 /* UIScrollView+HZTRefresh.h */,
 				ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */,
 			);
@@ -1942,6 +1965,7 @@
 			children = (
 				AC39C36A2248D3EB00CF93E7 /* CompanyInfo */,
 				ACDE3BBE2248B1A900B8EFB3 /* PostDetails */,
+				E1B6604622487D3E00394A4F /* MyWallet */,
 				E108A8402244C85D004F2694 /* FeedBack */,
 				E108A83B2244BA4A004F2694 /* ChangeMobile */,
 				E1BCFB582243791700111A3B /* ChangePassword */,
@@ -1957,7 +1981,6 @@
 				AC706FF5223A4B69003F4F6D /* Address */,
 				ACD276C72239152900AD825B /* NewsList */,
 				ACE8F64522389E440053D864 /* MyResume */,
-				ACE8F64922389E440053D864 /* MyWallet */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2021,37 +2044,6 @@
 				ACB38149224088D400FFB9B3 /* HZTTrainCell.h */,
 				ACB3814A224088D400FFB9B3 /* HZTTrainCell.m */,
 				ACB3814B224088D400FFB9B3 /* HZTTrainCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		ACE8F64922389E440053D864 /* MyWallet */ = {
-			isa = PBXGroup;
-			children = (
-				ACE8F64A22389E440053D864 /* Models */,
-				ACE8F64B22389E440053D864 /* Controllers */,
-				ACE8F64C22389E440053D864 /* Views */,
-			);
-			path = MyWallet;
-			sourceTree = "<group>";
-		};
-		ACE8F64A22389E440053D864 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		ACE8F64B22389E440053D864 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		ACE8F64C22389E440053D864 /* Views */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2397,6 +2389,41 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E1B6604622487D3E00394A4F /* MyWallet */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6604722487D3E00394A4F /* Controller */,
+				E1B6604822487D3E00394A4F /* View */,
+			);
+			path = MyWallet;
+			sourceTree = "<group>";
+		};
+		E1B6604722487D3E00394A4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1B660652248B3A900394A4F /* HZTMyWalletViewController.h */,
+				E1B660642248B3A900394A4F /* HZTMyWalletViewController.m */,
+				E1B660682248B3B000394A4F /* HZTBindingWechatWalletViewController.h */,
+				E1B660672248B3B000394A4F /* HZTBindingWechatWalletViewController.m */,
+				E1B660582248A8BF00394A4F /* HZTMyWalletDetailViewController.h */,
+				E1B660592248A8BF00394A4F /* HZTMyWalletDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1B6604822487D3E00394A4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6606A2248B3D800394A4F /* HZTMyWalletCell.h */,
+				E1B6606C2248B3D800394A4F /* HZTMyWalletCell.m */,
+				E1B6606B2248B3D800394A4F /* HZTMyWalletHeaderView.h */,
+				E1B6606D2248B3D800394A4F /* HZTMyWalletHeaderView.m */,
+				E1B6605B2248AAAB00394A4F /* HZTMyWalletDetailCell.h */,
+				E1B6605C2248AAAB00394A4F /* HZTMyWalletDetailCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E1BCFB582243791700111A3B /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -2659,6 +2686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC37E66222420D97004144AA /* HZTWorkAreaHeaderView.m in Sources */,
+				E1B6606E2248B3D800394A4F /* HZTMyWalletCell.m in Sources */,
 				ACF873872244CA0300B5F05F /* ZLCameraViewController.m in Sources */,
 				ACDE3BA42248872700B8EFB3 /* XHLaunchAdCache.m in Sources */,
 				AC2D7206223A246B00E80191 /* PYPhotoBrowserConst.m in Sources */,
@@ -2673,6 +2701,7 @@
 				ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */,
 				ACF873932244CA0300B5F05F /* UIImage+ZLPhotoLib.m in Sources */,
 				E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */,
+				E1B6606F2248B3D800394A4F /* HZTMyWalletHeaderView.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
 				ACDE3B9E2248872700B8EFB3 /* XHLaunchAdConst.m in Sources */,
@@ -2796,6 +2825,7 @@
 				ACDE3BA72248872700B8EFB3 /* YYFPSLabel.m in Sources */,
 				ACF873992244CA0300B5F05F /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
+				E1B660662248B3A900394A4F /* HZTMyWalletViewController.m in Sources */,
 				E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */,
 				ACDE3B9B2248872700B8EFB3 /* XHLaunchAdView.m in Sources */,
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
@@ -2813,18 +2843,22 @@
 				ACDE3B552245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m in Sources */,
 				AC707001223A4B90003F4F6D /* HZTDistrictModel.m in Sources */,
 				ACF873912244CA0300B5F05F /* ZLPhotoPickerCustomToolBarView.m in Sources */,
+				E1B660692248B3B000394A4F /* HZTBindingWechatWalletViewController.m in Sources */,
 				AC2D7268223A25B500E80191 /* MBProgressHUD.m in Sources */,
 				E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */,
 				ACDE3BB922488AC900B8EFB3 /* HZTLaunchAdModel.m in Sources */,
 				ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */,
 				ACF8738E2244CA0300B5F05F /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				ACF8738D2244CA0300B5F05F /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
+				E1B660632248B36600394A4F /* NSArray+Common.m in Sources */,
 				AC37E67622421961004144AA /* HZTImmediateMatchController.m in Sources */,
 				ACC1FB1B2238B947001E9F4A /* UITableViewCell+HZTableViewCell.m in Sources */,
+				E1B6605A2248A8BF00394A4F /* HZTMyWalletDetailViewController.m in Sources */,
 				ACD276C12238F2AD00AD825B /* ToolBaseClass.m in Sources */,
 				AC37E66722421822004144AA /* HZTAboutMeViewController.m in Sources */,
 				ACC1FB1F2238BA1E001E9F4A /* HZTLeftMenuContentView.m in Sources */,
 				ACBB3BA32238CECF0019EACB /* HZTMenuListModel.m in Sources */,
+				E1B6605D2248AAAB00394A4F /* HZTMyWalletDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
