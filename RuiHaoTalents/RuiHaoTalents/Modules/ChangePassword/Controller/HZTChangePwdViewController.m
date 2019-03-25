@@ -225,7 +225,7 @@
         _updateBtn = [[UIButton alloc] init];
         [_updateBtn setTitle:@"确认并修改密码" forState:(UIControlStateNormal)];
         [_updateBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        _updateBtn.titleLabel.font = HZTFontSize(15);
+        _updateBtn.titleLabel.font = HZTFontSize(16);
         _updateBtn.backgroundColor = HZTMainColor;
         _updateBtn.layer.cornerRadius = 5;
         _updateBtn.layer.masksToBounds = YES;

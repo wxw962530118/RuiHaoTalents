@@ -55,7 +55,9 @@
 }
 
 - (void)getCodeBtnClick {
-    self.getCodeBlock(self.getCodeBtn);
+    if (self.getCodeBlock) {
+        self.getCodeBlock(self.getCodeBtn);
+    }
 }
 
 - (void)viewClick {
