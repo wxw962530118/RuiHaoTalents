@@ -15,6 +15,9 @@
 #import "HZTScanAboutController.h"
 #import "HZTWorkAreaViewController.h"
 #import "HZTExpectJobViewController.h"
+
+#import "HZTPostDetailsController.h"
+
 @interface HZTHomeViewController ()<UITableViewDelegate,UITableViewDataSource,HZTHomeHeaderViewDelegate>
 /***/
 @property (nonatomic, strong) HZTLeftMenuContentView * menuContentView;

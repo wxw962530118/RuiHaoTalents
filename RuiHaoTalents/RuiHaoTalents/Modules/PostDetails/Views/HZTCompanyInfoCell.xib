@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HZTCompanyInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-1l-Mdg">
+                        <rect key="frame" x="20" y="27.5" width="55" height="55"/>
+                        <color key="backgroundColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="Ev9-O8-5ci"/>
+                            <constraint firstAttribute="width" constant="55" id="OSd-jP-QZ4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAj-9q-46r">
+                        <rect key="frame" x="90" y="27.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7c-MK-PMu">
+                        <rect key="frame" x="90" y="60.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="nKC-YF-e2q">
+                        <rect key="frame" x="273" y="49" width="7" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="7" id="GlD-3O-zxv"/>
+                            <constraint firstAttribute="height" constant="12" id="sPU-ag-yGD"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P3Y-1l-Mdg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5TX-7D-sWZ"/>
+                    <constraint firstItem="d7c-MK-PMu" firstAttribute="leading" secondItem="PAj-9q-46r" secondAttribute="leading" id="CVT-RU-pMv"/>
+                    <constraint firstItem="PAj-9q-46r" firstAttribute="top" secondItem="P3Y-1l-Mdg" secondAttribute="top" id="HDr-6u-rCf"/>
+                    <constraint firstItem="PAj-9q-46r" firstAttribute="leading" secondItem="P3Y-1l-Mdg" secondAttribute="trailing" constant="15" id="TBr-cR-xi7"/>
+                    <constraint firstItem="nKC-YF-e2q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yjm-pd-ppQ"/>
+                    <constraint firstAttribute="trailing" secondItem="nKC-YF-e2q" secondAttribute="trailing" constant="40" id="gAw-lG-epC"/>
+                    <constraint firstItem="d7c-MK-PMu" firstAttribute="top" secondItem="PAj-9q-46r" secondAttribute="bottom" constant="12" id="gVc-qE-c3D"/>
+                    <constraint firstItem="P3Y-1l-Mdg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pHb-vx-026"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descLabel" destination="d7c-MK-PMu" id="V9g-7O-5oh"/>
+                <outlet property="iconImgView" destination="P3Y-1l-Mdg" id="Pd0-e0-Ik1"/>
+                <outlet property="titleLabel" destination="PAj-9q-46r" id="3C9-o6-0Tz"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home_right_arrow" width="9" height="17"/>
+    </resources>
+</document>

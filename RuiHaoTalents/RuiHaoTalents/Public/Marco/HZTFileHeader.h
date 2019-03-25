@@ -10,6 +10,7 @@
 #define HZTFileHeader_h
 
 #import "APIKey.h"
+#import "HZTFlowLayout.h"
 #import <AFNetworking.h>
 #import "UIScrollView+HZTRefresh.h"
 #import "ToolBaseClass.h"

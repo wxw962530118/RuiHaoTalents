@@ -10,6 +10,7 @@
 #import "HZTImmediateMatchHeaderView.h"
 #import "HZTImmediateMatchCell.h"
 #import "HZTImmediateMatchModel.h"
+#import "HZTPostDetailsController.h"
 
 #define PAGE_CNT 10
 @interface HZTImmediateMatchController ()<UITableViewDelegate,UITableViewDataSource>
@@ -145,6 +146,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HZTPostDetailsController * vc = [[HZTPostDetailsController alloc] init];
+    [self xw_pushViewController:vc animated:YES];
 }
 
 #pragma mark --- 懒加载相关

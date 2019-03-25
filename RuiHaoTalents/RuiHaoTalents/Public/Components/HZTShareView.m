@@ -11,12 +11,15 @@
 @interface HZTShareView ()
 /***/
 @property (nonatomic, strong) UIView * blackView;
+/***/
+@property (nonatomic, assign) void (^Block)(ShareType type);
 @end
 
 @implementation HZTShareView
 
-+(instancetype)show{
++(instancetype)showWithCallBack:(void (^)(ShareType))callBack{
     HZTShareView * view = [[[NSBundle mainBundle] loadNibNamed:@"HZTShareView" owner:nil options:nil] lastObject];
+    view.Block = callBack;
     return view;
 }
 
@@ -51,11 +54,17 @@
     }];
 }
 - (IBAction)shareToWx:(id)sender {
-    
+    if (self.Block) {
+        self.Block(ShareType_WeChat);
+    }
+    [self hideView];
 }
 
 - (IBAction)shareToFriends:(id)sender {
-    
+    if (self.Block) {
+        self.Block(ShareType_Friends);
+    }
+    [self hideView];
 }
 
 - (IBAction)clickCancel:(id)sender {

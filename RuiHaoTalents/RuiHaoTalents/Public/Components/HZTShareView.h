@@ -10,8 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger,ShareType){
+    ShareType_WeChat,  /**微信*/
+    ShareType_Friends, /**朋友圈*/
+};
+
 @interface HZTShareView : UIView
-+(instancetype)show;
++(instancetype)showWithCallBack:(void (^)(ShareType type))callBack;
 @end
 
 NS_ASSUME_NONNULL_END
