@@ -9,6 +9,7 @@
 #ifndef HZTFileHeader_h
 #define HZTFileHeader_h
 
+#import "APIKey.h"
 #import <AFNetworking.h>
 #import "UIScrollView+HZTRefresh.h"
 #import "ToolBaseClass.h"
@@ -17,6 +18,7 @@
 #import "UIView+Category.h"
 #import <Masonry.h>
 #import <MJExtension.h>
+#import <UMSocialCore/UMSocialCore.h>
 #import <UIImageView+WebCache.h>
 #import <YYKit.h>
 #import <TYAttributedLabel.h>

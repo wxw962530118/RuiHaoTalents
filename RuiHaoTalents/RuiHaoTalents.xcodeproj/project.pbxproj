@@ -155,7 +155,6 @@
 		AC707006223A503F003F4F6D /* HZTHomeBottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC707004223A503F003F4F6D /* HZTHomeBottomCell.xib */; };
 		AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700A223B746F003F4F6D /* NetWorkManager.m */; };
 		AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700F223B750E003F4F6D /* HZTAccountManager.m */; };
-		AC707013223B753C003F4F6D /* HZTAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707012223B753C003F4F6D /* HZTAccountModel.m */; };
 		AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */; };
 		AC7DB40922421ED500F39EEF /* HZTWorkAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DB40822421ED500F39EEF /* HZTWorkAreaModel.m */; };
 		AC7DB40C22421F8F00F39EEF /* HZTWorkAreaListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DB40B22421F8F00F39EEF /* HZTWorkAreaListCell.m */; };
@@ -201,6 +200,33 @@
 		ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA0CCB223F33BA00C54A63 /* HZTMyResumeViewController.m */; };
 		ACDE3B552245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B542245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m */; };
 		ACDE3B582245F53000B8EFB3 /* UIScrollView+HZTRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */; };
+		ACDE3B902248872700B8EFB3 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3B5B2248872600B8EFB3 /* UMSocialSDKResources.bundle */; };
+		ACDE3B912248872700B8EFB3 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B5C2248872600B8EFB3 /* UShareUI.framework */; };
+		ACDE3B922248872700B8EFB3 /* UMSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B5E2248872600B8EFB3 /* UMSocialNetwork.framework */; };
+		ACDE3B932248872700B8EFB3 /* UMSocialSDKPromptResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3B5F2248872600B8EFB3 /* UMSocialSDKPromptResources.bundle */; };
+		ACDE3B942248872700B8EFB3 /* UMSocialCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B602248872600B8EFB3 /* UMSocialCore.framework */; };
+		ACDE3B952248872700B8EFB3 /* libSocialWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B632248872600B8EFB3 /* libSocialWeChat.a */; };
+		ACDE3B962248872700B8EFB3 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B662248872600B8EFB3 /* libSocialSina.a */; };
+		ACDE3B972248872700B8EFB3 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B6A2248872600B8EFB3 /* libSocialQQ.a */; };
+		ACDE3B982248872700B8EFB3 /* libUMSocialLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDE3B6C2248872600B8EFB3 /* libUMSocialLog.a */; };
+		ACDE3B9B2248872700B8EFB3 /* XHLaunchAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B782248872600B8EFB3 /* XHLaunchAdView.m */; };
+		ACDE3B9C2248872700B8EFB3 /* XHLaunchAdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B7B2248872600B8EFB3 /* XHLaunchAdButton.m */; };
+		ACDE3B9D2248872700B8EFB3 /* XHLaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B7D2248872600B8EFB3 /* XHLaunchImageView.m */; };
+		ACDE3B9E2248872700B8EFB3 /* XHLaunchAdConst.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B7E2248872600B8EFB3 /* XHLaunchAdConst.m */; };
+		ACDE3B9F2248872700B8EFB3 /* XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B802248872600B8EFB3 /* XHLaunchAd.m */; };
+		ACDE3BA02248872700B8EFB3 /* XHLaunchAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B812248872600B8EFB3 /* XHLaunchAdController.m */; };
+		ACDE3BA12248872700B8EFB3 /* XHLaunchAdDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B822248872600B8EFB3 /* XHLaunchAdDownloader.m */; };
+		ACDE3BA22248872700B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B842248872600B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.m */; };
+		ACDE3BA32248872700B8EFB3 /* XHLaunchAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B852248872600B8EFB3 /* XHLaunchAdConfiguration.m */; };
+		ACDE3BA42248872700B8EFB3 /* XHLaunchAdCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B872248872600B8EFB3 /* XHLaunchAdCache.m */; };
+		ACDE3BA52248872700B8EFB3 /* XHLaunchAdImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B892248872600B8EFB3 /* XHLaunchAdImageManager.m */; };
+		ACDE3BA72248872700B8EFB3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3B8E2248872600B8EFB3 /* YYFPSLabel.m */; };
+		ACDE3BAB224889FD00B8EFB3 /* HZTLaunchAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3BAA224889FD00B8EFB3 /* HZTLaunchAdManager.m */; };
+		ACDE3BB422488AB900B8EFB3 /* LaunchVideoAd.json in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3BB022488AB900B8EFB3 /* LaunchVideoAd.json */; };
+		ACDE3BB522488AB900B8EFB3 /* LaunchImageAd.json in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3BB122488AB900B8EFB3 /* LaunchImageAd.json */; };
+		ACDE3BB622488AB900B8EFB3 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3BB222488AB900B8EFB3 /* image2.jpg */; };
+		ACDE3BB922488AC900B8EFB3 /* HZTLaunchAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3BB822488AC900B8EFB3 /* HZTLaunchAdModel.m */; };
+		ACDE3BBD22488C5900B8EFB3 /* HZTAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3BBB22488C5800B8EFB3 /* HZTAccountModel.m */; };
 		ACE140D22243415E007FD87B /* HZTChoosePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D12243415E007FD87B /* HZTChoosePostController.m */; };
 		ACE140D6224359C1007FD87B /* HZTExpectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D4224359C1007FD87B /* HZTExpectJobViewController.m */; };
 		ACE140D7224359C1007FD87B /* HZTExpectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE140D5224359C1007FD87B /* HZTExpectJobViewController.xib */; };
@@ -462,8 +488,6 @@
 		AC70700A223B746F003F4F6D /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		AC70700E223B750E003F4F6D /* HZTAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTAccountManager.h; sourceTree = "<group>"; };
 		AC70700F223B750E003F4F6D /* HZTAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAccountManager.m; sourceTree = "<group>"; };
-		AC707011223B753C003F4F6D /* HZTAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTAccountModel.h; sourceTree = "<group>"; };
-		AC707012223B753C003F4F6D /* HZTAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAccountModel.m; sourceTree = "<group>"; };
 		AC707030223B8F15003F4F6D /* HZTLoginWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLoginWorkManager.h; sourceTree = "<group>"; };
 		AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLoginWorkManager.m; sourceTree = "<group>"; };
 		AC7DB40722421ED500F39EEF /* HZTWorkAreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTWorkAreaModel.h; sourceTree = "<group>"; };
@@ -546,6 +570,52 @@
 		ACDE3B542245E0B700B8EFB3 /* HZTImmeduateCompanyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTImmeduateCompanyModel.m; sourceTree = "<group>"; };
 		ACDE3B562245F53000B8EFB3 /* UIScrollView+HZTRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HZTRefresh.h"; sourceTree = "<group>"; };
 		ACDE3B572245F53000B8EFB3 /* UIScrollView+HZTRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HZTRefresh.m"; sourceTree = "<group>"; };
+		ACDE3B5B2248872600B8EFB3 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		ACDE3B5C2248872600B8EFB3 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
+		ACDE3B5E2248872600B8EFB3 /* UMSocialNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialNetwork.framework; sourceTree = "<group>"; };
+		ACDE3B5F2248872600B8EFB3 /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
+		ACDE3B602248872600B8EFB3 /* UMSocialCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMSocialCore.framework; sourceTree = "<group>"; };
+		ACDE3B632248872600B8EFB3 /* libSocialWeChat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWeChat.a; sourceTree = "<group>"; };
+		ACDE3B642248872600B8EFB3 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		ACDE3B662248872600B8EFB3 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		ACDE3B672248872600B8EFB3 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		ACDE3B692248872600B8EFB3 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		ACDE3B6A2248872600B8EFB3 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		ACDE3B6C2248872600B8EFB3 /* libUMSocialLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocialLog.a; sourceTree = "<group>"; };
+		ACDE3B752248872600B8EFB3 /* XHLaunchAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdController.h; sourceTree = "<group>"; };
+		ACDE3B762248872600B8EFB3 /* XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAd.h; sourceTree = "<group>"; };
+		ACDE3B772248872600B8EFB3 /* XHLaunchAdDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdDownloader.h; sourceTree = "<group>"; };
+		ACDE3B782248872600B8EFB3 /* XHLaunchAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdView.m; sourceTree = "<group>"; };
+		ACDE3B792248872600B8EFB3 /* XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdCache.h; sourceTree = "<group>"; };
+		ACDE3B7A2248872600B8EFB3 /* XHLaunchAdConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConfiguration.h; sourceTree = "<group>"; };
+		ACDE3B7B2248872600B8EFB3 /* XHLaunchAdButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdButton.m; sourceTree = "<group>"; };
+		ACDE3B7C2248872600B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XHLaunchAdImageView+XHLaunchAdCache.h"; sourceTree = "<group>"; };
+		ACDE3B7D2248872600B8EFB3 /* XHLaunchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchImageView.m; sourceTree = "<group>"; };
+		ACDE3B7E2248872600B8EFB3 /* XHLaunchAdConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConst.m; sourceTree = "<group>"; };
+		ACDE3B7F2248872600B8EFB3 /* XHLaunchAdImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdImageManager.h; sourceTree = "<group>"; };
+		ACDE3B802248872600B8EFB3 /* XHLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAd.m; sourceTree = "<group>"; };
+		ACDE3B812248872600B8EFB3 /* XHLaunchAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdController.m; sourceTree = "<group>"; };
+		ACDE3B822248872600B8EFB3 /* XHLaunchAdDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdDownloader.m; sourceTree = "<group>"; };
+		ACDE3B832248872600B8EFB3 /* XHLaunchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchImageView.h; sourceTree = "<group>"; };
+		ACDE3B842248872600B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XHLaunchAdImageView+XHLaunchAdCache.m"; sourceTree = "<group>"; };
+		ACDE3B852248872600B8EFB3 /* XHLaunchAdConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdConfiguration.m; sourceTree = "<group>"; };
+		ACDE3B862248872600B8EFB3 /* XHLaunchAdButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdButton.h; sourceTree = "<group>"; };
+		ACDE3B872248872600B8EFB3 /* XHLaunchAdCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdCache.m; sourceTree = "<group>"; };
+		ACDE3B882248872600B8EFB3 /* XHLaunchAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdView.h; sourceTree = "<group>"; };
+		ACDE3B892248872600B8EFB3 /* XHLaunchAdImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLaunchAdImageManager.m; sourceTree = "<group>"; };
+		ACDE3B8A2248872600B8EFB3 /* XHLaunchAdConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLaunchAdConst.h; sourceTree = "<group>"; };
+		ACDE3B8D2248872600B8EFB3 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		ACDE3B8E2248872600B8EFB3 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		ACDE3BA8224888A200B8EFB3 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		ACDE3BA9224889FD00B8EFB3 /* HZTLaunchAdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLaunchAdManager.h; sourceTree = "<group>"; };
+		ACDE3BAA224889FD00B8EFB3 /* HZTLaunchAdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLaunchAdManager.m; sourceTree = "<group>"; };
+		ACDE3BB022488AB900B8EFB3 /* LaunchVideoAd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaunchVideoAd.json; sourceTree = "<group>"; };
+		ACDE3BB122488AB900B8EFB3 /* LaunchImageAd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaunchImageAd.json; sourceTree = "<group>"; };
+		ACDE3BB222488AB900B8EFB3 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		ACDE3BB722488AC900B8EFB3 /* HZTLaunchAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLaunchAdModel.h; sourceTree = "<group>"; };
+		ACDE3BB822488AC900B8EFB3 /* HZTLaunchAdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLaunchAdModel.m; sourceTree = "<group>"; };
+		ACDE3BBB22488C5800B8EFB3 /* HZTAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTAccountModel.m; sourceTree = "<group>"; };
+		ACDE3BBC22488C5800B8EFB3 /* HZTAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTAccountModel.h; sourceTree = "<group>"; };
 		ACE140D02243415E007FD87B /* HZTChoosePostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChoosePostController.h; sourceTree = "<group>"; };
 		ACE140D12243415E007FD87B /* HZTChoosePostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostController.m; sourceTree = "<group>"; };
 		ACE140D3224359C1007FD87B /* HZTExpectJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTExpectJobViewController.h; sourceTree = "<group>"; };
@@ -671,7 +741,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDE3B942248872700B8EFB3 /* UMSocialCore.framework in Frameworks */,
+				ACDE3B952248872700B8EFB3 /* libSocialWeChat.a in Frameworks */,
+				ACDE3B912248872700B8EFB3 /* UShareUI.framework in Frameworks */,
 				68A6DB7B2491F8C6D9371AE2 /* libPods-RuiHaoTalents.a in Frameworks */,
+				ACDE3B922248872700B8EFB3 /* UMSocialNetwork.framework in Frameworks */,
+				ACDE3B982248872700B8EFB3 /* libUMSocialLog.a in Frameworks */,
+				ACDE3B972248872700B8EFB3 /* libSocialQQ.a in Frameworks */,
+				ACDE3B962248872700B8EFB3 /* libSocialSina.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +852,9 @@
 		AC2D71E0223A246B00E80191 /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE3B592248872600B8EFB3 /* UMSocial */,
+				ACDE3B6D2248872600B8EFB3 /* XHLaunchAd */,
+				ACDE3B8B2248872600B8EFB3 /* YYFPSLabel */,
 				ACF873A72244D3C800B5F05F /* SWQRCode */,
 				ACF873A12244CA5400B5F05F /* ImageClipTool */,
 				ACF873452244CA0200B5F05F /* ZLPhotoLib */,
@@ -1333,6 +1413,164 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ACDE3B592248872600B8EFB3 /* UMSocial */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B5A2248872600B8EFB3 /* UMSocialUI */,
+				ACDE3B5D2248872600B8EFB3 /* UMSocialSDK */,
+				ACDE3B612248872600B8EFB3 /* SocialLibraries */,
+				ACDE3B6B2248872600B8EFB3 /* UMSocialSDKPlugin */,
+			);
+			path = UMSocial;
+			sourceTree = "<group>";
+		};
+		ACDE3B5A2248872600B8EFB3 /* UMSocialUI */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B5B2248872600B8EFB3 /* UMSocialSDKResources.bundle */,
+				ACDE3B5C2248872600B8EFB3 /* UShareUI.framework */,
+			);
+			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
+		ACDE3B5D2248872600B8EFB3 /* UMSocialSDK */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B5E2248872600B8EFB3 /* UMSocialNetwork.framework */,
+				ACDE3B5F2248872600B8EFB3 /* UMSocialSDKPromptResources.bundle */,
+				ACDE3B602248872600B8EFB3 /* UMSocialCore.framework */,
+			);
+			path = UMSocialSDK;
+			sourceTree = "<group>";
+		};
+		ACDE3B612248872600B8EFB3 /* SocialLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B622248872600B8EFB3 /* WeChat */,
+				ACDE3B652248872600B8EFB3 /* Sina */,
+				ACDE3B682248872600B8EFB3 /* QQ */,
+			);
+			path = SocialLibraries;
+			sourceTree = "<group>";
+		};
+		ACDE3B622248872600B8EFB3 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B632248872600B8EFB3 /* libSocialWeChat.a */,
+				ACDE3B642248872600B8EFB3 /* UMSocialWechatHandler.h */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		ACDE3B652248872600B8EFB3 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B662248872600B8EFB3 /* libSocialSina.a */,
+				ACDE3B672248872600B8EFB3 /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		ACDE3B682248872600B8EFB3 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B692248872600B8EFB3 /* UMSocialQQHandler.h */,
+				ACDE3B6A2248872600B8EFB3 /* libSocialQQ.a */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		ACDE3B6B2248872600B8EFB3 /* UMSocialSDKPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B6C2248872600B8EFB3 /* libUMSocialLog.a */,
+			);
+			path = UMSocialSDKPlugin;
+			sourceTree = "<group>";
+		};
+		ACDE3B6D2248872600B8EFB3 /* XHLaunchAd */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B742248872600B8EFB3 /* XHLaunchAd */,
+			);
+			path = XHLaunchAd;
+			sourceTree = "<group>";
+		};
+		ACDE3B742248872600B8EFB3 /* XHLaunchAd */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B752248872600B8EFB3 /* XHLaunchAdController.h */,
+				ACDE3B762248872600B8EFB3 /* XHLaunchAd.h */,
+				ACDE3B772248872600B8EFB3 /* XHLaunchAdDownloader.h */,
+				ACDE3B782248872600B8EFB3 /* XHLaunchAdView.m */,
+				ACDE3B792248872600B8EFB3 /* XHLaunchAdCache.h */,
+				ACDE3B7A2248872600B8EFB3 /* XHLaunchAdConfiguration.h */,
+				ACDE3B7B2248872600B8EFB3 /* XHLaunchAdButton.m */,
+				ACDE3B7C2248872600B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.h */,
+				ACDE3B7D2248872600B8EFB3 /* XHLaunchImageView.m */,
+				ACDE3B7E2248872600B8EFB3 /* XHLaunchAdConst.m */,
+				ACDE3B7F2248872600B8EFB3 /* XHLaunchAdImageManager.h */,
+				ACDE3B802248872600B8EFB3 /* XHLaunchAd.m */,
+				ACDE3B812248872600B8EFB3 /* XHLaunchAdController.m */,
+				ACDE3B822248872600B8EFB3 /* XHLaunchAdDownloader.m */,
+				ACDE3B832248872600B8EFB3 /* XHLaunchImageView.h */,
+				ACDE3B842248872600B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.m */,
+				ACDE3B852248872600B8EFB3 /* XHLaunchAdConfiguration.m */,
+				ACDE3B862248872600B8EFB3 /* XHLaunchAdButton.h */,
+				ACDE3B872248872600B8EFB3 /* XHLaunchAdCache.m */,
+				ACDE3B882248872600B8EFB3 /* XHLaunchAdView.h */,
+				ACDE3B892248872600B8EFB3 /* XHLaunchAdImageManager.m */,
+				ACDE3B8A2248872600B8EFB3 /* XHLaunchAdConst.h */,
+			);
+			path = XHLaunchAd;
+			sourceTree = "<group>";
+		};
+		ACDE3B8B2248872600B8EFB3 /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3B8D2248872600B8EFB3 /* YYFPSLabel.h */,
+				ACDE3B8E2248872600B8EFB3 /* YYFPSLabel.m */,
+			);
+			path = YYFPSLabel;
+			sourceTree = "<group>";
+		};
+		ACDE3BAE22488A9100B8EFB3 /* AdInfo */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3BB322488AB900B8EFB3 /* Model */,
+				ACDE3BAF22488AB900B8EFB3 /* Source */,
+			);
+			path = AdInfo;
+			sourceTree = "<group>";
+		};
+		ACDE3BAF22488AB900B8EFB3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3BB022488AB900B8EFB3 /* LaunchVideoAd.json */,
+				ACDE3BB122488AB900B8EFB3 /* LaunchImageAd.json */,
+				ACDE3BB222488AB900B8EFB3 /* image2.jpg */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ACDE3BB322488AB900B8EFB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3BB722488AC900B8EFB3 /* HZTLaunchAdModel.h */,
+				ACDE3BB822488AC900B8EFB3 /* HZTLaunchAdModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACDE3BBA22488C5800B8EFB3 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE3BBC22488C5800B8EFB3 /* HZTAccountModel.h */,
+				ACDE3BBB22488C5800B8EFB3 /* HZTAccountModel.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		ACE140CC22434148007FD87B /* ChoosePost */ = {
 			isa = PBXGroup;
 			children = (
@@ -1398,7 +1636,8 @@
 		ACE8F62322389ACD0053D864 /* RuiHaoTalents */ = {
 			isa = PBXGroup;
 			children = (
-				ACFE80352238A2AA006D1506 /* Account */,
+				ACDE3BBA22488C5800B8EFB3 /* Account */,
+				ACDE3BAE22488A9100B8EFB3 /* AdInfo */,
 				ACFE80312238A29F006D1506 /* Login&Register */,
 				ACE8F63F22389E440053D864 /* Base */,
 				ACE8F64D22389E440053D864 /* Home */,
@@ -1432,6 +1671,8 @@
 		ACE8F63B22389E440053D864 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE3BA9224889FD00B8EFB3 /* HZTLaunchAdManager.h */,
+				ACDE3BAA224889FD00B8EFB3 /* HZTLaunchAdManager.m */,
 				AC70700E223B750E003F4F6D /* HZTAccountManager.h */,
 				AC70700F223B750E003F4F6D /* HZTAccountManager.m */,
 				AC37E65A2241DFA8004144AA /* HZTCLocationManager.h */,
@@ -1481,6 +1722,7 @@
 				ACFE80492238A46D006D1506 /* HZTMacroMeasurement.h */,
 				ACFE804A2238A47A006D1506 /* HZTMacroScreenDapter.h */,
 				ACC1FB1C2238B980001E9F4A /* HZTFileHeader.h */,
+				ACDE3BA8224888A200B8EFB3 /* APIKey.h */,
 			);
 			path = Marco;
 			sourceTree = "<group>";
@@ -1960,15 +2202,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		ACFE80352238A2AA006D1506 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				AC707011223B753C003F4F6D /* HZTAccountModel.h */,
-				AC707012223B753C003F4F6D /* HZTAccountModel.m */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		D8AC12AC29E0B95DBAD45356 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2114,6 +2347,7 @@
 				AC2D72AE223A25B500E80191 /* 2.png in Resources */,
 				AC2D7292223A25B500E80191 /* 23.png in Resources */,
 				AC2D728D223A25B500E80191 /* 20.png in Resources */,
+				ACDE3BB522488AB900B8EFB3 /* LaunchImageAd.json in Resources */,
 				AC2D727A223A25B500E80191 /* 72.png in Resources */,
 				AC2D7274223A25B500E80191 /* 65.png in Resources */,
 				AC2D726F223A25B500E80191 /* 48.png in Resources */,
@@ -2140,6 +2374,7 @@
 				AC2D72B3223A25B500E80191 /* 79.png in Resources */,
 				AC2D72A6223A25B500E80191 /* 7.png in Resources */,
 				ACBB3BA02238CE5E0019EACB /* HZTMenuListHeaderView.xib in Resources */,
+				ACDE3BB422488AB900B8EFB3 /* LaunchVideoAd.json in Resources */,
 				AC707006223A503F003F4F6D /* HZTHomeBottomCell.xib in Resources */,
 				AC2D7284223A25B500E80191 /* 16.png in Resources */,
 				ACB3814D224088D400FFB9B3 /* HZTTrainCell.xib in Resources */,
@@ -2188,6 +2423,7 @@
 				AC2D72B1223A25B500E80191 /* 51.png in Resources */,
 				AC2D7291223A25B500E80191 /* 37.png in Resources */,
 				AC2D729A223A25B500E80191 /* 25.png in Resources */,
+				ACDE3B902248872700B8EFB3 /* UMSocialSDKResources.bundle in Resources */,
 				AC2D7290223A25B500E80191 /* 36.png in Resources */,
 				ACB38148223FA43300FFB9B3 /* HZTCustomHederCell.xib in Resources */,
 				AC2D7296223A25B500E80191 /* 26.png in Resources */,
@@ -2201,6 +2437,7 @@
 				AC2D7297223A25B500E80191 /* 18.png in Resources */,
 				AC2D7210223A246C00E80191 /* PYPhotosView.bundle in Resources */,
 				AC2D72B6223A25B500E80191 /* 47.png in Resources */,
+				ACDE3B932248872700B8EFB3 /* UMSocialSDKPromptResources.bundle in Resources */,
 				ACBB3B9E2238CE4E0019EACB /* HZTHomeHeaderView.xib in Resources */,
 				ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */,
 				AC2D72AB223A25B500E80191 /* 40.png in Resources */,
@@ -2216,6 +2453,7 @@
 				AC2D727D223A25B500E80191 /* 73.png in Resources */,
 				AC2D72A5223A25B500E80191 /* 55.png in Resources */,
 				ACC1FB122238B3AB001E9F4A /* HZTMenuListCell.xib in Resources */,
+				ACDE3BB622488AB900B8EFB3 /* image2.jpg in Resources */,
 				AC2D72A8223A25B500E80191 /* 68.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2278,10 +2516,12 @@
 			files = (
 				AC37E66222420D97004144AA /* HZTWorkAreaHeaderView.m in Sources */,
 				ACF873872244CA0300B5F05F /* ZLCameraViewController.m in Sources */,
+				ACDE3BA42248872700B8EFB3 /* XHLaunchAdCache.m in Sources */,
 				AC2D7206223A246B00E80191 /* PYPhotoBrowserConst.m in Sources */,
 				ACC1FB042238B230001E9F4A /* HZTLeftMenuView.m in Sources */,
 				ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */,
 				AC845991224384AA00E09659 /* HZTChoosePostView.m in Sources */,
+				ACDE3BA02248872700B8EFB3 /* XHLaunchAdController.m in Sources */,
 				AC7DB40922421ED500F39EEF /* HZTWorkAreaModel.m in Sources */,
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
 				E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */,
@@ -2290,6 +2530,7 @@
 				E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
+				ACDE3B9E2248872700B8EFB3 /* XHLaunchAdConst.m in Sources */,
 				ACF8739D2244CA0300B5F05F /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
 				ACF8739F2244CA0300B5F05F /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 				AC20774B223F3EF40072129B /* HZTShareView.m in Sources */,
@@ -2297,11 +2538,14 @@
 				AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */,
 				AC207763223F479C0072129B /* HZTMyResumeCustomCell.m in Sources */,
 				ACBB3B9C2238CE3E0019EACB /* HZTHomeHeaderView.m in Sources */,
+				ACDE3B9D2248872700B8EFB3 /* XHLaunchImageView.m in Sources */,
 				ACF873892244CA0300B5F05F /* ZLCamera.m in Sources */,
 				E16AD6FC2243870F00B61431 /* HZTTextField.m in Sources */,
+				ACDE3BA52248872700B8EFB3 /* XHLaunchAdImageManager.m in Sources */,
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
 				AC37E65F224209DA004144AA /* HZTHomeNetWorkManager.m in Sources */,
 				E108A830224475AA004F2694 /* UIButton+Countdown.m in Sources */,
+				ACDE3BBD22488C5900B8EFB3 /* HZTAccountModel.m in Sources */,
 				ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */,
 				ACF873442244C97B00B5F05F /* HZTImagePickerView.m in Sources */,
 				AC37E68222421A86004144AA /* HZTImmediateMatchCell.m in Sources */,
@@ -2323,7 +2567,9 @@
 				AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */,
 				ACF873972244CA0300B5F05F /* ZLPhotoAssets.m in Sources */,
 				AC2D7209223A246C00E80191 /* PYPhotosNavigationController.m in Sources */,
+				ACDE3B9C2248872700B8EFB3 /* XHLaunchAdButton.m in Sources */,
 				ACF873962244CA0300B5F05F /* ZLPhotoPickerGroup.m in Sources */,
+				ACDE3BA32248872700B8EFB3 /* XHLaunchAdConfiguration.m in Sources */,
 				AC37E679224219FE004144AA /* HZTScanAboutController.m in Sources */,
 				ACB12D7B223A42C5008E5494 /* HZTCustomSheetView.m in Sources */,
 				AC707005223A503F003F4F6D /* HZTHomeBottomCell.m in Sources */,
@@ -2336,10 +2582,13 @@
 				ACB3815A2240B99300FFB9B3 /* HZTNewsListModel.m in Sources */,
 				ACF8739A2244CA0300B5F05F /* ZLPhotoPickerViewController.m in Sources */,
 				E16AD6F922437BD400B61431 /* HZTChangePwdView.m in Sources */,
+				ACDE3B9F2248872700B8EFB3 /* XHLaunchAd.m in Sources */,
+				ACDE3BAB224889FD00B8EFB3 /* HZTLaunchAdManager.m in Sources */,
 				AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */,
 				ACB3816A2240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m in Sources */,
 				AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */,
 				AC2D720F223A246C00E80191 /* PYPhotoView.m in Sources */,
+				ACDE3BA12248872700B8EFB3 /* XHLaunchAdDownloader.m in Sources */,
 				ACFE80382238A2F2006D1506 /* HZTBaseViewController.m in Sources */,
 				AC2D7205223A246B00E80191 /* PYProgressView.m in Sources */,
 				AC37E67C22421A55004144AA /* HZTImmediateMatchHeaderView.m in Sources */,
@@ -2354,7 +2603,6 @@
 				ACDA0CCC223F33BA00C54A63 /* HZTMyResumeViewController.m in Sources */,
 				AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */,
 				AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */,
-				AC707013223B753C003F4F6D /* HZTAccountModel.m in Sources */,
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				AC84598A2243783800E09659 /* HZTChoosePostCell.m in Sources */,
@@ -2379,6 +2627,7 @@
 				ACF8738C2244CA0300B5F05F /* ZLPhotoRect.m in Sources */,
 				AC2D720C223A246C00E80191 /* PYPhotosView.m in Sources */,
 				ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */,
+				ACDE3BA22248872700B8EFB3 /* XHLaunchAdImageView+XHLaunchAdCache.m in Sources */,
 				AC706FFE223A4B84003F4F6D /* HZTCityModel.m in Sources */,
 				ACF873B32244D3C800B5F05F /* SWQRCodeManager.m in Sources */,
 				ACF873952244CA0300B5F05F /* ZLPhotoPickerDatas.m in Sources */,
@@ -2389,9 +2638,11 @@
 				AC7DB40C22421F8F00F39EEF /* HZTWorkAreaListCell.m in Sources */,
 				AC2D720D223A246C00E80191 /* PYPhotoBrowseView.m in Sources */,
 				AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */,
+				ACDE3BA72248872700B8EFB3 /* YYFPSLabel.m in Sources */,
 				ACF873992244CA0300B5F05F /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
 				E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */,
+				ACDE3B9B2248872700B8EFB3 /* XHLaunchAdView.m in Sources */,
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
 				AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */,
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,
@@ -2408,6 +2659,7 @@
 				ACF873912244CA0300B5F05F /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				AC2D7268223A25B500E80191 /* MBProgressHUD.m in Sources */,
 				E108A8342244A634004F2694 /* HZTTextHelper.m in Sources */,
+				ACDE3BB922488AC900B8EFB3 /* HZTLaunchAdModel.m in Sources */,
 				ACB3816C2240CBDA00FFB9B3 /* HZTTopTabView.m in Sources */,
 				ACF8738E2244CA0300B5F05F /* ZLPhotoPickerBrowserViewController.m in Sources */,
 				ACF8738D2244CA0300B5F05F /* ZLPhotoPickerBrowserViewController+SignlePhotoBrowser.m in Sources */,
@@ -2548,12 +2800,24 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S8VLGVUGW6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialSDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";
 				INFOPLIST_FILE = RuiHaoTalents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialSDKPlugin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itresource.rulh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2575,12 +2839,24 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S8VLGVUGW6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialSDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RuiHaoTalents/HZTPrefixHeader.pch";
 				INFOPLIST_FILE = RuiHaoTalents/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/RuiHaoTalents/Public/ThirdSDK/UMSocial/UMSocialSDKPlugin",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itresource.rulh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
