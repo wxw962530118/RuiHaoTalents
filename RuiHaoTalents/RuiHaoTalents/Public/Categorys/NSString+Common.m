@@ -16,4 +16,8 @@
     return appVersion;
 }
 
+- (BOOL)isEmpty {
+    return [self isKindOfClass:[NSNull class]] || self == nil || [self length] < 1 ? YES : NO;
+}
+
 @end
