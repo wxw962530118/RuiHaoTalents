@@ -321,15 +321,9 @@
     if ([TextRun isKindOfClass:[TYLinkTextStorage class]]) {
         NSString * linkStr = ((TYLinkTextStorage*)TextRun).linkData;
         NSLog(@"linkStr === %@",linkStr);
-//        [[ToolBaseClass shareManager] showAlertViewType:CustomAlretType_Succeed title:@"推荐成功" desc:@"你可以前往我是伯乐-我的推荐查看" isShowCancel:YES bottomTitle:@"立即前往" callBack:^{
-//            NSLog(@"立即前往");
-//        }];
-//        [HZTCustomSheetView showCustomSheetViewTitle:@"选择地图" contentArr:@[@"高德",@"百度",@"谷歌"] callBack:^(NSInteger index) {
-//
-//        }];
-//        [HZTCustomPickerView showPickerViewWithTitle:@"选择性别" dataArray:@[@[@"未知",@"男",@"女"]] callBack:^(HZTCustomPickerModel * _Nonnull model) {
-//
-//        }];
+        [[ToolBaseClass shareManager] showAlertViewType:CustomAlretType_Wallect title:@"是否解除绑定" desc:@"你可以前往我是伯乐-我的推荐查看" isShowCancel:YES bottomTitle:@"立即前往" callBack:^{
+            NSLog(@"立即前往");
+        }];
     }
 }
 

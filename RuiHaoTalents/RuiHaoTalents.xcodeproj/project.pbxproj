@@ -206,7 +206,6 @@
 		ACE140D7224359C1007FD87B /* HZTExpectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE140D5224359C1007FD87B /* HZTExpectJobViewController.xib */; };
 		ACE8F62622389ACD0053D864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F62522389ACD0053D864 /* AppDelegate.m */; };
 		ACE8F62E22389AD00053D864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62D22389AD00053D864 /* Assets.xcassets */; };
-		ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */; };
 		ACE8F63422389AD00053D864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE8F63322389AD00053D864 /* main.m */; };
 		ACF873442244C97B00B5F05F /* HZTImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF873432244C97B00B5F05F /* HZTImagePickerView.m */; };
 		ACF873872244CA0300B5F05F /* ZLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF873482244CA0200B5F05F /* ZLCameraViewController.m */; };
@@ -556,7 +555,6 @@
 		ACE8F62422389ACD0053D864 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACE8F62522389ACD0053D864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ACE8F62D22389AD00053D864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ACE8F63022389AD00053D864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE8F63222389AD00053D864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE8F63322389AD00053D864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ACF873422244C97B00B5F05F /* HZTImagePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTImagePickerView.h; sourceTree = "<group>"; };
@@ -616,7 +614,6 @@
 		ACF873862244CA0200B5F05F /* ZLPhotoLib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZLPhotoLib.bundle; sourceTree = "<group>"; };
 		ACF873A22244CA5400B5F05F /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		ACF873A32244CA5400B5F05F /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
-		ACF873A52244D11400B5F05F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		ACF873A92244D3C800B5F05F /* SWQRCodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeConfig.m; sourceTree = "<group>"; };
 		ACF873AA2244D3C800B5F05F /* SWQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWQRCodeManager.m; sourceTree = "<group>"; };
 		ACF873AB2244D3C800B5F05F /* SWQRCodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWQRCodeConfig.h; sourceTree = "<group>"; };
@@ -1412,7 +1409,6 @@
 				ACE8F62522389ACD0053D864 /* AppDelegate.m */,
 				ACFE804B2238A527006D1506 /* HZTPrefixHeader.pch */,
 				ACE8F62D22389AD00053D864 /* Assets.xcassets */,
-				ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */,
 				ACE8F63222389AD00053D864 /* Info.plist */,
 				ACE8F63322389AD00053D864 /* main.m */,
 			);
@@ -2180,7 +2176,6 @@
 				AC2D7279223A25B500E80191 /* 8.png in Resources */,
 				AC2D726E223A25B500E80191 /* 74.png in Resources */,
 				AC2D7270223A25B500E80191 /* 49.png in Resources */,
-				ACE8F63122389AD00053D864 /* LaunchScreen.storyboard in Resources */,
 				AC2D72A4223A25B500E80191 /* 41.png in Resources */,
 				AC2D72B7223A25B500E80191 /* 46.png in Resources */,
 				AC2D729C223A25B500E80191 /* 19.png in Resources */,
@@ -2427,18 +2422,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		ACE8F62F22389AD00053D864 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACE8F63022389AD00053D864 /* Base */,
-				ACF873A52244D11400B5F05F /* zh-Hans */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		ACE8F63522389AD00053D864 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2492,7 +2475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2546,7 +2529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2559,6 +2542,7 @@
 			baseConfigurationReference = 2E40873FFA5C6606EF953AA1 /* Pods-RuiHaoTalents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2576,7 +2560,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = kaifa;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2585,6 +2569,7 @@
 			baseConfigurationReference = DE3FDDFC9736C540A38CB496 /* Pods-RuiHaoTalents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2601,7 +2586,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = kaifa;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
