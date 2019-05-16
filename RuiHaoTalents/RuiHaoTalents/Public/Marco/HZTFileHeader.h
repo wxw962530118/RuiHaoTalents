@@ -35,5 +35,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "HZTTextField.h"
+#import "UIViewController+JZExtension.h"
 
 #endif /* HZTFileHeader_h */

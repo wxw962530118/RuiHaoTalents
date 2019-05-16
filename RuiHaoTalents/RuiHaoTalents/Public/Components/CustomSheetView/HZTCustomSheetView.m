@@ -47,6 +47,7 @@
             UIButton * btn = [[UIButton alloc] init];
             btn.tag = 1000 + i;
             btn.titleLabel.font = HZTFontSize(21);
+            [btn setBackgroundImage:[ToolBaseClass imageWithColor:RGBColor(238, 238, 238)] forState:UIControlStateHighlighted];
             [btn setTitleColor:RGBColor(0, 0, 0) forState:UIControlStateNormal];
             [btn setTitle:contentArr[i] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];

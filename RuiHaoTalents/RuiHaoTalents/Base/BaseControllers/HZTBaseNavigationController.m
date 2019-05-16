@@ -17,8 +17,10 @@
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController{
     if (self = [super initWithRootViewController:rootViewController]) {
         [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:HZTColorEmphasis,NSFontAttributeName:HZTFontSize(17)}];
+
         [self.navigationBar setTranslucent:false];
     }
     return self;
 }
+
 @end

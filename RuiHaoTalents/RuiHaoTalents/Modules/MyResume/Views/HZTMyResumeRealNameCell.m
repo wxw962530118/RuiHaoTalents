@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.clipsToBounds = YES;
 }
 
 - (IBAction)clickRealName:(id)sender {

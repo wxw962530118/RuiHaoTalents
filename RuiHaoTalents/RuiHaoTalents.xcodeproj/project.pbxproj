@@ -155,6 +155,17 @@
 		AC39C3772248D68100CF93E7 /* HZTTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3762248D68100CF93E7 /* HZTTagViewCell.m */; };
 		AC39C37A2248D68E00CF93E7 /* HZTTagViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3792248D68E00CF93E7 /* HZTTagViewModel.m */; };
 		AC39C37D2248D87100CF93E7 /* HZTFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C37C2248D87100CF93E7 /* HZTFlowLayout.m */; };
+		AC39C3C82249F72900CF93E7 /* HZTRadarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3C72249F72900CF93E7 /* HZTRadarChartView.m */; };
+		AC39C3CB224A086000CF93E7 /* HZTCompanyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3CA224A086000CF93E7 /* HZTCompanyHeaderView.m */; };
+		AC39C3D1224A1D0200CF93E7 /* HZTNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3D0224A1D0200CF93E7 /* HZTNavView.m */; };
+		AC39C3DD224A20A300CF93E7 /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3D4224A20A300CF93E7 /* UINavigationController+JZExtension.m */; };
+		AC39C3DE224A20A300CF93E7 /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3D5224A20A300CF93E7 /* UIViewController+JZExtension.m */; };
+		AC39C3DF224A20A300CF93E7 /* _JZNavigationDelegating.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3D7224A20A300CF93E7 /* _JZNavigationDelegating.m */; };
+		AC39C3E0224A20A300CF93E7 /* _JZ-objc-internal.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3DA224A20A300CF93E7 /* _JZ-objc-internal.m */; };
+		AC39C3E3224A258900CF93E7 /* HZTCompanyContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3E2224A258900CF93E7 /* HZTCompanyContentCell.m */; };
+		AC39C3E6224A25AC00CF93E7 /* HZTCompanyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3E5224A25AC00CF93E7 /* HZTCompanyTableView.m */; };
+		AC39C3EA224A25E200CF93E7 /* HZTCompanyTableListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3E8224A25E200CF93E7 /* HZTCompanyTableListCell.m */; };
+		AC39C3EB224A25E200CF93E7 /* HZTCompanyTableListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC39C3E9224A25E200CF93E7 /* HZTCompanyTableListCell.xib */; };
 		AC6469F62238B12900408EA3 /* HZTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6469F52238B12900408EA3 /* HZTHomeViewController.m */; };
 		AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC706FF0223A4AC5003F4F6D /* HZTCustomPickerView.m */; };
 		AC706FF4223A4AE9003F4F6D /* HZTCustomPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC706FF3223A4AE9003F4F6D /* HZTCustomPickerModel.m */; };
@@ -173,6 +184,7 @@
 		AC84598E22437D5A00E09659 /* HZTChoosePostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC84598D22437D5A00E09659 /* HZTChoosePostModel.m */; };
 		AC845991224384AA00E09659 /* HZTChoosePostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC845990224384AA00E09659 /* HZTChoosePostView.m */; };
 		AC845994224490DD00E09659 /* HZTDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC845993224490DD00E09659 /* HZTDatePickerView.m */; };
+		ACAE8412224CAC60009CC125 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAE8411224CAC60009CC125 /* UINavigationBar+Awesome.m */; };
 		ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */; };
 		ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D74223A2BC5008E5494 /* HZTCustomAlretView.m */; };
 		ACB12D77223A2BD6008E5494 /* HZTCustomAlretView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB12D76223A2BD6008E5494 /* HZTCustomAlretView.xib */; };
@@ -510,6 +522,28 @@
 		AC39C3792248D68E00CF93E7 /* HZTTagViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTagViewModel.m; sourceTree = "<group>"; };
 		AC39C37B2248D87100CF93E7 /* HZTFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTFlowLayout.h; sourceTree = "<group>"; };
 		AC39C37C2248D87100CF93E7 /* HZTFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTFlowLayout.m; sourceTree = "<group>"; };
+		AC39C3C62249F72900CF93E7 /* HZTRadarChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTRadarChartView.h; sourceTree = "<group>"; };
+		AC39C3C72249F72900CF93E7 /* HZTRadarChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTRadarChartView.m; sourceTree = "<group>"; };
+		AC39C3C9224A086000CF93E7 /* HZTCompanyHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCompanyHeaderView.h; sourceTree = "<group>"; };
+		AC39C3CA224A086000CF93E7 /* HZTCompanyHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCompanyHeaderView.m; sourceTree = "<group>"; };
+		AC39C3CF224A1D0200CF93E7 /* HZTNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTNavView.h; sourceTree = "<group>"; };
+		AC39C3D0224A1D0200CF93E7 /* HZTNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTNavView.m; sourceTree = "<group>"; };
+		AC39C3D3224A20A300CF93E7 /* UIViewController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JZExtension.h"; sourceTree = "<group>"; };
+		AC39C3D4224A20A300CF93E7 /* UINavigationController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JZExtension.m"; sourceTree = "<group>"; };
+		AC39C3D5224A20A300CF93E7 /* UIViewController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JZExtension.m"; sourceTree = "<group>"; };
+		AC39C3D7224A20A300CF93E7 /* _JZNavigationDelegating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZNavigationDelegating.m; sourceTree = "<group>"; };
+		AC39C3D8224A20A300CF93E7 /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
+		AC39C3D9224A20A300CF93E7 /* _JZNavigationDelegating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationDelegating.h; sourceTree = "<group>"; };
+		AC39C3DA224A20A300CF93E7 /* _JZ-objc-internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "_JZ-objc-internal.m"; sourceTree = "<group>"; };
+		AC39C3DB224A20A300CF93E7 /* UINavigationController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JZExtension.h"; sourceTree = "<group>"; };
+		AC39C3DC224A20A300CF93E7 /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
+		AC39C3E1224A258900CF93E7 /* HZTCompanyContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCompanyContentCell.h; sourceTree = "<group>"; };
+		AC39C3E2224A258900CF93E7 /* HZTCompanyContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCompanyContentCell.m; sourceTree = "<group>"; };
+		AC39C3E4224A25AC00CF93E7 /* HZTCompanyTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCompanyTableView.h; sourceTree = "<group>"; };
+		AC39C3E5224A25AC00CF93E7 /* HZTCompanyTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCompanyTableView.m; sourceTree = "<group>"; };
+		AC39C3E7224A25E200CF93E7 /* HZTCompanyTableListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCompanyTableListCell.h; sourceTree = "<group>"; };
+		AC39C3E8224A25E200CF93E7 /* HZTCompanyTableListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCompanyTableListCell.m; sourceTree = "<group>"; };
+		AC39C3E9224A25E200CF93E7 /* HZTCompanyTableListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCompanyTableListCell.xib; sourceTree = "<group>"; };
 		AC6469F42238B12900408EA3 /* HZTHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeViewController.h; sourceTree = "<group>"; };
 		AC6469F52238B12900408EA3 /* HZTHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTHomeViewController.m; sourceTree = "<group>"; };
 		AC706FEF223A4AC5003F4F6D /* HZTCustomPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomPickerView.h; sourceTree = "<group>"; };
@@ -544,6 +578,8 @@
 		AC845990224384AA00E09659 /* HZTChoosePostView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostView.m; sourceTree = "<group>"; };
 		AC845992224490DD00E09659 /* HZTDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTDatePickerView.h; sourceTree = "<group>"; };
 		AC845993224490DD00E09659 /* HZTDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTDatePickerView.m; sourceTree = "<group>"; };
+		ACAE8410224CAC60009CC125 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		ACAE8411224CAC60009CC125 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		ACB12D6E223A2A53008E5494 /* HZTToastHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTToastHUD.h; sourceTree = "<group>"; };
 		ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTToastHUD.m; sourceTree = "<group>"; };
 		ACB12D73223A2BC5008E5494 /* HZTCustomAlretView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCustomAlretView.h; sourceTree = "<group>"; };
@@ -915,6 +951,7 @@
 		AC2D71E0223A246B00E80191 /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				AC39C3D2224A20A300CF93E7 /* JZNavigationExtension */,
 				ACDE3B592248872600B8EFB3 /* UMSocial */,
 				ACDE3B6D2248872600B8EFB3 /* XHLaunchAd */,
 				ACDE3B8B2248872600B8EFB3 /* YYFPSLabel */,
@@ -1255,6 +1292,15 @@
 		AC39C36D2248D3EB00CF93E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC39C3C9224A086000CF93E7 /* HZTCompanyHeaderView.h */,
+				AC39C3CA224A086000CF93E7 /* HZTCompanyHeaderView.m */,
+				AC39C3E1224A258900CF93E7 /* HZTCompanyContentCell.h */,
+				AC39C3E2224A258900CF93E7 /* HZTCompanyContentCell.m */,
+				AC39C3E4224A25AC00CF93E7 /* HZTCompanyTableView.h */,
+				AC39C3E5224A25AC00CF93E7 /* HZTCompanyTableView.m */,
+				AC39C3E7224A25E200CF93E7 /* HZTCompanyTableListCell.h */,
+				AC39C3E8224A25E200CF93E7 /* HZTCompanyTableListCell.m */,
+				AC39C3E9224A25E200CF93E7 /* HZTCompanyTableListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1270,6 +1316,30 @@
 				AC39C3792248D68E00CF93E7 /* HZTTagViewModel.m */,
 			);
 			path = TagView;
+			sourceTree = "<group>";
+		};
+		AC39C3D2224A20A300CF93E7 /* JZNavigationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AC39C3D3224A20A300CF93E7 /* UIViewController+JZExtension.h */,
+				AC39C3D4224A20A300CF93E7 /* UINavigationController+JZExtension.m */,
+				AC39C3D5224A20A300CF93E7 /* UIViewController+JZExtension.m */,
+				AC39C3D6224A20A300CF93E7 /* Private */,
+				AC39C3DB224A20A300CF93E7 /* UINavigationController+JZExtension.h */,
+				AC39C3DC224A20A300CF93E7 /* JZNavigationExtension.h */,
+			);
+			path = JZNavigationExtension;
+			sourceTree = "<group>";
+		};
+		AC39C3D6224A20A300CF93E7 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				AC39C3D7224A20A300CF93E7 /* _JZNavigationDelegating.m */,
+				AC39C3D8224A20A300CF93E7 /* _JZ-objc-internal.h */,
+				AC39C3D9224A20A300CF93E7 /* _JZNavigationDelegating.h */,
+				AC39C3DA224A20A300CF93E7 /* _JZ-objc-internal.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		AC706FF5223A4B69003F4F6D /* Address */ = {
@@ -1683,8 +1753,8 @@
 		ACDE3BBE2248B1A900B8EFB3 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
-				ACDE3BBF2248B1A900B8EFB3 /* Models */,
 				ACDE3BC02248B1A900B8EFB3 /* Controllers */,
+				ACDE3BBF2248B1A900B8EFB3 /* Models */,
 				ACDE3BC12248B1A900B8EFB3 /* Views */,
 			);
 			path = PostDetails;
@@ -1842,6 +1912,8 @@
 		ACE8F63C22389E440053D864 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC39C3CF224A1D0200CF93E7 /* HZTNavView.h */,
+				AC39C3D0224A1D0200CF93E7 /* HZTNavView.m */,
 				AC207749223F3EF30072129B /* HZTShareView.h */,
 				AC20774A223F3EF40072129B /* HZTShareView.m */,
 				AC20774C223F3F040072129B /* HZTShareView.xib */,
@@ -1861,6 +1933,8 @@
 				6B9D1808224617E100C68884 /* HZTTextView.m */,
 				AC39C37B2248D87100CF93E7 /* HZTFlowLayout.h */,
 				AC39C37C2248D87100CF93E7 /* HZTFlowLayout.m */,
+				AC39C3C62249F72900CF93E7 /* HZTRadarChartView.h */,
+				AC39C3C72249F72900CF93E7 /* HZTRadarChartView.m */,
 				AC39C3712248D5FD00CF93E7 /* TagView */,
 				ACB381632240CBDA00FFB9B3 /* HZTTopTabView */,
 				ACB12D78223A42A4008E5494 /* CustomSheetView */,
@@ -1890,6 +1964,8 @@
 		ACE8F63E22389E440053D864 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				ACAE8410224CAC60009CC125 /* UINavigationBar+Awesome.h */,
+				ACAE8411224CAC60009CC125 /* UINavigationBar+Awesome.m */,
 				ACC1FB182238B947001E9F4A /* UIButton+HitAreaExpand.h */,
 				ACC1FB152238B947001E9F4A /* UIButton+HitAreaExpand.m */,
 				E108A82E224475AA004F2694 /* UIButton+Countdown.h */,
@@ -2624,6 +2700,7 @@
 				AC2D727D223A25B500E80191 /* 73.png in Resources */,
 				AC2D72A5223A25B500E80191 /* 55.png in Resources */,
 				ACC1FB122238B3AB001E9F4A /* HZTMenuListCell.xib in Resources */,
+				AC39C3EB224A25E200CF93E7 /* HZTCompanyTableListCell.xib in Resources */,
 				ACDE3BB622488AB900B8EFB3 /* image2.jpg in Resources */,
 				AC2D72A8223A25B500E80191 /* 68.png in Resources */,
 			);
@@ -2697,12 +2774,15 @@
 				AC7DB40922421ED500F39EEF /* HZTWorkAreaModel.m in Sources */,
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
 				ACDC5B902248C81A00744DF9 /* HZTPostDetailsSectionView.m in Sources */,
+				AC39C3E6224A25AC00CF93E7 /* HZTCompanyTableView.m in Sources */,
 				E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */,
+				ACAE8412224CAC60009CC125 /* UINavigationBar+Awesome.m in Sources */,
 				ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */,
 				ACF873932244CA0300B5F05F /* UIImage+ZLPhotoLib.m in Sources */,
 				E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */,
 				E1B6606F2248B3D800394A4F /* HZTMyWalletHeaderView.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
+				AC39C3CB224A086000CF93E7 /* HZTCompanyHeaderView.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
 				ACDE3B9E2248872700B8EFB3 /* XHLaunchAdConst.m in Sources */,
 				ACF8739D2244CA0300B5F05F /* ZLPhotoPickerFooterCollectionReusableView.m in Sources */,
@@ -2723,15 +2803,18 @@
 				ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */,
 				ACF873442244C97B00B5F05F /* HZTImagePickerView.m in Sources */,
 				AC37E68222421A86004144AA /* HZTImmediateMatchCell.m in Sources */,
+				AC39C3DE224A20A300CF93E7 /* UIViewController+JZExtension.m in Sources */,
 				E1BCFB602243796B00111A3B /* HZTChangePwdViewController.m in Sources */,
 				AC20775D223F475C0072129B /* HZTMyResumeSectionFooterView.m in Sources */,
 				ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */,
 				AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */,
 				AC39C3642248D00400CF93E7 /* HZTPostDescCell.m in Sources */,
+				AC39C3D1224A1D0200CF93E7 /* HZTNavView.m in Sources */,
 				ACF873A42244CA5500B5F05F /* VPImageCropperViewController.m in Sources */,
 				ACF8739C2244CA0300B5F05F /* ZLPhotoPickerCollectionViewCell.m in Sources */,
 				AC20777B223F917A0072129B /* HZTSettingViewController.m in Sources */,
 				ACFE803B2238A309006D1506 /* HZTBaseNavigationController.m in Sources */,
+				AC39C3DD224A20A300CF93E7 /* UINavigationController+JZExtension.m in Sources */,
 				ACF873902244CA0300B5F05F /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				AC207750223F462F0072129B /* HZTMyResumeListModel.m in Sources */,
 				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
@@ -2740,6 +2823,7 @@
 				AC20776B223F82C90072129B /* HZTSkillModel.m in Sources */,
 				ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */,
 				AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */,
+				AC39C3DF224A20A300CF93E7 /* _JZNavigationDelegating.m in Sources */,
 				ACF873972244CA0300B5F05F /* ZLPhotoAssets.m in Sources */,
 				AC2D7209223A246C00E80191 /* PYPhotosNavigationController.m in Sources */,
 				ACDE3B9C2248872700B8EFB3 /* XHLaunchAdButton.m in Sources */,
@@ -2753,6 +2837,7 @@
 				ACF8738F2244CA0300B5F05F /* ZLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				ACB3816B2240CBDA00FFB9B3 /* HZTTopTabModel.m in Sources */,
 				AC39C35E2248CFD300CF93E7 /* HZTPostLightCell.m in Sources */,
+				AC39C3E0224A20A300CF93E7 /* _JZ-objc-internal.m in Sources */,
 				AC37E65C2241DFA8004144AA /* HZTCLocationManager.m in Sources */,
 				AC2D7203223A246B00E80191 /* UIView+PYExtension.m in Sources */,
 				ACB3815A2240B99300FFB9B3 /* HZTNewsListModel.m in Sources */,
@@ -2783,6 +2868,7 @@
 				AC39C37A2248D68E00CF93E7 /* HZTTagViewModel.m in Sources */,
 				AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */,
 				AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */,
+				AC39C3C82249F72900CF93E7 /* HZTRadarChartView.m in Sources */,
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				AC84598A2243783800E09659 /* HZTChoosePostCell.m in Sources */,
@@ -2826,6 +2912,7 @@
 				ACF873992244CA0300B5F05F /* ZLPhotoPickerAssetsViewController.m in Sources */,
 				ACC1FB0D2238B395001E9F4A /* HZTMenuListHeaderView.m in Sources */,
 				E1B660662248B3A900394A4F /* HZTMyWalletViewController.m in Sources */,
+				AC39C3E3224A258900CF93E7 /* HZTCompanyContentCell.m in Sources */,
 				E108A83F2244BA5E004F2694 /* HZTChangeMobileViewController.m in Sources */,
 				ACDE3B9B2248872700B8EFB3 /* XHLaunchAdView.m in Sources */,
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
@@ -2833,6 +2920,7 @@
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,
 				ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */,
 				E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */,
+				AC39C3EA224A25E200CF93E7 /* HZTCompanyTableListCell.m in Sources */,
 				AC39C3772248D68100CF93E7 /* HZTTagViewCell.m in Sources */,
 				AC2D71DF2239F2FA00E80191 /* HZTLoginRegisterModel.m in Sources */,
 				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,

@@ -148,11 +148,12 @@ static char base64EncodingTable[64] = {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
 
-+ (BOOL)isNullClass:(NSString *)obj{
++ (BOOL)isNullClass:(NSObject *)obj{
     if (!obj || obj == nil || [obj isKindOfClass:[NSNull class]]){
         return YES;
-    }else if ( [obj isKindOfClass:[NSString class]]){
-        return obj.length == 0;
+    }else if ([obj isKindOfClass:[NSString class]]){
+        NSString * str = (NSString *)obj;
+        return str.length == 0;
     }else if ( [obj isKindOfClass:[NSArray class]]){
         NSArray * arr = (NSArray *)obj;
         return  arr.count == 0;
@@ -581,7 +582,7 @@ static char base64EncodingTable[64] = {
 +(void)showNavigationWithLongitude:(double)longitude latitude:(double)latitude{
     /**当前手机可用地图容器 里面是存放字典 @{@"title":@"",@"url":""}*/
     NSMutableArray <NSMutableDictionary *>* mapsArr = [NSMutableArray array];
-    /**1.苹果内置地图比较特殊*/
+    /**1.苹果内置地图比较特殊 没有安装的话会提示用户恢复Maps 不用自己特殊判定是否安装*/
     NSMutableDictionary * appleMapDict = [NSMutableDictionary dictionary];
     [appleMapDict setValue:@"苹果地图" forKey:@"title"];
     [mapsArr addObject:appleMapDict];

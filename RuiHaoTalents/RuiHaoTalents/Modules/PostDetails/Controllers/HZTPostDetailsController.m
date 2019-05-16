@@ -15,6 +15,7 @@
 #import "HZTPostLightCell.h"
 #import "HZTTagViewModel.h"
 #import "HZTPostDescCell.h"
+#import "HZTJiNengCell.h"
 
 @interface HZTPostDetailsController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
@@ -74,7 +75,7 @@
 }
 
 -(void)configNavItem{
-    self.navigationItem.title = @"职位详情";
+    self.navTitle = @"职位详情";
     [self ctNavRightItemWithTitle:nil imageName:@"share_icon" callBack:^{
         [HZTShareView showWithCallBack:^(ShareType type) {
             NSLog(@"type:%ld",type);
@@ -86,7 +87,6 @@
         }];
     }];
 }
-
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 5;
@@ -107,12 +107,12 @@
         cell.array = self.tagsArray;
         cell.changed = ^(CGFloat height) {
             weakSelf.tagsCellHeight = (height + 56);
+            weakSelf.tagDescCellHeight = (height + 56);
             [weakSelf.mainTableView reloadData];
         };
         return cell;
     }else if (indexPath.section == 2){
-        UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
-        cell.backgroundColor = [UIColor clearColor];
+        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
         return cell;
     }else if (indexPath.section == 3){
         if (!indexPath.row) {
@@ -131,7 +131,6 @@
     }else{
         HZTCompanyInfoCell * cell = [HZTCompanyInfoCell cellWithTableViewFromXIB:tableView];
         [cell setTitle:@"陇浩网络科技有限公司" desc:@"股份制丨100~499人丨互联网" imageUrl:@""];
-
         return cell;
     }
 }
@@ -140,17 +139,17 @@
     if (indexPath.section == 0) {
         return 110;
     }else if (indexPath.section == 1){
-         return self.tagsCellHeight;
+        return self.tagsCellHeight;
     }else if (indexPath.section == 2){
-         return 200;
+        return 208 + 38;
     }else if (indexPath.section == 3){
         if (!indexPath.row) {
             return self.tagDescCellHeight;
         }else{
-             return 350;
+            return 350;
         }
     }else{
-         return 110;
+        return 110;
     }
 }
 
@@ -165,7 +164,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     HZTPostDetailsSectionView * view = [HZTPostDetailsSectionView createSectionView];
     if (section == 0) {
-         [view setTitle:@"职位发布者" imageName:@"post_user"];
+        [view setTitle:@"职位发布者" imageName:@"post_user"];
     }else if (section == 1){
         [view setTitle:@"职位亮点" imageName:@"post_light"];
     }else if (section == 2){
@@ -221,7 +220,7 @@
         _bottomBtn.layer.masksToBounds = true;
         _bottomBtn.layer.cornerRadius = 5;
         [_bottomBtn setTitle:@"投递简历" forState:UIControlStateNormal];
-        [_bottomBtn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
+        [_bottomBtn addTarget:self action:@selector(clickBottomBtn) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_bottomBtn];
         [_bottomBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view.mas_left).offset(15);
@@ -258,9 +257,9 @@
     return _tagsDescArray;
 }
 
--(void)clickBtn{
+#pragma mark --- 开始投递简历
+-(void)clickBottomBtn{
     
 }
-
 
 @end

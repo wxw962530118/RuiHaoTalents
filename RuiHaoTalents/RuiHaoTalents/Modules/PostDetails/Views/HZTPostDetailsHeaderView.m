@@ -27,4 +27,8 @@
     return view;
 }
 
+- (IBAction)clickAddress:(id)sender {
+    [ToolBaseClass showNavigationWithLongitude:108.836718 latitude:34.240541];
+}
+
 @end

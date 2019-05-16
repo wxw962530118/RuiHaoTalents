@@ -16,6 +16,7 @@
 #import "HZTCustomHederCell.h"
 #import "HZTTrainCell.h"
 #import "HZTImagePickerView.h"
+#import "HZTJiNengCell.h"
 @interface HZTMyResumeViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
@@ -36,30 +37,8 @@
 -(void)configNavItem{
     self.navigationItem.title = @"个人简历";
     [self ctNavRightItemWithTitle:nil imageName:@"share_icon" callBack:^{
-        //[ToolBaseClass showNavigationWithLongitude:108.836718 latitude:34.240541];
-        //[HZTShareView show];
-        [HZTImagePickerView showImagePickerViewWithMaxCount:1 callBack:^(NSMutableArray *imagesArray, HZTImagePickerViewType type,void(^resultBlock)(BOOL isSucceed)) {
-            switch (type) {
-                case HZTImagePickerViewType_PhotoLibrary:{
-                    [imagesArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                        ZLPhotoAssets * assets = (ZLPhotoAssets *)obj;
-                        UIImage * image;
-                        if (assets.originImage) {
-                            image = assets.originImage;
-                        }else if (assets.thumbImage){
-                            image = assets.thumbImage;
-                        }else{
-                            image = assets.aspectRatioImage;
-                        }
-                    }];
-                }
-                    break;
-                case HZTImagePickerViewType_Camera:
-                    /***/
-                    break;
-                default:
-                    break;
-            }
+        [HZTShareView showWithCallBack:^(ShareType type) {
+            
         }];
     }];
 }
@@ -102,18 +81,14 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [self.listModel.nameAuthent intValue] ? 4 : 5;
+    return 5;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if ([self.listModel.nameAuthent intValue]) {
-        return [self handleSectionCountWithSection:section];
+    if (!section){
+        return 1;
     }else{
-        if (!section){
-            return 1;
-        }else{
-            return [self handleSectionCountWithSection:section];
-        }
+        return [self handleSectionCountWithSection:section];
     }
 }
 
@@ -121,7 +96,7 @@
 -(NSInteger)handleSectionCountWithSection:(NSInteger)section{
     switch (section){
         case 1:
-            return self.listModel.personJobFullVO.skillList.count ? self.listModel.personJobFullVO.skillList.count + 1 : self.listModel.personJobFullVO.skillList.count;
+            return self.listModel.personJobFullVO.skillList.count ? 2 : self.listModel.personJobFullVO.skillList.count;
             break;
         case 2:
             return [self handleSectionCountWithCount:self.listModel.personJobFullVO.trainList.count isShowMore:(self.listModel.personJobFullVO.trainList.count > 2 ? self.listModel.personJobFullVO.trainList[1].isShowMore : false)];
@@ -158,9 +133,11 @@
         if (indexPath.section == 1) {
             if (!indexPath.row) {
                 HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
+                cell.title = @"期望工作";
                 return cell;
             }else{
-                UITableViewCell * cell = [UITableViewCell cellWithTableView:tableView];
+                HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
+                cell.title = @"拥有技能";
                 return cell;
             }
         }else if (indexPath.section == 2){
@@ -238,7 +215,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!indexPath.section) {
-        return 91;
+        return [self.listModel.nameAuthent intValue] ? .1f : 91;
     }else{
         if (indexPath.section == 2){
             if (!indexPath.row) return 80;
@@ -249,8 +226,14 @@
         }else if (indexPath.section == 4){
             if (!indexPath.row) return 80;
             return self.listModel.personJobFullVO.projiectList[indexPath.row-1].cellHeight;
+        }else if(indexPath.section == 1){
+            if (indexPath.row == 0) {
+                return 100;
+            }else{
+                return 208 + 38;
+            }
         }else{
-            return 100;
+            return .1f;
         }
     }
 }

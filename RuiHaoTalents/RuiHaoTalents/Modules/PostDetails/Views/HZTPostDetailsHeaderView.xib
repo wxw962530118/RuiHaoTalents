@@ -68,14 +68,25 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQJ-j4-E6j">
+                            <rect key="frame" x="0.0" y="134" width="335" height="92"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="clickAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="bQH-0W-PNN"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="HJj-4C-nWg" firstAttribute="leading" secondItem="qBe-pT-rE5" secondAttribute="leading" id="5Ff-xR-EoN"/>
                         <constraint firstAttribute="trailing" secondItem="gku-UK-8L9" secondAttribute="trailing" constant="20" id="5OU-Qw-E96"/>
+                        <constraint firstItem="FQJ-j4-E6j" firstAttribute="top" secondItem="gku-UK-8L9" secondAttribute="bottom" id="6iH-Fe-XYS"/>
                         <constraint firstItem="RcO-CO-r8D" firstAttribute="leading" secondItem="8Rb-rc-Hfo" secondAttribute="leading" id="6xA-TY-XHa"/>
+                        <constraint firstAttribute="trailing" secondItem="FQJ-j4-E6j" secondAttribute="trailing" id="ASj-88-ZuO"/>
+                        <constraint firstItem="FQJ-j4-E6j" firstAttribute="leading" secondItem="nVe-gq-lER" secondAttribute="leading" id="AWm-sG-Hr0"/>
                         <constraint firstItem="RcO-CO-r8D" firstAttribute="top" secondItem="8Rb-rc-Hfo" secondAttribute="bottom" constant="12" id="AqF-XK-fkz"/>
                         <constraint firstItem="qBe-pT-rE5" firstAttribute="top" secondItem="Zce-Dm-hpu" secondAttribute="bottom" constant="15" id="COM-to-bG6"/>
+                        <constraint firstAttribute="bottom" secondItem="FQJ-j4-E6j" secondAttribute="bottom" id="MAy-zg-1RO"/>
                         <constraint firstItem="HJj-4C-nWg" firstAttribute="top" secondItem="qBe-pT-rE5" secondAttribute="bottom" constant="12" id="PRQ-oJ-GDU"/>
                         <constraint firstItem="Zce-Dm-hpu" firstAttribute="leading" secondItem="nVe-gq-lER" secondAttribute="leading" constant="22" id="QDV-0t-8uP"/>
                         <constraint firstItem="Z9Y-4X-ykV" firstAttribute="centerY" secondItem="8Rb-rc-Hfo" secondAttribute="centerY" id="UyP-fM-2qr"/>

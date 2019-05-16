@@ -17,7 +17,7 @@
 #import "HZTExpectJobViewController.h"
 
 #import "HZTPostDetailsController.h"
-
+#import "HZTCompanyInfoController.h"
 @interface HZTHomeViewController ()<UITableViewDelegate,UITableViewDataSource,HZTHomeHeaderViewDelegate>
 /***/
 @property (nonatomic, strong) HZTLeftMenuContentView * menuContentView;
@@ -73,9 +73,9 @@
 -(void)locationSucceed:(NSNotification *)noti{
     NSDictionary * dict = noti.userInfo;
     self.longitude = [[dict objectForKey:@"longitude"] doubleValue];
-    self.latitude = [[dict objectForKey:@"latitude"] doubleValue];
-    self.cityName = [dict objectForKey:@"LocationCityName"];
-    self.areaName = [dict objectForKey:@"SubLocality"];
+    self.latitude  = [[dict objectForKey:@"latitude"] doubleValue];
+    self.cityName  = [dict objectForKey:@"LocationCityName"];
+    self.areaName  = [dict objectForKey:@"SubLocality"];
     self.headerView.cityName = [NSString stringWithFormat:@"%@-%@",self.cityName,self.areaName];
 }
 
@@ -135,7 +135,7 @@
         _tableView.estimatedRowHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
-        _tableView.tableHeaderView = self.headerView;
+        //_tableView.tableHeaderView = self.headerView;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -215,7 +215,8 @@
 #pragma mark --- 消息中心
 -(void)clickMessage{
     if ([ToolBaseClass isShouldLogin]) return;
-    HZTNewsListController * vc = [[HZTNewsListController alloc] init];
+    HZTCompanyInfoController * vc = [[HZTCompanyInfoController alloc] init];
+    //vc.jz_navigationBarHidden = YES;
     [self xw_pushViewController:vc animated:YES];
 }
 

@@ -1,8 +1,8 @@
 //
-//  HZTJiNengCell.h
+//  HZTCompanyTableView.h
 //  RuiHaoTalents
 //
-//  Created by 王新伟 on 2019/3/25.
+//  Created by 王新伟 on 2019/3/26.
 //  Copyright © 2019年 王新伟. All rights reserved.
 //
 
@@ -10,9 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HZTJiNengCell : UITableViewCell
-/***/
-@property (nonatomic, strong) NSString * title;
+@interface HZTCompanyTableView : UIView
+
 @end
 
 NS_ASSUME_NONNULL_END
