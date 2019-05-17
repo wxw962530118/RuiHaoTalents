@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HZTMyResumelPhoneCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_profile_phone" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-Fb-Wdn">
+                        <rect key="frame" x="20" y="11" width="12" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="Jya-bA-fZY"/>
+                            <constraint firstAttribute="height" constant="18" id="p0f-oQ-kL1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345678910" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-U5-4Ie">
+                        <rect key="frame" x="47" y="11" width="95.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_profile_email" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-nf-Own">
+                        <rect key="frame" x="178.5" y="14" width="16" height="12"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="0ho-ex-V14"/>
+                            <constraint firstAttribute="height" constant="12" id="LHn-wx-C5L"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-IO-rui">
+                        <rect key="frame" x="209.5" y="11" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_profile_wechat" translatesAutoresizingMaskIntoConstraints="NO" id="aOD-Ps-jnF">
+                        <rect key="frame" x="20" y="44" width="17" height="14"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="KqF-IF-Qm5"/>
+                            <constraint firstAttribute="height" constant="14" id="qdY-7L-VmQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urh-zy-wZO">
+                        <rect key="frame" x="52" y="42" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0sl-U5-4Ie" firstAttribute="centerY" secondItem="KR6-Fb-Wdn" secondAttribute="centerY" id="3SU-c9-VB7"/>
+                    <constraint firstItem="aOD-Ps-jnF" firstAttribute="leading" secondItem="KR6-Fb-Wdn" secondAttribute="leading" id="6bL-Al-dq5"/>
+                    <constraint firstItem="Urh-zy-wZO" firstAttribute="centerY" secondItem="aOD-Ps-jnF" secondAttribute="centerY" id="7DQ-PU-DYK"/>
+                    <constraint firstItem="vZe-nf-Own" firstAttribute="centerY" secondItem="0sl-U5-4Ie" secondAttribute="centerY" id="BTn-eE-sBE"/>
+                    <constraint firstItem="aOD-Ps-jnF" firstAttribute="top" secondItem="KR6-Fb-Wdn" secondAttribute="bottom" constant="15" id="Gg4-IL-ACZ"/>
+                    <constraint firstItem="0sl-U5-4Ie" firstAttribute="leading" secondItem="KR6-Fb-Wdn" secondAttribute="trailing" constant="15" id="Jtp-yS-lyy"/>
+                    <constraint firstItem="Urh-zy-wZO" firstAttribute="leading" secondItem="aOD-Ps-jnF" secondAttribute="trailing" constant="15" id="Kes-vq-KBM"/>
+                    <constraint firstItem="Kxx-IO-rui" firstAttribute="leading" secondItem="vZe-nf-Own" secondAttribute="trailing" constant="15" id="RRe-ud-lYl"/>
+                    <constraint firstItem="KR6-Fb-Wdn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="SYB-c9-G89"/>
+                    <constraint firstItem="Kxx-IO-rui" firstAttribute="centerY" secondItem="vZe-nf-Own" secondAttribute="centerY" id="aWS-oR-oov"/>
+                    <constraint firstItem="KR6-Fb-Wdn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gwu-db-tFE"/>
+                    <constraint firstItem="vZe-nf-Own" firstAttribute="leading" secondItem="0sl-U5-4Ie" secondAttribute="trailing" constant="36" id="hu1-Tk-WTI"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="me_profile_email" width="16" height="12"/>
+        <image name="me_profile_phone" width="11" height="17"/>
+        <image name="me_profile_wechat" width="17" height="13"/>
+    </resources>
+</document>

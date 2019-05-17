@@ -15,6 +15,7 @@
 #define IS_Simulator                   [[ToolBaseClass getPhoneExplicitModel] isEqualToString:@"Simulator"]
 #define GetHomeCachPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define App_TheFrontViewC              [ToolBaseClass getTheFrontViewController]
+#define App_TheFrontNavC               [ToolBaseClass getRootNavController]
 #define RootWindow [ToolBaseClass getRootWindow]
 
 @interface ToolBaseClass : NSObject
@@ -92,6 +93,7 @@
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 /**获取最前端的控制器*/
 + (HZTBaseViewController *)getTheFrontViewController;
++(HZTRootNavigationController *)getRootNavController;
 /**检测是否需要登录*/
 +(BOOL)isShouldLogin;
 /**根据目的地经纬度调起三方地图导航*/

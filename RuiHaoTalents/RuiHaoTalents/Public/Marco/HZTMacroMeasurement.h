@@ -34,5 +34,8 @@
 #define iOS10 [[UIDevice currentDevice].systemVersion floatValue] >= 10.0
 /**系统11*/
 #define iOS11 [[UIDevice currentDevice].systemVersion floatValue] >= 11.0
+#define NAV_BAR_HEIGHT                  44.0
+#define STATUS_BAR_HEIGHT       [[UIApplication sharedApplication] statusBarFrame].size.height
+#define NAV_HEIGHT                  (STATUS_BAR_HEIGHT+NAV_BAR_HEIGHT)
 
 #endif /* HZTMacroMeasurement_h */

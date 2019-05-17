@@ -72,6 +72,7 @@
             
             case 1: {
                 HZTMyResumeViewController * vc = [[HZTMyResumeViewController alloc] init];
+                vc.jz_navigationBarHidden = YES;
                 [App_TheFrontViewC xw_pushViewController:vc animated:YES];
             }
             break;

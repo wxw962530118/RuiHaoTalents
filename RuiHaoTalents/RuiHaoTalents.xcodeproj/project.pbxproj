@@ -134,6 +134,19 @@
 		AC2D72B8223A25B500E80191 /* 52.png in Resources */ = {isa = PBXBuildFile; fileRef = AC2D7264223A25B400E80191 /* 52.png */; };
 		AC2D72B9223A25B500E80191 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D7266223A25B400E80191 /* MBProgressHUD+MJ.m */; };
 		AC2D72BA223A25B500E80191 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC2D7267223A25B400E80191 /* MBProgressHUD.bundle */; };
+		AC2E3EEE228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3EED228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.m */; };
+		AC2E3EF0228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3EEF228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib */; };
+		AC2E3EF3228EB60100D2C332 /* HZTMyResumeViewNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3EF2228EB60100D2C332 /* HZTMyResumeViewNavView.m */; };
+		AC2E3EF5228EB60F00D2C332 /* HZTMyResumeViewNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3EF4228EB60F00D2C332 /* HZTMyResumeViewNavView.xib */; };
+		AC2E3EFE228EBB4E00D2C332 /* HZTMyResumeLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3EFC228EBB4E00D2C332 /* HZTMyResumeLevelCell.m */; };
+		AC2E3EFF228EBB4E00D2C332 /* HZTMyResumeLevelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3EFD228EBB4E00D2C332 /* HZTMyResumeLevelCell.xib */; };
+		AC2E3F03228EBC0B00D2C332 /* HZTMyResumelPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3F01228EBC0B00D2C332 /* HZTMyResumelPhoneCell.m */; };
+		AC2E3F04228EBC0B00D2C332 /* HZTMyResumelPhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3F02228EBC0B00D2C332 /* HZTMyResumelPhoneCell.xib */; };
+		AC2E3F07228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3F06228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.m */; };
+		AC2E3F09228EBFA700D2C332 /* HZTMyResumeOtherHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3F08228EBFA700D2C332 /* HZTMyResumeOtherHeaderView.xib */; };
+		AC2E3F0C228ECABC00D2C332 /* HZTMyResumeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3F0B228ECABC00D2C332 /* HZTMyResumeModel.m */; };
+		AC2E3F10228ECD9F00D2C332 /* HZTCardScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E3F0E228ECD9F00D2C332 /* HZTCardScrollCell.m */; };
+		AC2E3F11228ECD9F00D2C332 /* HZTCardScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2E3F0F228ECD9F00D2C332 /* HZTCardScrollCell.xib */; };
 		AC37E65C2241DFA8004144AA /* HZTCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E65B2241DFA8004144AA /* HZTCLocationManager.m */; };
 		AC37E65F224209DA004144AA /* HZTHomeNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E65E224209DA004144AA /* HZTHomeNetWorkManager.m */; };
 		AC37E66222420D97004144AA /* HZTWorkAreaHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC37E66122420D97004144AA /* HZTWorkAreaHeaderView.m */; };
@@ -483,6 +496,26 @@
 		AC2D7265223A25B400E80191 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		AC2D7266223A25B400E80191 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		AC2D7267223A25B400E80191 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		AC2E3EEC228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeNewsHeaderView.h; sourceTree = "<group>"; };
+		AC2E3EED228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeNewsHeaderView.m; sourceTree = "<group>"; };
+		AC2E3EEF228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeNewsHeaderView.xib; sourceTree = "<group>"; };
+		AC2E3EF1228EB60100D2C332 /* HZTMyResumeViewNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeViewNavView.h; sourceTree = "<group>"; };
+		AC2E3EF2228EB60100D2C332 /* HZTMyResumeViewNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeViewNavView.m; sourceTree = "<group>"; };
+		AC2E3EF4228EB60F00D2C332 /* HZTMyResumeViewNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeViewNavView.xib; sourceTree = "<group>"; };
+		AC2E3EFB228EBB4E00D2C332 /* HZTMyResumeLevelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeLevelCell.h; sourceTree = "<group>"; };
+		AC2E3EFC228EBB4E00D2C332 /* HZTMyResumeLevelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeLevelCell.m; sourceTree = "<group>"; };
+		AC2E3EFD228EBB4E00D2C332 /* HZTMyResumeLevelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeLevelCell.xib; sourceTree = "<group>"; };
+		AC2E3F00228EBC0B00D2C332 /* HZTMyResumelPhoneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumelPhoneCell.h; sourceTree = "<group>"; };
+		AC2E3F01228EBC0B00D2C332 /* HZTMyResumelPhoneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumelPhoneCell.m; sourceTree = "<group>"; };
+		AC2E3F02228EBC0B00D2C332 /* HZTMyResumelPhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumelPhoneCell.xib; sourceTree = "<group>"; };
+		AC2E3F05228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeOtherHeaderView.h; sourceTree = "<group>"; };
+		AC2E3F06228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeOtherHeaderView.m; sourceTree = "<group>"; };
+		AC2E3F08228EBFA700D2C332 /* HZTMyResumeOtherHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTMyResumeOtherHeaderView.xib; sourceTree = "<group>"; };
+		AC2E3F0A228ECABC00D2C332 /* HZTMyResumeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTMyResumeModel.h; sourceTree = "<group>"; };
+		AC2E3F0B228ECABC00D2C332 /* HZTMyResumeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTMyResumeModel.m; sourceTree = "<group>"; };
+		AC2E3F0D228ECD9F00D2C332 /* HZTCardScrollCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCardScrollCell.h; sourceTree = "<group>"; };
+		AC2E3F0E228ECD9F00D2C332 /* HZTCardScrollCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCardScrollCell.m; sourceTree = "<group>"; };
+		AC2E3F0F228ECD9F00D2C332 /* HZTCardScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCardScrollCell.xib; sourceTree = "<group>"; };
 		AC37E65A2241DFA8004144AA /* HZTCLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCLocationManager.h; sourceTree = "<group>"; };
 		AC37E65B2241DFA8004144AA /* HZTCLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCLocationManager.m; sourceTree = "<group>"; };
 		AC37E65D224209DA004144AA /* HZTHomeNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTHomeNetWorkManager.h; sourceTree = "<group>"; };
@@ -2086,6 +2119,8 @@
 				AC207770223F85170072129B /* HZTResumeModel.m */,
 				AC207772223F85EC0072129B /* HZTTrainModel.h */,
 				AC207773223F85EC0072129B /* HZTTrainModel.m */,
+				AC2E3F0A228ECABC00D2C332 /* HZTMyResumeModel.h */,
+				AC2E3F0B228ECABC00D2C332 /* HZTMyResumeModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2120,6 +2155,24 @@
 				ACB38149224088D400FFB9B3 /* HZTTrainCell.h */,
 				ACB3814A224088D400FFB9B3 /* HZTTrainCell.m */,
 				ACB3814B224088D400FFB9B3 /* HZTTrainCell.xib */,
+				AC2E3EEC228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.h */,
+				AC2E3EED228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.m */,
+				AC2E3EEF228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib */,
+				AC2E3EF1228EB60100D2C332 /* HZTMyResumeViewNavView.h */,
+				AC2E3EF2228EB60100D2C332 /* HZTMyResumeViewNavView.m */,
+				AC2E3EF4228EB60F00D2C332 /* HZTMyResumeViewNavView.xib */,
+				AC2E3EFB228EBB4E00D2C332 /* HZTMyResumeLevelCell.h */,
+				AC2E3EFC228EBB4E00D2C332 /* HZTMyResumeLevelCell.m */,
+				AC2E3EFD228EBB4E00D2C332 /* HZTMyResumeLevelCell.xib */,
+				AC2E3F00228EBC0B00D2C332 /* HZTMyResumelPhoneCell.h */,
+				AC2E3F01228EBC0B00D2C332 /* HZTMyResumelPhoneCell.m */,
+				AC2E3F02228EBC0B00D2C332 /* HZTMyResumelPhoneCell.xib */,
+				AC2E3F05228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.h */,
+				AC2E3F06228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.m */,
+				AC2E3F08228EBFA700D2C332 /* HZTMyResumeOtherHeaderView.xib */,
+				AC2E3F0D228ECD9F00D2C332 /* HZTCardScrollCell.h */,
+				AC2E3F0E228ECD9F00D2C332 /* HZTCardScrollCell.m */,
+				AC2E3F0F228ECD9F00D2C332 /* HZTCardScrollCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2589,6 +2642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2D72AE223A25B500E80191 /* 2.png in Resources */,
+				AC2E3F11228ECD9F00D2C332 /* HZTCardScrollCell.xib in Resources */,
 				AC2D7292223A25B500E80191 /* 23.png in Resources */,
 				AC2D728D223A25B500E80191 /* 20.png in Resources */,
 				ACDE3BB522488AB900B8EFB3 /* LaunchImageAd.json in Resources */,
@@ -2604,6 +2658,7 @@
 				AC2D727E223A25B500E80191 /* 9.png in Resources */,
 				AC2D726D223A25B500E80191 /* 60.png in Resources */,
 				AC2D72B2223A25B500E80191 /* 45.png in Resources */,
+				AC2E3EF0228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib in Resources */,
 				AC207764223F479C0072129B /* HZTMyResumeCustomCell.xib in Resources */,
 				AC2D72A2223A25B500E80191 /* 57.png in Resources */,
 				AC20774D223F3F040072129B /* HZTShareView.xib in Resources */,
@@ -2643,6 +2698,8 @@
 				AC2D7277223A25B500E80191 /* 64.png in Resources */,
 				AC2D728F223A25B500E80191 /* 22.png in Resources */,
 				AC2D729D223A25B500E80191 /* 4.png in Resources */,
+				AC2E3EF5228EB60F00D2C332 /* HZTMyResumeViewNavView.xib in Resources */,
+				AC2E3F04228EBC0B00D2C332 /* HZTMyResumelPhoneCell.xib in Resources */,
 				AC2D72AF223A25B500E80191 /* 50.png in Resources */,
 				ACF873B42244D3C800B5F05F /* SWQRCode.bundle in Resources */,
 				AC2D727C223A25B500E80191 /* 67.png in Resources */,
@@ -2698,6 +2755,8 @@
 				AC20775F223F476E0072129B /* HZTMyResumeSectionFooterView.xib in Resources */,
 				ACB12D77223A2BD6008E5494 /* HZTCustomAlretView.xib in Resources */,
 				AC2D727D223A25B500E80191 /* 73.png in Resources */,
+				AC2E3EFF228EBB4E00D2C332 /* HZTMyResumeLevelCell.xib in Resources */,
+				AC2E3F09228EBFA700D2C332 /* HZTMyResumeOtherHeaderView.xib in Resources */,
 				AC2D72A5223A25B500E80191 /* 55.png in Resources */,
 				ACC1FB122238B3AB001E9F4A /* HZTMenuListCell.xib in Resources */,
 				AC39C3EB224A25E200CF93E7 /* HZTCompanyTableListCell.xib in Resources */,
@@ -2775,12 +2834,14 @@
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
 				ACDC5B902248C81A00744DF9 /* HZTPostDetailsSectionView.m in Sources */,
 				AC39C3E6224A25AC00CF93E7 /* HZTCompanyTableView.m in Sources */,
+				AC2E3F10228ECD9F00D2C332 /* HZTCardScrollCell.m in Sources */,
 				E14CAB882241EF3A0001A308 /* NSString+Common.m in Sources */,
 				ACAE8412224CAC60009CC125 /* UINavigationBar+Awesome.m in Sources */,
 				ACB381562240B97A00FFB9B3 /* HZTNewsListCell.m in Sources */,
 				ACF873932244CA0300B5F05F /* UIImage+ZLPhotoLib.m in Sources */,
 				E108A8452244C870004F2694 /* HZTFeedBackViewController.m in Sources */,
 				E1B6606F2248B3D800394A4F /* HZTMyWalletHeaderView.m in Sources */,
+				AC2E3EF3228EB60100D2C332 /* HZTMyResumeViewNavView.m in Sources */,
 				AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */,
 				AC39C3CB224A086000CF93E7 /* HZTCompanyHeaderView.m in Sources */,
 				AC2D720B223A246C00E80191 /* PYPhoto.m in Sources */,
@@ -2820,6 +2881,7 @@
 				ACD276C42238F8A300AD825B /* HZTPageControl.m in Sources */,
 				AC706FFB223A4B79003F4F6D /* HZTProvinceModel.m in Sources */,
 				E14CAB822241E6AD0001A308 /* UIColor+Hex.m in Sources */,
+				AC2E3F03228EBC0B00D2C332 /* HZTMyResumelPhoneCell.m in Sources */,
 				AC20776B223F82C90072129B /* HZTSkillModel.m in Sources */,
 				ACD276BD2238EA4900AD825B /* HZTHomeHeaderModel.m in Sources */,
 				AC207753223F464F0072129B /* HZTMyResumeHeaderView.m in Sources */,
@@ -2844,9 +2906,11 @@
 				ACF8739A2244CA0300B5F05F /* ZLPhotoPickerViewController.m in Sources */,
 				E16AD6F922437BD400B61431 /* HZTChangePwdView.m in Sources */,
 				ACDE3B9F2248872700B8EFB3 /* XHLaunchAd.m in Sources */,
+				AC2E3EEE228EAA6A00D2C332 /* HZTMyResumeNewsHeaderView.m in Sources */,
 				ACDE3BAB224889FD00B8EFB3 /* HZTLaunchAdManager.m in Sources */,
 				AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */,
 				ACB3816A2240CBDA00FFB9B3 /* HZTTopTabCollectionCell.m in Sources */,
+				AC2E3F0C228ECABC00D2C332 /* HZTMyResumeModel.m in Sources */,
 				AC706FF1223A4AC5003F4F6D /* HZTCustomPickerView.m in Sources */,
 				AC2D720F223A246C00E80191 /* PYPhotoView.m in Sources */,
 				ACDE3BA12248872700B8EFB3 /* XHLaunchAdDownloader.m in Sources */,
@@ -2877,6 +2941,7 @@
 				ACFE80412238A331006D1506 /* HZTRootNavigationController.m in Sources */,
 				AC207759223F472A0072129B /* HZTMyResumeRealNameCell.m in Sources */,
 				ACD276CD2239153E00AD825B /* HZTNewsListController.m in Sources */,
+				AC2E3F07228EBF9900D2C332 /* HZTMyResumeOtherHeaderView.m in Sources */,
 				ACB3814C224088D400FFB9B3 /* HZTTrainCell.m in Sources */,
 				6B9D180D22461E5E00C68884 /* HZTFeedBackCell.m in Sources */,
 				ACC1FB1A2238B947001E9F4A /* UIButton+HitAreaExpand.m in Sources */,
@@ -2918,6 +2983,7 @@
 				AC37E68622421ABB004144AA /* HZTImmediateMatchModel.m in Sources */,
 				AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */,
 				AC2D7207223A246B00E80191 /* PYPhotosViewController.m in Sources */,
+				AC2E3EFE228EBB4E00D2C332 /* HZTMyResumeLevelCell.m in Sources */,
 				ACC1FB0A2238B382001E9F4A /* HZTMenuListView.m in Sources */,
 				E108A83A2244A777004F2694 /* UILabel+TextHelper.m in Sources */,
 				AC39C3EA224A25E200CF93E7 /* HZTCompanyTableListCell.m in Sources */,
