@@ -24,6 +24,7 @@
 #import "HZTMyResumelPhoneCell.h"
 #import "HZTMyResumeModel.h"
 #import "HZTCardScrollCell.h"
+#import "HZTExpectWorkCell.h"
 @interface HZTMyResumeViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
@@ -43,8 +44,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NotificationRegister(HZTNOTIFICATION_DID_LOGIN_SUCCEED, self, @selector(loginSucceed), nil);
     [self configNavItem];
     [self prepareData];
+}
+
+-(void)loginSucceed{
+     [self prepareData];
 }
 
 -(void)configNavItem{
@@ -109,7 +115,23 @@
         return 1;
     }else{
         if (self.dataArray[section].isExpend) {
-            return 2;
+            if (section == 0) {
+                return 1;
+            }else{
+                if (section == 3) {
+                  return  1;
+                }else if (section == 4){
+                  return  1;
+                }else if (section == 5){
+                  return  self.listModel.personJobFullVO.resumeList.count;
+                }else if (section == 6){
+                   return self.listModel.personJobFullVO.projiectList.count;
+                }else if (section == 7){
+                   return self.listModel.personJobFullVO.projiectList.count;
+                }else {
+                   return self.listModel.personJobFullVO.projiectList.count;
+                }
+            }
         }else{
             return 0;
         }
@@ -153,7 +175,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     WS(weakSelf)
-    if (!indexPath.section) {
+    if (indexPath.section == 0) {
         HZTCardScrollCell * cell = [HZTCardScrollCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 1) {
@@ -166,16 +188,13 @@
         HZTMyResumelPhoneCell * cell = [HZTMyResumelPhoneCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 3) {
-        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
+        HZTExpectWorkCell * cell = [HZTExpectWorkCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 4) {
         HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
         return cell;
     }else if (indexPath.section == 5) {
-        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
+        HZTTrainCell * cell = [HZTTrainCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 6) {
         HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
@@ -283,12 +302,21 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 100;
-    }else if (indexPath.section == 1 || indexPath.section == 2){
+    }else if (indexPath.section == 1){
         return 67;
-    }else{
+    }else if (indexPath.section == 2){
+        return 67;
+    }else if (indexPath.section == 3) {
+        return 41*3 + 2*7 + 2*15;
+    }else if (indexPath.section == 4) {
+        return 2*15 + (kScreenW-32)*230/343;
+    }else if (indexPath.section == 5) {
+        return 2*15 + 90*2 + 2*7 + 48;
+    }
+    else{
         return 200;
     }
-//    if (!indexPath.section) {
+    //    if (!indexPath.section) {
 //        return [self.listModel.nameAuthent intValue] ? .1f : 91;
 //    }else{
 //        if (indexPath.section == 2){
@@ -462,6 +490,11 @@
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+
+-(void)dealloc{
+    NotificationRemoveAll(self);
+    NSLog(@"HZTMyResumeViewController dealloc");
 }
 
 @end

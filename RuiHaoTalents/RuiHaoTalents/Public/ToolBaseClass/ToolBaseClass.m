@@ -576,7 +576,8 @@ static char base64EncodingTable[64] = {
 }
 
 + (HZTRootNavigationController *)getRootNavController{
-    return (HZTRootNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
+    HZTRootNavigationController * nav = (HZTRootNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
+    return nav;
 }
 
 +(void)showNavigationWithLongitude:(double)longitude latitude:(double)latitude{

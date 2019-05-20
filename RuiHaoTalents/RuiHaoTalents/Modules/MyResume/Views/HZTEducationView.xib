@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HZTEducationView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大学" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Na-Tv-zRN">
+                    <rect key="frame" x="15" y="15" width="35" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="Aam-fe-K7T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2013-09-01至2017-07-01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkA-nx-qMP">
+                    <rect key="frame" x="15" y="68" width="156.5" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="11" id="Uya-Ni-ipF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_gree_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-gM-bcK">
+                    <rect key="frame" x="354" y="39.5" width="6" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="11" id="gWy-cS-ly1"/>
+                        <constraint firstAttribute="width" constant="6" id="kPH-lM-6NG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本科·视觉传达设计" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8J-BS-3eO">
+                    <rect key="frame" x="15" y="40" width="127" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="sd7-cu-0ck"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hN3-gM-bcK" secondAttribute="trailing" constant="15" id="0jb-Wn-coX"/>
+                <constraint firstItem="7Na-Tv-zRN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="DnT-uw-jQ8"/>
+                <constraint firstItem="wkA-nx-qMP" firstAttribute="leading" secondItem="7Na-Tv-zRN" secondAttribute="leading" id="Hla-Lg-cXO"/>
+                <constraint firstItem="7Na-Tv-zRN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="R91-Xf-c5T"/>
+                <constraint firstItem="wkA-nx-qMP" firstAttribute="top" secondItem="V8J-BS-3eO" secondAttribute="bottom" constant="13" id="S23-0M-pQl"/>
+                <constraint firstItem="V8J-BS-3eO" firstAttribute="leading" secondItem="7Na-Tv-zRN" secondAttribute="leading" id="TK2-xi-CnG"/>
+                <constraint firstItem="hN3-gM-bcK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="btt-IR-RQl"/>
+                <constraint firstItem="V8J-BS-3eO" firstAttribute="top" secondItem="7Na-Tv-zRN" secondAttribute="bottom" constant="9" id="nVX-Ps-OHp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.40000000000001" y="154.72263868065968"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_gree_arrow" width="5" height="10"/>
+    </resources>
+</document>

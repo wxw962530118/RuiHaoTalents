@@ -8,7 +8,6 @@
 
 #import "HZTJiNengCell.h"
 #import "HZTRadarChartView.h"
-
 @interface HZTJiNengCell ()
 /***/
 @property (nonatomic, strong) HZTRadarChartView * radarView;
@@ -19,20 +18,8 @@
 @implementation HZTJiNengCell
 
 -(void)loadWithComponents{
+    self.backgroundColor = HZTMainColor;
     [self addRadarView];
-    [self addTitleLabel];
-}
-
--(void)addTitleLabel{
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = HZTFontSize(17);
-        [self.contentView addSubview:_titleLabel];
-        [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.contentView.mas_left).offset(15);
-            make.top.equalTo(self.contentView.mas_top).offset(13);
-        }];
-    }
 }
 
 -(void)addRadarView{
@@ -44,7 +31,8 @@
             HZTRadarChartDataItem *item = [HZTRadarChartDataItem dataItemWithValue:[values[i] floatValue] description:descs[i]];
             [items addObject:item];
         }
-        HZTRadarChartView *radarChart = [[HZTRadarChartView alloc] initWithFrame:CGRectMake(0,15,kScreenW , 238) items:items valueDivider:2];
+        HZTRadarChartView *radarChart = [[HZTRadarChartView alloc] initWithFrame:CGRectMake(16,15,kScreenW- 32, (kScreenW-32)*230/343) items:items valueDivider:2];
+        radarChart.layer.cornerRadius = 5;
         radarChart.tempFillColor = RGBColorAlpha(220, 246, 243, .3);
         radarChart.tempStrokeColor = RGBColorAlpha(74, 211, 195, .3);
         radarChart.plotFillColor = RGBColorAlpha(79,193,170,.5);

@@ -190,6 +190,8 @@
 		AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700A223B746F003F4F6D /* NetWorkManager.m */; };
 		AC707010223B750E003F4F6D /* HZTAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70700F223B750E003F4F6D /* HZTAccountManager.m */; };
 		AC707032223B8F15003F4F6D /* HZTLoginWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */; };
+		AC7AA9202292BA3900B0ECF2 /* HZTEducationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7AA91F2292BA3900B0ECF2 /* HZTEducationView.m */; };
+		AC7AA9222292BA4500B0ECF2 /* HZTEducationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7AA9212292BA4500B0ECF2 /* HZTEducationView.xib */; };
 		AC7DB40922421ED500F39EEF /* HZTWorkAreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DB40822421ED500F39EEF /* HZTWorkAreaModel.m */; };
 		AC7DB40C22421F8F00F39EEF /* HZTWorkAreaListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DB40B22421F8F00F39EEF /* HZTWorkAreaListCell.m */; };
 		AC84598A2243783800E09659 /* HZTChoosePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8459882243783800E09659 /* HZTChoosePostCell.m */; };
@@ -197,6 +199,10 @@
 		AC84598E22437D5A00E09659 /* HZTChoosePostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC84598D22437D5A00E09659 /* HZTChoosePostModel.m */; };
 		AC845991224384AA00E09659 /* HZTChoosePostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC845990224384AA00E09659 /* HZTChoosePostView.m */; };
 		AC845994224490DD00E09659 /* HZTDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC845993224490DD00E09659 /* HZTDatePickerView.m */; };
+		AC92E3172292A2EC00D47ACB /* HZTExpectWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92E3152292A2EC00D47ACB /* HZTExpectWorkCell.m */; };
+		AC92E3182292A2EC00D47ACB /* HZTExpectWorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC92E3162292A2EC00D47ACB /* HZTExpectWorkCell.xib */; };
+		AC92E31B2292AD4D00D47ACB /* HZTCardTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92E31A2292AD4D00D47ACB /* HZTCardTypeView.m */; };
+		AC92E31D2292AD5B00D47ACB /* HZTCardTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC92E31C2292AD5B00D47ACB /* HZTCardTypeView.xib */; };
 		ACAE8412224CAC60009CC125 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAE8411224CAC60009CC125 /* UINavigationBar+Awesome.m */; };
 		ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D6F223A2A53008E5494 /* HZTToastHUD.m */; };
 		ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB12D74223A2BC5008E5494 /* HZTCustomAlretView.m */; };
@@ -598,6 +604,9 @@
 		AC70700F223B750E003F4F6D /* HZTAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTAccountManager.m; sourceTree = "<group>"; };
 		AC707030223B8F15003F4F6D /* HZTLoginWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLoginWorkManager.h; sourceTree = "<group>"; };
 		AC707031223B8F15003F4F6D /* HZTLoginWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTLoginWorkManager.m; sourceTree = "<group>"; };
+		AC7AA91E2292BA3900B0ECF2 /* HZTEducationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTEducationView.h; sourceTree = "<group>"; };
+		AC7AA91F2292BA3900B0ECF2 /* HZTEducationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTEducationView.m; sourceTree = "<group>"; };
+		AC7AA9212292BA4500B0ECF2 /* HZTEducationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTEducationView.xib; sourceTree = "<group>"; };
 		AC7DB40722421ED500F39EEF /* HZTWorkAreaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTWorkAreaModel.h; sourceTree = "<group>"; };
 		AC7DB40822421ED500F39EEF /* HZTWorkAreaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTWorkAreaModel.m; sourceTree = "<group>"; };
 		AC7DB40A22421F8F00F39EEF /* HZTWorkAreaListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTWorkAreaListCell.h; sourceTree = "<group>"; };
@@ -611,6 +620,12 @@
 		AC845990224384AA00E09659 /* HZTChoosePostView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostView.m; sourceTree = "<group>"; };
 		AC845992224490DD00E09659 /* HZTDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTDatePickerView.h; sourceTree = "<group>"; };
 		AC845993224490DD00E09659 /* HZTDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTDatePickerView.m; sourceTree = "<group>"; };
+		AC92E3142292A2EC00D47ACB /* HZTExpectWorkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTExpectWorkCell.h; sourceTree = "<group>"; };
+		AC92E3152292A2EC00D47ACB /* HZTExpectWorkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTExpectWorkCell.m; sourceTree = "<group>"; };
+		AC92E3162292A2EC00D47ACB /* HZTExpectWorkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTExpectWorkCell.xib; sourceTree = "<group>"; };
+		AC92E3192292AD4C00D47ACB /* HZTCardTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTCardTypeView.h; sourceTree = "<group>"; };
+		AC92E31A2292AD4D00D47ACB /* HZTCardTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTCardTypeView.m; sourceTree = "<group>"; };
+		AC92E31C2292AD5B00D47ACB /* HZTCardTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTCardTypeView.xib; sourceTree = "<group>"; };
 		ACAE8410224CAC60009CC125 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		ACAE8411224CAC60009CC125 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		ACB12D6E223A2A53008E5494 /* HZTToastHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTToastHUD.h; sourceTree = "<group>"; };
@@ -2173,6 +2188,15 @@
 				AC2E3F0D228ECD9F00D2C332 /* HZTCardScrollCell.h */,
 				AC2E3F0E228ECD9F00D2C332 /* HZTCardScrollCell.m */,
 				AC2E3F0F228ECD9F00D2C332 /* HZTCardScrollCell.xib */,
+				AC92E3142292A2EC00D47ACB /* HZTExpectWorkCell.h */,
+				AC92E3152292A2EC00D47ACB /* HZTExpectWorkCell.m */,
+				AC92E3162292A2EC00D47ACB /* HZTExpectWorkCell.xib */,
+				AC92E3192292AD4C00D47ACB /* HZTCardTypeView.h */,
+				AC92E31A2292AD4D00D47ACB /* HZTCardTypeView.m */,
+				AC92E31C2292AD5B00D47ACB /* HZTCardTypeView.xib */,
+				AC7AA91E2292BA3900B0ECF2 /* HZTEducationView.h */,
+				AC7AA91F2292BA3900B0ECF2 /* HZTEducationView.m */,
+				AC7AA9212292BA4500B0ECF2 /* HZTEducationView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2657,6 +2681,7 @@
 				AC2D7280223A25B500E80191 /* 28.png in Resources */,
 				AC2D727E223A25B500E80191 /* 9.png in Resources */,
 				AC2D726D223A25B500E80191 /* 60.png in Resources */,
+				AC92E3182292A2EC00D47ACB /* HZTExpectWorkCell.xib in Resources */,
 				AC2D72B2223A25B500E80191 /* 45.png in Resources */,
 				AC2E3EF0228EAA7E00D2C332 /* HZTMyResumeNewsHeaderView.xib in Resources */,
 				AC207764223F479C0072129B /* HZTMyResumeCustomCell.xib in Resources */,
@@ -2731,8 +2756,10 @@
 				AC2D7296223A25B500E80191 /* 26.png in Resources */,
 				AC2D71DC2239F06100E80191 /* HZTLoginRegisterCell.xib in Resources */,
 				AC2D7294223A25B500E80191 /* 33.png in Resources */,
+				AC92E31D2292AD5B00D47ACB /* HZTCardTypeView.xib in Resources */,
 				AC2D728C223A25B500E80191 /* 21.png in Resources */,
 				AC2D7273223A25B500E80191 /* 59.png in Resources */,
+				AC7AA9222292BA4500B0ECF2 /* HZTEducationView.xib in Resources */,
 				ACF873A02244CA0300B5F05F /* ZLPhotoLib.bundle in Resources */,
 				AC2D7269223A25B500E80191 /* 77.png in Resources */,
 				AC2D72B5223A25B500E80191 /* 1.png in Resources */,
@@ -2860,6 +2887,7 @@
 				ACE8F63422389AD00053D864 /* main.m in Sources */,
 				AC37E65F224209DA004144AA /* HZTHomeNetWorkManager.m in Sources */,
 				E108A830224475AA004F2694 /* UIButton+Countdown.m in Sources */,
+				AC92E31B2292AD4D00D47ACB /* HZTCardTypeView.m in Sources */,
 				ACDE3BBD22488C5900B8EFB3 /* HZTAccountModel.m in Sources */,
 				ACB38143223F94EC00FFB9B3 /* HZTPersonJobFullModel.m in Sources */,
 				ACF873442244C97B00B5F05F /* HZTImagePickerView.m in Sources */,
@@ -2933,6 +2961,7 @@
 				AC207768223F4CD60072129B /* HZTOthersNetWorkManager.m in Sources */,
 				AC207774223F85EC0072129B /* HZTTrainModel.m in Sources */,
 				AC39C3C82249F72900CF93E7 /* HZTRadarChartView.m in Sources */,
+				AC92E3172292A2EC00D47ACB /* HZTExpectWorkCell.m in Sources */,
 				AC2D720A223A246C00E80191 /* PYPhotosPreviewController.m in Sources */,
 				AC2D720E223A246C00E80191 /* PYPhotoCell.m in Sources */,
 				AC84598A2243783800E09659 /* HZTChoosePostCell.m in Sources */,
@@ -2991,6 +3020,7 @@
 				AC2D71DF2239F2FA00E80191 /* HZTLoginRegisterModel.m in Sources */,
 				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,
 				ACF873882244CA0300B5F05F /* ZLCameraImageView.m in Sources */,
+				AC7AA9202292BA3900B0ECF2 /* HZTEducationView.m in Sources */,
 				E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */,
 				ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */,
 				AC84598E22437D5A00E09659 /* HZTChoosePostModel.m in Sources */,
