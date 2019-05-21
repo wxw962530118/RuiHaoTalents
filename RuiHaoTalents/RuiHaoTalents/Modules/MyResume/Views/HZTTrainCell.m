@@ -44,15 +44,8 @@
         btn.titleLabel.font = HZTFontSize(15);
         [btn setTitle:@"添加教育经历" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
-        CAShapeLayer * border = [CAShapeLayer layer];
-        border.strokeColor = [UIColor whiteColor].CGColor;
-        border.fillColor = [UIColor clearColor].CGColor;
-        border.path = [UIBezierPath bezierPathWithRect:btn.bounds].CGPath;
-        border.frame = btn.bounds;
-        border.lineWidth = 1.f;
-        border.lineCap = @"square";
-        border.lineDashPattern = @[@5, @3];
-        [btn.layer addSublayer:border];
+        btn.layer.borderWidth = 1;
+        btn.layer.borderColor = RGBColor(255, 255, 255).CGColor;
         [self.contentView addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(_educationSuperView.mas_centerX);

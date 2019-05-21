@@ -26,7 +26,9 @@
 
 -(NSURLSessionDataTask *)requestMeProfileWithHumanId:(NSString *)humanId succeed:(void (^)(id _Nonnull))succeed failure:(void (^)(NSURLSessionDataTask * _Nonnull, NSError * _Nonnull))failure{
     NSMutableDictionary * param = [NSMutableDictionary dictionary];
-    [param setObject:humanId forKey:@"humanId"];
+    if (![ToolBaseClass isNullClass:humanId]){
+        [param setObject:humanId forKey:@"humanId"];
+    }
     NSString * URLString = [NSString stringWithFormat:URL_ME_PROFILE,HZT_HOST];
     NSURLSessionDataTask * task = [[NetWorkManager sharedInstance]POST:URLString parameters:param success:^(id response) {
         succeed(response[@"data"]);

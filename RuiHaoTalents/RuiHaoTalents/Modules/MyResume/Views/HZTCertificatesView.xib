@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HZTCertificatesView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教师资格证书" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQM-Zs-utG">
+                    <rect key="frame" x="16" y="15" width="104" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="r7J-6n-bWD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获得时间：2014年12月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFX-Ci-8oH">
+                    <rect key="frame" x="16" y="43" width="137" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="qMo-kw-Izi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_gree_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="j8g-Fm-9n1">
+                    <rect key="frame" x="353" y="28" width="6" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="6" id="OuM-aX-joE"/>
+                        <constraint firstAttribute="height" constant="11" id="zOw-Vl-5nx"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KFX-Ci-8oH" firstAttribute="top" secondItem="uQM-Zs-utG" secondAttribute="bottom" constant="12" id="0qn-2H-acR"/>
+                <constraint firstAttribute="trailing" secondItem="j8g-Fm-9n1" secondAttribute="trailing" constant="16" id="Ajn-D1-nMd"/>
+                <constraint firstItem="j8g-Fm-9n1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UkR-Ur-V2C"/>
+                <constraint firstItem="KFX-Ci-8oH" firstAttribute="leading" secondItem="uQM-Zs-utG" secondAttribute="leading" id="fUX-gL-MGN"/>
+                <constraint firstItem="uQM-Zs-utG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="g7o-lc-JAY"/>
+                <constraint firstItem="uQM-Zs-utG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="lxH-pu-dcC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_gree_arrow" width="5" height="10"/>
+    </resources>
+</document>

@@ -7,13 +7,10 @@
 //
 
 #import "HZTMyResumeCustomCell.h"
-
+#import "HZTWorkExperienceView.h"
 @interface HZTMyResumeCustomCell ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *jobNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descLabel;
-@property (weak, nonatomic) IBOutlet UIButton *lookMoreBtn;
+/***/
+@property (nonatomic, strong) UIView * workSuperView;
 
 @end
 
@@ -21,39 +18,51 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self addWorkSuperView];
 }
 
-- (IBAction)clickLookMoreBtn:(id)sender {
-    if (self.callBack) {
-        self.lookMoreBtn.hidden = YES;
-        self.callBack(MyResumeCellCallBackType_LookMore);
+-(void)addWorkSuperView{
+    if (!_workSuperView) {
+        _workSuperView = [[UIView alloc] init];
+        [self.contentView addSubview:_workSuperView];
+        [_workSuperView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.right.bottom.left.equalTo(self.contentView);
+        }];
+        
     }
 }
 
-- (IBAction)clickDeleteBtn:(id)sender {
-    NSLog(@"删除");
-    if (self.callBack) {
-        self.callBack(MyResumeCellCallBackType_Delete);
-    }
-}
+//- (IBAction)clickLookMoreBtn:(id)sender {
+//    if (self.callBack) {
+//        self.lookMoreBtn.hidden = YES;
+//        self.callBack(MyResumeCellCallBackType_LookMore);
+//    }
+//}
+//
+//- (IBAction)clickDeleteBtn:(id)sender {
+//    NSLog(@"删除");
+//    if (self.callBack) {
+//        self.callBack(MyResumeCellCallBackType_Delete);
+//    }
+//}
 
 -(void)setResumeModel:(HZTResumeModel *)resumeModel{
     _resumeModel = resumeModel;
-    self.titleLabel.text = resumeModel.resumeName;
-    self.jobNameLabel.text = resumeModel.resumePosition;
-    self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",resumeModel.startDate,resumeModel.endDate];
-    self.descLabel.text = resumeModel.resumeDescribe;
-    self.lookMoreBtn.hidden = !resumeModel.isShowMore;
+//    self.titleLabel.text = resumeModel.resumeName;
+//    self.jobNameLabel.text = resumeModel.resumePosition;
+//    self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",resumeModel.startDate,resumeModel.endDate];
+//    self.descLabel.text = resumeModel.resumeDescribe;
+//    self.lookMoreBtn.hidden = !resumeModel.isShowMore;
 }
 
 -(void)setProjiectModel:(HZTProjiectModel *)projiectModel{
     _projiectModel = projiectModel;
-    self.titleLabel.text = projiectModel.projectName;
-    self.jobNameLabel.text = projiectModel.projectPost;
-    self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",projiectModel.projectStart,projiectModel.projectEnd];
-    self.descLabel.text = projiectModel.projectDescribe;
-    self.lookMoreBtn.hidden = !projiectModel.isShowMore;
+//    self.titleLabel.text = projiectModel.projectName;
+//    self.jobNameLabel.text = projiectModel.projectPost;
+//    self.timeLabel.text = [NSString stringWithFormat:@"%@-%@",projiectModel.projectStart,projiectModel.projectEnd];
+//    self.descLabel.text = projiectModel.projectDescribe;
+//    self.lookMoreBtn.hidden = !projiectModel.isShowMore;
 }
 
 @end

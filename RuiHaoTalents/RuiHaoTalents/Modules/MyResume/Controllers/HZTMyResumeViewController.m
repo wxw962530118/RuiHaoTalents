@@ -25,11 +25,12 @@
 #import "HZTMyResumeModel.h"
 #import "HZTCardScrollCell.h"
 #import "HZTExpectWorkCell.h"
+#import "HZTCertificatesCell.h"
+#import "HZTWorkTrainCell.h"
+#import "HZTProjectExperienceCell.h"
 @interface HZTMyResumeViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * mainTableView;
-/***/
-//@property (nonatomic, strong) HZTMyResumeHeaderView * headerView;
 /***/
 @property (nonatomic, strong) HZTMyResumeNewsHeaderView * newsHeaderView;
 /***/
@@ -44,22 +45,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NotificationRegister(HZTNOTIFICATION_DID_LOGIN_SUCCEED, self, @selector(loginSucceed), nil);
-    [self configNavItem];
+    [self addObserver];
     [self prepareData];
+}
+
+-(void)addObserver{
+    NotificationRegister(HZTNOTIFICATION_DID_LOGIN_SUCCEED, self, @selector(loginSucceed), nil);
 }
 
 -(void)loginSucceed{
      [self prepareData];
-}
-
--(void)configNavItem{
-    self.navigationItem.title = @"个人简历";
-    [self ctNavRightItemWithTitle:nil imageName:@"share_icon" callBack:^{
-        [HZTShareView showWithCallBack:^(ShareType type) {
-            
-        }];
-    }];
 }
 
 -(void)prepareData{
@@ -197,16 +192,13 @@
         HZTTrainCell * cell = [HZTTrainCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 6) {
-        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
+        HZTWorkTrainCell * cell = [HZTWorkTrainCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else if (indexPath.section == 7) {
-        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
+        HZTProjectExperienceCell * cell = [HZTProjectExperienceCell cellWithTableViewFromXIB:tableView];
         return cell;
     }else {
-        HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-        cell.title = @"拥有技能";
+        HZTCertificatesCell * cell = [HZTCertificatesCell cellWithTableViewFromXIB:tableView];
         return cell;
     }
 //    if (!indexPath.section) {
@@ -303,7 +295,7 @@
     if (indexPath.section == 0) {
         return 100;
     }else if (indexPath.section == 1){
-        return 67;
+        return [self.listModel.nameAuthent intValue] ? .1f : 67;
     }else if (indexPath.section == 2){
         return 67;
     }else if (indexPath.section == 3) {
@@ -312,9 +304,12 @@
         return 2*15 + (kScreenW-32)*230/343;
     }else if (indexPath.section == 5) {
         return 2*15 + 90*2 + 2*7 + 48;
-    }
-    else{
-        return 200;
+    }else if (indexPath.section == 6) {
+        return 2*15 + 2*98 + 2*7 + 48;
+    }else if (indexPath.section == 7) {
+        return 2*15 + 2*98 + 2*7 + 48;
+    }else{
+        return 2*15 + 2*67 + 2*7 + 48;
     }
     //    if (!indexPath.section) {
 //        return [self.listModel.nameAuthent intValue] ? .1f : 91;
