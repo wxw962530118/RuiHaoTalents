@@ -12,6 +12,8 @@
 @interface HZTWorkTrainCell ()
 /***/
 @property (nonatomic, strong) UIView * workSuperView;
+/***/
+@property (nonatomic, strong) NSMutableArray <HZTWorkExperienceView *>* viewsArr;
 @end
 
 @implementation HZTWorkTrainCell
@@ -23,6 +25,13 @@
     [self addWorkSuperView];
 }
 
+-(NSMutableArray *)viewsArr{
+    if (!_viewsArr) {
+        _viewsArr = [NSMutableArray array];
+    }
+    return _viewsArr;
+}
+
 -(void)addWorkSuperView{
     if (!_workSuperView) {
         _workSuperView = [[UIView alloc] init];
@@ -30,17 +39,7 @@
         [_workSuperView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.left.equalTo(self.contentView);
         }];
-        
-        for (int i = 0; i< 2; i++) {
-            HZTWorkExperienceView * view = [HZTWorkExperienceView createWorkExperienceView];
-            view.layer.cornerRadius = 5;
-            [_workSuperView addSubview:view];
-            [view mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerX.equalTo(_workSuperView.mas_centerX);
-                make.size.mas_equalTo(CGSizeMake(343, 98));
-                make.top.equalTo(_workSuperView.mas_top).offset(!i ? 15 : (i*(98 + 7) +15));
-            }];
-        }
+    
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 344, 48)];
         [btn setTitleColor:RGBColor(255, 255, 255) forState:UIControlStateNormal];
         btn.titleLabel.font = HZTFontSize(15);
@@ -54,6 +53,29 @@
             make.bottom.equalTo(_workSuperView.mas_bottom).offset(-15);
             make.size.mas_equalTo(CGSizeMake(344, 48));
         }];
+    }
+}
+
+-(void)setResumeArr:(NSArray<HZTResumeModel *> *)resumeArr{
+    _resumeArr = resumeArr;
+    if (self.viewsArr.count && self.viewsArr.count == resumeArr.count) {
+        return;
+    }else{
+        for (HZTWorkExperienceView * view in self.viewsArr) {
+            [view removeFromSuperview];
+        }
+        for (int i = 0; i< resumeArr.count; i++) {
+            HZTWorkExperienceView * view = [HZTWorkExperienceView createWorkExperienceView];
+            [self.viewsArr addObject:view];
+            view.layer.cornerRadius = 5;
+            view.model = resumeArr[i]; 
+            [_workSuperView addSubview:view];
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(_workSuperView.mas_centerX);
+                make.size.mas_equalTo(CGSizeMake(343, resumeArr[i].cardHeight));
+                make.top.equalTo(_workSuperView.mas_top).offset(!i ? 15 : (i*(resumeArr[i].cardHeight + 7) +15));
+            }];
+        }
     }
 }
 

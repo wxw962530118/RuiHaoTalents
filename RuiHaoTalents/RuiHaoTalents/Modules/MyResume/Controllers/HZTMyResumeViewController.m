@@ -63,7 +63,6 @@
         [HZTToastHUD hideLoading];
         self.listModel = [HZTMyResumeListModel mj_objectWithKeyValues:responseObject];
         self.newsHeaderView.listModel = self.listModel;
-        /**处理动态cell高度*/
         for (int i = 0; i< self.listModel.personJobFullVO.trainList.count; i++) {
             HZTTrainModel * model = self.listModel.personJobFullVO.trainList[i];
             model.cellHeight = 94;
@@ -74,19 +73,11 @@
         }
         for (int i = 0; i< self.listModel.personJobFullVO.resumeList.count; i++) {
             HZTResumeModel * model = self.listModel.personJobFullVO.resumeList[i];
-            model.cellHeight = (30 + 20 + 18 + 16 + 10 + 12 + 14 + [ToolBaseClass getHeightWithString:model.resumeDescribe width:kScreenW - 70 font:HZTFontSize(14)] + 30);
-            if (self.listModel.personJobFullVO.resumeList.count > 2 &&  i == 1) {
-                model.isShowMore = YES;
-                model.cellHeight += 30;
-            }
+            model.cardHeight += (14 + 16 + 12 + 12 + 11 + [ToolBaseClass getHeightWithString:model.resumeDescribe width:kScreenW - 62 font:HZTFontSize(14)] + 18);
         }
         for (int i = 0; i< self.listModel.personJobFullVO.projiectList.count; i++) {
             HZTProjiectModel * model = self.listModel.personJobFullVO.projiectList[i];
-            model.cellHeight = (30 + 20 + 18 + 16 + 10 + 12 + 14 + [ToolBaseClass getHeightWithString:model.projectDescribe width:kScreenW - 70 font:HZTFontSize(14)] + 30);
-            if (self.listModel.personJobFullVO.projiectList.count > 2 &&  i == 1) {
-                model.isShowMore = YES;
-                model.cellHeight += 30;
-            }
+            model.cardHeight = (15 + 16 + 11 + 12 + 17 + [ToolBaseClass getHeightWithString:model.projectDescribe width:kScreenW - 62 font:HZTFontSize(14)] + 14);
         }
         for (int i = 0; i< 9; i++) {
             HZTMyResumeModel * model = [[HZTMyResumeModel alloc] init];
@@ -106,58 +97,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     /**默认只有第二组和第三组显示数据 其他组需要手动点击展开项*/
-    if (section == 1 || section == 2) {
-        return 1;
-    }else{
-        if (self.dataArray[section].isExpend) {
-            if (section == 0) {
-                return 1;
-            }else{
-                if (section == 3) {
-                  return  1;
-                }else if (section == 4){
-                  return  1;
-                }else if (section == 5){
-                  return  self.listModel.personJobFullVO.resumeList.count;
-                }else if (section == 6){
-                   return self.listModel.personJobFullVO.projiectList.count;
-                }else if (section == 7){
-                   return self.listModel.personJobFullVO.projiectList.count;
-                }else {
-                   return self.listModel.personJobFullVO.projiectList.count;
-                }
-            }
-        }else{
-            return 0;
-        }
-    }
-//    if (!section){
-//        return 1;
-//    }else{
-//
-//        return [self handleSectionCountWithSection:section];
-//    }
-}
-
-#pragma mark --- 每组的数据
--(NSInteger)handleSectionCountWithSection:(NSInteger)section{
-    switch (section){
-        case 1:
-            return self.listModel.personJobFullVO.skillList.count ? 2 : self.listModel.personJobFullVO.skillList.count;
-            break;
-        case 2:
-            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.trainList.count isShowMore:(self.listModel.personJobFullVO.trainList.count > 2 ? self.listModel.personJobFullVO.trainList[1].isShowMore : false)];
-            break;
-        case 3:
-            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.resumeList.count isShowMore:(self.listModel.personJobFullVO.resumeList.count > 2 ? self.listModel.personJobFullVO.resumeList[1].isShowMore : false)];
-            break;
-        case 4:
-            return [self handleSectionCountWithCount:self.listModel.personJobFullVO.projiectList.count isShowMore:(self.listModel.personJobFullVO.projiectList.count > 2 ? self.listModel.personJobFullVO.projiectList[1].isShowMore : false)];
-            break;
-        default:
-            return 0;
-            break;
-    }
+    if (section == 1 || section == 2) return 1;
+    return self.dataArray[section].isExpend ? 1 : 0;
 }
 
 -(NSInteger)handleSectionCountWithCount:(NSInteger)count isShowMore:(BOOL)isShowMore{
@@ -169,7 +110,6 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    WS(weakSelf)
     if (indexPath.section == 0) {
         HZTCardScrollCell * cell = [HZTCardScrollCell cellWithTableViewFromXIB:tableView];
         return cell;
@@ -181,6 +121,7 @@
         return cell;
     }else if (indexPath.section == 2) {
         HZTMyResumelPhoneCell * cell = [HZTMyResumelPhoneCell cellWithTableViewFromXIB:tableView];
+        cell.listModel = self.listModel;
         return cell;
     }else if (indexPath.section == 3) {
         HZTExpectWorkCell * cell = [HZTExpectWorkCell cellWithTableViewFromXIB:tableView];
@@ -193,101 +134,15 @@
         return cell;
     }else if (indexPath.section == 6) {
         HZTWorkTrainCell * cell = [HZTWorkTrainCell cellWithTableViewFromXIB:tableView];
+        cell.resumeArr = self.listModel.personJobFullVO.resumeList;
         return cell;
     }else if (indexPath.section == 7) {
         HZTProjectExperienceCell * cell = [HZTProjectExperienceCell cellWithTableViewFromXIB:tableView];
+        cell.projectArr = self.listModel.personJobFullVO.projiectList;
         return cell;
     }else {
         HZTCertificatesCell * cell = [HZTCertificatesCell cellWithTableViewFromXIB:tableView];
         return cell;
-    }
-//    if (!indexPath.section) {
-//        HZTMyResumeRealNameCell * cell = [HZTMyResumeRealNameCell cellWithTableViewFromXIB:tableView];
-//        cell.clickRealNameBlock = ^{
-//            /**跳转至实名认证页面*/
-//        };
-//        return cell;
-//    }else{
-//        if (indexPath.section == 1) {
-//            if (!indexPath.row) {
-//                HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
-//                cell.title = @"期望工作";
-//                return cell;
-//            }else{
-//                HZTJiNengCell * cell = [HZTJiNengCell cellWithTableView:tableView];
-//                cell.title = @"拥有技能";
-//                return cell;
-//            }
-//        }else if (indexPath.section == 2){
-//            if (!indexPath.row) {
-//                HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
-//                cell.title = @"教育经历";
-//                return cell;
-//            }else{
-//                HZTTrainCell * cell = [HZTTrainCell cellWithTableViewFromXIB:tableView];
-//                cell.model = self.listModel.personJobFullVO.trainList[indexPath.row - 1];
-//                cell.callBack = ^(TrainCallBackType type) {
-//                    if (type == TrainCallBackType_LookMore) {
-//                        weakSelf.listModel.personJobFullVO.trainList[1].isShowMore = false;
-//                        weakSelf.listModel.personJobFullVO.trainList[1].cellHeight -= 30;
-//                        [weakSelf.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
-//                    }
-//                };
-//                return cell;
-//            }
-//        }else if (indexPath.section == 3){
-//            if (!indexPath.row) {
-//                HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
-//                cell.title = @"工作经历";
-//                return cell;
-//            }else{
-//                HZTMyResumeCustomCell * cell = [HZTMyResumeCustomCell cellWithTableViewFromXIB:tableView];
-//                cell.resumeModel = self.listModel.personJobFullVO.resumeList[indexPath.row - 1];
-//                cell.callBack = ^(MyResumeCellCallBackType type) {
-//                    [weakSelf handleResumeCellCallBackWithType:type indexPath:indexPath projiectList:nil resumeList:weakSelf.listModel.personJobFullVO.resumeList];
-//                };
-//                return cell;
-//            }
-//        }else{
-//            if (!indexPath.row) {
-//                HZTCustomHederCell * cell = [HZTCustomHederCell cellWithTableViewFromXIB:tableView];
-//                cell.title = @"项目经验";
-//                return cell;
-//            }else{
-//                HZTMyResumeCustomCell * cell = [HZTMyResumeCustomCell cellWithTableViewFromXIB:tableView];
-//                cell.projiectModel = self.listModel.personJobFullVO.projiectList[indexPath.row - 1];
-//                cell.callBack = ^(MyResumeCellCallBackType type) {
-//                    [weakSelf handleResumeCellCallBackWithType:type indexPath:indexPath projiectList:weakSelf.listModel.personJobFullVO.projiectList resumeList:nil];
-//                };
-//                return cell;
-//            }
-//        }
-//     }
-}
-
-#pragma mark --- 处理项目经验 工作经历 公用cell 回调事件
--(void)handleResumeCellCallBackWithType:(MyResumeCellCallBackType)type  indexPath:(NSIndexPath *)indexPath projiectList:(NSArray <HZTProjiectModel *>*)projiectList resumeList:(NSArray <HZTResumeModel *>*)resumeList{
-    if (type == MyResumeCellCallBackType_LookMore) {
-        if (projiectList) {
-            projiectList[1].isShowMore = false;
-            projiectList[1].cellHeight -= 30;
-        }else{
-            resumeList[1].isShowMore = false;
-            resumeList[1].cellHeight -= 30;
-        }
-        [self.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
-    }else{
-        NSMutableArray * temp;
-        if (projiectList) {
-            temp = [NSMutableArray arrayWithArray:projiectList];
-            [temp removeObject:projiectList[indexPath.row - 1]];
-            self.listModel.personJobFullVO.projiectList = temp;
-        }else{
-            temp = [NSMutableArray arrayWithArray:resumeList];
-            [temp removeObject:resumeList[indexPath.row - 1]];
-            self.listModel.personJobFullVO.resumeList = temp;
-        }
-        [self.mainTableView reloadSection:indexPath.section withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 
@@ -305,34 +160,24 @@
     }else if (indexPath.section == 5) {
         return 2*15 + 90*2 + 2*7 + 48;
     }else if (indexPath.section == 6) {
-        return 2*15 + 2*98 + 2*7 + 48;
+        CGFloat cellHeight = 15;
+        for (int i = 0; i< self.listModel.personJobFullVO.resumeList.count; i++) {
+            HZTResumeModel * model = self.listModel.personJobFullVO.resumeList[i];
+            cellHeight += model.cardHeight;
+            cellHeight += 7;
+        }
+        return cellHeight += (48 + 15);
     }else if (indexPath.section == 7) {
-        return 2*15 + 2*98 + 2*7 + 48;
+        CGFloat cellHeight = 15;
+        for (int i = 0; i< self.listModel.personJobFullVO.projiectList.count; i++) {
+            HZTResumeModel * model = self.listModel.personJobFullVO.resumeList[i];
+            cellHeight += model.cardHeight;
+            cellHeight += 7;
+        }
+        return cellHeight += (48 + 15);
     }else{
         return 2*15 + 2*67 + 2*7 + 48;
     }
-    //    if (!indexPath.section) {
-//        return [self.listModel.nameAuthent intValue] ? .1f : 91;
-//    }else{
-//        if (indexPath.section == 2){
-//            if (!indexPath.row) return 80;
-//            return self.listModel.personJobFullVO.trainList[indexPath.row-1].cellHeight;
-//        }else if (indexPath.section == 3){
-//           if (!indexPath.row) return 80;
-//           return self.listModel.personJobFullVO.resumeList[indexPath.row-1].cellHeight;
-//        }else if (indexPath.section == 4){
-//            if (!indexPath.row) return 80;
-//            return self.listModel.personJobFullVO.projiectList[indexPath.row-1].cellHeight;
-//        }else if(indexPath.section == 1){
-//            if (indexPath.row == 0) {
-//                return 100;
-//            }else{
-//                return 208 + 38;
-//            }
-//        }else{
-//            return .1f;
-//        }
-//    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -340,28 +185,6 @@
         return 0.01;
     }else{
          return 0.01;
-        //return  [self handleSectionHeight:section];
-    }
-}
-
-#pragma mark --- 根据数据源 刷新尾部视图的高度
--(CGFloat)handleSectionHeight:(NSInteger)section{
-    switch (section) {
-        case 1:
-            return !self.listModel.personJobFullVO.skillList.count ? 67 : 10;
-            break;
-        case 2:
-            return !self.listModel.personJobFullVO.trainList.count ? 67 : 10;
-            break;
-        case 3:
-            return !self.listModel.personJobFullVO.resumeList.count ? 67 : 10;
-            break;
-        case 4:
-            return !self.listModel.personJobFullVO.projiectList.count ? 67 : 10;
-            break;
-        default:
-            return 0.01;
-            break;
     }
 }
 
@@ -407,20 +230,6 @@
         view.title = titleArr[section - 3];
         return view;
     }
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-     return nil;
-//    if (section) {
-//        NSArray * titleArr = @[@"+添加拥有技能",@"+添加教育经历",@"+添加工作经验",@"+添加项目经验"];
-//        HZTMyResumeSectionFooterView * view = [HZTMyResumeSectionFooterView createMyResumeSectionFooterViewWithTitle:titleArr[section - 1] callBack:^(NSString * _Nonnull title) {
-//            NSLog(@"title:%@",title);
-//        }];
-//        view.frame = CGRectMake(0, 0, kScreenWidth, 58);
-//        return view;
-//    }else{
-//        return nil;
-//    }
 }
 
 #pragma mark --- 自定义导航栏渐变处理

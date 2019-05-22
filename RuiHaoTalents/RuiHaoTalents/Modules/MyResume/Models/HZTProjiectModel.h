@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * projectStart;
 /**结束时间*/
 @property (nonatomic, copy) NSString * projectEnd;
-/**cell高度*/
-@property (nonatomic, assign) CGFloat cellHeight;
+/**卡片高度*/
+@property (nonatomic, assign) CGFloat cardHeight;
 /**展示查看更多*/
 @property (nonatomic, assign) BOOL isShowMore;
 @end

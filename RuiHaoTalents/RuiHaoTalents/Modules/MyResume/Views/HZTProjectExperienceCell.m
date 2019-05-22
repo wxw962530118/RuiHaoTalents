@@ -11,6 +11,8 @@
 @interface HZTProjectExperienceCell ()
 /***/
 @property (nonatomic, strong) UIView * workSuperView;
+/***/
+@property (nonatomic, strong) NSMutableArray <HZTWorkExperienceView *>* viewsArr;
 @end
 
 @implementation HZTProjectExperienceCell
@@ -21,6 +23,13 @@
     [self addWorkSuperView];
 }
 
+-(NSMutableArray *)viewsArr{
+    if (!_viewsArr) {
+        _viewsArr = [NSMutableArray array];
+    }
+    return _viewsArr;
+}
+
 -(void)addWorkSuperView{
     if (!_workSuperView) {
         _workSuperView = [[UIView alloc] init];
@@ -28,21 +37,11 @@
         [_workSuperView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.left.equalTo(self.contentView);
         }];
-        
-        for (int i = 0; i< 2; i++) {
-            HZTWorkExperienceView * view = [HZTWorkExperienceView createWorkExperienceView];
-            view.layer.cornerRadius = 5;
-            [_workSuperView addSubview:view];
-            [view mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerX.equalTo(_workSuperView.mas_centerX);
-                make.size.mas_equalTo(CGSizeMake(343, 98));
-                make.top.equalTo(_workSuperView.mas_top).offset(!i ? 15 : (i*(98 + 7) +15));
-            }];
-        }
+    
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 344, 48)];
         [btn setTitleColor:RGBColor(255, 255, 255) forState:UIControlStateNormal];
         btn.titleLabel.font = HZTFontSize(15);
-        [btn setTitle:@"添加工作经历" forState:UIControlStateNormal];
+        [btn setTitle:@"添加项目经历" forState:UIControlStateNormal];
         btn.layer.cornerRadius = 5;
         btn.layer.borderWidth = 1;
         btn.layer.borderColor = RGBColor(255, 255, 255).CGColor;
@@ -55,5 +54,39 @@
     }
 }
 
+#pragma mark --- 卡片view的点击事件
+-(void)clickView:(UITapGestureRecognizer *)ges{
+    UIView * view = [ges view];
+    /**取出 index*/
+    NSInteger index = view.tag - 1000;
+    /**通过index 取数据源取模型 block 回调到控制器*/
+    HZTProjiectModel * model = self.projectArr[index];
+    NSLog(@"projectName:%@",model.projectName);
+}
+
+#pragma mark --- 数据源赋值
+-(void)setProjectArr:(NSArray<HZTProjiectModel *> *)projectArr{
+    _projectArr = projectArr;
+    if (self.viewsArr.count && self.viewsArr.count == projectArr.count) {
+        return;
+    }else{
+        for (HZTWorkExperienceView * view in self.viewsArr) {
+            [view removeFromSuperview];
+        }
+        for (int i = 0; i< projectArr.count; i++) {
+            HZTWorkExperienceView * view = [HZTWorkExperienceView createWorkExperienceView];
+            view.projectModel = projectArr[i];
+            view.tag = 1000 + i;
+            [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickView:)]];
+            view.layer.cornerRadius = 5;
+            [_workSuperView addSubview:view];
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(_workSuperView.mas_centerX);
+                make.size.mas_equalTo(CGSizeMake(343, projectArr[i].cardHeight));
+                make.top.equalTo(_workSuperView.mas_top).offset(!i ? 15 : (i*(projectArr[i].cardHeight + 7) +15));
+            }];
+        }
+    }
+}
 
 @end

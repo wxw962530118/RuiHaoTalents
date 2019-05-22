@@ -8,17 +8,22 @@
 
 #import "HZTMyResumelPhoneCell.h"
 
+
+@interface HZTMyResumelPhoneCell ()
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+
+@end
+
 @implementation HZTMyResumelPhoneCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)setListModel:(HZTMyResumeListModel *)listModel{
+    _listModel = listModel;
+    self.phoneLabel.text = listModel.humanPhone;
 }
 
 @end

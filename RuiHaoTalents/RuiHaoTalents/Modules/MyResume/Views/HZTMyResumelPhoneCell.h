@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTMyResumeListModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTMyResumelPhoneCell : UITableViewCell
-
+/***/
+@property (nonatomic, strong) HZTMyResumeListModel * listModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -54,7 +54,12 @@
                 <constraint firstItem="hJP-oL-3Vf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="tEz-ae-Fk8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
+            <connections>
+                <outlet property="descLabel" destination="U1O-RU-DcD" id="ptr-z2-gB4"/>
+                <outlet property="timeLabel" destination="E4s-f8-W5Y" id="B4m-Vl-V6w"/>
+                <outlet property="titleLabel" destination="hJP-oL-3Vf" id="4wU-UC-Mir"/>
+            </connections>
+            <point key="canvasLocation" x="584.79999999999995" y="19.790104947526238"/>
         </view>
     </objects>
     <resources>

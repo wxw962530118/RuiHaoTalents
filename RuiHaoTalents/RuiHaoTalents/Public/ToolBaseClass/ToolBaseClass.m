@@ -10,7 +10,7 @@
 #import <sys/sysctl.h>
 #import <mach/mach.h>
 #import <CommonCrypto/CommonDigest.h>
-
+#import "HZTOthersNetWorkManager.h"
 @interface ToolBaseClass ()<UIAlertViewDelegate,UIActionSheetDelegate>
 @property (nonatomic, copy) void(^callBack)(NSUInteger index);
 @property (nonatomic, copy) void(^alertBlock)(void);

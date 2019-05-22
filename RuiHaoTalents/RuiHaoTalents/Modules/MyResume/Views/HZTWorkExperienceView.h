@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTResumeModel.h"
+#import "HZTProjiectModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTWorkExperienceView : UIView
  +(instancetype)createWorkExperienceView;
+/***/
+@property (nonatomic, strong) HZTResumeModel * model;
+/***/
+@property (nonatomic, strong) HZTProjiectModel * projectModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -76,6 +76,9 @@
                     <constraint firstItem="vZe-nf-Own" firstAttribute="leading" secondItem="0sl-U5-4Ie" secondAttribute="trailing" constant="36" id="hu1-Tk-WTI"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="phoneLabel" destination="0sl-U5-4Ie" id="opJ-aT-QTE"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTResumeModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTWorkTrainCell : UITableViewCell
-
+/***/
+@property (nonatomic, strong) NSArray <HZTResumeModel *>* resumeArr;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTProjiectModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTProjectExperienceCell : UITableViewCell
-
+/***/
+@property (nonatomic, strong) NSArray <HZTProjiectModel *>* projectArr;
 @end
 
 NS_ASSUME_NONNULL_END
