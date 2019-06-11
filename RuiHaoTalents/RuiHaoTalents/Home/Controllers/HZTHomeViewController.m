@@ -216,7 +216,7 @@
 -(void)clickMessage{
     if ([ToolBaseClass isShouldLogin]) return;
     HZTCompanyInfoController * vc = [[HZTCompanyInfoController alloc] init];
-    //vc.jz_navigationBarHidden = YES;
+    vc.jz_navigationBarHidden = YES;
     [self xw_pushViewController:vc animated:YES];
 }
 

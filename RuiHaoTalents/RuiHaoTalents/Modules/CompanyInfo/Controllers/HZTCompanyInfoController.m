@@ -32,18 +32,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configNavInfo];
     /**记录最开始偏移量y值*/
     self.oriOffsetY = -HeaderH + SectionH;
     /**设置tableView顶部额外滚动区域*/
     [self.mainTableView reloadData];
+    [self configNavInfo];
 }
 
 -(void)configNavInfo{
-    self.navTitle = @"公司简介";
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
-//    [self.view addSubview:self.navView];
-//    [self.navView setNavTitle:@"公司简介"];
+    [self.view addSubview:self.navView];
+    [self.view bringSubviewToFront:self.navView];
+    [self.navView setNavTitle:@"公司简介"];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -56,7 +55,7 @@
     cell.backgroundColor = [UIColor greenColor];
     cell.Block = ^(CGFloat offSetY) {
         NSLog(@"offSetY:%f",offSetY);
-       // [weakSelf.mainTableView setContentOffset:CGPointMake(0, offSetY) animated:YES];
+        [weakSelf.mainTableView setContentOffset:CGPointMake(0, offSetY) animated:YES];
     };
     return cell;
 }
@@ -80,19 +79,17 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
-    CGFloat yOffset = scrollView.contentOffset.y;
-    NSLog(@"yOffset:%f",yOffset);
-    if (yOffset < 0) {
-        self.headerView.offSetY = yOffset;
-    }
-    if (yOffset > 64) {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:1]];
-    }else if(yOffset < 0){
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    CGFloat contentY = scrollView.contentOffset.y;
+    CGFloat scrollH = IS_IPhoneX() ? 88 : 64;
+    NSLog(@"contentY:%f",contentY);
+    if (contentY < 0) self.headerView.offSetY = contentY;
+    if (contentY > scrollH) {
+        [self.navView setNavBarWithAlpha:1];
+    }else if(contentY <= 0){
+        [self.navView setNavBarWithAlpha:0];
     }else{
-        CGFloat alpha = (64 - yOffset)/64;
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+        CGFloat alpha = contentY/scrollH;
+        [self.navView setNavBarWithAlpha:alpha];
     }
 }
 
@@ -102,7 +99,6 @@
         _mainTableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _mainTableView.backgroundColor = HZTClearColor;
         _mainTableView.delegate = self;
-//        _mainTableView.scrollEnabled = false;
         _mainTableView.dataSource = self;
         _mainTableView.estimatedRowHeight = 0;
         _mainTableView.estimatedSectionFooterHeight = 0;

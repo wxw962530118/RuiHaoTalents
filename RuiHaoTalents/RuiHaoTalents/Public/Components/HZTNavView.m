@@ -30,18 +30,18 @@
     [self addTitleLabel];
 }
 
--(void )addBackButton{
+-(void)addBackButton{
     if (!_backButton) {
         _backButton = [[UIButton alloc]init];
-        [_backButton setBackgroundImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_backButton];
         _backButton.minHitTestWidth = 54;
         _backButton.minHitTestHeight = 54;
         [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(12, 20));
-            make.left.equalTo(self.mas_left).offset(15);
-            make.top.equalTo(self.mas_top).offset(30);
+            make.size.mas_equalTo(CGSizeMake(30, 30));
+            make.left.equalTo(self.mas_left).offset(10);
+            make.bottom.equalTo(self.mas_bottom).offset(-10);
         }];
     }
 }
@@ -49,7 +49,7 @@
 -(void)addTitleLabel{
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc]init];
-        _titleLabel.font = HZTFontSize(15);
+        _titleLabel.font = HZTFontSize(17);
         _titleLabel.textColor = [HZTColorEmphasis colorWithAlphaComponent:0];;
         [self addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,9 +60,7 @@
 }
 
 -(void)clickBack{
-    if (self.Block) {
-        self.Block();
-    }
+    if (self.Block) self.Block();
 }
 
 -(void)setNavBarWithAlpha:(CGFloat )alpha{
