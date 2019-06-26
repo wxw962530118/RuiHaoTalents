@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HZTBaseView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTBaseViewController : UIViewController
+/***/
+@property (nonatomic, strong) HZTBaseView * baseView;
 /**导航栏标题*/
 @property (nonatomic, copy) NSString * navTitle;
 /**

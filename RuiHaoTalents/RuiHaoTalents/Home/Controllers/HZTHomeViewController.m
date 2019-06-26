@@ -135,11 +135,15 @@
         _tableView.estimatedRowHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
-        //_tableView.tableHeaderView = self.headerView;
+        _tableView.tableHeaderView = self.headerView;
+        _tableView.contentInset = UIEdgeInsetsMake(IS_IPhoneX() ? 88 : 64, 0, 0, 0);
+        _tableView.scrollIndicatorInsets = _tableView.contentInset;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_tableView];
+        [self.view sendSubviewToBack:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.left.equalTo(self.view);
+            //make.top.equalTo(self.view.mas_top).offset(IS_IPhoneX() ? 88 : 64);
         }];
     }
     return _tableView;
@@ -149,6 +153,7 @@
     if (!_headerView) {
         _headerView = [HZTHomeHeaderView createHomeHeaderView];
         _headerView.delegate = self;
+        _headerView.backgroundColor = [UIColor redColor];
     }
     return _headerView;
 }

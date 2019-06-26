@@ -11,7 +11,7 @@
 #import "HZTHomeViewController.h"
 #import "HZTCLocationManager.h"
 #import "YYFPSLabel.h"
-
+#import "HZTTestHomeController.h"
 @interface AppDelegate ()
 
 @end
@@ -69,7 +69,7 @@
 -(void)configRootWindow{
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH)];
     self.window.backgroundColor = HZTColorWhiteGround;
-    self.window.rootViewController = [[HZTRootNavigationController alloc] initWithRootViewController:[[HZTHomeViewController alloc] init]];
+    self.window.rootViewController = [[HZTRootNavigationController alloc] initWithRootViewController:[[HZTTestHomeController alloc] init]];
     [self.window makeKeyAndVisible];
 }
 
@@ -85,6 +85,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [UIApplication sharedApplication].statusBarHidden = YES;
     [self configUmeng];
     [self initCLocation];
     [self configIQKeyboardManager];

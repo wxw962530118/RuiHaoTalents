@@ -30,6 +30,7 @@
 		AC20777B223F917A0072129B /* HZTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20777A223F917A0072129B /* HZTSettingViewController.m */; };
 		AC20777F223F91B60072129B /* HZTSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC20777D223F91B60072129B /* HZTSettingCell.m */; };
 		AC207780223F91B60072129B /* HZTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC20777E223F91B60072129B /* HZTSettingCell.xib */; };
+		AC282DD622B23866009A7FBC /* HZTTestNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC282DD522B23866009A7FBC /* HZTTestNavView.m */; };
 		AC2C7A8E2241DD0C003BC70E /* HZTWorkAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C7A8D2241DD0C003BC70E /* HZTWorkAreaViewController.m */; };
 		AC2D71D12239ED2A00E80191 /* HZTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D71D02239ED2A00E80191 /* HZTLoginViewController.m */; };
 		AC2D71D42239ED3800E80191 /* HZTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D71D32239ED3800E80191 /* HZTRegisterViewController.m */; };
@@ -285,6 +286,9 @@
 		ACDE3BC42248B1BE00B8EFB3 /* HZTPostDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3BC32248B1BE00B8EFB3 /* HZTPostDetailsController.m */; };
 		ACDE3BC72248B70000B8EFB3 /* HZTPostDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3BC62248B70000B8EFB3 /* HZTPostDetailsHeaderView.m */; };
 		ACDE3BC92248B70800B8EFB3 /* HZTPostDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACDE3BC82248B70800B8EFB3 /* HZTPostDetailsHeaderView.xib */; };
+		ACDECFDE22B23F050093E96E /* HZTTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDECFDD22B23F050093E96E /* HZTTestHomeController.m */; };
+		ACDECFE122B23F1B0093E96E /* HZTBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDECFE022B23F1B0093E96E /* HZTBaseTableView.m */; };
+		ACDECFE422B23F300093E96E /* HZTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDECFE322B23F300093E96E /* HZTBaseView.m */; };
 		ACE140D22243415E007FD87B /* HZTChoosePostController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D12243415E007FD87B /* HZTChoosePostController.m */; };
 		ACE140D6224359C1007FD87B /* HZTExpectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE140D4224359C1007FD87B /* HZTExpectJobViewController.m */; };
 		ACE140D7224359C1007FD87B /* HZTExpectJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE140D5224359C1007FD87B /* HZTExpectJobViewController.xib */; };
@@ -388,6 +392,8 @@
 		AC20777C223F91B60072129B /* HZTSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTSettingCell.h; sourceTree = "<group>"; };
 		AC20777D223F91B60072129B /* HZTSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTSettingCell.m; sourceTree = "<group>"; };
 		AC20777E223F91B60072129B /* HZTSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTSettingCell.xib; sourceTree = "<group>"; };
+		AC282DD422B23866009A7FBC /* HZTTestNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTestNavView.h; sourceTree = "<group>"; };
+		AC282DD522B23866009A7FBC /* HZTTestNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTestNavView.m; sourceTree = "<group>"; };
 		AC2C7A8C2241DD0C003BC70E /* HZTWorkAreaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTWorkAreaViewController.h; sourceTree = "<group>"; };
 		AC2C7A8D2241DD0C003BC70E /* HZTWorkAreaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTWorkAreaViewController.m; sourceTree = "<group>"; };
 		AC2D71CF2239ED2A00E80191 /* HZTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTLoginViewController.h; sourceTree = "<group>"; };
@@ -779,6 +785,12 @@
 		ACDE3BC52248B70000B8EFB3 /* HZTPostDetailsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTPostDetailsHeaderView.h; sourceTree = "<group>"; };
 		ACDE3BC62248B70000B8EFB3 /* HZTPostDetailsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTPostDetailsHeaderView.m; sourceTree = "<group>"; };
 		ACDE3BC82248B70800B8EFB3 /* HZTPostDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HZTPostDetailsHeaderView.xib; sourceTree = "<group>"; };
+		ACDECFDC22B23F050093E96E /* HZTTestHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTTestHomeController.h; sourceTree = "<group>"; };
+		ACDECFDD22B23F050093E96E /* HZTTestHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTTestHomeController.m; sourceTree = "<group>"; };
+		ACDECFDF22B23F1B0093E96E /* HZTBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTBaseTableView.h; sourceTree = "<group>"; };
+		ACDECFE022B23F1B0093E96E /* HZTBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTBaseTableView.m; sourceTree = "<group>"; };
+		ACDECFE222B23F300093E96E /* HZTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTBaseView.h; sourceTree = "<group>"; };
+		ACDECFE322B23F300093E96E /* HZTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTBaseView.m; sourceTree = "<group>"; };
 		ACE140D02243415E007FD87B /* HZTChoosePostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTChoosePostController.h; sourceTree = "<group>"; };
 		ACE140D12243415E007FD87B /* HZTChoosePostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTChoosePostController.m; sourceTree = "<group>"; };
 		ACE140D3224359C1007FD87B /* HZTExpectJobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTExpectJobViewController.h; sourceTree = "<group>"; };
@@ -1876,6 +1888,39 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ACDECFD822B23EDB0093E96E /* 沉浸式体验Demo */ = {
+			isa = PBXGroup;
+			children = (
+				ACDECFD922B23EDB0093E96E /* Models */,
+				ACDECFDA22B23EDB0093E96E /* Views */,
+				ACDECFDB22B23EDB0093E96E /* Controlls */,
+			);
+			path = "沉浸式体验Demo";
+			sourceTree = "<group>";
+		};
+		ACDECFD922B23EDB0093E96E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACDECFDA22B23EDB0093E96E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACDECFDB22B23EDB0093E96E /* Controlls */ = {
+			isa = PBXGroup;
+			children = (
+				ACDECFDC22B23F050093E96E /* HZTTestHomeController.h */,
+				ACDECFDD22B23F050093E96E /* HZTTestHomeController.m */,
+			);
+			path = Controlls;
+			sourceTree = "<group>";
+		};
 		ACE140CC22434148007FD87B /* ChoosePost */ = {
 			isa = PBXGroup;
 			children = (
@@ -1941,6 +1986,7 @@
 		ACE8F62322389ACD0053D864 /* RuiHaoTalents */ = {
 			isa = PBXGroup;
 			children = (
+				ACDECFD822B23EDB0093E96E /* 沉浸式体验Demo */,
 				ACDE3BBA22488C5800B8EFB3 /* Account */,
 				ACDE3BAE22488A9100B8EFB3 /* AdInfo */,
 				ACFE80312238A29F006D1506 /* Login&Register */,
@@ -2079,6 +2125,12 @@
 		ACE8F64022389E440053D864 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				AC282DD422B23866009A7FBC /* HZTTestNavView.h */,
+				AC282DD522B23866009A7FBC /* HZTTestNavView.m */,
+				ACDECFDF22B23F1B0093E96E /* HZTBaseTableView.h */,
+				ACDECFE022B23F1B0093E96E /* HZTBaseTableView.m */,
+				ACDECFE222B23F300093E96E /* HZTBaseView.h */,
+				ACDECFE322B23F300093E96E /* HZTBaseView.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -2911,6 +2963,7 @@
 				ACB38147223FA43300FFB9B3 /* HZTCustomHederCell.m in Sources */,
 				AC845991224384AA00E09659 /* HZTChoosePostView.m in Sources */,
 				ACDE3BA02248872700B8EFB3 /* XHLaunchAdController.m in Sources */,
+				ACDECFE122B23F1B0093E96E /* HZTBaseTableView.m in Sources */,
 				AC7DB40922421ED500F39EEF /* HZTWorkAreaModel.m in Sources */,
 				AC2D71D72239EFF700E80191 /* HZTMajorButton.m in Sources */,
 				ACDC5B902248C81A00744DF9 /* HZTPostDetailsSectionView.m in Sources */,
@@ -2951,6 +3004,7 @@
 				AC20775D223F475C0072129B /* HZTMyResumeSectionFooterView.m in Sources */,
 				ACB12D75223A2BC5008E5494 /* HZTCustomAlretView.m in Sources */,
 				AC70700D223B746F003F4F6D /* NetWorkManager.m in Sources */,
+				AC282DD622B23866009A7FBC /* HZTTestNavView.m in Sources */,
 				AC39C3642248D00400CF93E7 /* HZTPostDescCell.m in Sources */,
 				AC39C3D1224A1D0200CF93E7 /* HZTNavView.m in Sources */,
 				ACF873A42244CA5500B5F05F /* VPImageCropperViewController.m in Sources */,
@@ -3052,6 +3106,7 @@
 				AC706FFE223A4B84003F4F6D /* HZTCityModel.m in Sources */,
 				ACF873B32244D3C800B5F05F /* SWQRCodeManager.m in Sources */,
 				ACF873952244CA0300B5F05F /* ZLPhotoPickerDatas.m in Sources */,
+				ACDECFDE22B23F050093E96E /* HZTTestHomeController.m in Sources */,
 				AC39C3702248D3FF00CF93E7 /* HZTCompanyInfoController.m in Sources */,
 				AC2D7204223A246B00E80191 /* MBProgressHUD+PYExtension.m in Sources */,
 				ACF873B52244D3C800B5F05F /* SWScannerView.m in Sources */,
@@ -3079,6 +3134,7 @@
 				AC2D71DF2239F2FA00E80191 /* HZTLoginRegisterModel.m in Sources */,
 				ACFE80452238A39B006D1506 /* HZTMacroNotifications.m in Sources */,
 				ACF873882244CA0300B5F05F /* ZLCameraImageView.m in Sources */,
+				ACDECFE422B23F300093E96E /* HZTBaseView.m in Sources */,
 				AC7AA9202292BA3900B0ECF2 /* HZTEducationView.m in Sources */,
 				E14CAB852241E7370001A308 /* UIColor+Common.m in Sources */,
 				ACB12D70223A2A53008E5494 /* HZTToastHUD.m in Sources */,

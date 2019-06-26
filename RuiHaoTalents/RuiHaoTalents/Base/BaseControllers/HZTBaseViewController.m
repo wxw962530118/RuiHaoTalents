@@ -7,21 +7,33 @@
 //
 
 #import "HZTBaseViewController.h"
-
+#import "JZNavigationExtension.h"
+#import "HZTTestNavView.h"
 @interface HZTBaseViewController ()
 /***/
 @property (nonatomic, copy) void (^Block)(void);
 /***/
 @property (nonatomic, strong) UILabel * noDataLabel;
+/***/
+@property (nonatomic, strong) HZTTestNavView * navView;
 @end
 
 @implementation HZTBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addNavView];
     [self configSelf];
     [self configBackItem];
     [self configTableContentInset];
+}
+
+-(void)addNavView{
+    if (!_navView) {
+        _navView = [[HZTTestNavView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, IS_IPhoneX() ? 88 : 64)];
+        [self.view addSubview:_navView];
+        [self.view bringSubviewToFront:_navView];
+    }
 }
 
 -(void)setNavTitle:(NSString *)navTitle{
@@ -33,6 +45,7 @@
     self.view.backgroundColor = HZTColorWhiteGround;
     /**自定义导航栏返回按钮 系统侧滑返回失效 处理*/
     self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    self.jz_navigationBarHidden = YES;
 }
 
 -(void)configBackItem{

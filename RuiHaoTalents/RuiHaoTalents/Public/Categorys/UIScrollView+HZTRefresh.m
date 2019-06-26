@@ -136,4 +136,9 @@ static void *LoadMoreBlockKey = &LoadMoreBlockKey;
     return objc_getAssociatedObject(self, &LoadMoreBlockKey);
 }
 
+-(void)handleScrollIndicatorInsets{
+    self.contentInset = UIEdgeInsetsMake(IS_IPhoneX() ? 88 : 64, 0, 0, 0);
+    self.scrollIndicatorInsets = self.contentInset;
+}
+
 @end

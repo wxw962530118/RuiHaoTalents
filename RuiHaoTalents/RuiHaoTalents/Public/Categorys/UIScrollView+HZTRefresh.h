@@ -36,7 +36,10 @@ NS_ASSUME_NONNULL_BEGIN
  没有数据结束刷新
  */
 - (void)endFooterNoMoreData;
-
+/**
+ 处理滚动时图的insets
+ */
+-(void)handleScrollIndicatorInsets;
 @end
 
 NS_ASSUME_NONNULL_END
