@@ -1,25 +1,24 @@
 //
-//  HZTTestHomeController.m
+//  HZTDetailesViewController.m
 //  RuiHaoTalents
 //
-//  Created by 王新伟 on 2019/6/13.
+//  Created by 王新伟 on 2019/7/26.
 //  Copyright © 2019年 王新伟. All rights reserved.
 //
 
-#import "HZTTestHomeController.h"
 #import "HZTDetailesViewController.h"
-@interface HZTTestHomeController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface HZTDetailesViewController ()<UITableViewDelegate,UITableViewDataSource>
 /***/
 @property (nonatomic, strong) UITableView * tableView;
-/***/
-@property (nonatomic, strong) UIScrollView * mainScrollView;
+
 @end
 
-@implementation HZTTestHomeController
+@implementation HZTDetailesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navTitle = @"首页";
+    self.navTitle = @"详情";
     [self.tableView reloadData];
 }
 
@@ -35,8 +34,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    HZTDetailesViewController * vc = [HZTDetailesViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZTTestNavView : UIView
-
+/***/
+@property (nonatomic, copy) NSString * title;
 @end
 
 NS_ASSUME_NONNULL_END

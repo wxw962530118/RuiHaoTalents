@@ -38,6 +38,7 @@
 
 -(void)setNavTitle:(NSString *)navTitle{
     _navTitle = navTitle;
+    _navView.title = navTitle;
     self.navigationItem.title = navTitle;
 }
 
@@ -81,6 +82,7 @@
             if ([vc isKindOfClass:[viewController class]]) {
                 /**当前导航控制器 栈内存在 指定控制器 则 pop回vc*/
                 [self.navigationController popToViewController:vc animated:YES];
+                break;
             }
         }
     }else{
@@ -116,9 +118,7 @@
 }
 
 -(void)clickRightItem{
-    if (self.Block) {
-        self.Block();
-    }
+    if (self.Block) self.Block();
 }
 
 -(void)addNoDataLabelWithView:(UIView *)view{
